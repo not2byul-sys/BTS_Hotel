@@ -1,112 +1,122 @@
 [
   {
-    "name": "[Ilsan] 쿠팡 트래블 추천 숙소",
-    "price": 74,
+    "name": "[Goyang] 쿠팡 트래블 추천 숙소",
+    "price": 60,
     "currency": "USD",
     "source": "coupang_travel",
-    "location": "Ilsan",
+    "location": "Goyang",
+    "image_url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
     "available": true,
-    "rooms_left": 1,
-    "status": "품절 임박 (남은 객실 1개)",
-    "last_update": "2026-01-25 16:31"
-  },
-  {
-    "name": "[Paju] Agoda 추천 숙소",
-    "price": 79,
-    "currency": "USD",
-    "source": "agoda",
-    "location": "Paju",
-    "available": true,
-    "rooms_left": 4,
+    "rooms_left": 7,
     "status": "예약 가능",
-    "last_update": "2026-01-25 16:31"
-  },
-  {
-    "name": "[Ilsan] Agoda 추천 숙소",
-    "price": 102,
-    "currency": "USD",
-    "source": "agoda",
-    "location": "Ilsan",
-    "available": true,
-    "rooms_left": 5,
-    "status": "예약 가능",
-    "last_update": "2026-01-25 16:31"
+    "last_update": "2026-01-25 16:55"
   },
   {
     "name": "[Paju] 쿠팡 트래블 추천 숙소",
-    "price": 121,
+    "price": 82,
     "currency": "USD",
     "source": "coupang_travel",
     "location": "Paju",
+    "image_url": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80",
     "available": true,
     "rooms_left": 3,
     "status": "품절 임박 (남은 객실 3개)",
-    "last_update": "2026-01-25 16:31"
+    "last_update": "2026-01-25 16:55"
   },
   {
-    "name": "[Hongdae] 쿠팡 트래블 추천 숙소",
-    "price": 150,
-    "currency": "USD",
-    "source": "coupang_travel",
-    "location": "Hongdae",
-    "available": true,
-    "rooms_left": 7,
-    "status": "예약 가능",
-    "last_update": "2026-01-25 16:31"
-  },
-  {
-    "name": "[Goyang] 쿠팡 트래블 추천 숙소",
-    "price": 162,
-    "currency": "USD",
-    "source": "coupang_travel",
-    "location": "Goyang",
-    "available": true,
-    "rooms_left": 8,
-    "status": "예약 가능",
-    "last_update": "2026-01-25 16:31"
-  },
-  {
-    "name": "[Hongdae] Agoda 추천 숙소",
-    "price": 165,
+    "name": "[Paju] Agoda 추천 숙소",
+    "price": 90,
     "currency": "USD",
     "source": "agoda",
-    "location": "Hongdae",
-    "available": false,
-    "rooms_left": 0,
-    "status": "예약 마감",
-    "last_update": "2026-01-25 16:31"
-  },
-  {
-    "name": "[Sangam] 쿠팡 트래블 추천 숙소",
-    "price": 202,
-    "currency": "USD",
-    "source": "coupang_travel",
-    "location": "Sangam",
+    "location": "Paju",
+    "image_url": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80",
     "available": true,
-    "rooms_left": 7,
+    "rooms_left": 6,
     "status": "예약 가능",
-    "last_update": "2026-01-25 16:31"
+    "last_update": "2026-01-25 16:55"
   },
   {
     "name": "[Goyang] Agoda 추천 숙소",
-    "price": 231,
+    "price": 113,
     "currency": "USD",
     "source": "agoda",
     "location": "Goyang",
+    "image_url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80",
+    "available": true,
+    "rooms_left": 3,
+    "status": "품절 임박 (남은 객실 3개)",
+    "last_update": "2026-01-25 16:55"
+  },
+  {
+    "name": "[Ilsan] 쿠팡 트래블 추천 숙소",
+    "price": 193,
+    "currency": "USD",
+    "source": "coupang_travel",
+    "location": "Ilsan",
+    "image_url": "https://images.unsplash.com/photo-1551882547-ff43c63efe81?auto=format&fit=crop&w=800&q=80",
+    "available": true,
+    "rooms_left": 10,
+    "status": "예약 가능",
+    "last_update": "2026-01-25 16:55"
+  },
+  {
+    "name": "[Ilsan] Agoda 추천 숙소",
+    "price": 204,
+    "currency": "USD",
+    "source": "agoda",
+    "location": "Ilsan",
+    "image_url": "https://images.unsplash.com/photo-1551882547-ff43c63efe81?auto=format&fit=crop&w=800&q=80",
     "available": false,
     "rooms_left": 0,
     "status": "예약 마감",
-    "last_update": "2026-01-25 16:31"
+    "last_update": "2026-01-25 16:55"
+  },
+  {
+    "name": "[Hongdae] Agoda 추천 숙소",
+    "price": 204,
+    "currency": "USD",
+    "source": "agoda",
+    "location": "Hongdae",
+    "image_url": "https://images.unsplash.com/photo-1590633711545-e1a359239458?auto=format&fit=crop&w=800&q=80",
+    "available": true,
+    "rooms_left": 8,
+    "status": "예약 가능",
+    "last_update": "2026-01-25 16:55"
   },
   {
     "name": "[Sangam] Agoda 추천 숙소",
-    "price": 235,
+    "price": 227,
     "currency": "USD",
     "source": "agoda",
     "location": "Sangam",
+    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+    "available": true,
+    "rooms_left": 3,
+    "status": "품절 임박 (남은 객실 3개)",
+    "last_update": "2026-01-25 16:55"
+  },
+  {
+    "name": "[Hongdae] 쿠팡 트래블 추천 숙소",
+    "price": 263,
+    "currency": "USD",
+    "source": "coupang_travel",
+    "location": "Hongdae",
+    "image_url": "https://images.unsplash.com/photo-1590633711545-e1a359239458?auto=format&fit=crop&w=800&q=80",
+    "available": true,
+    "rooms_left": 1,
+    "status": "품절 임박 (남은 객실 1개)",
+    "last_update": "2026-01-25 16:55"
+  },
+  {
+    "name": "[Sangam] 쿠팡 트래블 추천 숙소",
+    "price": 270,
+    "currency": "USD",
+    "source": "coupang_travel",
+    "location": "Sangam",
+    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
     "available": true,
     "rooms_left": 4,
     "status": "예약 가능",
-    "last_update": "2026-01-25 16:31"
+    "last_update": "2026-01-25 16:55"
   }
 ]
