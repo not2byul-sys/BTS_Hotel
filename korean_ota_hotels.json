@@ -1,0 +1,170 @@
+[
+  {
+    "name": "고양 모텔 파라다이스",
+    "price": 38,
+    "currency": "USD",
+    "rating": 4.0,
+    "reviews": 89,
+    "source": "yanolja",
+    "url": "https://www.yanolja.com/hotel/...",
+    "available": true,
+    "location": "Goyang",
+    "sources": [
+      "yanolja"
+    ],
+    "price_range": {
+      "min": 38,
+      "max": 38
+    }
+  },
+  {
+    "name": "일산 비즈니스 호텔",
+    "price": 45,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviews": 156,
+    "source": "goodchoice",
+    "url": "https://www.goodchoice.kr/product/...",
+    "available": true,
+    "location": "Ilsan, Goyang",
+    "sources": [
+      "goodchoice"
+    ],
+    "price_range": {
+      "min": 45,
+      "max": 45
+    }
+  },
+  {
+    "name": "에어비앤비 샘플 호텔",
+    "price": 50,
+    "source": "airbnb",
+    "available": true,
+    "sources": [
+      "airbnb"
+    ],
+    "price_range": {
+      "min": 50,
+      "max": 50
+    }
+  },
+  {
+    "name": "호텔스컴바인 샘플 호텔",
+    "price": 54,
+    "source": "hotelscombined_kr",
+    "available": true,
+    "sources": [
+      "hotelscombined_kr"
+    ],
+    "price_range": {
+      "min": 54,
+      "max": 54
+    }
+  },
+  {
+    "name": "Hotels.com 샘플 호텔",
+    "price": 77,
+    "source": "hotels",
+    "available": true,
+    "sources": [
+      "hotels"
+    ],
+    "price_range": {
+      "min": 77,
+      "max": 77
+    }
+  },
+  {
+    "name": "Booking.com 샘플 호텔",
+    "price": 93,
+    "source": "booking",
+    "available": true,
+    "sources": [
+      "booking"
+    ],
+    "price_range": {
+      "min": 93,
+      "max": 93
+    }
+  },
+  {
+    "name": "Agoda 샘플 호텔",
+    "price": 132,
+    "source": "agoda",
+    "available": true,
+    "sources": [
+      "agoda"
+    ],
+    "price_range": {
+      "min": 132,
+      "max": 132
+    }
+  },
+  {
+    "name": "서울 홍대 L7",
+    "price": 135,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviews": 2341,
+    "source": "coupang_travel",
+    "url": "https://trip.coupang.com/...",
+    "available": true,
+    "location": "Seoul Hongdae",
+    "sources": [
+      "coupang_travel"
+    ],
+    "price_range": {
+      "min": 135,
+      "max": 135
+    }
+  },
+  {
+    "name": "Expedia 샘플 호텔",
+    "price": 178,
+    "source": "expedia",
+    "available": true,
+    "sources": [
+      "expedia"
+    ],
+    "price_range": {
+      "min": 178,
+      "max": 178
+    }
+  },
+  {
+    "name": "고양 글로스터 호텔",
+    "price": 410,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviews": 422,
+    "source": "naver",
+    "url": "https://hotel.naver.com/hotels/...",
+    "available": false,
+    "location": "Goyang",
+    "sources": [
+      "naver"
+    ],
+    "price_range": {
+      "min": 410,
+      "max": 410
+    }
+  },
+  {
+    "name": "고양 소노캄 골프리조트",
+    "price": 500,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviews": 826,
+    "source": "naver",
+    "url": "https://hotel.naver.com/hotels/...",
+    "available": false,
+    "location": "Goyang",
+    "sources": [
+      "naver"
+    ],
+    "price_range": {
+      "min": 500,
+      "max": 500
+    }
+  }
+]
