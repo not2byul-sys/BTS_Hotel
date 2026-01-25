@@ -1,27 +1,170 @@
-import streamlit as st
-import pandas as pd
-import json
-import os
-
-st.set_page_config(page_title="BTS 콘서트 숙소 찾기", page_icon="💜")
-st.title("💜 BTS 콘서트 고양 숙소 실시간 리포트")
-
-# 현재 위치의 파일 목록을 확인 (디버깅용)
-file_path = 'korean_ota_hotels.json'
-
-if os.path.exists(file_path):
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        
-        if data and len(data) > 0:
-            df = pd.DataFrame(data)
-            st.success(f"✅ 총 {len(df)}개의 숙소 정보를 불러왔습니다.")
-            st.dataframe(df, use_container_width=True)
-        else:
-            st.warning("⚠️ 데이터 파일(`json`) 안이 비어 있습니다. 맥북에서 스크래퍼를 실행해 주세요!")
-    except Exception as e:
-        st.error(f"❌ 데이터를 읽는 중 에러가 발생했습니다: {e}")
-else:
-    st.error(f"❌ 파일을 찾을 수 없습니다: {file_path}")
-    st.info("현재 창고(GitHub)에 파일이 있는지 다시 한번 확인해 주세요.")
+[
+  {
+    "name": "고양 모텔 파라다이스",
+    "price": 38,
+    "currency": "USD",
+    "rating": 4.0,
+    "reviews": 89,
+    "source": "yanolja",
+    "url": "https://www.yanolja.com/hotel/...",
+    "available": true,
+    "location": "Goyang",
+    "sources": [
+      "yanolja"
+    ],
+    "price_range": {
+      "min": 38,
+      "max": 38
+    }
+  },
+  {
+    "name": "일산 비즈니스 호텔",
+    "price": 45,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviews": 156,
+    "source": "goodchoice",
+    "url": "https://www.goodchoice.kr/product/...",
+    "available": true,
+    "location": "Ilsan, Goyang",
+    "sources": [
+      "goodchoice"
+    ],
+    "price_range": {
+      "min": 45,
+      "max": 45
+    }
+  },
+  {
+    "name": "Agoda 샘플 호텔",
+    "price": 88,
+    "source": "agoda",
+    "available": true,
+    "sources": [
+      "agoda"
+    ],
+    "price_range": {
+      "min": 88,
+      "max": 88
+    }
+  },
+  {
+    "name": "에어비앤비 샘플 호텔",
+    "price": 127,
+    "source": "airbnb",
+    "available": true,
+    "sources": [
+      "airbnb"
+    ],
+    "price_range": {
+      "min": 127,
+      "max": 127
+    }
+  },
+  {
+    "name": "Hotels.com 샘플 호텔",
+    "price": 131,
+    "source": "hotels",
+    "available": true,
+    "sources": [
+      "hotels"
+    ],
+    "price_range": {
+      "min": 131,
+      "max": 131
+    }
+  },
+  {
+    "name": "호텔스컴바인 샘플 호텔",
+    "price": 132,
+    "source": "hotelscombined_kr",
+    "available": true,
+    "sources": [
+      "hotelscombined_kr"
+    ],
+    "price_range": {
+      "min": 132,
+      "max": 132
+    }
+  },
+  {
+    "name": "서울 홍대 L7",
+    "price": 135,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviews": 2341,
+    "source": "coupang_travel",
+    "url": "https://trip.coupang.com/...",
+    "available": true,
+    "location": "Seoul Hongdae",
+    "sources": [
+      "coupang_travel"
+    ],
+    "price_range": {
+      "min": 135,
+      "max": 135
+    }
+  },
+  {
+    "name": "Booking.com 샘플 호텔",
+    "price": 146,
+    "source": "booking",
+    "available": true,
+    "sources": [
+      "booking"
+    ],
+    "price_range": {
+      "min": 146,
+      "max": 146
+    }
+  },
+  {
+    "name": "Expedia 샘플 호텔",
+    "price": 154,
+    "source": "expedia",
+    "available": true,
+    "sources": [
+      "expedia"
+    ],
+    "price_range": {
+      "min": 154,
+      "max": 154
+    }
+  },
+  {
+    "name": "고양 글로스터 호텔",
+    "price": 410,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviews": 422,
+    "source": "naver",
+    "url": "https://hotel.naver.com/hotels/...",
+    "available": false,
+    "location": "Goyang",
+    "sources": [
+      "naver"
+    ],
+    "price_range": {
+      "min": 410,
+      "max": 410
+    }
+  },
+  {
+    "name": "고양 소노캄 골프리조트",
+    "price": 500,
+    "currency": "USD",
+    "rating": 5.0,
+    "reviews": 826,
+    "source": "naver",
+    "url": "https://hotel.naver.com/hotels/...",
+    "available": false,
+    "location": "Goyang",
+    "sources": [
+      "naver"
+    ],
+    "price_range": {
+      "min": 500,
+      "max": 500
+    }
+  }
+]
