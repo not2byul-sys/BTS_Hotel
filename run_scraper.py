@@ -23,19 +23,68 @@ class ARMYStayHubEngine:
             "lng": 126.7456
         }
 
-        # BTS 성지순례 장소 (Army Local Guide용)
+        # BTS 성지순례 장소 (Army Local Guide용) - 서브태그 추가
         self.BTS_SPOTS = [
-            {"name": "HYBE INSIGHT", "lat": 37.5260, "lng": 127.0405, "type": "museum", "description": "BTS 전시 및 체험 공간"},
-            {"name": "방탄소년단 데뷔 무대 (광장시장)", "lat": 37.5700, "lng": 127.0098, "type": "historic", "description": "2013년 데뷔 무대 장소"},
-            {"name": "상암 MBC", "lat": 37.5786, "lng": 126.8918, "type": "broadcast", "description": "음악방송 촬영지"},
-            {"name": "여의도 KBS", "lat": 37.5172, "lng": 126.9297, "type": "broadcast", "description": "음악방송 촬영지"},
-            {"name": "홍대 버스킹 거리", "lat": 37.5563, "lng": 126.9220, "type": "street", "description": "데뷔 전 버스킹 장소"},
-            {"name": "용산 하이브 사옥", "lat": 37.5280, "lng": 127.0400, "type": "company", "description": "하이브 본사"},
-            {"name": "서울숲 (화양연화 촬영지)", "lat": 37.5443, "lng": 127.0374, "type": "filming", "description": "뮤직비디오 촬영지"},
-            {"name": "남산타워", "lat": 37.5512, "lng": 126.9882, "type": "landmark", "description": "BTS 콘텐츠 촬영지"},
-            {"name": "청계천", "lat": 37.5696, "lng": 126.9784, "type": "landmark", "description": "Run BTS 촬영지"},
-            {"name": "경복궁", "lat": 37.5796, "lng": 126.9770, "type": "landmark", "description": "한복 화보 촬영지"},
+            {"name": "HYBE INSIGHT", "name_en": "HYBE INSIGHT", "lat": 37.5260, "lng": 127.0405, "type": "museum", "description": "BTS 전시 및 체험 공간", "description_en": "BTS exhibition & experience space", "spot_tag": "Official BTS Museum", "spot_tag_kr": "공식 BTS 박물관"},
+            {"name": "유정식당", "name_en": "Yoojung Sikdang", "lat": 37.5298, "lng": 127.0412, "type": "restaurant", "description": "연습생 시절 멤버들이 자주 찾던 맛집", "description_en": "Members favorite place during trainee days", "spot_tag": "BTS Favorite Spot", "spot_tag_kr": "BTS 단골 맛집"},
+            {"name": "광장시장 (데뷔 무대)", "name_en": "Gwangjang Market", "lat": 37.5700, "lng": 127.0098, "type": "historic", "description": "2013년 데뷔 무대 장소", "description_en": "2013 debut stage location", "spot_tag": "Debut Memory", "spot_tag_kr": "데뷔 추억"},
+            {"name": "상암 MBC", "name_en": "MBC Sangam", "lat": 37.5786, "lng": 126.8918, "type": "broadcast", "description": "음악방송 촬영지", "description_en": "Music show filming location", "spot_tag": "Music Show Stage", "spot_tag_kr": "음악방송 무대"},
+            {"name": "여의도 KBS", "name_en": "KBS Yeouido", "lat": 37.5172, "lng": 126.9297, "type": "broadcast", "description": "음악방송 촬영지", "description_en": "Music show filming location", "spot_tag": "Music Show Stage", "spot_tag_kr": "음악방송 무대"},
+            {"name": "홍대 버스킹 거리", "name_en": "Hongdae Busking Street", "lat": 37.5563, "lng": 126.9220, "type": "street", "description": "데뷔 전 버스킹 장소", "description_en": "Pre-debut busking location", "spot_tag": "Trainee Memory", "spot_tag_kr": "연습생 추억"},
+            {"name": "하이브 사옥", "name_en": "HYBE Headquarters", "lat": 37.5280, "lng": 127.0400, "type": "company", "description": "하이브 본사 (용산)", "description_en": "HYBE HQ in Yongsan", "spot_tag": "BTS Home", "spot_tag_kr": "BTS의 집"},
+            {"name": "서울숲", "name_en": "Seoul Forest", "lat": 37.5443, "lng": 127.0374, "type": "filming", "description": "화양연화 뮤직비디오 촬영지", "description_en": "HYYH MV filming location", "spot_tag": "MV Location", "spot_tag_kr": "뮤비 촬영지"},
+            {"name": "남산타워", "name_en": "Namsan Tower", "lat": 37.5512, "lng": 126.9882, "type": "landmark", "description": "BTS 콘텐츠 촬영지", "description_en": "BTS content filming spot", "spot_tag": "Iconic Spot", "spot_tag_kr": "아이코닉 스팟"},
+            {"name": "경복궁", "name_en": "Gyeongbokgung Palace", "lat": 37.5796, "lng": 126.9770, "type": "landmark", "description": "한복 화보 촬영지", "description_en": "Hanbok photoshoot location", "spot_tag": "Photo Spot", "spot_tag_kr": "화보 촬영지"},
+            {"name": "카페 휴가 (구 빅히트)", "name_en": "Cafe Hyuga (Old Big Hit)", "lat": 37.5240, "lng": 127.0380, "type": "cafe", "description": "구 빅히트 사옥 앞 카페", "description_en": "Cafe near old Big Hit building", "spot_tag": "ARMY Gathering", "spot_tag_kr": "아미 성지"},
+            {"name": "IFC몰", "name_en": "IFC Mall", "lat": 37.5251, "lng": 126.9256, "type": "shopping", "description": "Run BTS 촬영지", "description_en": "Run BTS filming location", "spot_tag": "Run BTS", "spot_tag_kr": "달려라 방탄"},
         ]
+
+        # 숙소 타입별 샘플 이미지 URL (Unsplash)
+        self.HOTEL_IMAGES = {
+            "5star": [
+                "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+                "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800",
+                "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+            ],
+            "4star": [
+                "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+                "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800",
+                "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800",
+            ],
+            "3star": [
+                "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+                "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
+                "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800",
+            ],
+            "residence": [
+                "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+                "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
+                "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+            ],
+            "guesthouse": [
+                "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
+                "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
+                "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800",
+            ],
+            "airbnb": [
+                "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800",
+                "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+                "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
+            ],
+            "hostel": [
+                "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
+                "https://images.unsplash.com/photo-1520277739336-7bf67edfa768?w=800",
+                "https://images.unsplash.com/photo-1573052905904-34ad8c27f0cc?w=800",
+            ],
+        }
+
+        # 지역별 지하철 노선 정보
+        self.SUBWAY_ROUTES = {
+            "Ilsan/KINTEX": {"station": "대화역", "station_en": "Daehwa", "line": "3호선", "line_en": "Line 3", "line_color": "#EF7C1C"},
+            "Hongdae/Sinchon": {"station": "홍대입구역", "station_en": "Hongik Univ.", "line": "2호선", "line_en": "Line 2", "line_color": "#00A84D"},
+            "Sangam/DMC": {"station": "디지털미디어시티역", "station_en": "DMC", "line": "6호선", "line_en": "Line 6", "line_color": "#CD7C2F"},
+            "Paju/Unjeong": {"station": "운정역", "station_en": "Unjeong", "line": "경의중앙선", "line_en": "Gyeongui Line", "line_color": "#77C4A3"},
+        }
 
         # 숙소 타입별 설정
         self.HOTEL_TYPES = {
@@ -336,36 +385,50 @@ class ARMYStayHubEngine:
         return keywords[:5]  # 최대 5개
 
     def _get_safe_return_info(self, hotel: Dict, distance_km: float) -> Dict:
-        """안심 귀가 정보 생성"""
+        """안심 귀가 정보 생성 - UI 상세 페이지용"""
         area = hotel.get("area", "")
 
-        # 지역별 막차 시간
-        if "Ilsan" in area or "KINTEX" in area:
-            last_train = "23:40"
-            station = "대화역 (경의중앙선)"
-        elif "Hongdae" in area:
-            last_train = "00:10"
-            station = "홍대입구역 (2호선/경의중앙선)"
-        elif "Sangam" in area:
-            last_train = "00:05"
-            station = "디지털미디어시티역 (6호선/경의중앙선)"
-        elif "Paju" in area:
-            last_train = "23:20"
-            station = "운정역 (경의중앙선)"
-        else:
-            last_train = "00:00"
-            station = "인근 지하철역"
+        # 지역별 정보 가져오기
+        route_info = self.SUBWAY_ROUTES.get(area, {
+            "station": "인근역",
+            "station_en": "Nearby Station",
+            "line": "지하철",
+            "line_en": "Subway",
+            "line_color": "#888888"
+        })
 
-        # 콘서트 종료 시간 기준 (보통 21:30~22:00 종료)
-        concert_end = "22:00"
+        # 지역별 막차 시간
+        last_train_times = {
+            "Ilsan/KINTEX": "23:40",
+            "Hongdae/Sinchon": "00:10",
+            "Sangam/DMC": "00:05",
+            "Paju/Unjeong": "23:20",
+        }
+        last_train = last_train_times.get(area, "00:00")
+
+        # 역에서 숙소까지 도보 시간 (랜덤 시뮬레이션: 3~20분)
+        walk_from_station = random.randint(3, 20)
+
+        # 경로 요약 텍스트 생성 (UI: "Jamsil → Line 2 → Stay")
+        route_summary = f"KINTEX → {route_info['line_en']} → Stay"
+        route_summary_kr = f"킨텍스 → {route_info['line']} → 숙소"
 
         return {
             "last_train_time": last_train,
-            "nearest_station": station,
-            "concert_end_estimate": concert_end,
-            "safe_return_possible": distance_km < 15,  # 15km 이내면 막차 가능
+            "nearest_station": route_info["station"],
+            "nearest_station_en": route_info["station_en"],
+            "subway_line": route_info["line"],
+            "subway_line_en": route_info["line_en"],
+            "line_color": route_info["line_color"],
+            "walk_from_station_min": walk_from_station,
+            "route_summary": route_summary,
+            "route_summary_kr": route_summary_kr,
+            "concert_end_estimate": "22:00",
+            "safe_return_possible": distance_km < 15,
             "recommended_transport": "지하철" if distance_km < 10 else "택시" if distance_km < 20 else "셔틀버스",
-            "taxi_estimate_krw": int(distance_km * 1200 + 4800) if distance_km > 2 else 0,  # 택시비 추정
+            "recommended_transport_en": "Subway" if distance_km < 10 else "Taxi" if distance_km < 20 else "Shuttle",
+            "taxi_estimate_krw": int(distance_km * 1200 + 4800) if distance_km > 2 else 0,
+            "taxi_estimate_usd": int((distance_km * 1200 + 4800) / 1350) if distance_km > 2 else 0,
         }
 
     def _get_booking_info(self, hotel: Dict) -> Dict:
@@ -389,8 +452,43 @@ class ARMYStayHubEngine:
             "iframe_support": platform_info["iframe_support"],
         }
 
+    def _generate_address(self, hotel: Dict) -> Tuple[str, str]:
+        """상세 주소 생성"""
+        area = hotel.get("area", "")
+
+        # 지역별 주소 패턴
+        address_patterns = {
+            "Ilsan/KINTEX": [
+                ("경기도 고양시 일산서구 킨텍스로", "KINTEX-ro, Ilsanseo-gu, Goyang-si"),
+                ("경기도 고양시 일산서구 대화동", "Daehwa-dong, Ilsanseo-gu, Goyang-si"),
+                ("경기도 고양시 일산동구 장항동", "Janghang-dong, Ilsandong-gu, Goyang-si"),
+            ],
+            "Hongdae/Sinchon": [
+                ("서울특별시 마포구 와우산로", "Wausan-ro, Mapo-gu, Seoul"),
+                ("서울특별시 마포구 홍익로", "Hongik-ro, Mapo-gu, Seoul"),
+                ("서울특별시 서대문구 연세로", "Yonsei-ro, Seodaemun-gu, Seoul"),
+            ],
+            "Sangam/DMC": [
+                ("서울특별시 마포구 상암동 월드컵로", "World Cup-ro, Sangam-dong, Mapo-gu"),
+                ("서울특별시 마포구 성암로", "Seongam-ro, Mapo-gu, Seoul"),
+                ("서울특별시 마포구 DMC단지", "DMC Complex, Mapo-gu, Seoul"),
+            ],
+            "Paju/Unjeong": [
+                ("경기도 파주시 운정역로", "Unjeong Station-ro, Paju-si"),
+                ("경기도 파주시 금촌동", "Geumchon-dong, Paju-si"),
+                ("경기도 파주시 야당동", "Yadang-dong, Paju-si"),
+            ],
+        }
+
+        patterns = address_patterns.get(area, [("서울특별시", "Seoul")])
+        addr_kr, addr_en = random.choice(patterns)
+
+        # 번지 추가
+        num = random.randint(1, 200)
+        return f"{addr_kr} {num}", f"{num}, {addr_en}"
+
     def generate_hotel_data(self, hotel: Dict) -> Dict:
-        """개별 호텔의 완전한 데이터 생성"""
+        """개별 호텔의 완전한 데이터 생성 - UI 상세 페이지 완전 지원"""
 
         # 거리 및 시간 계산
         distance = self._calculate_distance(
@@ -406,7 +504,7 @@ class ARMYStayHubEngine:
         # 태그 생성
         trans_tag_en, trans_tag_kr = self._get_transport_tag(walking_time, distance)
         army_density = self._generate_army_density(hotel["type"], hotel.get("area", ""))
-        nearby_spots = self._find_nearby_bts_spots(hotel["lat"], hotel["lng"])
+        nearby_spots = self._find_nearby_bts_spots(hotel["lat"], hotel["lng"], count=3)  # 3개로 확장
         keywords = self._generate_keywords(hotel, walking_time, army_density, nearby_spots)
 
         # Safe Return 정보
@@ -418,6 +516,18 @@ class ARMYStayHubEngine:
         # 객실 현황 (시뮬레이션)
         rooms_left = random.randint(0, 12)
 
+        # 이미지 URL 선택
+        images = self.HOTEL_IMAGES.get(hotel["type"], self.HOTEL_IMAGES["3star"])
+        image_url = random.choice(images)
+
+        # 상세 주소 생성
+        address_kr, address_en = self._generate_address(hotel)
+
+        # 평점 생성 (타입별 가중치)
+        rating_base = {"5star": 4.5, "4star": 4.2, "3star": 3.9, "residence": 4.1, "guesthouse": 4.3, "airbnb": 4.0, "hostel": 3.8}
+        rating = round(rating_base.get(hotel["type"], 4.0) + random.uniform(-0.3, 0.5), 1)
+        rating = min(5.0, max(3.5, rating))  # 3.5 ~ 5.0 범위
+
         return {
             # 기본 정보
             "id": f"hotel_{hash(hotel['name']) % 100000:05d}",
@@ -426,14 +536,25 @@ class ARMYStayHubEngine:
             "area": hotel.get("area", ""),
             "area_kr": hotel.get("area_kr", ""),
 
+            # 상세 주소 (UI: Lotte World Tower, Songpa-gu)
+            "address": address_kr,
+            "address_en": address_en,
+
+            # 이미지 (UI: 상단 숙소 이미지)
+            "image_url": image_url,
+
             # 좌표 (지도 뷰용)
             "latitude": hotel["lat"],
             "longitude": hotel["lng"],
 
-            # 가격
+            # 가격 (UI: Total price $450)
             "price_usd": price,
-            "price_krw": price * 1350,  # 환율 적용
+            "price_krw": price * 1350,
             "currency": "USD",
+
+            # 평점 (UI: AGODA ⭐ 4.9)
+            "rating": rating,
+            "review_count": random.randint(50, 2000),
 
             # 4단계 태그 시스템
             "display_tags": {
@@ -459,27 +580,29 @@ class ARMYStayHubEngine:
             # 공연장 정보
             "venue": {
                 "name": self.KINTEX["name"],
+                "name_en": "KINTEX",
                 "distance_km": round(distance, 1),
                 "walking_time_min": walking_time
             },
 
-            # 안심 귀가 정보 (Safe Return Route)
+            # 안심 귀가 정보 (Safe Return Route) - UI 상세 페이지
             "safe_return": safe_return,
 
-            # Army Local Guide (성지순례)
+            # Army Local Guide (성지순례) - 3개로 확장
             "nearby_bts_spots": nearby_spots,
 
-            # 예약 정보
+            # 예약 정보 (UI: Book on Agoda 버튼)
             "booking": booking,
 
             # 객실 현황
             "rooms_left": rooms_left,
             "status": "예약 마감" if rooms_left == 0 else f"남은 객실 {rooms_left}개",
+            "status_en": "Sold Out" if rooms_left == 0 else f"{rooms_left} rooms left",
             "is_available": rooms_left > 0,
 
             # 메타데이터
             "last_update": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            "d_day": "D-138",  # 공연까지 남은 일수 (설정 필요)
+            "d_day": "D-138",
         }
 
     def generate_all_hotels(self) -> List[Dict]:
