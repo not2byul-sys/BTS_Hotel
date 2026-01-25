@@ -1,677 +1,112 @@
 [
   {
-    "name": "[Goyang] 쿠팡 트래블 추천 숙소",
-    "price": 37,
-    "currency": "USD",
-    "source": "coupang_travel",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] Expedia 추천 숙소",
-    "price": 42,
-    "currency": "USD",
-    "source": "expedia",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] 여기어때 추천 숙소",
-    "price": 45,
-    "currency": "USD",
-    "source": "goodchoice",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] 인터파크 투어 추천 숙소",
-    "price": 45,
-    "currency": "USD",
-    "source": "interpark_tour",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] 에어비앤비 추천 숙소",
-    "price": 49,
-    "currency": "USD",
-    "source": "airbnb",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] Trip.com 추천 숙소",
-    "price": 50,
-    "currency": "USD",
-    "source": "trip",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] 여기어때 추천 숙소",
-    "price": 50,
-    "currency": "USD",
-    "source": "goodchoice",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] 야놀자 추천 숙소",
-    "price": 53,
-    "currency": "USD",
-    "source": "yanolja",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] 프리플 추천 숙소",
+    "name": "[Ilsan] 쿠팡 트래블 추천 숙소",
     "price": 74,
     "currency": "USD",
-    "source": "freeple",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] Hotels.com 추천 숙소",
-    "price": 75,
-    "currency": "USD",
-    "source": "hotels",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] Booking.com 추천 숙소",
-    "price": 82,
-    "currency": "USD",
-    "source": "booking",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] 인터파크 투어 추천 숙소",
-    "price": 83,
-    "currency": "USD",
-    "source": "interpark_tour",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] Expedia 추천 숙소",
-    "price": 86,
-    "currency": "USD",
-    "source": "expedia",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] 쿠팡 트래블 추천 숙소",
-    "price": 93,
-    "currency": "USD",
-    "source": "coupang_travel",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] Expedia 추천 숙소",
-    "price": 97,
-    "currency": "USD",
-    "source": "expedia",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] 에어비앤비 추천 숙소",
-    "price": 98,
-    "currency": "USD",
-    "source": "airbnb",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] 쿠팡 트래블 추천 숙소",
-    "price": 101,
-    "currency": "USD",
     "source": "coupang_travel",
     "location": "Ilsan",
     "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] Hotels.com 추천 숙소",
-    "price": 107,
-    "currency": "USD",
-    "source": "hotels",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] Booking.com 추천 숙소",
-    "price": 110,
-    "currency": "USD",
-    "source": "booking",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] 호텔스컴바인 추천 숙소",
-    "price": 111,
-    "currency": "USD",
-    "source": "hotelscombined_kr",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] 마이리얼트립 추천 숙소",
-    "price": 111,
-    "currency": "USD",
-    "source": "myrealtrip",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] Kayak 추천 숙소",
-    "price": 113,
-    "currency": "USD",
-    "source": "kayak",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] Kayak 추천 숙소",
-    "price": 114,
-    "currency": "USD",
-    "source": "kayak",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] Kayak 추천 숙소",
-    "price": 117,
-    "currency": "USD",
-    "source": "kayak",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] Hotels.com 추천 숙소",
-    "price": 125,
-    "currency": "USD",
-    "source": "hotels",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] Expedia 추천 숙소",
-    "price": 128,
-    "currency": "USD",
-    "source": "expedia",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] 호텔스컴바인 추천 숙소",
-    "price": 137,
-    "currency": "USD",
-    "source": "hotelscombined_kr",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] 네이버 호텔 추천 숙소",
-    "price": 143,
-    "currency": "USD",
-    "source": "naver",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] 인터파크 투어 추천 숙소",
-    "price": 149,
-    "currency": "USD",
-    "source": "interpark_tour",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] 여기어때 추천 숙소",
-    "price": 150,
-    "currency": "USD",
-    "source": "goodchoice",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] Trip.com 추천 숙소",
-    "price": 154,
-    "currency": "USD",
-    "source": "trip",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] 에어비앤비 추천 숙소",
-    "price": 157,
-    "currency": "USD",
-    "source": "airbnb",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] Agoda 추천 숙소",
-    "price": 157,
-    "currency": "USD",
-    "source": "agoda",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] 야놀자 추천 숙소",
-    "price": 158,
-    "currency": "USD",
-    "source": "yanolja",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] Kayak 추천 숙소",
-    "price": 159,
-    "currency": "USD",
-    "source": "kayak",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] 쿠팡 트래블 추천 숙소",
-    "price": 164,
-    "currency": "USD",
-    "source": "coupang_travel",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] 마이리얼트립 추천 숙소",
-    "price": 165,
-    "currency": "USD",
-    "source": "myrealtrip",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] 네이버 호텔 추천 숙소",
-    "price": 166,
-    "currency": "USD",
-    "source": "naver",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] 프리플 추천 숙소",
-    "price": 166,
-    "currency": "USD",
-    "source": "freeple",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] 야놀자 추천 숙소",
-    "price": 172,
-    "currency": "USD",
-    "source": "yanolja",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] Expedia 추천 숙소",
-    "price": 176,
-    "currency": "USD",
-    "source": "expedia",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] 프리플 추천 숙소",
-    "price": 178,
-    "currency": "USD",
-    "source": "freeple",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] 네이버 호텔 추천 숙소",
-    "price": 179,
-    "currency": "USD",
-    "source": "naver",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] Booking.com 추천 숙소",
-    "price": 184,
-    "currency": "USD",
-    "source": "booking",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] 네이버 호텔 추천 숙소",
-    "price": 190,
-    "currency": "USD",
-    "source": "naver",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] Kayak 추천 숙소",
-    "price": 192,
-    "currency": "USD",
-    "source": "kayak",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] 인터파크 투어 추천 숙소",
-    "price": 193,
-    "currency": "USD",
-    "source": "interpark_tour",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] 호텔스컴바인 추천 숙소",
-    "price": 193,
-    "currency": "USD",
-    "source": "hotelscombined_kr",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] Trip.com 추천 숙소",
-    "price": 193,
-    "currency": "USD",
-    "source": "trip",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] 에어비앤비 추천 숙소",
-    "price": 196,
-    "currency": "USD",
-    "source": "airbnb",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] 네이버 호텔 추천 숙소",
-    "price": 197,
-    "currency": "USD",
-    "source": "naver",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] 마이리얼트립 추천 숙소",
-    "price": 199,
-    "currency": "USD",
-    "source": "myrealtrip",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] Trip.com 추천 숙소",
-    "price": 201,
-    "currency": "USD",
-    "source": "trip",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] Booking.com 추천 숙소",
-    "price": 201,
-    "currency": "USD",
-    "source": "booking",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] Agoda 추천 숙소",
-    "price": 208,
-    "currency": "USD",
-    "source": "agoda",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] 마이리얼트립 추천 숙소",
-    "price": 210,
-    "currency": "USD",
-    "source": "myrealtrip",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] 야놀자 추천 숙소",
-    "price": 213,
-    "currency": "USD",
-    "source": "yanolja",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] Hotels.com 추천 숙소",
-    "price": 214,
-    "currency": "USD",
-    "source": "hotels",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] 에어비앤비 추천 숙소",
-    "price": 219,
-    "currency": "USD",
-    "source": "airbnb",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] 쿠팡 트래블 추천 숙소",
-    "price": 221,
-    "currency": "USD",
-    "source": "coupang_travel",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
+    "rooms_left": 1,
+    "status": "품절 임박 (남은 객실 1개)",
+    "last_update": "2026-01-25 16:31"
   },
   {
     "name": "[Paju] Agoda 추천 숙소",
-    "price": 222,
+    "price": 79,
     "currency": "USD",
     "source": "agoda",
     "location": "Paju",
     "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] Agoda 추천 숙소",
-    "price": 223,
-    "currency": "USD",
-    "source": "agoda",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] 프리플 추천 숙소",
-    "price": 224,
-    "currency": "USD",
-    "source": "freeple",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] 야놀자 추천 숙소",
-    "price": 225,
-    "currency": "USD",
-    "source": "yanolja",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] 여기어때 추천 숙소",
-    "price": 230,
-    "currency": "USD",
-    "source": "goodchoice",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] 호텔스컴바인 추천 숙소",
-    "price": 232,
-    "currency": "USD",
-    "source": "hotelscombined_kr",
-    "location": "Hongdae",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Sangam] 호텔스컴바인 추천 숙소",
-    "price": 236,
-    "currency": "USD",
-    "source": "hotelscombined_kr",
-    "location": "Sangam",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
+    "rooms_left": 4,
+    "status": "예약 가능",
+    "last_update": "2026-01-25 16:31"
   },
   {
     "name": "[Ilsan] Agoda 추천 숙소",
-    "price": 238,
+    "price": 102,
     "currency": "USD",
     "source": "agoda",
     "location": "Ilsan",
     "available": true,
-    "last_update": "2026-01-25 15:10"
+    "rooms_left": 5,
+    "status": "예약 가능",
+    "last_update": "2026-01-25 16:31"
   },
   {
-    "name": "[Ilsan] Trip.com 추천 숙소",
-    "price": 238,
+    "name": "[Paju] 쿠팡 트래블 추천 숙소",
+    "price": 121,
     "currency": "USD",
-    "source": "trip",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Goyang] 마이리얼트립 추천 숙소",
-    "price": 239,
-    "currency": "USD",
-    "source": "myrealtrip",
-    "location": "Goyang",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Ilsan] 여기어때 추천 숙소",
-    "price": 239,
-    "currency": "USD",
-    "source": "goodchoice",
-    "location": "Ilsan",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Paju] 인터파크 투어 추천 숙소",
-    "price": 240,
-    "currency": "USD",
-    "source": "interpark_tour",
+    "source": "coupang_travel",
     "location": "Paju",
     "available": true,
-    "last_update": "2026-01-25 15:10"
+    "rooms_left": 3,
+    "status": "품절 임박 (남은 객실 3개)",
+    "last_update": "2026-01-25 16:31"
   },
   {
-    "name": "[Paju] Hotels.com 추천 숙소",
-    "price": 243,
+    "name": "[Hongdae] 쿠팡 트래블 추천 숙소",
+    "price": 150,
     "currency": "USD",
-    "source": "hotels",
-    "location": "Paju",
-    "available": true,
-    "last_update": "2026-01-25 15:10"
-  },
-  {
-    "name": "[Hongdae] 프리플 추천 숙소",
-    "price": 243,
-    "currency": "USD",
-    "source": "freeple",
+    "source": "coupang_travel",
     "location": "Hongdae",
     "available": true,
-    "last_update": "2026-01-25 15:10"
+    "rooms_left": 7,
+    "status": "예약 가능",
+    "last_update": "2026-01-25 16:31"
   },
   {
-    "name": "[Paju] Booking.com 추천 숙소",
-    "price": 244,
+    "name": "[Goyang] 쿠팡 트래블 추천 숙소",
+    "price": 162,
     "currency": "USD",
-    "source": "booking",
-    "location": "Paju",
+    "source": "coupang_travel",
+    "location": "Goyang",
     "available": true,
-    "last_update": "2026-01-25 15:10"
+    "rooms_left": 8,
+    "status": "예약 가능",
+    "last_update": "2026-01-25 16:31"
+  },
+  {
+    "name": "[Hongdae] Agoda 추천 숙소",
+    "price": 165,
+    "currency": "USD",
+    "source": "agoda",
+    "location": "Hongdae",
+    "available": false,
+    "rooms_left": 0,
+    "status": "예약 마감",
+    "last_update": "2026-01-25 16:31"
+  },
+  {
+    "name": "[Sangam] 쿠팡 트래블 추천 숙소",
+    "price": 202,
+    "currency": "USD",
+    "source": "coupang_travel",
+    "location": "Sangam",
+    "available": true,
+    "rooms_left": 7,
+    "status": "예약 가능",
+    "last_update": "2026-01-25 16:31"
+  },
+  {
+    "name": "[Goyang] Agoda 추천 숙소",
+    "price": 231,
+    "currency": "USD",
+    "source": "agoda",
+    "location": "Goyang",
+    "available": false,
+    "rooms_left": 0,
+    "status": "예약 마감",
+    "last_update": "2026-01-25 16:31"
+  },
+  {
+    "name": "[Sangam] Agoda 추천 숙소",
+    "price": 235,
+    "currency": "USD",
+    "source": "agoda",
+    "location": "Sangam",
+    "available": true,
+    "rooms_left": 4,
+    "status": "예약 가능",
+    "last_update": "2026-01-25 16:31"
   }
 ]
