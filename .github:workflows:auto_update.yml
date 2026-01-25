@@ -1,0 +1,29 @@
+name: BTS Hotel Data Auto Update
+
+on:
+  schedule:
+    - cron: '0 * * * *' # 매시간 정각에 자동으로 실행
+  workflow_dispatch: # 필요할 때 수동으로도 실행 가능
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Run Scraper
+        run: python run_scraper.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add korean_ota_hotels.json
+          git commit -m "Auto-update hotel data" || exit 0
+          git push

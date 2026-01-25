@@ -1,75 +1,74 @@
-"""
-BTS Hotel Finder - 확장판 (홍대, 상암, 파주 포함)
-스테이폴리오 제외 / 레딧 추천 지역 반영
-"""
-
-import time
-import random
-import requests
-from datetime import datetime
-from typing import List, Dict
 import json
+import random
 
-class KoreanOTA_Scraper:
-    def __init__(self):
-        # 대상 지역 확장: 고양 + 레딧 아미 추천 지역
-        self.target_areas = ["Goyang", "Ilsan", "Paju", "Hongdae", "Sangam"]
+# 1. 기준 좌표 설정 (KINTEX)
+VENUE_COORDS = {"lat": 37.6694, "lng": 126.7456}
+
+def generate_hotel_data(count=100):
+    hotels = []
+    types = ["5-Star Hotel", "4-Star Hotel", "Business Hotel", "Guesthouse", "Residence"]
+    platforms = ["AGODA", "Booking.com", "Yanolja"]
+    
+    for i in range(1, count + 1):
+        # 거리 및 좌표 랜덤 생성 (킨텍스 근처)
+        lat = VENUE_COORDS["lat"] + random.uniform(-0.02, 0.02)
+        lng = VENUE_COORDS["lng"] + random.uniform(-0.02, 0.02)
+        dist = round(random.uniform(0.5, 5.0), 1)
         
-        # 15개 플랫폼 설정 (스테이폴리오 제외)
-        self.platforms = {
-            'naver': {'name': '네이버 호텔', 'priority': 1, 'cooldown': 180, 'last_request': 0},
-            'goodchoice': {'name': '여기어때', 'priority': 1, 'cooldown': 240, 'last_request': 0},
-            'yanolja': {'name': '야놀자', 'priority': 1, 'cooldown': 240, 'last_request': 0},
-            'coupang_travel': {'name': '쿠팡 트래블', 'priority': 2, 'cooldown': 300, 'last_request': 0},
-            'interpark_tour': {'name': '인터파크 투어', 'priority': 2, 'cooldown': 300, 'last_request': 0},
-            'freeple': {'name': '프리플', 'priority': 3, 'cooldown': 360, 'last_request': 0},
-            'myrealtrip': {'name': '마이리얼트립', 'priority': 2, 'cooldown': 300, 'last_request': 0},
-            'airbnb': {'name': '에어비앤비', 'priority': 1, 'cooldown': 240, 'last_request': 0},
-            'hotelscombined_kr': {'name': '호텔스컴바인', 'priority': 2, 'cooldown': 300, 'last_request': 0},
-            # 스테이폴리오(stayfolio)가 리스트에서 삭제되었습니다.
-            'booking': {'name': 'Booking.com', 'priority': 1, 'cooldown': 300, 'last_request': 0},
-            'agoda': {'name': 'Agoda', 'priority': 2, 'cooldown': 300, 'last_request': 0},
-            'expedia': {'name': 'Expedia', 'priority': 2, 'cooldown': 300, 'last_request': 0},
-            'trip': {'name': 'Trip.com', 'priority': 2, 'cooldown': 300, 'last_request': 0},
-            'hotels': {'name': 'Hotels.com', 'priority': 2, 'cooldown': 300, 'last_request': 0},
-            'kayak': {'name': 'Kayak', 'priority': 2, 'cooldown': 300, 'last_request': 0}
+        hotel = {
+            "id": f"army_stay_{i:03d}",
+            "venue": {
+                "name_en": "KINTEX",
+                "distance_km": dist
+            },
+            "name_en": f"Stay Venue {i} near KINTEX",
+            "address_en": f"{random.randint(10, 500)}, KINTEX-ro, Ilsanseo-gu, Goyang",
+            "latitude": lat,
+            "longitude": lng,
+            "price_usd": random.randint(45, 350),
+            "rating": round(random.uniform(4.0, 5.0), 1),
+            "image_url": f"https://images.unsplash.com/photo-{random.randint(1500000, 1600000)}?auto=format&fit=crop&w=800&q=80",
+            "status_en": random.choice(["Available", "6 rooms left", "Likely to sell out"]),
+            "booking": {
+                "platform": random.choice(platforms),
+                "booking_url": "https://www.agoda.com/partners/link?id=12345",
+                "iframe_support": False
+            },
+            "display_tags": {
+                "type": {"en": random.choice(types)},
+                "trans": {"en": f"Walk {int(dist*12)}min"},
+                "density": {"label_en": f"ARMY Density {random.randint(40, 95)}%"},
+                "keywords": ["#ARMYHotspot", "#SafePath", "#EnglishSpeaking"]
+            },
+            "safe_return": {
+                "route_summary": "KINTEX → Main Road → Stay",
+                "line_color": "#EF7C1C",
+                "last_train_time": f"{random.randint(23, 24)}:{random.choice(['10', '30', '45'])}",
+                "walk_from_station_min": random.randint(5, 20)
+            },
+            "nearby_bts_spots": [
+                {
+                    "type": "cafe",
+                    "name_en": "Purple Coffee",
+                    "spot_tag": "BTS Favorite Spot",
+                    "description_en": "A cafe visited by RM during his holiday.",
+                    "travel_time_min": "10min"
+                },
+                {
+                    "type": "restaurant",
+                    "name_en": "Bangtan Sikdang",
+                    "spot_tag": "Trainee Days Memory",
+                    "description_en": "The place where members had dinner often.",
+                    "travel_time_min": "25min"
+                }
+            ]
         }
-        
-        self.stats = {'total_requests': 0, 'total_hotels': 0}
+        hotels.append(hotel)
+    
+    return hotels
 
-    def scrape_all_smart(self):
-        all_hotels = []
-        print(f"🚀 {', '.join(self.target_areas)} 지역 아미 숙소 수집 시작!")
-        
-        for area in self.target_areas:
-            for p_key in self.platforms.keys():
-                # 실제 스크래핑 로직 시뮬레이션 (지역별로 데이터 생성)
-                hotel_name = f"[{area}] {self.platforms[p_key]['name']} 추천 숙소"
-                price = random.randint(35, 250)
-                
-                all_hotels.append({
-                    'name': hotel_name,
-                    'price': price,
-                    'currency': 'USD',
-                    'source': p_key,
-                    'location': area,
-                    'available': True,
-                    'last_update': datetime.now().strftime('%Y-%m-%d %H:%M')
-                })
-                self.stats['total_hotels'] += 1
-        
-        return all_hotels
+# JSON 파일로 저장
+with open('korean_ota_hotels.json', 'w', encoding='utf-8') as f:
+    json.dump(generate_hotel_data(), f, indent=4, ensure_all_ascii=False)
 
-    def save_data(self, hotels):
-        output_file = 'korean_ota_hotels.json'
-        # 가격 낮은 순으로 정렬해서 저장
-        hotels.sort(key=lambda x: x['price'])
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(hotels, f, ensure_ascii=False, indent=2)
-        print(f"\n💾 {len(hotels)}개 데이터가 {output_file}에 저장되었습니다.")
-
-if __name__ == "__main__":
-    scraper = KoreanOTA_Scraper()
-    data = scraper.scrape_all_smart()
-    scraper.save_data(data)
-    print("\n✨ 모든 지역 업데이트 완료!")
+print("✅ 100개의 숙소 데이터가 명세서에 맞춰 생성되었습니다.")
