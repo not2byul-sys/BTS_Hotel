@@ -1,19 +1,12 @@
 name: ARMY Stay Hub - Auto Update
 
+# ============================================
+# 맥북 crontab으로 운영 중 - GitHub Actions는 수동 실행만
+# ============================================
+
 on:
-  # 1시간마다 자동 실행
-  schedule:
-    - cron: '0 * * * *'
-
-  # 수동 실행 가능
+  # 수동 실행 전용 (Actions 탭에서 Run workflow 클릭)
   workflow_dispatch:
-
-  # main 브랜치 푸시 시에도 실행
-  push:
-    branches:
-      - main
-    paths:
-      - 'run_scraper.py'
 
 jobs:
   update-hotel-data:
