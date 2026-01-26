@@ -221,6 +221,84 @@ class ARMYStayHubEngine:
 
         return result
 
+    def _get_army_density(self, lat: float, lng: float, hotel_type: str, distance_km: float) -> Dict:
+        """
+        아미 밀집도 계산
+
+        계산 요소:
+        1. 공연장 거리 (가까울수록 +)
+        2. 숙소 타입 (게스트하우스/호스텔 +)
+        3. BTS 스팟 근접도 (가까울수록 +)
+        4. 지역 특성 (홍대, 일산 +)
+        """
+        base = 30  # 기본값
+
+        # 1. 공연장 거리 (0~30점)
+        if distance_km <= 1:
+            base += 30
+        elif distance_km <= 3:
+            base += 25
+        elif distance_km <= 5:
+            base += 20
+        elif distance_km <= 10:
+            base += 10
+
+        # 2. 숙소 타입 (0~20점) - 커뮤니티 형성 용이
+        type_bonus = {
+            "Guesthouse": 20,
+            "Hostel": 18,
+            "Airbnb": 10,
+            "Residence": 8,
+            "3-Star Hotel": 5,
+            "4-Star Hotel": 3,
+            "5-Star Hotel": 2,
+        }
+        base += type_bonus.get(hotel_type, 5)
+
+        # 3. BTS 스팟 근접도 (0~15점)
+        bts_spots = [s for s in self.LOCAL_SPOTS if s["category"] == "bts"]
+        min_bts_dist = min(self._calc_distance(lat, lng, s["lat"], s["lng"]) for s in bts_spots)
+        if min_bts_dist <= 2:
+            base += 15
+        elif min_bts_dist <= 5:
+            base += 10
+        elif min_bts_dist <= 10:
+            base += 5
+
+        # 4. 지역 특성 (0~10점)
+        location = self._get_location(lat, lng)
+        area_bonus = {
+            "Ilsan": 10,    # 공연장 근처
+            "Hongdae": 8,   # 외국인 팬 인기
+            "Sangam": 5,    # 방송국
+        }
+        base += area_bonus.get(location["area_en"], 0)
+
+        # 최종값 (35~95 범위)
+        density = min(95, max(35, base))
+
+        # 레벨 결정
+        if density >= 80:
+            level = "Very High"
+            level_kr = "매우 높음"
+        elif density >= 65:
+            level = "High"
+            level_kr = "높음"
+        elif density >= 50:
+            level = "Medium"
+            level_kr = "보통"
+        else:
+            level = "Low"
+            level_kr = "낮음"
+
+        return {
+            "value": density,
+            "level_en": level,
+            "level_kr": level_kr,
+            "label_en": f"ARMY {density}%",
+            "label_kr": f"아미 {density}%"
+        }
+
     def _get_nearby_spots_for_map(self, lat: float, lng: float) -> List[Dict]:
         """상세 지도용 근처 스팟 (5km 이내)"""
         nearby = []
@@ -324,6 +402,9 @@ class ARMYStayHubEngine:
         # 위치 정보
         location = self._get_location(lat, lng)
 
+        # 아미 밀집도
+        army_density = self._get_army_density(lat, lng, hotel_type["label_en"], distance_km)
+
         return {
             # === 스크래핑 데이터 ===
             "id": f"hotel_{abs(hash(scraped.get('name', ''))) % 100000:05d}",
@@ -339,6 +420,7 @@ class ARMYStayHubEngine:
             "lat": lat,
             "lng": lng,
             "location": location,
+            "army_density": army_density,
             "distance": self._get_distance_display(distance_km),
             "transport": self._get_transport(),
             "safe_return": self._get_safe_return(scraped.get("name", ""), distance_km),

@@ -9,7 +9,7 @@
     "available_count": 9,
     "total_count": 10,
     "lowest_price_krw": 28000,
-    "last_update": "2026-01-26 07:49:50"
+    "last_update": "2026-01-26 08:10:19"
   },
   "map": {
     "venue": {
@@ -113,70 +113,70 @@
     ],
     "hotels": [
       {
-        "id": "hotel_53259",
+        "id": "hotel_93883",
         "name_en": "MVL Hotel Goyang",
         "lat": 37.656,
         "lng": 126.77,
         "price_krw": 185000
       },
       {
-        "id": "hotel_41032",
+        "id": "hotel_03439",
         "name_en": "Goyang Cozy Room",
         "lat": 37.656,
         "lng": 126.772,
         "price_krw": 65000
       },
       {
-        "id": "hotel_25731",
+        "id": "hotel_25542",
         "name_en": "Ilsan Residence",
         "lat": 37.6545,
         "lng": 126.773,
         "price_krw": 95000
       },
       {
-        "id": "hotel_75062",
+        "id": "hotel_93860",
         "name_en": "La Festa Residence",
         "lat": 37.6575,
         "lng": 126.7705,
         "price_krw": 110000
       },
       {
-        "id": "hotel_38340",
+        "id": "hotel_82818",
         "name_en": "Best Western Premier Kukdo",
         "lat": 37.6555,
         "lng": 126.775,
         "price_krw": 142000
       },
       {
-        "id": "hotel_20942",
+        "id": "hotel_82991",
         "name_en": "Ramada Encore Goyang",
         "lat": 37.658,
         "lng": 126.768,
         "price_krw": 128000
       },
       {
-        "id": "hotel_50185",
+        "id": "hotel_18508",
         "name_en": "Ilsan ARMY House",
         "lat": 37.6535,
         "lng": 126.766,
         "price_krw": 45000
       },
       {
-        "id": "hotel_34494",
+        "id": "hotel_93897",
         "name_en": "Ilsan Hostel 808",
         "lat": 37.649,
         "lng": 126.775,
         "price_krw": 28000
       },
       {
-        "id": "hotel_77702",
+        "id": "hotel_13152",
         "name_en": "Lake Park View Apt",
         "lat": 37.658,
         "lng": 126.759,
         "price_krw": 78000
       },
       {
-        "id": "hotel_95655",
+        "id": "hotel_58949",
         "name_en": "Hotel Castle Ilsan",
         "lat": 37.662,
         "lng": 126.7595,
@@ -186,7 +186,7 @@
   },
   "hotels": [
     {
-      "id": "hotel_53259",
+      "id": "hotel_93883",
       "name_en": "MVL Hotel Goyang",
       "price_krw": 185000,
       "rating": 4.5,
@@ -204,6 +204,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 72,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 72%",
+        "label_kr": "아미 72%"
       },
       "distance": {
         "type": "walk",
@@ -400,24 +407,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_75062",
+          "id": "hotel_93860",
           "name_en": "La Festa Residence",
           "price_krw": 110000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_41032",
+          "id": "hotel_03439",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_20942",
+          "id": "hotel_82991",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.3,
@@ -426,7 +433,7 @@
       ]
     },
     {
-      "id": "hotel_41032",
+      "id": "hotel_03439",
       "name_en": "Goyang Cozy Room",
       "price_krw": 65000,
       "rating": 4.3,
@@ -444,6 +451,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 80,
+        "level_en": "Very High",
+        "level_kr": "매우 높음",
+        "label_en": "ARMY 80%",
+        "label_kr": "아미 80%"
       },
       "distance": {
         "type": "walk",
@@ -639,24 +653,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_53259",
+          "id": "hotel_93883",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_25731",
+          "id": "hotel_25542",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_75062",
+          "id": "hotel_93860",
           "name_en": "La Festa Residence",
           "price_krw": 110000,
           "distance_km": 0.2,
@@ -665,7 +679,7 @@
       ]
     },
     {
-      "id": "hotel_25731",
+      "id": "hotel_25542",
       "name_en": "Ilsan Residence",
       "price_krw": 95000,
       "rating": 4.0,
@@ -683,6 +697,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 78,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 78%",
+        "label_kr": "아미 78%"
       },
       "distance": {
         "type": "walk",
@@ -878,24 +899,24 @@
         ],
         "foreigner_friendly": "partial"
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_38340",
+          "id": "hotel_82818",
           "name_en": "Best Western Premier Kukdo",
           "price_krw": 142000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_41032",
+          "id": "hotel_03439",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_53259",
+          "id": "hotel_93883",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.3,
@@ -904,7 +925,7 @@
       ]
     },
     {
-      "id": "hotel_75062",
+      "id": "hotel_93860",
       "name_en": "La Festa Residence",
       "price_krw": 110000,
       "rating": 4.1,
@@ -922,6 +943,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 78,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 78%",
+        "label_kr": "아미 78%"
       },
       "distance": {
         "type": "walk",
@@ -1118,24 +1146,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_53259",
+          "id": "hotel_93883",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_20942",
+          "id": "hotel_82991",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_41032",
+          "id": "hotel_03439",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.2,
@@ -1144,7 +1172,7 @@
       ]
     },
     {
-      "id": "hotel_38340",
+      "id": "hotel_82818",
       "name_en": "Best Western Premier Kukdo",
       "price_krw": 142000,
       "rating": 4.2,
@@ -1162,6 +1190,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 73,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 73%",
+        "label_kr": "아미 73%"
       },
       "distance": {
         "type": "walk",
@@ -1357,24 +1392,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_25731",
+          "id": "hotel_25542",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_41032",
+          "id": "hotel_03439",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.3,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_53259",
+          "id": "hotel_93883",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.4,
@@ -1383,7 +1418,7 @@
       ]
     },
     {
-      "id": "hotel_20942",
+      "id": "hotel_82991",
       "name_en": "Ramada Encore Goyang",
       "price_krw": 128000,
       "rating": 4.1,
@@ -1401,6 +1436,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 73,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 73%",
+        "label_kr": "아미 73%"
       },
       "distance": {
         "type": "walk",
@@ -1596,24 +1638,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_75062",
+          "id": "hotel_93860",
           "name_en": "La Festa Residence",
           "price_krw": 110000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_53259",
+          "id": "hotel_93883",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.3,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_41032",
+          "id": "hotel_03439",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.4,
@@ -1622,7 +1664,7 @@
       ]
     },
     {
-      "id": "hotel_50185",
+      "id": "hotel_18508",
       "name_en": "Ilsan ARMY House",
       "price_krw": 45000,
       "rating": 4.6,
@@ -1640,6 +1682,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 90,
+        "level_en": "Very High",
+        "level_kr": "매우 높음",
+        "label_en": "ARMY 90%",
+        "label_kr": "아미 90%"
       },
       "distance": {
         "type": "walk",
@@ -1835,24 +1884,24 @@
         ],
         "foreigner_friendly": "limited"
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_53259",
+          "id": "hotel_93883",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_20942",
+          "id": "hotel_82991",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.5,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_25731",
+          "id": "hotel_25542",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.6,
@@ -1861,7 +1910,7 @@
       ]
     },
     {
-      "id": "hotel_34494",
+      "id": "hotel_93897",
       "name_en": "Ilsan Hostel 808",
       "price_krw": 28000,
       "rating": 4.0,
@@ -1879,6 +1928,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 88,
+        "level_en": "Very High",
+        "level_kr": "매우 높음",
+        "label_en": "ARMY 88%",
+        "label_kr": "아미 88%"
       },
       "distance": {
         "type": "walk",
@@ -2074,24 +2130,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_25731",
+          "id": "hotel_25542",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.6,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_38340",
+          "id": "hotel_82818",
           "name_en": "Best Western Premier Kukdo",
           "price_krw": 142000,
           "distance_km": 0.7,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_41032",
+          "id": "hotel_03439",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.8,
@@ -2100,7 +2156,7 @@
       ]
     },
     {
-      "id": "hotel_77702",
+      "id": "hotel_13152",
       "name_en": "Lake Park View Apt",
       "price_krw": 78000,
       "rating": 4.4,
@@ -2118,6 +2174,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 75,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 75%",
+        "label_kr": "아미 75%"
       },
       "distance": {
         "type": "walk",
@@ -2314,24 +2377,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_95655",
+          "id": "hotel_58949",
           "name_en": "Hotel Castle Ilsan",
           "price_krw": 89000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_20942",
+          "id": "hotel_82991",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.8,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_50185",
+          "id": "hotel_18508",
           "name_en": "Ilsan ARMY House",
           "price_krw": 45000,
           "distance_km": 0.8,
@@ -2340,7 +2403,7 @@
       ]
     },
     {
-      "id": "hotel_95655",
+      "id": "hotel_58949",
       "name_en": "Hotel Castle Ilsan",
       "price_krw": 89000,
       "rating": 3.9,
@@ -2358,6 +2421,13 @@
         "area_kr": "일산",
         "address_en": "Ilsan, Goyang-si",
         "address_kr": "고양시 일산"
+      },
+      "army_density": {
+        "value": 70,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 70%",
+        "label_kr": "아미 70%"
       },
       "distance": {
         "type": "walk",
@@ -2554,24 +2624,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:49:50",
+      "last_update": "2026-01-26 08:10:19",
       "nearby": [
         {
-          "id": "hotel_77702",
+          "id": "hotel_13152",
           "name_en": "Lake Park View Apt",
           "price_krw": 78000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_20942",
+          "id": "hotel_82991",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.9,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_53259",
+          "id": "hotel_93883",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 1.1,
