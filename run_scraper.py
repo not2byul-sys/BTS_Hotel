@@ -1,18 +1,32 @@
 """
-ARMY Stay Hub - 데이터 엔진 v2.0
-레딧 해외 팬 페인포인트 기반 숙소 큐레이션 데이터 생성
+ARMY Stay Hub - 데이터 엔진 v3.0
+레딧 해외 팬 페인포인트 기반 숙소 큐레이션 데이터 생성 + 실시간 스크래핑
 
 핵심 해결 문제:
 1. 교통 공포 → walking_time, last_train, safe_return_route
 2. 정보 불균형 → 4단계 태그 시스템 (Type, Trans, Density, Keyword)
 3. 외로움/소속감 → army_density, nearby_bts_spots
+
+v3.0 업데이트:
+- 다중 플랫폼 실시간 스크래핑 (Agoda, 네이버, 여기어때, 야놀자, 쿠팡트래블)
+- 시뮬레이션 + 실제 데이터 병합
+- 하루 10회 분산 실행 최적화
 """
 
 import json
 import random
 import math
-from datetime import datetime
+import os
+from datetime import datetime, timedelta
 from typing import List, Dict, Tuple
+
+# 스크래핑 모듈 임포트 (선택적)
+try:
+    from korean_ota_scraper import KoreanOTAScraper
+    SCRAPING_ENABLED = True
+except ImportError:
+    SCRAPING_ENABLED = False
+    print("⚠️ 스크래핑 모듈 없음 - 시뮬레이션 모드로 실행")
 
 class ARMYStayHubEngine:
     def __init__(self):
@@ -641,14 +655,83 @@ class ARMYStayHubEngine:
             print(f"   - {t}: {count}개")
 
 
-if __name__ == "__main__":
-    print("🚀 ARMY Stay Hub 데이터 엔진 v2.0 시작!")
-    print("=" * 50)
+def run_with_scraping(use_scraping: bool = True):
+    """
+    스크래핑 + 시뮬레이션 통합 실행
+
+    Args:
+        use_scraping: 실시간 스크래핑 사용 여부
+    """
+    print("🚀 ARMY Stay Hub 데이터 엔진 v3.0 시작!")
+    print("=" * 60)
 
     engine = ARMYStayHubEngine()
-    hotels = engine.generate_all_hotels()
-    engine.save_to_json(hotels)
 
-    print("\n" + "=" * 50)
+    # 1. 시뮬레이션 데이터 생성 (기본 데이터)
+    print("\n📊 Step 1: 시뮬레이션 데이터 생성...")
+    simulated_hotels = engine.generate_all_hotels()
+    print(f"   → {len(simulated_hotels)}개 숙소 기본 데이터 생성")
+
+    # 2. 실시간 스크래핑 (선택적)
+    final_hotels = simulated_hotels
+
+    if use_scraping and SCRAPING_ENABLED:
+        print("\n🌐 Step 2: 실시간 스크래핑...")
+        try:
+            ota_scraper = KoreanOTAScraper()
+
+            # 분산 스크래핑 (1~2개 플랫폼)
+            scraped_hotels = ota_scraper.scrape_distributed()
+
+            if scraped_hotels:
+                # 3. 데이터 병합
+                print("\n🔄 Step 3: 데이터 병합...")
+                final_hotels = ota_scraper.merge_with_simulation(scraped_hotels, simulated_hotels)
+            else:
+                print("   ⚠️ 스크래핑 데이터 없음 - 시뮬레이션 데이터 사용")
+
+        except Exception as e:
+            print(f"   ❌ 스크래핑 실패: {e}")
+            print("   → 시뮬레이션 데이터로 계속 진행")
+    else:
+        if not SCRAPING_ENABLED:
+            print("\n⚠️ Step 2 건너뜀: 스크래핑 모듈 미설치")
+        else:
+            print("\n⏭️ Step 2 건너뜀: 시뮬레이션 전용 모드")
+
+    # 4. JSON 저장
+    print("\n💾 Step 4: JSON 저장...")
+    engine.save_to_json(final_hotels)
+
+    # 5. 실행 로그
+    log_entry = {
+        "timestamp": datetime.now().isoformat(),
+        "total_hotels": len(final_hotels),
+        "scraping_used": use_scraping and SCRAPING_ENABLED,
+        "scraped_count": sum(1 for h in final_hotels if h.get('_data_source') not in ['simulation', None]),
+    }
+    print(f"\n📋 실행 로그: {log_entry}")
+
+    print("\n" + "=" * 60)
     print("✨ 데이터 생성 완료! Figma Site에서 확인하세요.")
     print("🔗 https://boar-ignite-62413385.figma.site/")
+
+    return final_hotels
+
+
+if __name__ == "__main__":
+    import sys
+
+    # 명령줄 인자로 모드 선택
+    # python run_scraper.py           → 스크래핑 + 시뮬레이션
+    # python run_scraper.py sim       → 시뮬레이션만
+    # python run_scraper.py scrape    → 스크래핑 시도 + 시뮬레이션
+
+    mode = sys.argv[1] if len(sys.argv) > 1 else "auto"
+
+    if mode == "sim":
+        print("📌 시뮬레이션 전용 모드")
+        run_with_scraping(use_scraping=False)
+    else:
+        print("📌 스크래핑 + 시뮬레이션 모드")
+        run_with_scraping(use_scraping=True)
