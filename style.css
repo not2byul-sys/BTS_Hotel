@@ -412,6 +412,222 @@ body {
     color: #666;
 }
 
+/* ===== Notify Button ===== */
+.notify-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 20px;
+    background: #fff;
+    color: #7C3AED;
+    border: 2px solid #7C3AED;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.notify-btn:hover {
+    background: #F5F3FF;
+}
+
+.notify-btn.subscribed {
+    background: #7C3AED;
+    color: #fff;
+}
+
+.notify-btn.subscribed:hover {
+    background: #6D28D9;
+}
+
+.hotel-card.unavailable .notify-btn {
+    opacity: 1;
+}
+
+/* ===== Notification Modal ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 24px;
+    padding: 32px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.modal-icon {
+    margin-bottom: 16px;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.modal-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.modal-subtitle strong {
+    color: #7C3AED;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.modal-input:focus {
+    outline: none;
+    border-color: #7C3AED;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #7C3AED;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background: #6D28D9;
+}
+
+.submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.modal-note {
+    font-size: 13px;
+    color: #888;
+    margin-top: 16px;
+}
+
+/* ===== Channel Options ===== */
+.channel-options {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.channel-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.channel-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.channel-checkbox:hover {
+    border-color: #7C3AED;
+    background: #F5F3FF;
+}
+
+.channel-checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: #7C3AED;
+}
+
+.channel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+}
+
+.channel-icon.discord {
+    background: #5865F2;
+    color: white;
+}
+
+.channel-icon.telegram {
+    background: #0088cc;
+    color: white;
+}
+
+.channel-input {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.channel-input.hidden {
+    display: none;
+}
+
 /* ===== Responsive ===== */
 @media (min-width: 768px) {
     .app-container {

@@ -3,10 +3,16 @@
  * JSON 데이터 바인딩 및 UI 렌더링
  */
 
+// ===== Supabase Config =====
+// TODO: 실제 Supabase URL과 anon key로 교체
+const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+
 // ===== Global State =====
 let hotelsData = [];
 let currentFilter = 'all';
 let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
+let notificationSubscriptions = new Set(JSON.parse(localStorage.getItem('notifications') || '[]'));
 
 // ===== DOM Elements =====
 const hotelList = document.getElementById('hotel-list');
@@ -48,6 +54,14 @@ const icons = {
     </svg>`,
     chevronRight: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>`,
+    bell: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+    </svg>`,
+    bellFilled: `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
     </svg>`
 };
 
@@ -124,9 +138,16 @@ function renderHotelCard(hotel) {
                     <div class="hotel-price">
                         <span class="price-amount">${formatPrice(hotel.price_krw)}<span class="price-unit"> /night</span></span>
                     </div>
-                    <button class="reserve-btn" onclick="openBooking('${hotel.platform?.booking_url || '#'}')">
-                        Reserve ${icons.chevronRight}
-                    </button>
+                    ${hotel.is_available
+                        ? `<button class="reserve-btn" onclick="openBooking('${hotel.platform?.booking_url || '#'}')">
+                            Reserve ${icons.chevronRight}
+                          </button>`
+                        : `<button class="notify-btn ${notificationSubscriptions.has(hotel.id) ? 'subscribed' : ''}"
+                                   onclick="openNotifyModal('${hotel.id}', '${hotel.name_en.replace(/'/g, "\\'")}')">
+                            ${notificationSubscriptions.has(hotel.id) ? icons.bellFilled : icons.bell}
+                            ${notificationSubscriptions.has(hotel.id) ? 'Subscribed' : 'Notify Me'}
+                          </button>`
+                    }
                 </div>
             </div>
         </div>
@@ -201,6 +222,179 @@ function openBooking(url) {
         window.open(url, '_blank');
     } else {
         alert('Booking link not available. Please check the hotel details.');
+    }
+}
+
+// ===== Notification Functions =====
+let currentNotifyHotel = null;
+
+function openNotifyModal(hotelId, hotelName) {
+    // 이미 구독 중이면 구독 취소
+    if (notificationSubscriptions.has(hotelId)) {
+        if (confirm('Cancel notification subscription?')) {
+            cancelNotification(hotelId);
+        }
+        return;
+    }
+
+    currentNotifyHotel = { id: hotelId, name: hotelName };
+
+    // 모달 표시
+    const modal = document.getElementById('notify-modal');
+    const hotelNameEl = document.getElementById('notify-hotel-name');
+
+    if (modal && hotelNameEl) {
+        hotelNameEl.textContent = hotelName;
+        modal.classList.add('active');
+    }
+}
+
+function closeNotifyModal() {
+    const modal = document.getElementById('notify-modal');
+    if (modal) {
+        modal.classList.remove('active');
+    }
+    currentNotifyHotel = null;
+
+    // Reset channel inputs
+    const discordCheck = document.getElementById('notify-discord');
+    const telegramCheck = document.getElementById('notify-telegram');
+    const discordInput = document.getElementById('discord-user-id');
+    const telegramInput = document.getElementById('telegram-chat-id');
+
+    if (discordCheck) discordCheck.checked = false;
+    if (telegramCheck) telegramCheck.checked = false;
+    if (discordInput) {
+        discordInput.classList.add('hidden');
+        discordInput.value = '';
+    }
+    if (telegramInput) {
+        telegramInput.classList.add('hidden');
+        telegramInput.value = '';
+    }
+}
+
+function toggleDiscordInput() {
+    const checkbox = document.getElementById('notify-discord');
+    const input = document.getElementById('discord-user-id');
+    if (checkbox && input) {
+        input.classList.toggle('hidden', !checkbox.checked);
+        if (checkbox.checked) input.focus();
+    }
+}
+
+function toggleTelegramInput() {
+    const checkbox = document.getElementById('notify-telegram');
+    const input = document.getElementById('telegram-chat-id');
+    if (checkbox && input) {
+        input.classList.toggle('hidden', !checkbox.checked);
+        if (checkbox.checked) input.focus();
+    }
+}
+
+async function submitNotification() {
+    const emailInput = document.getElementById('notify-email');
+    const email = emailInput?.value?.trim();
+
+    if (!email || !email.includes('@')) {
+        alert('Please enter a valid email address');
+        return;
+    }
+
+    if (!currentNotifyHotel) return;
+
+    // 채널 옵션 수집
+    const notifyDiscord = document.getElementById('notify-discord')?.checked || false;
+    const notifyTelegram = document.getElementById('notify-telegram')?.checked || false;
+    const discordUserId = document.getElementById('discord-user-id')?.value?.trim() || null;
+    const telegramChatId = document.getElementById('telegram-chat-id')?.value?.trim() || null;
+
+    // Discord 체크했는데 ID 없으면 경고
+    if (notifyDiscord && !discordUserId) {
+        alert('Please enter your Discord User ID to receive Discord notifications');
+        return;
+    }
+
+    // Telegram 체크했는데 ID 없으면 경고
+    if (notifyTelegram && !telegramChatId) {
+        alert('Please enter your Telegram Chat ID to receive Telegram notifications');
+        return;
+    }
+
+    const submitBtn = document.querySelector('#notify-modal .submit-btn');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Subscribing...';
+    }
+
+    try {
+        // Supabase에 저장
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/hotel_notifications`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'apikey': SUPABASE_ANON_KEY,
+                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({
+                email: email,
+                hotel_id: currentNotifyHotel.id,
+                hotel_name: currentNotifyHotel.name,
+                notify_email: true,
+                notify_discord: notifyDiscord,
+                notify_telegram: notifyTelegram,
+                discord_user_id: discordUserId,
+                telegram_chat_id: telegramChatId
+            })
+        });
+
+        if (response.ok || response.status === 201) {
+            // 로컬 스토리지에도 저장
+            notificationSubscriptions.add(currentNotifyHotel.id);
+            localStorage.setItem('notifications', JSON.stringify([...notificationSubscriptions]));
+
+            // UI 업데이트
+            const btn = document.querySelector(`[data-id="${currentNotifyHotel.id}"] .notify-btn`);
+            if (btn) {
+                btn.classList.add('subscribed');
+                btn.innerHTML = `${icons.bellFilled} Subscribed`;
+            }
+
+            alert(`We'll notify you at ${email} when this hotel becomes available!`);
+            closeNotifyModal();
+            emailInput.value = '';
+        } else {
+            const error = await response.json();
+            if (error.code === '23505') {
+                alert('You are already subscribed to this hotel.');
+                notificationSubscriptions.add(currentNotifyHotel.id);
+                localStorage.setItem('notifications', JSON.stringify([...notificationSubscriptions]));
+                closeNotifyModal();
+            } else {
+                throw new Error(error.message || 'Failed to subscribe');
+            }
+        }
+    } catch (error) {
+        console.error('Notification subscription failed:', error);
+        alert('Failed to subscribe. Please try again later.');
+    } finally {
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Notify Me';
+        }
+    }
+}
+
+async function cancelNotification(hotelId) {
+    notificationSubscriptions.delete(hotelId);
+    localStorage.setItem('notifications', JSON.stringify([...notificationSubscriptions]));
+
+    // UI 업데이트
+    const btn = document.querySelector(`[data-id="${hotelId}"] .notify-btn`);
+    if (btn) {
+        btn.classList.remove('subscribed');
+        btn.innerHTML = `${icons.bell} Notify Me`;
     }
 }
 
