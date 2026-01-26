@@ -380,6 +380,107 @@ class ARMYStayHubEngine:
             "color": type_colors.get(hotel_type, "#4A90D9")
         }
 
+    def _get_cancellation_policy(self, scraped: Dict, platform: str) -> Dict:
+        """
+        취소 정책 정보
+
+        스크래핑 데이터에서 가져오거나, 플랫폼별 기본값 적용
+        팬들의 '일단 박기' 전략을 위한 핵심 정보
+        """
+        # 스크래핑 데이터에 취소 정책이 있는 경우
+        if scraped.get("cancellation_policy"):
+            raw = scraped.get("cancellation_policy", "").lower()
+            if any(x in raw for x in ["free", "무료", "free cancellation", "취소 무료"]):
+                return {
+                    "type": "free",
+                    "label_en": "Free Cancellation",
+                    "label_kr": "무료 취소",
+                    "is_refundable": True
+                }
+            elif any(x in raw for x in ["partial", "부분", "일부"]):
+                return {
+                    "type": "partial",
+                    "label_en": "Partial Refund",
+                    "label_kr": "부분 환불",
+                    "is_refundable": True
+                }
+            else:
+                return {
+                    "type": "non_refundable",
+                    "label_en": "Non-refundable",
+                    "label_kr": "환불 불가",
+                    "is_refundable": False
+                }
+
+        # 플랫폼별 기본값 (대부분 무료 취소 옵션 있음)
+        platform_defaults = {
+            "Agoda": {"type": "free", "label_en": "Free Cancellation", "label_kr": "무료 취소", "is_refundable": True},
+            "Booking.com": {"type": "free", "label_en": "Free Cancellation", "label_kr": "무료 취소", "is_refundable": True},
+            "Hotels.com": {"type": "free", "label_en": "Free Cancellation", "label_kr": "무료 취소", "is_refundable": True},
+            "야놀자": {"type": "partial", "label_en": "Partial Refund", "label_kr": "부분 환불", "is_refundable": True},
+            "여기어때": {"type": "partial", "label_en": "Partial Refund", "label_kr": "부분 환불", "is_refundable": True},
+        }
+
+        return platform_defaults.get(platform, {
+            "type": "unknown",
+            "label_en": "Check Policy",
+            "label_kr": "정책 확인",
+            "is_refundable": None
+        })
+
+    def _generate_tags(self, cancellation: Dict, army_density: Dict, distance_km: float, hotel_type: str) -> Dict:
+        """
+        동적 태그 생성
+
+        팬 커뮤니티에서 중요하게 여기는 정보를 태그로 표시:
+        - 취소 가능 여부
+        - 아미 밀집도
+        - 공연장 근접성
+        - 숙소 타입
+        """
+        tags_en = []
+        tags_kr = []
+
+        # 1. 취소 정책 태그 (팬들의 '일단 박기' 전략)
+        if cancellation.get("type") == "free":
+            tags_en.append("#FreeCancellation")
+            tags_kr.append("#취소가능")
+
+        # 2. 아미 밀집도 태그
+        density_value = army_density.get("value", 0)
+        if density_value >= 80:
+            tags_en.append("#ARMYHotspot")
+            tags_kr.append("#아미선점중")
+        elif density_value >= 65:
+            tags_en.append("#ARMYPopular")
+            tags_kr.append("#아미인기")
+
+        # 3. 거리 태그
+        if distance_km <= 1:
+            tags_en.append("#WalkToVenue")
+            tags_kr.append("#도보가능")
+        elif distance_km <= 3:
+            tags_en.append("#NearVenue")
+            tags_kr.append("#공연장근처")
+
+        # 4. 숙소 타입 태그
+        type_tags = {
+            "Guesthouse": ("#Community", "#커뮤니티"),
+            "Hostel": ("#BudgetFriendly", "#가성비"),
+            "5-Star Hotel": ("#Luxury", "#럭셔리"),
+            "Airbnb": ("#LocalLife", "#현지생활"),
+        }
+        if hotel_type in type_tags:
+            tags_en.append(type_tags[hotel_type][0])
+            tags_kr.append(type_tags[hotel_type][1])
+
+        return {
+            "list_en": tags_en,
+            "list_kr": tags_kr,
+            "display_en": " ".join(tags_en[:3]),  # 최대 3개 표시
+            "display_kr": " ".join(tags_kr[:3])
+        }
+
     def enrich_hotel(self, scraped: Dict) -> Dict:
         """스크래핑 데이터 + 계산 데이터 결합"""
 
@@ -405,6 +506,12 @@ class ARMYStayHubEngine:
         # 아미 밀집도
         army_density = self._get_army_density(lat, lng, hotel_type["label_en"], distance_km)
 
+        # 취소 정책 (스크래핑 데이터 또는 플랫폼 기본값)
+        cancellation = self._get_cancellation_policy(scraped, platform)
+
+        # 동적 태그 생성
+        tags = self._generate_tags(cancellation, army_density, distance_km, hotel_type["label_en"])
+
         return {
             # === 스크래핑 데이터 ===
             "id": f"hotel_{abs(hash(scraped.get('name', ''))) % 100000:05d}",
@@ -415,6 +522,8 @@ class ARMYStayHubEngine:
             "rooms_left": scraped.get("rooms_left", -1),
             "is_available": scraped.get("rooms_left", 1) != 0,
             "hotel_type": hotel_type,
+            "cancellation": cancellation,
+            "tags": tags,
 
             # === 계산 데이터 ===
             "lat": lat,

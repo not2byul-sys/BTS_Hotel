@@ -9,7 +9,7 @@
     "available_count": 9,
     "total_count": 10,
     "lowest_price_krw": 28000,
-    "last_update": "2026-01-26 08:10:19"
+    "last_update": "2026-01-26 15:47:03"
   },
   "map": {
     "venue": {
@@ -113,70 +113,70 @@
     ],
     "hotels": [
       {
-        "id": "hotel_93883",
+        "id": "hotel_98937",
         "name_en": "MVL Hotel Goyang",
         "lat": 37.656,
         "lng": 126.77,
         "price_krw": 185000
       },
       {
-        "id": "hotel_03439",
+        "id": "hotel_80773",
         "name_en": "Goyang Cozy Room",
         "lat": 37.656,
         "lng": 126.772,
         "price_krw": 65000
       },
       {
-        "id": "hotel_25542",
+        "id": "hotel_53252",
         "name_en": "Ilsan Residence",
         "lat": 37.6545,
         "lng": 126.773,
         "price_krw": 95000
       },
       {
-        "id": "hotel_93860",
+        "id": "hotel_01080",
         "name_en": "La Festa Residence",
         "lat": 37.6575,
         "lng": 126.7705,
         "price_krw": 110000
       },
       {
-        "id": "hotel_82818",
+        "id": "hotel_13519",
         "name_en": "Best Western Premier Kukdo",
         "lat": 37.6555,
         "lng": 126.775,
         "price_krw": 142000
       },
       {
-        "id": "hotel_82991",
+        "id": "hotel_65736",
         "name_en": "Ramada Encore Goyang",
         "lat": 37.658,
         "lng": 126.768,
         "price_krw": 128000
       },
       {
-        "id": "hotel_18508",
+        "id": "hotel_48944",
         "name_en": "Ilsan ARMY House",
         "lat": 37.6535,
         "lng": 126.766,
         "price_krw": 45000
       },
       {
-        "id": "hotel_93897",
+        "id": "hotel_26042",
         "name_en": "Ilsan Hostel 808",
         "lat": 37.649,
         "lng": 126.775,
         "price_krw": 28000
       },
       {
-        "id": "hotel_13152",
+        "id": "hotel_71359",
         "name_en": "Lake Park View Apt",
         "lat": 37.658,
         "lng": 126.759,
         "price_krw": 78000
       },
       {
-        "id": "hotel_58949",
+        "id": "hotel_71026",
         "name_en": "Hotel Castle Ilsan",
         "lat": 37.662,
         "lng": 126.7595,
@@ -186,7 +186,7 @@
   },
   "hotels": [
     {
-      "id": "hotel_93883",
+      "id": "hotel_98937",
       "name_en": "MVL Hotel Goyang",
       "price_krw": 185000,
       "rating": 4.5,
@@ -196,6 +196,28 @@
       "hotel_type": {
         "label_en": "5-Star Hotel",
         "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#FreeCancellation",
+          "#ARMYPopular",
+          "#WalkToVenue",
+          "#Luxury"
+        ],
+        "list_kr": [
+          "#취소가능",
+          "#아미인기",
+          "#도보가능",
+          "#럭셔리"
+        ],
+        "display_en": "#FreeCancellation #ARMYPopular #WalkToVenue",
+        "display_kr": "#취소가능 #아미인기 #도보가능"
       },
       "lat": 37.656,
       "lng": 126.77,
@@ -407,24 +429,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_93860",
+          "id": "hotel_01080",
           "name_en": "La Festa Residence",
           "price_krw": 110000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_03439",
+          "id": "hotel_80773",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_82991",
+          "id": "hotel_65736",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.3,
@@ -433,7 +455,7 @@
       ]
     },
     {
-      "id": "hotel_03439",
+      "id": "hotel_80773",
       "name_en": "Goyang Cozy Room",
       "price_krw": 65000,
       "rating": 4.3,
@@ -443,6 +465,28 @@
       "hotel_type": {
         "label_en": "Airbnb",
         "color": "#FF5A5F"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#FreeCancellation",
+          "#ARMYHotspot",
+          "#WalkToVenue",
+          "#LocalLife"
+        ],
+        "list_kr": [
+          "#취소가능",
+          "#아미선점중",
+          "#도보가능",
+          "#현지생활"
+        ],
+        "display_en": "#FreeCancellation #ARMYHotspot #WalkToVenue",
+        "display_kr": "#취소가능 #아미선점중 #도보가능"
       },
       "lat": 37.656,
       "lng": 126.772,
@@ -653,24 +697,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_93883",
+          "id": "hotel_98937",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_25542",
+          "id": "hotel_53252",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_93860",
+          "id": "hotel_01080",
           "name_en": "La Festa Residence",
           "price_krw": 110000,
           "distance_km": 0.2,
@@ -679,7 +723,7 @@
       ]
     },
     {
-      "id": "hotel_25542",
+      "id": "hotel_53252",
       "name_en": "Ilsan Residence",
       "price_krw": 95000,
       "rating": 4.0,
@@ -689,6 +733,24 @@
       "hotel_type": {
         "label_en": "Residence",
         "color": "#87CEEB"
+      },
+      "cancellation": {
+        "type": "partial",
+        "label_en": "Partial Refund",
+        "label_kr": "부분 환불",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#ARMYPopular",
+          "#WalkToVenue"
+        ],
+        "list_kr": [
+          "#아미인기",
+          "#도보가능"
+        ],
+        "display_en": "#ARMYPopular #WalkToVenue",
+        "display_kr": "#아미인기 #도보가능"
       },
       "lat": 37.6545,
       "lng": 126.773,
@@ -899,24 +961,24 @@
         ],
         "foreigner_friendly": "partial"
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_82818",
+          "id": "hotel_13519",
           "name_en": "Best Western Premier Kukdo",
           "price_krw": 142000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_03439",
+          "id": "hotel_80773",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_93883",
+          "id": "hotel_98937",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.3,
@@ -925,7 +987,7 @@
       ]
     },
     {
-      "id": "hotel_93860",
+      "id": "hotel_01080",
       "name_en": "La Festa Residence",
       "price_krw": 110000,
       "rating": 4.1,
@@ -935,6 +997,26 @@
       "hotel_type": {
         "label_en": "Residence",
         "color": "#87CEEB"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#FreeCancellation",
+          "#ARMYPopular",
+          "#WalkToVenue"
+        ],
+        "list_kr": [
+          "#취소가능",
+          "#아미인기",
+          "#도보가능"
+        ],
+        "display_en": "#FreeCancellation #ARMYPopular #WalkToVenue",
+        "display_kr": "#취소가능 #아미인기 #도보가능"
       },
       "lat": 37.6575,
       "lng": 126.7705,
@@ -1146,24 +1228,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_93883",
+          "id": "hotel_98937",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_82991",
+          "id": "hotel_65736",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_03439",
+          "id": "hotel_80773",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.2,
@@ -1172,7 +1254,7 @@
       ]
     },
     {
-      "id": "hotel_82818",
+      "id": "hotel_13519",
       "name_en": "Best Western Premier Kukdo",
       "price_krw": 142000,
       "rating": 4.2,
@@ -1182,6 +1264,26 @@
       "hotel_type": {
         "label_en": "4-Star Hotel",
         "color": "#C0C0C0"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#FreeCancellation",
+          "#ARMYPopular",
+          "#WalkToVenue"
+        ],
+        "list_kr": [
+          "#취소가능",
+          "#아미인기",
+          "#도보가능"
+        ],
+        "display_en": "#FreeCancellation #ARMYPopular #WalkToVenue",
+        "display_kr": "#취소가능 #아미인기 #도보가능"
       },
       "lat": 37.6555,
       "lng": 126.775,
@@ -1392,24 +1494,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_25542",
+          "id": "hotel_53252",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_03439",
+          "id": "hotel_80773",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.3,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_93883",
+          "id": "hotel_98937",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.4,
@@ -1418,7 +1520,7 @@
       ]
     },
     {
-      "id": "hotel_82991",
+      "id": "hotel_65736",
       "name_en": "Ramada Encore Goyang",
       "price_krw": 128000,
       "rating": 4.1,
@@ -1428,6 +1530,26 @@
       "hotel_type": {
         "label_en": "4-Star Hotel",
         "color": "#C0C0C0"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#FreeCancellation",
+          "#ARMYPopular",
+          "#WalkToVenue"
+        ],
+        "list_kr": [
+          "#취소가능",
+          "#아미인기",
+          "#도보가능"
+        ],
+        "display_en": "#FreeCancellation #ARMYPopular #WalkToVenue",
+        "display_kr": "#취소가능 #아미인기 #도보가능"
       },
       "lat": 37.658,
       "lng": 126.768,
@@ -1638,24 +1760,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_93860",
+          "id": "hotel_01080",
           "name_en": "La Festa Residence",
           "price_krw": 110000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_93883",
+          "id": "hotel_98937",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.3,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_03439",
+          "id": "hotel_80773",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.4,
@@ -1664,7 +1786,7 @@
       ]
     },
     {
-      "id": "hotel_18508",
+      "id": "hotel_48944",
       "name_en": "Ilsan ARMY House",
       "price_krw": 45000,
       "rating": 4.6,
@@ -1674,6 +1796,26 @@
       "hotel_type": {
         "label_en": "Guesthouse",
         "color": "#98FB98"
+      },
+      "cancellation": {
+        "type": "partial",
+        "label_en": "Partial Refund",
+        "label_kr": "부분 환불",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#ARMYHotspot",
+          "#WalkToVenue",
+          "#Community"
+        ],
+        "list_kr": [
+          "#아미선점중",
+          "#도보가능",
+          "#커뮤니티"
+        ],
+        "display_en": "#ARMYHotspot #WalkToVenue #Community",
+        "display_kr": "#아미선점중 #도보가능 #커뮤니티"
       },
       "lat": 37.6535,
       "lng": 126.766,
@@ -1884,24 +2026,24 @@
         ],
         "foreigner_friendly": "limited"
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_93883",
+          "id": "hotel_98937",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_82991",
+          "id": "hotel_65736",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.5,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_25542",
+          "id": "hotel_53252",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.6,
@@ -1910,7 +2052,7 @@
       ]
     },
     {
-      "id": "hotel_93897",
+      "id": "hotel_26042",
       "name_en": "Ilsan Hostel 808",
       "price_krw": 28000,
       "rating": 4.0,
@@ -1920,6 +2062,28 @@
       "hotel_type": {
         "label_en": "Hostel",
         "color": "#DDA0DD"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#FreeCancellation",
+          "#ARMYHotspot",
+          "#WalkToVenue",
+          "#BudgetFriendly"
+        ],
+        "list_kr": [
+          "#취소가능",
+          "#아미선점중",
+          "#도보가능",
+          "#가성비"
+        ],
+        "display_en": "#FreeCancellation #ARMYHotspot #WalkToVenue",
+        "display_kr": "#취소가능 #아미선점중 #도보가능"
       },
       "lat": 37.649,
       "lng": 126.775,
@@ -2130,24 +2294,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_25542",
+          "id": "hotel_53252",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.6,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_82818",
+          "id": "hotel_13519",
           "name_en": "Best Western Premier Kukdo",
           "price_krw": 142000,
           "distance_km": 0.7,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_03439",
+          "id": "hotel_80773",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.8,
@@ -2156,7 +2320,7 @@
       ]
     },
     {
-      "id": "hotel_13152",
+      "id": "hotel_71359",
       "name_en": "Lake Park View Apt",
       "price_krw": 78000,
       "rating": 4.4,
@@ -2166,6 +2330,28 @@
       "hotel_type": {
         "label_en": "Airbnb",
         "color": "#FF5A5F"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#FreeCancellation",
+          "#ARMYPopular",
+          "#NearVenue",
+          "#LocalLife"
+        ],
+        "list_kr": [
+          "#취소가능",
+          "#아미인기",
+          "#공연장근처",
+          "#현지생활"
+        ],
+        "display_en": "#FreeCancellation #ARMYPopular #NearVenue",
+        "display_kr": "#취소가능 #아미인기 #공연장근처"
       },
       "lat": 37.658,
       "lng": 126.759,
@@ -2377,24 +2563,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_58949",
+          "id": "hotel_71026",
           "name_en": "Hotel Castle Ilsan",
           "price_krw": 89000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_82991",
+          "id": "hotel_65736",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.8,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_18508",
+          "id": "hotel_48944",
           "name_en": "Ilsan ARMY House",
           "price_krw": 45000,
           "distance_km": 0.8,
@@ -2403,7 +2589,7 @@
       ]
     },
     {
-      "id": "hotel_58949",
+      "id": "hotel_71026",
       "name_en": "Hotel Castle Ilsan",
       "price_krw": 89000,
       "rating": 3.9,
@@ -2413,6 +2599,26 @@
       "hotel_type": {
         "label_en": "3-Star Hotel",
         "color": "#CD7F32"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": [
+          "#FreeCancellation",
+          "#ARMYPopular",
+          "#NearVenue"
+        ],
+        "list_kr": [
+          "#취소가능",
+          "#아미인기",
+          "#공연장근처"
+        ],
+        "display_en": "#FreeCancellation #ARMYPopular #NearVenue",
+        "display_kr": "#취소가능 #아미인기 #공연장근처"
       },
       "lat": 37.662,
       "lng": 126.7595,
@@ -2624,24 +2830,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 08:10:19",
+      "last_update": "2026-01-26 15:47:03",
       "nearby": [
         {
-          "id": "hotel_13152",
+          "id": "hotel_71359",
           "name_en": "Lake Park View Apt",
           "price_krw": 78000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_82991",
+          "id": "hotel_65736",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.9,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_93883",
+          "id": "hotel_98937",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 1.1,
