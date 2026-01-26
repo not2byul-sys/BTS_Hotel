@@ -1,0 +1,44 @@
+name: Auto Scrape Hotels
+
+on:
+  # 매시간 실행 (UTC 기준)
+  schedule:
+    - cron: '0 * * * *'
+
+  # 수동 실행 가능
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Run scraper
+        run: |
+          python run_scraper.py
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --quiet korean_ota_hotels.json || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add korean_ota_hotels.json
+          git commit -m "chore: Auto-update hotel data $(date +'%Y-%m-%d %H:%M UTC')"
+          git push
