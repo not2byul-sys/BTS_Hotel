@@ -96,6 +96,8 @@ class BaseScraper(ABC):
         return {
             "name": raw_data.get("name", ""),
             "name_en": raw_data.get("name_en", raw_data.get("name", "")),
+            "hotel_type": self._normalize_hotel_type(raw_data.get("hotel_type", raw_data.get("property_type", ""))),
+            "star_rating": raw_data.get("star_rating", raw_data.get("stars", 0)),
             "price_krw": raw_data.get("price_krw", 0),
             "price_usd": raw_data.get("price_usd", int(raw_data.get("price_krw", 0) / 1350)),
             "rating": raw_data.get("rating", 0),
@@ -109,6 +111,43 @@ class BaseScraper(ABC):
             "platform": self.name,
             "scraped_at": datetime.now().isoformat(),
         }
+
+    def _normalize_hotel_type(self, raw_type: str) -> str:
+        """호텔 타입 정규화 - 플랫폼별 다른 표기를 통일"""
+        if not raw_type:
+            return ""
+
+        raw_lower = raw_type.lower()
+
+        # 호텔 (성급)
+        if any(x in raw_lower for x in ["5성", "5-star", "5 star", "luxury"]):
+            return "5-Star Hotel"
+        if any(x in raw_lower for x in ["4성", "4-star", "4 star"]):
+            return "4-Star Hotel"
+        if any(x in raw_lower for x in ["3성", "3-star", "3 star"]):
+            return "3-Star Hotel"
+        if any(x in raw_lower for x in ["2성", "2-star", "1성", "1-star"]):
+            return "Budget Hotel"
+
+        # 타입별
+        if any(x in raw_lower for x in ["호텔", "hotel"]):
+            return "Hotel"
+        if any(x in raw_lower for x in ["리조트", "resort"]):
+            return "Resort"
+        if any(x in raw_lower for x in ["모텔", "motel"]):
+            return "Motel"
+        if any(x in raw_lower for x in ["게스트하우스", "guesthouse", "guest house"]):
+            return "Guesthouse"
+        if any(x in raw_lower for x in ["호스텔", "hostel"]):
+            return "Hostel"
+        if any(x in raw_lower for x in ["펜션", "pension"]):
+            return "Pension"
+        if any(x in raw_lower for x in ["아파트", "apartment", "레지던스", "residence"]):
+            return "Residence"
+        if any(x in raw_lower for x in ["에어비앤비", "airbnb", "민박"]):
+            return "Airbnb"
+
+        return raw_type
 
 
 class AgodaScraper(BaseScraper):

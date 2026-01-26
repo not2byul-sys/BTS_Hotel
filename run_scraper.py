@@ -213,6 +213,44 @@ class ARMYStayHubEngine:
 
         return result
 
+    def _get_hotel_type_display(self, hotel_type: str, star_rating: int = 0) -> Dict:
+        """호텔 타입 표시 데이터 생성"""
+        # 타입별 색상
+        type_colors = {
+            "5-Star Hotel": "#FFD700",
+            "4-Star Hotel": "#C0C0C0",
+            "3-Star Hotel": "#CD7F32",
+            "Hotel": "#4A90D9",
+            "Budget Hotel": "#8B4513",
+            "Resort": "#2E8B57",
+            "Motel": "#708090",
+            "Guesthouse": "#98FB98",
+            "Hostel": "#DDA0DD",
+            "Pension": "#F0E68C",
+            "Residence": "#87CEEB",
+            "Airbnb": "#FF5A5F",
+        }
+
+        # 타입이 없으면 성급으로 추론
+        if not hotel_type and star_rating:
+            if star_rating >= 5:
+                hotel_type = "5-Star Hotel"
+            elif star_rating >= 4:
+                hotel_type = "4-Star Hotel"
+            elif star_rating >= 3:
+                hotel_type = "3-Star Hotel"
+            else:
+                hotel_type = "Hotel"
+
+        # 기본값
+        if not hotel_type:
+            hotel_type = "Hotel"
+
+        return {
+            "label_en": hotel_type,
+            "color": type_colors.get(hotel_type, "#4A90D9")
+        }
+
     def enrich_hotel(self, scraped: Dict) -> Dict:
         """스크래핑 데이터 + 계산 데이터 결합"""
 
@@ -226,6 +264,12 @@ class ARMYStayHubEngine:
         # 플랫폼
         platform = scraped.get("platform", "Agoda")
 
+        # 호텔 타입
+        hotel_type = self._get_hotel_type_display(
+            scraped.get("hotel_type", ""),
+            scraped.get("star_rating", 0)
+        )
+
         return {
             # === 스크래핑 데이터 ===
             "id": f"hotel_{abs(hash(scraped.get('name', ''))) % 100000:05d}",
@@ -235,6 +279,7 @@ class ARMYStayHubEngine:
             "image_url": scraped.get("image_url", ""),
             "rooms_left": scraped.get("rooms_left", -1),
             "is_available": scraped.get("rooms_left", 1) != 0,
+            "hotel_type": hotel_type,
 
             # === 계산 데이터 ===
             "lat": lat,
@@ -309,25 +354,35 @@ class ARMYStayHubEngine:
 def generate_sample_data() -> List[Dict]:
     """테스트용 샘플 데이터 (스크래핑 대체)"""
     samples = [
-        {"name": "MVL Hotel Goyang", "price_krw": 185000, "rating": 4.5, "latitude": 37.6560, "longitude": 126.7700,
+        {"name": "MVL Hotel Goyang", "hotel_type": "5-Star Hotel", "price_krw": 185000, "rating": 4.5,
+         "latitude": 37.6560, "longitude": 126.7700,
          "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800", "rooms_left": 5, "platform": "Agoda"},
-        {"name": "Best Western Premier Kukdo", "price_krw": 142000, "rating": 4.2, "latitude": 37.6555, "longitude": 126.7750,
+        {"name": "Best Western Premier Kukdo", "hotel_type": "4-Star Hotel", "price_krw": 142000, "rating": 4.2,
+         "latitude": 37.6555, "longitude": 126.7750,
          "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800", "rooms_left": 3, "platform": "Booking.com"},
-        {"name": "Ramada Encore Goyang", "price_krw": 128000, "rating": 4.1, "latitude": 37.6580, "longitude": 126.7680,
+        {"name": "Ramada Encore Goyang", "hotel_type": "4-Star Hotel", "price_krw": 128000, "rating": 4.1,
+         "latitude": 37.6580, "longitude": 126.7680,
          "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800", "rooms_left": 8, "platform": "Hotels.com"},
-        {"name": "Hotel Castle Ilsan", "price_krw": 89000, "rating": 3.9, "latitude": 37.6620, "longitude": 126.7595,
+        {"name": "Hotel Castle Ilsan", "hotel_type": "3-Star Hotel", "price_krw": 89000, "rating": 3.9,
+         "latitude": 37.6620, "longitude": 126.7595,
          "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800", "rooms_left": 2, "platform": "Agoda"},
-        {"name": "Ilsan Residence", "price_krw": 95000, "rating": 4.0, "latitude": 37.6545, "longitude": 126.7730,
+        {"name": "Ilsan Residence", "hotel_type": "Residence", "price_krw": 95000, "rating": 4.0,
+         "latitude": 37.6545, "longitude": 126.7730,
          "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800", "rooms_left": 6, "platform": "야놀자"},
-        {"name": "La Festa Residence", "price_krw": 110000, "rating": 4.1, "latitude": 37.6575, "longitude": 126.7705,
+        {"name": "La Festa Residence", "hotel_type": "Residence", "price_krw": 110000, "rating": 4.1,
+         "latitude": 37.6575, "longitude": 126.7705,
          "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800", "rooms_left": 4, "platform": "Agoda"},
-        {"name": "Goyang Cozy Room", "price_krw": 65000, "rating": 4.3, "latitude": 37.6560, "longitude": 126.7720,
+        {"name": "Goyang Cozy Room", "hotel_type": "Airbnb", "price_krw": 65000, "rating": 4.3,
+         "latitude": 37.6560, "longitude": 126.7720,
          "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800", "rooms_left": 1, "platform": "Booking.com"},
-        {"name": "Lake Park View Apt", "price_krw": 78000, "rating": 4.4, "latitude": 37.6580, "longitude": 126.7590,
+        {"name": "Lake Park View Apt", "hotel_type": "Airbnb", "price_krw": 78000, "rating": 4.4,
+         "latitude": 37.6580, "longitude": 126.7590,
          "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800", "rooms_left": 0, "platform": "Agoda"},
-        {"name": "Ilsan ARMY House", "price_krw": 45000, "rating": 4.6, "latitude": 37.6535, "longitude": 126.7660,
+        {"name": "Ilsan ARMY House", "hotel_type": "Guesthouse", "price_krw": 45000, "rating": 4.6,
+         "latitude": 37.6535, "longitude": 126.7660,
          "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800", "rooms_left": 2, "platform": "여기어때"},
-        {"name": "Ilsan Hostel 808", "price_krw": 28000, "rating": 4.0, "latitude": 37.6490, "longitude": 126.7750,
+        {"name": "Ilsan Hostel 808", "hotel_type": "Hostel", "price_krw": 28000, "rating": 4.0,
+         "latitude": 37.6490, "longitude": 126.7750,
          "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800", "rooms_left": 10, "platform": "Booking.com"},
     ]
     return samples
