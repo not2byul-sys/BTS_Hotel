@@ -1,22 +1,16 @@
 """
-ARMY Stay Hub - 데이터 엔진 v3.0
-레딧 해외 팬 페인포인트 기반 숙소 큐레이션 데이터 생성 + 실시간 스크래핑
+ARMY Stay Hub - 데이터 엔진 v4.0
+고양종합운동장 기준 숙소 큐레이션 + 외국인 예약 가이드
 
-핵심 해결 문제:
-1. 교통 공포 → walking_time, last_train, safe_return_route
-2. 정보 불균형 → 4단계 태그 시스템 (Type, Trans, Density, Keyword)
-3. 외로움/소속감 → army_density, nearby_bts_spots
-
-v3.0 업데이트:
-- 다중 플랫폼 실시간 스크래핑 (Agoda, 네이버, 여기어때, 야놀자, 쿠팡트래블)
-- 시뮬레이션 + 실제 데이터 병합
-- 하루 10회 분산 실행 최적화
+페이지별 데이터:
+- Home: 예약 가능 숙소 수, 최저가
+- List: 거리(도보/차), 4단계 태그(Type, Density, Transport, ArmySpot)
+- Detail: Safe Return Route, Army Local Guide, 예약 가이드, 추천 숙소
 """
 
 import json
 import random
 import math
-import os
 from datetime import datetime, timedelta
 from typing import List, Dict, Tuple
 
@@ -28,710 +22,703 @@ except ImportError:
     SCRAPING_ENABLED = False
     print("⚠️ 스크래핑 모듈 없음 - 시뮬레이션 모드로 실행")
 
+
 class ARMYStayHubEngine:
     def __init__(self):
-        # 킨텍스 (KINTEX) 공연장 좌표 - 중심점
-        self.KINTEX = {
-            "name": "KINTEX (킨텍스)",
-            "lat": 37.6694,
-            "lng": 126.7456
+        # 고양종합운동장 좌표 - 중심점 (변경됨)
+        self.VENUE = {
+            "name": "고양종합운동장",
+            "name_en": "Goyang Stadium",
+            "lat": 37.6556,
+            "lng": 126.7714
         }
 
-        # BTS 성지순례 장소 (Army Local Guide용) - 서브태그 추가
-        self.BTS_SPOTS = [
-            {"name": "HYBE INSIGHT", "name_en": "HYBE INSIGHT", "lat": 37.5260, "lng": 127.0405, "type": "museum", "description": "BTS 전시 및 체험 공간", "description_en": "BTS exhibition & experience space", "spot_tag": "Official BTS Museum", "spot_tag_kr": "공식 BTS 박물관"},
-            {"name": "유정식당", "name_en": "Yoojung Sikdang", "lat": 37.5298, "lng": 127.0412, "type": "restaurant", "description": "연습생 시절 멤버들이 자주 찾던 맛집", "description_en": "Members favorite place during trainee days", "spot_tag": "BTS Favorite Spot", "spot_tag_kr": "BTS 단골 맛집"},
-            {"name": "광장시장 (데뷔 무대)", "name_en": "Gwangjang Market", "lat": 37.5700, "lng": 127.0098, "type": "historic", "description": "2013년 데뷔 무대 장소", "description_en": "2013 debut stage location", "spot_tag": "Debut Memory", "spot_tag_kr": "데뷔 추억"},
-            {"name": "상암 MBC", "name_en": "MBC Sangam", "lat": 37.5786, "lng": 126.8918, "type": "broadcast", "description": "음악방송 촬영지", "description_en": "Music show filming location", "spot_tag": "Music Show Stage", "spot_tag_kr": "음악방송 무대"},
-            {"name": "여의도 KBS", "name_en": "KBS Yeouido", "lat": 37.5172, "lng": 126.9297, "type": "broadcast", "description": "음악방송 촬영지", "description_en": "Music show filming location", "spot_tag": "Music Show Stage", "spot_tag_kr": "음악방송 무대"},
-            {"name": "홍대 버스킹 거리", "name_en": "Hongdae Busking Street", "lat": 37.5563, "lng": 126.9220, "type": "street", "description": "데뷔 전 버스킹 장소", "description_en": "Pre-debut busking location", "spot_tag": "Trainee Memory", "spot_tag_kr": "연습생 추억"},
-            {"name": "하이브 사옥", "name_en": "HYBE Headquarters", "lat": 37.5280, "lng": 127.0400, "type": "company", "description": "하이브 본사 (용산)", "description_en": "HYBE HQ in Yongsan", "spot_tag": "BTS Home", "spot_tag_kr": "BTS의 집"},
-            {"name": "서울숲", "name_en": "Seoul Forest", "lat": 37.5443, "lng": 127.0374, "type": "filming", "description": "화양연화 뮤직비디오 촬영지", "description_en": "HYYH MV filming location", "spot_tag": "MV Location", "spot_tag_kr": "뮤비 촬영지"},
-            {"name": "남산타워", "name_en": "Namsan Tower", "lat": 37.5512, "lng": 126.9882, "type": "landmark", "description": "BTS 콘텐츠 촬영지", "description_en": "BTS content filming spot", "spot_tag": "Iconic Spot", "spot_tag_kr": "아이코닉 스팟"},
-            {"name": "경복궁", "name_en": "Gyeongbokgung Palace", "lat": 37.5796, "lng": 126.9770, "type": "landmark", "description": "한복 화보 촬영지", "description_en": "Hanbok photoshoot location", "spot_tag": "Photo Spot", "spot_tag_kr": "화보 촬영지"},
-            {"name": "카페 휴가 (구 빅히트)", "name_en": "Cafe Hyuga (Old Big Hit)", "lat": 37.5240, "lng": 127.0380, "type": "cafe", "description": "구 빅히트 사옥 앞 카페", "description_en": "Cafe near old Big Hit building", "spot_tag": "ARMY Gathering", "spot_tag_kr": "아미 성지"},
-            {"name": "IFC몰", "name_en": "IFC Mall", "lat": 37.5251, "lng": 126.9256, "type": "shopping", "description": "Run BTS 촬영지", "description_en": "Run BTS filming location", "spot_tag": "Run BTS", "spot_tag_kr": "달려라 방탄"},
+        # 아미 로컬 가이드 - BTS 관련 장소 + 맛집/카페/핫스팟
+        self.LOCAL_SPOTS = [
+            # BTS 관련 장소
+            {"name": "HYBE INSIGHT", "name_en": "HYBE INSIGHT", "lat": 37.5260, "lng": 127.0405,
+             "category": "bts", "type": "museum",
+             "description_en": "Official BTS museum with exhibitions and experiences",
+             "spot_tag": "BTS Museum"},
+            {"name": "하이브 사옥", "name_en": "HYBE Headquarters", "lat": 37.5280, "lng": 127.0400,
+             "category": "bts", "type": "landmark",
+             "description_en": "HYBE company headquarters in Yongsan",
+             "spot_tag": "BTS Home"},
+            {"name": "홍대 버스킹 거리", "name_en": "Hongdae Busking Street", "lat": 37.5563, "lng": 126.9220,
+             "category": "bts", "type": "street",
+             "description_en": "Pre-debut busking location of BTS",
+             "spot_tag": "Trainee Memory"},
+            {"name": "상암 MBC", "name_en": "MBC Sangam", "lat": 37.5786, "lng": 126.8918,
+             "category": "bts", "type": "broadcast",
+             "description_en": "Music show filming location",
+             "spot_tag": "Music Show"},
+            {"name": "광장시장", "name_en": "Gwangjang Market", "lat": 37.5700, "lng": 127.0098,
+             "category": "bts", "type": "historic",
+             "description_en": "2013 debut stage location",
+             "spot_tag": "Debut Memory"},
+
+            # 고양시 주변 맛집
+            {"name": "일산 맛집거리", "name_en": "Ilsan Food Street", "lat": 37.6580, "lng": 126.7720,
+             "category": "restaurant", "type": "food_street",
+             "description_en": "Popular local food street near stadium",
+             "spot_tag": "Local Eats"},
+            {"name": "라페스타 맛집", "name_en": "La Festa Restaurants", "lat": 37.6575, "lng": 126.7705,
+             "category": "restaurant", "type": "dining",
+             "description_en": "Various restaurants in La Festa complex",
+             "spot_tag": "Dining Hub"},
+            {"name": "웨스턴돔 푸드코트", "name_en": "Western Dom Food Court", "lat": 37.6630, "lng": 126.7620,
+             "category": "restaurant", "type": "food_court",
+             "description_en": "Food court with Korean and international options",
+             "spot_tag": "Food Court"},
+
+            # 카페
+            {"name": "일산호수공원 카페거리", "name_en": "Ilsan Lake Park Cafe Street", "lat": 37.6590, "lng": 126.7600,
+             "category": "cafe", "type": "cafe_street",
+             "description_en": "Scenic cafes along Ilsan Lake Park",
+             "spot_tag": "Lake View Cafe"},
+            {"name": "라페스타 카페", "name_en": "La Festa Cafes", "lat": 37.6572, "lng": 126.7710,
+             "category": "cafe", "type": "cafe",
+             "description_en": "Trendy cafes in La Festa area",
+             "spot_tag": "Trendy Cafe"},
+
+            # 핫스팟
+            {"name": "일산호수공원", "name_en": "Ilsan Lake Park", "lat": 37.6580, "lng": 126.7590,
+             "category": "hotspot", "type": "park",
+             "description_en": "Beautiful lake park, great for walks",
+             "spot_tag": "Must Visit"},
+            {"name": "원마운트", "name_en": "One Mount", "lat": 37.6650, "lng": 126.7510,
+             "category": "hotspot", "type": "entertainment",
+             "description_en": "Theme park with water park and snow park",
+             "spot_tag": "Entertainment"},
+            {"name": "스타필드 고양", "name_en": "Starfield Goyang", "lat": 37.6450, "lng": 126.8950,
+             "category": "hotspot", "type": "shopping",
+             "description_en": "Large shopping mall with various stores",
+             "spot_tag": "Shopping"},
         ]
 
-        # 숙소 타입별 샘플 이미지 URL (Unsplash)
-        self.HOTEL_IMAGES = {
-            "5star": [
-                "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
-                "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800",
-                "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
-            ],
-            "4star": [
-                "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
-                "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800",
-                "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800",
-            ],
-            "3star": [
-                "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
-                "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
-                "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800",
-            ],
-            "residence": [
-                "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
-                "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800",
-                "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
-            ],
-            "guesthouse": [
-                "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
-                "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
-                "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800",
-            ],
-            "airbnb": [
-                "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800",
-                "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
-                "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800",
-            ],
-            "hostel": [
-                "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
-                "https://images.unsplash.com/photo-1520277739336-7bf67edfa768?w=800",
-                "https://images.unsplash.com/photo-1573052905904-34ad8c27f0cc?w=800",
-            ],
+        # 플랫폼별 외국인 예약 가이드
+        self.BOOKING_GUIDES = {
+            "Agoda": {
+                "platform": "Agoda",
+                "steps_en": [
+                    "1. Select your dates and search for hotels",
+                    "2. Choose your room and click 'Book Now'",
+                    "3. Enter guest details (passport name required)",
+                    "4. Pay with international credit card or PayPal",
+                    "5. Receive confirmation email instantly"
+                ],
+                "tips_en": [
+                    "Use 'Pay at Hotel' option if available for flexibility",
+                    "Check cancellation policy before booking",
+                    "AgodaCash can be used for discounts"
+                ],
+                "payment_methods": ["Credit Card", "PayPal", "Pay at Hotel"],
+                "foreigner_friendly": True
+            },
+            "Booking.com": {
+                "platform": "Booking.com",
+                "steps_en": [
+                    "1. Search for Goyang hotels with your dates",
+                    "2. Filter by 'Free Cancellation' for flexibility",
+                    "3. Select room and enter guest information",
+                    "4. Choose 'Pay at Property' or prepay online",
+                    "5. Show confirmation at check-in"
+                ],
+                "tips_en": [
+                    "Genius membership gives extra discounts",
+                    "Many hotels offer free cancellation",
+                    "Mobile app has exclusive deals"
+                ],
+                "payment_methods": ["Credit Card", "Pay at Property"],
+                "foreigner_friendly": True
+            },
+            "야놀자": {
+                "platform": "Yanolja",
+                "steps_en": [
+                    "1. Download Yanolja app (available in English)",
+                    "2. Search '고양' or 'Goyang' for hotels",
+                    "3. Select dates and choose accommodation",
+                    "4. Register with phone number (Korean or international)",
+                    "5. Pay with Korean card or international card"
+                ],
+                "tips_en": [
+                    "App has English language option",
+                    "Some hotels may require Korean phone for contact",
+                    "Check if hotel accepts foreign guests"
+                ],
+                "payment_methods": ["Credit Card", "Korean Pay"],
+                "foreigner_friendly": "partial"
+            },
+            "여기어때": {
+                "platform": "GoodChoice",
+                "steps_en": [
+                    "1. Use GoodChoice app or website",
+                    "2. Search for Goyang area accommodations",
+                    "3. Select room type and check-in time",
+                    "4. Enter booking information",
+                    "5. Pay and receive confirmation"
+                ],
+                "tips_en": [
+                    "Limited English support",
+                    "Recommend using Papago translator",
+                    "Better to book through global OTA for foreigners"
+                ],
+                "payment_methods": ["Credit Card", "Korean Pay"],
+                "foreigner_friendly": "limited"
+            },
+            "Hotels.com": {
+                "platform": "Hotels.com",
+                "steps_en": [
+                    "1. Search 'Goyang, South Korea' on Hotels.com",
+                    "2. Filter by price, rating, or amenities",
+                    "3. Select hotel and room type",
+                    "4. Enter guest details and payment info",
+                    "5. Collect stamps for free nights reward"
+                ],
+                "tips_en": [
+                    "Collect 10 stamps = 1 free night",
+                    "Price match guarantee available",
+                    "Secret prices for app users"
+                ],
+                "payment_methods": ["Credit Card", "PayPal"],
+                "foreigner_friendly": True
+            },
         }
 
         # 지역별 지하철 노선 정보
         self.SUBWAY_ROUTES = {
-            "Ilsan/KINTEX": {"station": "대화역", "station_en": "Daehwa", "line": "3호선", "line_en": "Line 3", "line_color": "#EF7C1C"},
-            "Hongdae/Sinchon": {"station": "홍대입구역", "station_en": "Hongik Univ.", "line": "2호선", "line_en": "Line 2", "line_color": "#00A84D"},
-            "Sangam/DMC": {"station": "디지털미디어시티역", "station_en": "DMC", "line": "6호선", "line_en": "Line 6", "line_color": "#CD7C2F"},
-            "Paju/Unjeong": {"station": "운정역", "station_en": "Unjeong", "line": "경의중앙선", "line_en": "Gyeongui Line", "line_color": "#77C4A3"},
+            "Ilsan/KINTEX": {"station": "정발산역", "station_en": "Jeongbalsan", "line": "3호선", "line_en": "Line 3", "line_color": "#EF7C1C", "to_venue_min": 10},
+            "Hongdae/Sinchon": {"station": "홍대입구역", "station_en": "Hongik Univ.", "line": "2호선", "line_en": "Line 2", "line_color": "#00A84D", "to_venue_min": 45},
+            "Sangam/DMC": {"station": "디지털미디어시티역", "station_en": "DMC", "line": "6호선", "line_en": "Line 6", "line_color": "#CD7C2F", "to_venue_min": 30},
+            "Paju/Unjeong": {"station": "운정역", "station_en": "Unjeong", "line": "경의중앙선", "line_en": "Gyeongui Line", "line_color": "#77C4A3", "to_venue_min": 25},
         }
 
-        # 숙소 타입별 설정
+        # 숙소 타입 설정
         self.HOTEL_TYPES = {
-            "5star": {"label": "5-Star Hotel", "label_kr": "5성급 호텔", "price_range": (180, 350), "color": "#FFD700"},
-            "4star": {"label": "4-Star Hotel", "label_kr": "4성급 호텔", "price_range": (120, 200), "color": "#C0C0C0"},
-            "3star": {"label": "3-Star Hotel", "label_kr": "3성급 호텔", "price_range": (70, 130), "color": "#CD7F32"},
-            "residence": {"label": "Residence", "label_kr": "레지던스", "price_range": (90, 180), "color": "#87CEEB"},
-            "guesthouse": {"label": "Guesthouse", "label_kr": "게스트하우스", "price_range": (25, 60), "color": "#98FB98"},
-            "airbnb": {"label": "Airbnb", "label_kr": "에어비앤비", "price_range": (40, 120), "color": "#FF5A5F"},
-            "hostel": {"label": "Hostel", "label_kr": "호스텔", "price_range": (15, 40), "color": "#DDA0DD"},
+            "5star": {"label_en": "5-Star Hotel", "label_kr": "5성급", "price_range": (180000, 350000), "color": "#FFD700"},
+            "4star": {"label_en": "4-Star Hotel", "label_kr": "4성급", "price_range": (120000, 200000), "color": "#C0C0C0"},
+            "3star": {"label_en": "3-Star Hotel", "label_kr": "3성급", "price_range": (70000, 130000), "color": "#CD7F32"},
+            "residence": {"label_en": "Residence", "label_kr": "레지던스", "price_range": (90000, 180000), "color": "#87CEEB"},
+            "guesthouse": {"label_en": "Guesthouse", "label_kr": "게스트하우스", "price_range": (25000, 60000), "color": "#98FB98"},
+            "airbnb": {"label_en": "Airbnb", "label_kr": "에어비앤비", "price_range": (40000, 120000), "color": "#FF5A5F"},
+            "hostel": {"label_en": "Hostel", "label_kr": "호스텔", "price_range": (15000, 40000), "color": "#DDA0DD"},
         }
 
-        # 예약 플랫폼 설정
+        # 숙소 이미지
+        self.HOTEL_IMAGES = {
+            "5star": ["https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+                      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800"],
+            "4star": ["https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+                      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800"],
+            "3star": ["https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+                      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"],
+            "residence": ["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+                         "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800"],
+            "guesthouse": ["https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"],
+            "airbnb": ["https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"],
+            "hostel": ["https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"],
+        }
+
+        # 플랫폼 설정
         self.PLATFORMS = {
-            "agoda": {"name": "Agoda", "iframe_support": True, "url_pattern": "https://www.agoda.com/search?city=14690"},
-            "booking": {"name": "Booking.com", "iframe_support": False, "url_pattern": "https://www.booking.com/searchresults.ko.html?dest_id=-716583"},
-            "hotels": {"name": "Hotels.com", "iframe_support": True, "url_pattern": "https://kr.hotels.com/search.do?destination-id=759818"},
-            "expedia": {"name": "Expedia", "iframe_support": False, "url_pattern": "https://www.expedia.co.kr/Hotel-Search?destination=Goyang"},
-            "trip": {"name": "Trip.com", "iframe_support": True, "url_pattern": "https://kr.trip.com/hotels/goyang-hotel"},
-            "airbnb": {"name": "Airbnb", "iframe_support": False, "url_pattern": "https://www.airbnb.co.kr/s/Goyang/homes"},
-            "yanolja": {"name": "야놀자", "iframe_support": True, "url_pattern": "https://www.yanolja.com/search/고양"},
-            "goodchoice": {"name": "여기어때", "iframe_support": True, "url_pattern": "https://www.goodchoice.kr/search?keyword=고양"},
+            "agoda": {"name": "Agoda", "url_pattern": "https://www.agoda.com/search?city=14690"},
+            "booking": {"name": "Booking.com", "url_pattern": "https://www.booking.com/searchresults.ko.html?dest_id=-716583"},
+            "hotels": {"name": "Hotels.com", "url_pattern": "https://kr.hotels.com/search.do?destination-id=759818"},
+            "yanolja": {"name": "야놀자", "url_pattern": "https://www.yanolja.com/search/고양"},
+            "goodchoice": {"name": "여기어때", "url_pattern": "https://www.goodchoice.kr/search?keyword=고양"},
         }
 
-        # 실제 호텔 데이터 (킨텍스 주변 + 서울 주요 지역)
+        # 호텔 데이터베이스 생성
         self.HOTELS_DATA = self._generate_hotels_database()
 
-        # 막차 시간 데이터 (경의중앙선, 3호선 기준)
-        self.LAST_TRAINS = {
-            "kintex": "23:40",
-            "ilsan": "23:50",
-            "hongdae": "00:10",
-            "sangam": "00:05",
-            "seoul_station": "00:20",
-        }
-
     def _generate_hotels_database(self) -> List[Dict]:
-        """실제 호텔명과 좌표를 기반으로 100개+ 숙소 데이터베이스 생성"""
-
+        """호텔 기본 데이터베이스 생성"""
         hotels = []
 
-        # 1. 킨텍스/일산 지역 (40개) - 공연장 도보권
+        # 일산/고양 지역 (고양종합운동장 근처)
         ilsan_hotels = [
-            {"name": "KINTEX by Kensington Hotel", "name_en": "KINTEX by Kensington Hotel", "lat": 37.6685, "lng": 126.7510, "type": "5star"},
-            {"name": "MVL Hotel Goyang", "name_en": "MVL Hotel Goyang", "lat": 37.6560, "lng": 126.7700, "type": "5star"},
-            {"name": "베스트웨스턴 프리미어 호텔 국도", "name_en": "Best Western Premier Hotel Kukdo", "lat": 37.6555, "lng": 126.7750, "type": "4star"},
-            {"name": "라마다 앙코르 고양 호텔", "name_en": "Ramada Encore Goyang", "lat": 37.6580, "lng": 126.7680, "type": "4star"},
-            {"name": "호텔 캐슬", "name_en": "Hotel Castle Ilsan", "lat": 37.6620, "lng": 126.7595, "type": "3star"},
-            {"name": "일산 스카이 호텔", "name_en": "Ilsan Sky Hotel", "lat": 37.6590, "lng": 126.7650, "type": "3star"},
-            {"name": "호텔 마레", "name_en": "Hotel Mare Ilsan", "lat": 37.6550, "lng": 126.7780, "type": "3star"},
-            {"name": "일산 레지던스", "name_en": "Ilsan Residence", "lat": 37.6545, "lng": 126.7730, "type": "residence"},
-            {"name": "킨텍스 스테이", "name_en": "KINTEX Stay Residence", "lat": 37.6700, "lng": 126.7480, "type": "residence"},
-            {"name": "라페스타 레지던스", "name_en": "La Festa Residence", "lat": 37.6575, "lng": 126.7705, "type": "residence"},
-            {"name": "웨스턴돔 레지던스", "name_en": "Western Dom Residence", "lat": 37.6630, "lng": 126.7620, "type": "residence"},
-            {"name": "백석 게스트하우스", "name_en": "Baekseok Guesthouse", "lat": 37.6480, "lng": 126.7820, "type": "guesthouse"},
-            {"name": "일산 아미 하우스", "name_en": "Ilsan ARMY House", "lat": 37.6535, "lng": 126.7660, "type": "guesthouse"},
-            {"name": "킨텍스 코지룸", "name_en": "KINTEX Cozy Room", "lat": 37.6710, "lng": 126.7520, "type": "airbnb"},
-            {"name": "일산호수공원 뷰 아파트", "name_en": "Ilsan Lake Park View Apt", "lat": 37.6580, "lng": 126.7590, "type": "airbnb"},
-            {"name": "주엽역 모던 스튜디오", "name_en": "Juyeop Station Modern Studio", "lat": 37.6693, "lng": 126.7610, "type": "airbnb"},
-            {"name": "대화역 프라이빗 룸", "name_en": "Daehwa Station Private Room", "lat": 37.6762, "lng": 126.7436, "type": "airbnb"},
-            {"name": "마두역 원룸", "name_en": "Madu Station One Room", "lat": 37.6518, "lng": 126.7781, "type": "airbnb"},
-            {"name": "호텔 아이콘 일산", "name_en": "Hotel Icon Ilsan", "lat": 37.6530, "lng": 126.7710, "type": "3star"},
-            {"name": "그레이스 호텔", "name_en": "Grace Hotel Ilsan", "lat": 37.6500, "lng": 126.7820, "type": "3star"},
-            {"name": "호텔 W 일산", "name_en": "Hotel W Ilsan", "lat": 37.6615, "lng": 126.7560, "type": "4star"},
-            {"name": "비즈니스 호텔 일산", "name_en": "Business Hotel Ilsan", "lat": 37.6565, "lng": 126.7685, "type": "3star"},
-            {"name": "일산 호스텔 808", "name_en": "Ilsan Hostel 808", "lat": 37.6490, "lng": 126.7750, "type": "hostel"},
-            {"name": "백마 호스텔", "name_en": "Baekma Hostel", "lat": 37.6420, "lng": 126.7880, "type": "hostel"},
-            {"name": "풍산역 게스트하우스", "name_en": "Pungsan Station Guesthouse", "lat": 37.6460, "lng": 126.7920, "type": "guesthouse"},
-            {"name": "정발산 레지던스", "name_en": "Jeongbalsan Residence", "lat": 37.6610, "lng": 126.7550, "type": "residence"},
-            {"name": "호텔 르네상스 일산", "name_en": "Hotel Renaissance Ilsan", "lat": 37.6640, "lng": 126.7515, "type": "4star"},
-            {"name": "일산 센트럴 호텔", "name_en": "Ilsan Central Hotel", "lat": 37.6555, "lng": 126.7630, "type": "3star"},
-            {"name": "호텔 아트리움", "name_en": "Hotel Atrium Ilsan", "lat": 37.6695, "lng": 126.7530, "type": "4star"},
-            {"name": "일산 로프트", "name_en": "Ilsan Loft Airbnb", "lat": 37.6605, "lng": 126.7670, "type": "airbnb"},
-            {"name": "화정 비즈니스 호텔", "name_en": "Hwajeong Business Hotel", "lat": 37.6340, "lng": 126.8320, "type": "3star"},
-            {"name": "화정역 레지던스", "name_en": "Hwajeong Station Residence", "lat": 37.6350, "lng": 126.8290, "type": "residence"},
-            {"name": "원당 호텔", "name_en": "Wondang Hotel", "lat": 37.6450, "lng": 126.8150, "type": "3star"},
-            {"name": "능곡 게스트하우스", "name_en": "Neunggok Guesthouse", "lat": 37.6380, "lng": 126.8100, "type": "guesthouse"},
-            {"name": "덕양 호스텔", "name_en": "Deokyang Hostel", "lat": 37.6300, "lng": 126.8250, "type": "hostel"},
-            {"name": "행신 레지던스", "name_en": "Haengsin Residence", "lat": 37.6120, "lng": 126.8350, "type": "residence"},
-            {"name": "탄현역 에어비앤비", "name_en": "Tanhyeon Station Airbnb", "lat": 37.6820, "lng": 126.7280, "type": "airbnb"},
-            {"name": "일산 더 스테이", "name_en": "Ilsan The Stay", "lat": 37.6585, "lng": 126.7725, "type": "residence"},
-            {"name": "산들마을 게스트하우스", "name_en": "Sandeul Village Guesthouse", "lat": 37.6650, "lng": 126.7640, "type": "guesthouse"},
-            {"name": "호수마을 아파트", "name_en": "Lake Village Apartment", "lat": 37.6560, "lng": 126.7575, "type": "airbnb"},
+            {"name_en": "MVL Hotel Goyang", "lat": 37.6560, "lng": 126.7700, "type": "5star"},
+            {"name_en": "Best Western Premier Kukdo", "lat": 37.6555, "lng": 126.7750, "type": "4star"},
+            {"name_en": "Ramada Encore Goyang", "lat": 37.6580, "lng": 126.7680, "type": "4star"},
+            {"name_en": "Hotel Castle Ilsan", "lat": 37.6620, "lng": 126.7595, "type": "3star"},
+            {"name_en": "Ilsan Sky Hotel", "lat": 37.6590, "lng": 126.7650, "type": "3star"},
+            {"name_en": "Hotel Mare Ilsan", "lat": 37.6550, "lng": 126.7780, "type": "3star"},
+            {"name_en": "Ilsan Residence", "lat": 37.6545, "lng": 126.7730, "type": "residence"},
+            {"name_en": "Goyang Stay Residence", "lat": 37.6570, "lng": 126.7740, "type": "residence"},
+            {"name_en": "La Festa Residence", "lat": 37.6575, "lng": 126.7705, "type": "residence"},
+            {"name_en": "Western Dom Residence", "lat": 37.6630, "lng": 126.7620, "type": "residence"},
+            {"name_en": "Baekseok Guesthouse", "lat": 37.6480, "lng": 126.7820, "type": "guesthouse"},
+            {"name_en": "Ilsan ARMY House", "lat": 37.6535, "lng": 126.7660, "type": "guesthouse"},
+            {"name_en": "Goyang Cozy Room", "lat": 37.6560, "lng": 126.7720, "type": "airbnb"},
+            {"name_en": "Lake Park View Apt", "lat": 37.6580, "lng": 126.7590, "type": "airbnb"},
+            {"name_en": "Jeongbalsan Modern Studio", "lat": 37.6550, "lng": 126.7680, "type": "airbnb"},
+            {"name_en": "Madu Station Room", "lat": 37.6518, "lng": 126.7781, "type": "airbnb"},
+            {"name_en": "Hotel Icon Ilsan", "lat": 37.6530, "lng": 126.7710, "type": "3star"},
+            {"name_en": "Grace Hotel Ilsan", "lat": 37.6500, "lng": 126.7820, "type": "3star"},
+            {"name_en": "Hotel W Ilsan", "lat": 37.6615, "lng": 126.7560, "type": "4star"},
+            {"name_en": "Ilsan Hostel 808", "lat": 37.6490, "lng": 126.7750, "type": "hostel"},
+            {"name_en": "Baekma Hostel", "lat": 37.6420, "lng": 126.7880, "type": "hostel"},
+            {"name_en": "Jeongbalsan Residence", "lat": 37.6610, "lng": 126.7550, "type": "residence"},
+            {"name_en": "Hotel Renaissance Ilsan", "lat": 37.6640, "lng": 126.7515, "type": "4star"},
+            {"name_en": "Ilsan Central Hotel", "lat": 37.6555, "lng": 126.7630, "type": "3star"},
+            {"name_en": "Hotel Atrium Ilsan", "lat": 37.6600, "lng": 126.7580, "type": "4star"},
+            {"name_en": "Ilsan Loft Airbnb", "lat": 37.6605, "lng": 126.7670, "type": "airbnb"},
+            {"name_en": "Hwajeong Business Hotel", "lat": 37.6340, "lng": 126.8320, "type": "3star"},
+            {"name_en": "Hwajeong Residence", "lat": 37.6350, "lng": 126.8290, "type": "residence"},
+            {"name_en": "Haengsin Residence", "lat": 37.6120, "lng": 126.8350, "type": "residence"},
+            {"name_en": "Ilsan The Stay", "lat": 37.6585, "lng": 126.7725, "type": "residence"},
         ]
 
-        # 2. 홍대/신촌 지역 (25개) - 외국인 인기 지역
+        # 홍대/신촌 지역
         hongdae_hotels = [
-            {"name": "L7 홍대 바이 롯데", "name_en": "L7 Hongdae by Lotte", "lat": 37.5567, "lng": 126.9236, "type": "5star"},
-            {"name": "라이즈 오토그래프 컬렉션", "name_en": "RYSE Autograph Collection", "lat": 37.5559, "lng": 126.9213, "type": "5star"},
-            {"name": "홍대 스테이 호텔", "name_en": "Hongdae Stay Hotel", "lat": 37.5578, "lng": 126.9220, "type": "4star"},
-            {"name": "마리골드 호텔 홍대", "name_en": "Marigold Hotel Hongdae", "lat": 37.5590, "lng": 126.9198, "type": "4star"},
-            {"name": "호텔 리버 홍대", "name_en": "Hotel River Hongdae", "lat": 37.5549, "lng": 126.9262, "type": "3star"},
-            {"name": "미스터 홍 게스트하우스", "name_en": "Mr. Hong Guesthouse", "lat": 37.5570, "lng": 126.9255, "type": "guesthouse"},
-            {"name": "홍대 아미 게스트하우스", "name_en": "Hongdae ARMY Guesthouse", "lat": 37.5585, "lng": 126.9245, "type": "guesthouse"},
-            {"name": "웬즈데이 게스트하우스", "name_en": "Wednesday Guesthouse", "lat": 37.5555, "lng": 126.9270, "type": "guesthouse"},
-            {"name": "세이프 스테이 홍대", "name_en": "Safe Stay Hongdae", "lat": 37.5598, "lng": 126.9185, "type": "hostel"},
-            {"name": "하이 홍대 호스텔", "name_en": "Hi Hongdae Hostel", "lat": 37.5540, "lng": 126.9295, "type": "hostel"},
-            {"name": "홍대입구 모던 스튜디오", "name_en": "Hongdae Modern Studio", "lat": 37.5572, "lng": 126.9235, "type": "airbnb"},
-            {"name": "연남동 레트로 하우스", "name_en": "Yeonnam-dong Retro House", "lat": 37.5620, "lng": 126.9255, "type": "airbnb"},
-            {"name": "상수역 아트 로프트", "name_en": "Sangsu Station Art Loft", "lat": 37.5478, "lng": 126.9227, "type": "airbnb"},
-            {"name": "합정역 원룸", "name_en": "Hapjeong Station One Room", "lat": 37.5498, "lng": 126.9138, "type": "airbnb"},
-            {"name": "홍대 아트 레지던스", "name_en": "Hongdae Art Residence", "lat": 37.5580, "lng": 126.9200, "type": "residence"},
-            {"name": "신촌 세브란스 호텔", "name_en": "Sinchon Severance Hotel", "lat": 37.5580, "lng": 126.9370, "type": "3star"},
-            {"name": "신촌 그랜드 호텔", "name_en": "Sinchon Grand Hotel", "lat": 37.5597, "lng": 126.9390, "type": "4star"},
-            {"name": "이대 게스트하우스", "name_en": "Ewha Guesthouse", "lat": 37.5575, "lng": 126.9455, "type": "guesthouse"},
-            {"name": "신촌 호스텔 1001", "name_en": "Sinchon Hostel 1001", "lat": 37.5560, "lng": 126.9385, "type": "hostel"},
-            {"name": "연세로 레지던스", "name_en": "Yonsei-ro Residence", "lat": 37.5570, "lng": 126.9410, "type": "residence"},
-            {"name": "더 로컬 홍대", "name_en": "The Local Hongdae", "lat": 37.5545, "lng": 126.9245, "type": "4star"},
-            {"name": "아만티 홍대", "name_en": "Amanti Hotel Hongdae", "lat": 37.5535, "lng": 126.9310, "type": "4star"},
-            {"name": "홍대 포레스트 호텔", "name_en": "Hongdae Forest Hotel", "lat": 37.5610, "lng": 126.9175, "type": "3star"},
-            {"name": "K-Style Hub 게스트하우스", "name_en": "K-Style Hub Guesthouse", "lat": 37.5568, "lng": 126.9228, "type": "guesthouse"},
-            {"name": "퍼플 하우스 홍대", "name_en": "Purple House Hongdae", "lat": 37.5592, "lng": 126.9208, "type": "airbnb"},
+            {"name_en": "L7 Hongdae by Lotte", "lat": 37.5567, "lng": 126.9236, "type": "5star"},
+            {"name_en": "RYSE Autograph Collection", "lat": 37.5559, "lng": 126.9213, "type": "5star"},
+            {"name_en": "Hongdae Stay Hotel", "lat": 37.5578, "lng": 126.9220, "type": "4star"},
+            {"name_en": "Marigold Hotel Hongdae", "lat": 37.5590, "lng": 126.9198, "type": "4star"},
+            {"name_en": "Hotel River Hongdae", "lat": 37.5549, "lng": 126.9262, "type": "3star"},
+            {"name_en": "Mr. Hong Guesthouse", "lat": 37.5570, "lng": 126.9255, "type": "guesthouse"},
+            {"name_en": "Hongdae ARMY Guesthouse", "lat": 37.5585, "lng": 126.9245, "type": "guesthouse"},
+            {"name_en": "Safe Stay Hongdae", "lat": 37.5598, "lng": 126.9185, "type": "hostel"},
+            {"name_en": "Hi Hongdae Hostel", "lat": 37.5540, "lng": 126.9295, "type": "hostel"},
+            {"name_en": "Hongdae Modern Studio", "lat": 37.5572, "lng": 126.9235, "type": "airbnb"},
+            {"name_en": "Yeonnam Retro House", "lat": 37.5620, "lng": 126.9255, "type": "airbnb"},
+            {"name_en": "Hongdae Art Residence", "lat": 37.5580, "lng": 126.9200, "type": "residence"},
+            {"name_en": "The Local Hongdae", "lat": 37.5545, "lng": 126.9245, "type": "4star"},
+            {"name_en": "Amanti Hotel Hongdae", "lat": 37.5535, "lng": 126.9310, "type": "4star"},
+            {"name_en": "Purple House Hongdae", "lat": 37.5592, "lng": 126.9208, "type": "airbnb"},
         ]
 
-        # 3. 상암/DMC 지역 (20개) - 방송국 밀집
+        # 상암/DMC 지역
         sangam_hotels = [
-            {"name": "스탠포드 호텔 상암", "name_en": "Stanford Hotel Sangam", "lat": 37.5795, "lng": 126.8898, "type": "4star"},
-            {"name": "코트야드 바이 메리어트 상암", "name_en": "Courtyard by Marriott Sangam", "lat": 37.5768, "lng": 126.8920, "type": "5star"},
-            {"name": "상암 MBC 프레스센터 호텔", "name_en": "MBC Press Center Hotel", "lat": 37.5780, "lng": 126.8910, "type": "4star"},
-            {"name": "DMC 비즈니스 호텔", "name_en": "DMC Business Hotel", "lat": 37.5755, "lng": 126.8950, "type": "3star"},
-            {"name": "상암 레지던스 호텔", "name_en": "Sangam Residence Hotel", "lat": 37.5770, "lng": 126.8875, "type": "residence"},
-            {"name": "디지털미디어시티 게스트하우스", "name_en": "DMC Guesthouse", "lat": 37.5788, "lng": 126.8930, "type": "guesthouse"},
-            {"name": "월드컵경기장 호스텔", "name_en": "World Cup Stadium Hostel", "lat": 37.5682, "lng": 126.8972, "type": "hostel"},
-            {"name": "상암 파크 스튜디오", "name_en": "Sangam Park Studio", "lat": 37.5765, "lng": 126.8855, "type": "airbnb"},
-            {"name": "하늘공원 뷰 아파트", "name_en": "Sky Park View Apartment", "lat": 37.5720, "lng": 126.8920, "type": "airbnb"},
-            {"name": "상암 MBC 앞 원룸", "name_en": "Sangam MBC Front Room", "lat": 37.5792, "lng": 126.8905, "type": "airbnb"},
-            {"name": "수색역 호텔", "name_en": "Susaek Station Hotel", "lat": 37.5802, "lng": 126.8960, "type": "3star"},
-            {"name": "증산역 레지던스", "name_en": "Jeungsan Station Residence", "lat": 37.5830, "lng": 126.9095, "type": "residence"},
-            {"name": "응암동 게스트하우스", "name_en": "Eungam-dong Guesthouse", "lat": 37.5950, "lng": 126.9150, "type": "guesthouse"},
-            {"name": "새절역 호스텔", "name_en": "Saejeol Station Hostel", "lat": 37.5880, "lng": 126.9120, "type": "hostel"},
-            {"name": "상암 스카이뷰 호텔", "name_en": "Sangam Skyview Hotel", "lat": 37.5750, "lng": 126.8905, "type": "4star"},
-            {"name": "DMC 타워 레지던스", "name_en": "DMC Tower Residence", "lat": 37.5775, "lng": 126.8940, "type": "residence"},
-            {"name": "상암 월드컵 호텔", "name_en": "Sangam World Cup Hotel", "lat": 37.5695, "lng": 126.8985, "type": "3star"},
-            {"name": "난지도 게스트하우스", "name_en": "Nanjido Guesthouse", "lat": 37.5650, "lng": 126.8850, "type": "guesthouse"},
-            {"name": "마포 상암 에어비앤비", "name_en": "Mapo Sangam Airbnb", "lat": 37.5710, "lng": 126.8965, "type": "airbnb"},
-            {"name": "평화의공원 스튜디오", "name_en": "Peace Park Studio", "lat": 37.5670, "lng": 126.8935, "type": "airbnb"},
+            {"name_en": "Stanford Hotel Sangam", "lat": 37.5795, "lng": 126.8898, "type": "4star"},
+            {"name_en": "Courtyard by Marriott Sangam", "lat": 37.5768, "lng": 126.8920, "type": "5star"},
+            {"name_en": "MBC Press Center Hotel", "lat": 37.5780, "lng": 126.8910, "type": "4star"},
+            {"name_en": "DMC Business Hotel", "lat": 37.5755, "lng": 126.8950, "type": "3star"},
+            {"name_en": "Sangam Residence Hotel", "lat": 37.5770, "lng": 126.8875, "type": "residence"},
+            {"name_en": "DMC Guesthouse", "lat": 37.5788, "lng": 126.8930, "type": "guesthouse"},
+            {"name_en": "World Cup Stadium Hostel", "lat": 37.5682, "lng": 126.8972, "type": "hostel"},
+            {"name_en": "Sangam Park Studio", "lat": 37.5765, "lng": 126.8855, "type": "airbnb"},
+            {"name_en": "Sky Park View Apartment", "lat": 37.5720, "lng": 126.8920, "type": "airbnb"},
+            {"name_en": "Sangam Skyview Hotel", "lat": 37.5750, "lng": 126.8905, "type": "4star"},
         ]
 
-        # 4. 파주/운정 지역 (15개) - 외곽 저렴한 옵션
+        # 파주 지역
         paju_hotels = [
-            {"name": "롯데 프리미엄 아울렛 파주", "name_en": "Lotte Premium Outlet Paju", "lat": 37.7150, "lng": 126.7250, "type": "4star"},
-            {"name": "운정 호텔", "name_en": "Unjeong Hotel", "lat": 37.7120, "lng": 126.7580, "type": "3star"},
-            {"name": "파주 레지던스", "name_en": "Paju Residence", "lat": 37.7080, "lng": 126.7620, "type": "residence"},
-            {"name": "운정역 게스트하우스", "name_en": "Unjeong Station Guesthouse", "lat": 37.7095, "lng": 126.7550, "type": "guesthouse"},
-            {"name": "파주 평화 호스텔", "name_en": "Paju Peace Hostel", "lat": 37.7200, "lng": 126.7180, "type": "hostel"},
-            {"name": "운정호수공원 에어비앤비", "name_en": "Unjeong Lake Park Airbnb", "lat": 37.7060, "lng": 126.7650, "type": "airbnb"},
-            {"name": "야당역 원룸", "name_en": "Yadang Station One Room", "lat": 37.7250, "lng": 126.7450, "type": "airbnb"},
-            {"name": "금촌역 호텔", "name_en": "Geumchon Station Hotel", "lat": 37.7550, "lng": 126.7680, "type": "3star"},
-            {"name": "금촌 레지던스", "name_en": "Geumchon Residence", "lat": 37.7530, "lng": 126.7710, "type": "residence"},
-            {"name": "문산 게스트하우스", "name_en": "Munsan Guesthouse", "lat": 37.8580, "lng": 126.7850, "type": "guesthouse"},
-            {"name": "파주 출판도시 호텔", "name_en": "Paju Book City Hotel", "lat": 37.7350, "lng": 126.7150, "type": "4star"},
-            {"name": "헤이리 예술마을 에어비앤비", "name_en": "Heyri Art Village Airbnb", "lat": 37.7450, "lng": 126.6850, "type": "airbnb"},
-            {"name": "파주 프리미엄 호텔", "name_en": "Paju Premium Hotel", "lat": 37.7180, "lng": 126.7350, "type": "4star"},
-            {"name": "운정 비즈니스 호텔", "name_en": "Unjeong Business Hotel", "lat": 37.7100, "lng": 126.7530, "type": "3star"},
-            {"name": "파주 더 스테이", "name_en": "Paju The Stay", "lat": 37.7140, "lng": 126.7480, "type": "residence"},
+            {"name_en": "Unjeong Hotel", "lat": 37.7120, "lng": 126.7580, "type": "3star"},
+            {"name_en": "Paju Residence", "lat": 37.7080, "lng": 126.7620, "type": "residence"},
+            {"name_en": "Unjeong Guesthouse", "lat": 37.7095, "lng": 126.7550, "type": "guesthouse"},
+            {"name_en": "Paju Peace Hostel", "lat": 37.7200, "lng": 126.7180, "type": "hostel"},
+            {"name_en": "Unjeong Lake Airbnb", "lat": 37.7060, "lng": 126.7650, "type": "airbnb"},
+            {"name_en": "Paju Book City Hotel", "lat": 37.7350, "lng": 126.7150, "type": "4star"},
+            {"name_en": "Heyri Art Village Airbnb", "lat": 37.7450, "lng": 126.6850, "type": "airbnb"},
+            {"name_en": "Paju Premium Hotel", "lat": 37.7180, "lng": 126.7350, "type": "4star"},
+            {"name_en": "Unjeong Business Hotel", "lat": 37.7100, "lng": 126.7530, "type": "3star"},
+            {"name_en": "Paju The Stay", "lat": 37.7140, "lng": 126.7480, "type": "residence"},
         ]
 
-        # 모든 지역 합치기
-        all_hotels = []
+        # 지역 태그 추가
+        for h in ilsan_hotels:
+            h["area"] = "Ilsan/KINTEX"
+            hotels.append(h)
+        for h in hongdae_hotels:
+            h["area"] = "Hongdae/Sinchon"
+            hotels.append(h)
+        for h in sangam_hotels:
+            h["area"] = "Sangam/DMC"
+            hotels.append(h)
+        for h in paju_hotels:
+            h["area"] = "Paju/Unjeong"
+            hotels.append(h)
 
-        for hotel in ilsan_hotels:
-            hotel["area"] = "Ilsan/KINTEX"
-            hotel["area_kr"] = "일산/킨텍스"
-            all_hotels.append(hotel)
-
-        for hotel in hongdae_hotels:
-            hotel["area"] = "Hongdae/Sinchon"
-            hotel["area_kr"] = "홍대/신촌"
-            all_hotels.append(hotel)
-
-        for hotel in sangam_hotels:
-            hotel["area"] = "Sangam/DMC"
-            hotel["area_kr"] = "상암/DMC"
-            all_hotels.append(hotel)
-
-        for hotel in paju_hotels:
-            hotel["area"] = "Paju/Unjeong"
-            hotel["area_kr"] = "파주/운정"
-            all_hotels.append(hotel)
-
-        return all_hotels
+        return hotels
 
     def _calculate_distance(self, lat1: float, lng1: float, lat2: float, lng2: float) -> float:
-        """두 좌표 간 거리 계산 (km) - Haversine 공식"""
-        R = 6371  # 지구 반경 (km)
-
-        lat1_rad = math.radians(lat1)
-        lat2_rad = math.radians(lat2)
+        """Haversine 공식으로 거리 계산 (km)"""
+        R = 6371
+        lat1_rad, lat2_rad = math.radians(lat1), math.radians(lat2)
         delta_lat = math.radians(lat2 - lat1)
         delta_lng = math.radians(lng2 - lng1)
-
         a = math.sin(delta_lat/2)**2 + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(delta_lng/2)**2
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+        return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
-        return R * c
+    def _get_distance_display(self, distance_km: float) -> Dict:
+        """거리 표시 생성 - 도보 30분 이내면 도보, 아니면 차로"""
+        walking_time = int(distance_km / 5 * 60)  # 5km/h 기준
+        driving_time = int(distance_km / 30 * 60)  # 30km/h 기준 (시내)
 
-    def _calculate_walking_time(self, distance_km: float) -> int:
-        """거리에 따른 도보 시간 계산 (분) - 평균 5km/h 기준"""
-        return int(distance_km / 5 * 60)
-
-    def _get_transport_tag(self, walking_time: int, distance_km: float) -> Tuple[str, str]:
-        """교통 태그 생성"""
-        if walking_time <= 10:
-            return f"Walk {walking_time}min", f"도보 {walking_time}분"
-        elif walking_time <= 20:
-            return f"Walk {walking_time}min", f"도보 {walking_time}분"
-        elif distance_km <= 5:
-            shuttle_time = int(distance_km * 3)  # 셔틀 평균 20km/h
-            return f"Shuttle {shuttle_time}min", f"셔틀 {shuttle_time}분"
-        elif distance_km <= 15:
-            subway_time = int(distance_km * 2.5)  # 지하철 평균 24km/h
-            return f"Subway {subway_time}min", f"지하철 {subway_time}분"
+        if walking_time <= 30:
+            return {
+                "type": "walk",
+                "display_en": f"Walk {walking_time}min",
+                "display_kr": f"도보 {walking_time}분",
+                "minutes": walking_time,
+                "distance_km": round(distance_km, 1)
+            }
         else:
-            taxi_time = int(distance_km * 1.5)  # 택시 평균 40km/h
-            return f"Taxi {taxi_time}min", f"택시 {taxi_time}분"
+            return {
+                "type": "car",
+                "display_en": f"Drive {driving_time}min",
+                "display_kr": f"차로 {driving_time}분",
+                "minutes": driving_time,
+                "distance_km": round(distance_km, 1)
+            }
 
-    def _generate_army_density(self, hotel_type: str, area: str) -> int:
-        """아미 밀집도 생성 - 지역/타입별 가중치"""
-        base = random.randint(15, 45)
+    def _generate_army_density(self, hotel_type: str, area: str) -> Dict:
+        """아미 밀집도 생성"""
+        base = random.randint(20, 50)
 
-        # 지역 보너스
-        if "KINTEX" in area or "Ilsan" in area:
-            base += random.randint(20, 40)  # 킨텍스 근처는 아미 밀집도 높음
+        if "Ilsan" in area or "KINTEX" in area:
+            base += random.randint(20, 35)
         elif "Hongdae" in area:
-            base += random.randint(15, 30)  # 홍대도 외국인 아미 많음
+            base += random.randint(15, 30)
         elif "Sangam" in area:
-            base += random.randint(10, 25)  # 방송국 근처
+            base += random.randint(10, 20)
 
-        # 타입 보너스
         if hotel_type == "guesthouse":
-            base += random.randint(10, 20)  # 게스트하우스는 팬들끼리 모이기 좋음
+            base += random.randint(10, 20)
         elif hotel_type == "hostel":
             base += random.randint(5, 15)
 
-        return min(base, 98)  # 최대 98%
-
-    def _find_nearby_bts_spots(self, lat: float, lng: float, count: int = 2) -> List[Dict]:
-        """숙소 근처 BTS 성지 찾기"""
-        spots_with_distance = []
-
-        for spot in self.BTS_SPOTS:
-            distance = self._calculate_distance(lat, lng, spot["lat"], spot["lng"])
-            spots_with_distance.append({
-                **spot,
-                "distance_km": round(distance, 1),
-                "travel_time_min": self._calculate_walking_time(distance) if distance < 2 else int(distance * 2.5)
-            })
-
-        # 가장 가까운 순으로 정렬
-        spots_with_distance.sort(key=lambda x: x["distance_km"])
-
-        return spots_with_distance[:count]
-
-    def _generate_keywords(self, hotel: Dict, walking_time: int, army_density: int, nearby_spots: List) -> List[str]:
-        """추천 키워드 생성 (영어/한글 혼용)"""
-        keywords = []
-
-        # 교통 관련
-        if walking_time <= 10:
-            keywords.append("#WalkableVenue")
-        if walking_time <= 20:
-            keywords.append("#NearKINTEX")
-
-        # 아미 밀집도 관련
-        if army_density >= 70:
-            keywords.append("#ARMYHotspot")
-            keywords.append("#팬덤밀집")
-        elif army_density >= 50:
-            keywords.append("#ARMYFriendly")
-
-        # 지역 특성
-        if "Hongdae" in hotel.get("area", ""):
-            keywords.append("#HongdaeVibes")
-            keywords.append("#NightlifeArea")
-        if "Sangam" in hotel.get("area", ""):
-            keywords.append("#BroadcastStations")
-            keywords.append("#MusicShowAccess")
-
-        # 타입 관련
-        if hotel["type"] == "guesthouse":
-            keywords.append("#MeetARMY")
-            keywords.append("#CommunityStay")
-        elif hotel["type"] == "5star":
-            keywords.append("#LuxuryStay")
-        elif hotel["type"] in ["airbnb", "residence"]:
-            keywords.append("#SelfCatering")
-            keywords.append("#LongStayOK")
-
-        # 성지순례 관련
-        if any(spot["distance_km"] < 3 for spot in nearby_spots):
-            keywords.append("#성지순례")
-            keywords.append("#BTSSpot")
-
-        # 영어 지원 (외국인용)
-        if hotel["type"] in ["5star", "4star"] or "Hongdae" in hotel.get("area", ""):
-            keywords.append("#EnglishOK")
-
-        return keywords[:5]  # 최대 5개
-
-    def _get_safe_return_info(self, hotel: Dict, distance_km: float) -> Dict:
-        """안심 귀가 정보 생성 - UI 상세 페이지용"""
-        area = hotel.get("area", "")
-
-        # 지역별 정보 가져오기
-        route_info = self.SUBWAY_ROUTES.get(area, {
-            "station": "인근역",
-            "station_en": "Nearby Station",
-            "line": "지하철",
-            "line_en": "Subway",
-            "line_color": "#888888"
-        })
-
-        # 지역별 막차 시간
-        last_train_times = {
-            "Ilsan/KINTEX": "23:40",
-            "Hongdae/Sinchon": "00:10",
-            "Sangam/DMC": "00:05",
-            "Paju/Unjeong": "23:20",
-        }
-        last_train = last_train_times.get(area, "00:00")
-
-        # 역에서 숙소까지 도보 시간 (랜덤 시뮬레이션: 3~20분)
-        walk_from_station = random.randint(3, 20)
-
-        # 경로 요약 텍스트 생성 (UI: "Jamsil → Line 2 → Stay")
-        route_summary = f"KINTEX → {route_info['line_en']} → Stay"
-        route_summary_kr = f"킨텍스 → {route_info['line']} → 숙소"
-
+        value = min(base, 95)
         return {
-            "last_train_time": last_train,
-            "nearest_station": route_info["station"],
-            "nearest_station_en": route_info["station_en"],
-            "subway_line": route_info["line"],
-            "subway_line_en": route_info["line_en"],
-            "line_color": route_info["line_color"],
-            "walk_from_station_min": walk_from_station,
-            "route_summary": route_summary,
-            "route_summary_kr": route_summary_kr,
-            "concert_end_estimate": "22:00",
-            "safe_return_possible": distance_km < 15,
-            "recommended_transport": "지하철" if distance_km < 10 else "택시" if distance_km < 20 else "셔틀버스",
-            "recommended_transport_en": "Subway" if distance_km < 10 else "Taxi" if distance_km < 20 else "Shuttle",
-            "taxi_estimate_krw": int(distance_km * 1200 + 4800) if distance_km > 2 else 0,
-            "taxi_estimate_usd": int((distance_km * 1200 + 4800) / 1350) if distance_km > 2 else 0,
+            "value": value,
+            "label_en": f"ARMY {value}%",
+            "label_kr": f"아미 {value}%"
         }
 
-    def _get_booking_info(self, hotel: Dict) -> Dict:
-        """예약 플랫폼 정보 생성"""
-        # 호텔 타입에 따른 플랫폼 선택
-        if hotel["type"] in ["5star", "4star", "3star"]:
-            platforms = ["agoda", "booking", "hotels", "expedia", "trip"]
-        elif hotel["type"] == "airbnb":
-            platforms = ["airbnb"]
-        elif hotel["type"] in ["guesthouse", "hostel"]:
-            platforms = ["agoda", "booking", "yanolja", "goodchoice"]
+    def _get_transport_info(self, area: str) -> Dict:
+        """근처 교통편 정보"""
+        route = self.SUBWAY_ROUTES.get(area, self.SUBWAY_ROUTES["Ilsan/KINTEX"])
+        return {
+            "station_en": route["station_en"],
+            "station_kr": route["station"],
+            "line_en": route["line_en"],
+            "line_kr": route["line"],
+            "line_color": route["line_color"],
+            "to_venue_min": route["to_venue_min"],
+            "display_en": f"{route['station_en']} ({route['line_en']})",
+            "display_kr": f"{route['station']} ({route['line']})"
+        }
+
+    def _get_army_spot_tag(self, lat: float, lng: float) -> Dict:
+        """가장 가까운 아미 스팟 태그"""
+        bts_spots = [s for s in self.LOCAL_SPOTS if s["category"] == "bts"]
+        nearest = min(bts_spots, key=lambda s: self._calculate_distance(lat, lng, s["lat"], s["lng"]))
+        distance = self._calculate_distance(lat, lng, nearest["lat"], nearest["lng"])
+        return {
+            "name_en": nearest["name_en"],
+            "spot_tag": nearest["spot_tag"],
+            "distance_km": round(distance, 1)
+        }
+
+    def _get_safe_return_route(self, hotel: Dict, distance_km: float) -> Dict:
+        """Safe Return Route - 공연장에서 숙소까지 경로"""
+        area = hotel.get("area", "Ilsan/KINTEX")
+        route = self.SUBWAY_ROUTES.get(area, self.SUBWAY_ROUTES["Ilsan/KINTEX"])
+
+        # 공연 종료 예상 시간
+        concert_end = "22:00"
+
+        # 막차 시간
+        last_trains = {
+            "Ilsan/KINTEX": "23:50",
+            "Hongdae/Sinchon": "00:15",
+            "Sangam/DMC": "00:10",
+            "Paju/Unjeong": "23:30",
+        }
+        last_train = last_trains.get(area, "23:50")
+
+        # 이동 수단 결정
+        walking_time = int(distance_km / 5 * 60)
+        if walking_time <= 30:
+            transport = "walk"
+            travel_time = walking_time
+            route_detail = f"Walk from {self.VENUE['name_en']} → {hotel['name_en']}"
+        elif distance_km <= 10:
+            transport = "subway"
+            travel_time = route["to_venue_min"]
+            route_detail = f"{self.VENUE['name_en']} → {route['station_en']} ({route['line_en']}) → Walk to hotel"
         else:
-            platforms = ["agoda", "booking", "yanolja"]
-
-        selected = random.choice(platforms)
-        platform_info = self.PLATFORMS[selected]
+            transport = "taxi"
+            travel_time = int(distance_km / 30 * 60)
+            route_detail = f"Taxi from {self.VENUE['name_en']} → {hotel['name_en']}"
 
         return {
-            "platform": platform_info["name"],
-            "booking_url": platform_info["url_pattern"],
-            "iframe_support": platform_info["iframe_support"],
+            "venue_name_en": self.VENUE["name_en"],
+            "venue_name_kr": self.VENUE["name"],
+            "route_detail_en": route_detail,
+            "route_summary_en": f"{self.VENUE['name_en']} → {route['line_en']} → Hotel",
+            "route_summary_kr": f"{self.VENUE['name']} → {route['line']} → 숙소",
+            "transport_type": transport,
+            "travel_time_min": travel_time,
+            "last_train_time": last_train,
+            "concert_end_estimate": concert_end,
+            "safe_return_possible": distance_km < 15,
+            "line_color": route["line_color"],
+            "station_en": route["station_en"],
+            "taxi_estimate_krw": int(distance_km * 1200 + 4800) if transport == "taxi" else 0
         }
 
-    def _generate_address(self, hotel: Dict) -> Tuple[str, str]:
-        """상세 주소 생성"""
-        area = hotel.get("area", "")
+    def _get_army_local_guide(self, lat: float, lng: float) -> Dict:
+        """아미 로컬 가이드 - BTS/맛집/카페/핫스팟"""
+        result = {"bts_spots": [], "restaurants": [], "cafes": [], "hotspots": []}
 
-        # 지역별 주소 패턴
-        address_patterns = {
-            "Ilsan/KINTEX": [
-                ("경기도 고양시 일산서구 킨텍스로", "KINTEX-ro, Ilsanseo-gu, Goyang-si"),
-                ("경기도 고양시 일산서구 대화동", "Daehwa-dong, Ilsanseo-gu, Goyang-si"),
-                ("경기도 고양시 일산동구 장항동", "Janghang-dong, Ilsandong-gu, Goyang-si"),
-            ],
-            "Hongdae/Sinchon": [
-                ("서울특별시 마포구 와우산로", "Wausan-ro, Mapo-gu, Seoul"),
-                ("서울특별시 마포구 홍익로", "Hongik-ro, Mapo-gu, Seoul"),
-                ("서울특별시 서대문구 연세로", "Yonsei-ro, Seodaemun-gu, Seoul"),
-            ],
-            "Sangam/DMC": [
-                ("서울특별시 마포구 상암동 월드컵로", "World Cup-ro, Sangam-dong, Mapo-gu"),
-                ("서울특별시 마포구 성암로", "Seongam-ro, Mapo-gu, Seoul"),
-                ("서울특별시 마포구 DMC단지", "DMC Complex, Mapo-gu, Seoul"),
-            ],
-            "Paju/Unjeong": [
-                ("경기도 파주시 운정역로", "Unjeong Station-ro, Paju-si"),
-                ("경기도 파주시 금촌동", "Geumchon-dong, Paju-si"),
-                ("경기도 파주시 야당동", "Yadang-dong, Paju-si"),
-            ],
-        }
+        for spot in self.LOCAL_SPOTS:
+            dist = self._calculate_distance(lat, lng, spot["lat"], spot["lng"])
+            spot_data = {
+                "name_en": spot["name_en"],
+                "spot_tag": spot["spot_tag"],
+                "description_en": spot["description_en"],
+                "distance_km": round(dist, 1),
+                "latitude": spot["lat"],
+                "longitude": spot["lng"]
+            }
 
-        patterns = address_patterns.get(area, [("서울특별시", "Seoul")])
-        addr_kr, addr_en = random.choice(patterns)
+            if spot["category"] == "bts":
+                result["bts_spots"].append(spot_data)
+            elif spot["category"] == "restaurant":
+                result["restaurants"].append(spot_data)
+            elif spot["category"] == "cafe":
+                result["cafes"].append(spot_data)
+            elif spot["category"] == "hotspot":
+                result["hotspots"].append(spot_data)
 
-        # 번지 추가
-        num = random.randint(1, 200)
-        return f"{addr_kr} {num}", f"{num}, {addr_en}"
+        # 각 카테고리별 가까운 순 정렬 및 제한
+        for key in result:
+            result[key] = sorted(result[key], key=lambda x: x["distance_km"])[:3]
 
-    def generate_hotel_data(self, hotel: Dict) -> Dict:
-        """개별 호텔의 완전한 데이터 생성 - UI 상세 페이지 완전 지원"""
+        return result
 
-        # 거리 및 시간 계산
+    def _get_booking_guide(self, platform_name: str) -> Dict:
+        """외국인 예약 가이드"""
+        guide = self.BOOKING_GUIDES.get(platform_name, self.BOOKING_GUIDES["Agoda"])
+        return guide
+
+    def generate_hotel_data(self, hotel: Dict, all_hotels: List[Dict] = None) -> Dict:
+        """개별 호텔 완전 데이터 생성"""
+
+        # 거리 계산
         distance = self._calculate_distance(
             hotel["lat"], hotel["lng"],
-            self.KINTEX["lat"], self.KINTEX["lng"]
+            self.VENUE["lat"], self.VENUE["lng"]
         )
-        walking_time = self._calculate_walking_time(distance)
 
-        # 가격 생성
+        # 타입 정보
         type_info = self.HOTEL_TYPES[hotel["type"]]
-        price = random.randint(*type_info["price_range"])
 
-        # 태그 생성
-        trans_tag_en, trans_tag_kr = self._get_transport_tag(walking_time, distance)
-        army_density = self._generate_army_density(hotel["type"], hotel.get("area", ""))
-        nearby_spots = self._find_nearby_bts_spots(hotel["lat"], hotel["lng"], count=3)  # 3개로 확장
-        keywords = self._generate_keywords(hotel, walking_time, army_density, nearby_spots)
+        # 가격 (원화 기준)
+        price_krw = random.randint(*type_info["price_range"])
 
-        # Safe Return 정보
-        safe_return = self._get_safe_return_info(hotel, distance)
+        # 플랫폼 선택
+        if hotel["type"] in ["5star", "4star", "3star"]:
+            platform_key = random.choice(["agoda", "booking", "hotels"])
+        elif hotel["type"] == "airbnb":
+            platform_key = "agoda"  # 에어비앤비도 글로벌 OTA로
+        else:
+            platform_key = random.choice(["agoda", "booking", "yanolja"])
 
-        # 예약 정보
-        booking = self._get_booking_info(hotel)
+        platform = self.PLATFORMS[platform_key]
 
-        # 객실 현황 (시뮬레이션)
-        rooms_left = random.randint(0, 12)
+        # 평점 생성
+        rating_base = {"5star": 4.5, "4star": 4.2, "3star": 3.9, "residence": 4.1,
+                       "guesthouse": 4.3, "airbnb": 4.0, "hostel": 3.8}
+        rating = round(rating_base.get(hotel["type"], 4.0) + random.uniform(-0.3, 0.4), 1)
+        rating = min(5.0, max(3.5, rating))
 
-        # 이미지 URL 선택
+        # 객실 현황
+        rooms_left = random.randint(0, 10)
+
+        # 이미지
         images = self.HOTEL_IMAGES.get(hotel["type"], self.HOTEL_IMAGES["3star"])
         image_url = random.choice(images)
 
-        # 상세 주소 생성
-        address_kr, address_en = self._generate_address(hotel)
+        # 4단계 태그 (키워드 제거)
+        display_tags = {
+            "type": {
+                "label_en": type_info["label_en"],
+                "label_kr": type_info["label_kr"],
+                "color": type_info["color"]
+            },
+            "density": self._generate_army_density(hotel["type"], hotel.get("area", "")),
+            "transport": self._get_transport_info(hotel.get("area", "")),
+            "army_spot": self._get_army_spot_tag(hotel["lat"], hotel["lng"])
+        }
 
-        # 평점 생성 (타입별 가중치)
-        rating_base = {"5star": 4.5, "4star": 4.2, "3star": 3.9, "residence": 4.1, "guesthouse": 4.3, "airbnb": 4.0, "hostel": 3.8}
-        rating = round(rating_base.get(hotel["type"], 4.0) + random.uniform(-0.3, 0.5), 1)
-        rating = min(5.0, max(3.5, rating))  # 3.5 ~ 5.0 범위
+        hotel_id = f"hotel_{abs(hash(hotel['name_en'])) % 100000:05d}"
 
         return {
-            # 기본 정보
-            "id": f"hotel_{hash(hotel['name']) % 100000:05d}",
-            "name": hotel["name"],
+            "id": hotel_id,
             "name_en": hotel["name_en"],
             "area": hotel.get("area", ""),
-            "area_kr": hotel.get("area_kr", ""),
-
-            # 상세 주소 (UI: Lotte World Tower, Songpa-gu)
-            "address": address_kr,
-            "address_en": address_en,
-
-            # 이미지 (UI: 상단 숙소 이미지)
-            "image_url": image_url,
-
-            # 좌표 (지도 뷰용)
             "latitude": hotel["lat"],
             "longitude": hotel["lng"],
 
-            # 가격 (UI: Total price $450)
-            "price_usd": price,
-            "price_krw": price * 1350,
-            "currency": "USD",
+            # 가격 (원화)
+            "price_krw": price_krw,
 
-            # 평점 (UI: AGODA ⭐ 4.9)
-            "rating": rating,
-            "review_count": random.randint(50, 2000),
+            # 거리 표시 (도보/차)
+            "distance": self._get_distance_display(distance),
 
-            # 4단계 태그 시스템
-            "display_tags": {
-                "type": {
-                    "en": type_info["label"],
-                    "kr": type_info["label_kr"],
-                    "color": type_info["color"]
-                },
-                "trans": {
-                    "en": trans_tag_en,
-                    "kr": trans_tag_kr,
-                    "walking_time_min": walking_time,
-                    "distance_km": round(distance, 1)
-                },
-                "density": {
-                    "value": army_density,
-                    "label_en": f"ARMY Density {army_density}%",
-                    "label_kr": f"아미 밀집도 {army_density}%"
-                },
-                "keywords": keywords
+            # 4단계 태그 (키워드 없음)
+            "display_tags": display_tags,
+
+            # 플랫폼 & 평점
+            "platform": {
+                "name": platform["name"],
+                "rating": rating,
+                "booking_url": platform["url_pattern"]
             },
-
-            # 공연장 정보
-            "venue": {
-                "name": self.KINTEX["name"],
-                "name_en": "KINTEX",
-                "distance_km": round(distance, 1),
-                "walking_time_min": walking_time
-            },
-
-            # 안심 귀가 정보 (Safe Return Route) - UI 상세 페이지
-            "safe_return": safe_return,
-
-            # Army Local Guide (성지순례) - 3개로 확장
-            "nearby_bts_spots": nearby_spots,
-
-            # 예약 정보 (UI: Book on Agoda 버튼)
-            "booking": booking,
 
             # 객실 현황
             "rooms_left": rooms_left,
-            "status": "예약 마감" if rooms_left == 0 else f"남은 객실 {rooms_left}개",
-            "status_en": "Sold Out" if rooms_left == 0 else f"{rooms_left} rooms left",
             "is_available": rooms_left > 0,
+            "status_en": "Sold Out" if rooms_left == 0 else f"{rooms_left} rooms left",
 
-            # 메타데이터
+            # 이미지
+            "image_url": image_url,
+
+            # === Detail 페이지용 ===
+
+            # Safe Return Route
+            "safe_return": self._get_safe_return_route(hotel, distance),
+
+            # Army Local Guide
+            "army_local_guide": self._get_army_local_guide(hotel["lat"], hotel["lng"]),
+
+            # 외국인 예약 가이드
+            "booking_guide": self._get_booking_guide(platform["name"]),
+
+            # 메타
             "last_update": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            "d_day": "D-138",
         }
 
+    def _add_nearby_recommendations(self, hotels: List[Dict]) -> List[Dict]:
+        """각 호텔에 가까운 추천 숙소 3개 추가"""
+        for hotel in hotels:
+            nearby = []
+            for other in hotels:
+                if other["id"] != hotel["id"]:
+                    dist = self._calculate_distance(
+                        hotel["latitude"], hotel["longitude"],
+                        other["latitude"], other["longitude"]
+                    )
+                    nearby.append({
+                        "id": other["id"],
+                        "name_en": other["name_en"],
+                        "price_krw": other["price_krw"],
+                        "distance_km": round(dist, 1),
+                        "image_url": other["image_url"],
+                        "platform_name": other["platform"]["name"],
+                        "rating": other["platform"]["rating"]
+                    })
+
+            # 거리순 정렬 후 상위 3개
+            nearby.sort(key=lambda x: x["distance_km"])
+            hotel["nearby_recommendations"] = nearby[:3]
+
+        return hotels
+
     def generate_all_hotels(self) -> List[Dict]:
-        """모든 호텔 데이터 생성"""
-        all_hotels = []
+        """전체 호텔 데이터 생성"""
+        hotels = []
+        for h in self.HOTELS_DATA:
+            hotel_data = self.generate_hotel_data(h)
+            hotels.append(hotel_data)
 
-        for hotel in self.HOTELS_DATA:
-            hotel_data = self.generate_hotel_data(hotel)
-            all_hotels.append(hotel_data)
+        # 거리순 정렬
+        hotels.sort(key=lambda x: x["distance"]["distance_km"])
 
-        # 거리순으로 정렬
-        all_hotels.sort(key=lambda x: x["venue"]["distance_km"])
+        # 추천 숙소 추가
+        hotels = self._add_nearby_recommendations(hotels)
 
-        return all_hotels
+        return hotels
+
+    def generate_home_summary(self, hotels: List[Dict]) -> Dict:
+        """홈 페이지용 요약 데이터"""
+        available = [h for h in hotels if h["is_available"]]
+        prices = [h["price_krw"] for h in available]
+
+        return {
+            "venue": {
+                "name_en": self.VENUE["name_en"],
+                "name_kr": self.VENUE["name"],
+                "latitude": self.VENUE["lat"],
+                "longitude": self.VENUE["lng"]
+            },
+            "available_count": len(available),
+            "total_count": len(hotels),
+            "lowest_price_krw": min(prices) if prices else 0,
+            "highest_price_krw": max(prices) if prices else 0,
+            "last_update": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        }
+
+    def generate_map_data(self, hotels: List[Dict]) -> Dict:
+        """맵뷰용 데이터"""
+        return {
+            "venue": {
+                "name_en": self.VENUE["name_en"],
+                "latitude": self.VENUE["lat"],
+                "longitude": self.VENUE["lng"],
+                "type": "venue"
+            },
+            "local_spots": [
+                {
+                    "name_en": s["name_en"],
+                    "category": s["category"],
+                    "spot_tag": s["spot_tag"],
+                    "latitude": s["lat"],
+                    "longitude": s["lng"]
+                } for s in self.LOCAL_SPOTS
+            ],
+            "hotels": [
+                {
+                    "id": h["id"],
+                    "name_en": h["name_en"],
+                    "latitude": h["latitude"],
+                    "longitude": h["longitude"],
+                    "price_krw": h["price_krw"],
+                    "type": "hotel"
+                } for h in hotels
+            ]
+        }
 
     def save_to_json(self, hotels: List[Dict], filename: str = "korean_ota_hotels.json"):
-        """JSON 파일로 저장"""
+        """JSON 저장"""
+        output = {
+            "home": self.generate_home_summary(hotels),
+            "map": self.generate_map_data(hotels),
+            "hotels": hotels
+        }
+
         with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(hotels, f, ensure_ascii=False, indent=2)
+            json.dump(output, f, ensure_ascii=False, indent=2)
 
-        print(f"✅ {len(hotels)}개 숙소 데이터가 {filename}에 저장되었습니다.")
+        print(f"✅ {len(hotels)}개 숙소 데이터 저장 완료: {filename}")
 
-        # 통계 출력
-        areas = {}
-        types = {}
-        for h in hotels:
-            areas[h["area"]] = areas.get(h["area"], 0) + 1
-            types[h["display_tags"]["type"]["en"]] = types.get(h["display_tags"]["type"]["en"], 0) + 1
-
-        print("\n📊 지역별 분포:")
-        for area, count in areas.items():
-            print(f"   - {area}: {count}개")
-
-        print("\n🏨 타입별 분포:")
-        for t, count in types.items():
-            print(f"   - {t}: {count}개")
+        # 통계
+        available = sum(1 for h in hotels if h["is_available"])
+        print(f"📊 예약 가능: {available}/{len(hotels)}개")
+        print(f"💰 최저가: ₩{output['home']['lowest_price_krw']:,}")
 
 
 def run_with_scraping(use_scraping: bool = True):
-    """
-    스크래핑 + 시뮬레이션 통합 실행
-
-    Args:
-        use_scraping: 실시간 스크래핑 사용 여부
-    """
-    print("🚀 ARMY Stay Hub 데이터 엔진 v3.0 시작!")
+    """메인 실행 함수"""
+    print("🚀 ARMY Stay Hub 데이터 엔진 v4.0")
     print("=" * 60)
 
     engine = ARMYStayHubEngine()
 
-    # 1. 시뮬레이션 데이터 생성 (기본 데이터)
-    print("\n📊 Step 1: 시뮬레이션 데이터 생성...")
-    simulated_hotels = engine.generate_all_hotels()
-    print(f"   → {len(simulated_hotels)}개 숙소 기본 데이터 생성")
+    print("\n📊 데이터 생성 중...")
+    hotels = engine.generate_all_hotels()
 
-    # 2. 실시간 스크래핑 (선택적)
-    final_hotels = simulated_hotels
-
-    if use_scraping and SCRAPING_ENABLED:
-        print("\n🌐 Step 2: 실시간 스크래핑...")
-        try:
-            ota_scraper = KoreanOTAScraper()
-
-            # 분산 스크래핑 (1~2개 플랫폼)
-            scraped_hotels = ota_scraper.scrape_distributed()
-
-            if scraped_hotels:
-                # 3. 데이터 병합
-                print("\n🔄 Step 3: 데이터 병합...")
-                final_hotels = ota_scraper.merge_with_simulation(scraped_hotels, simulated_hotels)
-            else:
-                print("   ⚠️ 스크래핑 데이터 없음 - 시뮬레이션 데이터 사용")
-
-        except Exception as e:
-            print(f"   ❌ 스크래핑 실패: {e}")
-            print("   → 시뮬레이션 데이터로 계속 진행")
-    else:
-        if not SCRAPING_ENABLED:
-            print("\n⚠️ Step 2 건너뜀: 스크래핑 모듈 미설치")
-        else:
-            print("\n⏭️ Step 2 건너뜀: 시뮬레이션 전용 모드")
-
-    # 4. JSON 저장
-    print("\n💾 Step 4: JSON 저장...")
-    engine.save_to_json(final_hotels)
-
-    # 5. 실행 로그
-    log_entry = {
-        "timestamp": datetime.now().isoformat(),
-        "total_hotels": len(final_hotels),
-        "scraping_used": use_scraping and SCRAPING_ENABLED,
-        "scraped_count": sum(1 for h in final_hotels if h.get('_data_source') not in ['simulation', None]),
-    }
-    print(f"\n📋 실행 로그: {log_entry}")
+    print("\n💾 저장 중...")
+    engine.save_to_json(hotels)
 
     print("\n" + "=" * 60)
-    print("✨ 데이터 생성 완료! Figma Site에서 확인하세요.")
-    print("🔗 https://boar-ignite-62413385.figma.site/")
+    print("✨ 완료!")
 
-    return final_hotels
+    return hotels
 
 
 if __name__ == "__main__":
-    import sys
-
-    # 명령줄 인자로 모드 선택
-    # python run_scraper.py           → 스크래핑 + 시뮬레이션
-    # python run_scraper.py sim       → 시뮬레이션만
-    # python run_scraper.py scrape    → 스크래핑 시도 + 시뮬레이션
-
-    mode = sys.argv[1] if len(sys.argv) > 1 else "auto"
-
-    if mode == "sim":
-        print("📌 시뮬레이션 전용 모드")
-        run_with_scraping(use_scraping=False)
-    else:
-        print("📌 스크래핑 + 시뮬레이션 모드")
-        run_with_scraping(use_scraping=True)
+    run_with_scraping()
