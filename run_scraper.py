@@ -136,6 +136,14 @@ class ARMYStayHubEngine:
                        "line_en": "Line 3", "line_kr": "3호선", "line_color": "#EF7C1C"}
         }
 
+        # 지역 정보 (좌표 기반 판단용)
+        self.AREAS = [
+            {"name_en": "Ilsan", "name_kr": "일산", "lat": 37.6556, "lng": 126.7714, "radius_km": 3},
+            {"name_en": "Hongdae", "name_kr": "홍대", "lat": 37.5563, "lng": 126.9220, "radius_km": 2},
+            {"name_en": "Sangam", "name_kr": "상암", "lat": 37.5786, "lng": 126.8918, "radius_km": 2},
+            {"name_en": "Paju", "name_kr": "파주", "lat": 37.7600, "lng": 126.7800, "radius_km": 5},
+        ]
+
     def _calc_distance(self, lat1, lng1, lat2, lng2) -> float:
         """Haversine 거리 (km)"""
         R = 6371
@@ -213,6 +221,49 @@ class ARMYStayHubEngine:
 
         return result
 
+    def _get_nearby_spots_for_map(self, lat: float, lng: float) -> List[Dict]:
+        """상세 지도용 근처 스팟 (5km 이내)"""
+        nearby = []
+        for spot in self.LOCAL_SPOTS:
+            dist = self._calc_distance(lat, lng, spot["lat"], spot["lng"])
+            if dist <= 5:  # 5km 이내만
+                nearby.append({
+                    "name_en": spot["name_en"],
+                    "category": spot["category"],
+                    "spot_tag": spot["spot_tag"],
+                    "lat": spot["lat"],
+                    "lng": spot["lng"],
+                    "distance_km": round(dist, 1)
+                })
+        return sorted(nearby, key=lambda x: x["distance_km"])[:5]  # 최대 5개
+
+    def _get_location(self, lat: float, lng: float) -> Dict:
+        """좌표 기반 위치 정보"""
+        # 가장 가까운 지역 찾기
+        nearest_area = None
+        min_dist = float('inf')
+
+        for area in self.AREAS:
+            dist = self._calc_distance(lat, lng, area["lat"], area["lng"])
+            if dist < min_dist and dist <= area["radius_km"]:
+                min_dist = dist
+                nearest_area = area
+
+        if nearest_area:
+            return {
+                "area_en": nearest_area["name_en"],
+                "area_kr": nearest_area["name_kr"],
+                "address_en": f"{nearest_area['name_en']}, Goyang-si",
+                "address_kr": f"고양시 {nearest_area['name_kr']}"
+            }
+        else:
+            return {
+                "area_en": "Goyang",
+                "area_kr": "고양",
+                "address_en": "Goyang-si, Gyeonggi-do",
+                "address_kr": "경기도 고양시"
+            }
+
     def _get_hotel_type_display(self, hotel_type: str, star_rating: int = 0) -> Dict:
         """호텔 타입 표시 데이터 생성"""
         # 타입별 색상
@@ -270,6 +321,9 @@ class ARMYStayHubEngine:
             scraped.get("star_rating", 0)
         )
 
+        # 위치 정보
+        location = self._get_location(lat, lng)
+
         return {
             # === 스크래핑 데이터 ===
             "id": f"hotel_{abs(hash(scraped.get('name', ''))) % 100000:05d}",
@@ -284,10 +338,18 @@ class ARMYStayHubEngine:
             # === 계산 데이터 ===
             "lat": lat,
             "lng": lng,
+            "location": location,
             "distance": self._get_distance_display(distance_km),
             "transport": self._get_transport(),
             "safe_return": self._get_safe_return(scraped.get("name", ""), distance_km),
             "army_local_guide": self._get_local_guide(lat, lng),
+
+            # === 상세 페이지용 지도 데이터 ===
+            "map_detail": {
+                "hotel": {"name_en": scraped.get("name_en") or scraped.get("name", ""), "lat": lat, "lng": lng},
+                "venue": {"name_en": self.VENUE["name_en"], "lat": self.VENUE["lat"], "lng": self.VENUE["lng"]},
+                "nearby_spots": self._get_nearby_spots_for_map(lat, lng)
+            },
 
             # === 정적 데이터 ===
             "platform": {

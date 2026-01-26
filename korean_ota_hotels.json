@@ -9,7 +9,7 @@
     "available_count": 9,
     "total_count": 10,
     "lowest_price_krw": 28000,
-    "last_update": "2026-01-26 07:22:02"
+    "last_update": "2026-01-26 07:49:50"
   },
   "map": {
     "venue": {
@@ -113,70 +113,70 @@
     ],
     "hotels": [
       {
-        "id": "hotel_90200",
+        "id": "hotel_53259",
         "name_en": "MVL Hotel Goyang",
         "lat": 37.656,
         "lng": 126.77,
         "price_krw": 185000
       },
       {
-        "id": "hotel_15249",
+        "id": "hotel_41032",
         "name_en": "Goyang Cozy Room",
         "lat": 37.656,
         "lng": 126.772,
         "price_krw": 65000
       },
       {
-        "id": "hotel_09648",
+        "id": "hotel_25731",
         "name_en": "Ilsan Residence",
         "lat": 37.6545,
         "lng": 126.773,
         "price_krw": 95000
       },
       {
-        "id": "hotel_53643",
+        "id": "hotel_75062",
         "name_en": "La Festa Residence",
         "lat": 37.6575,
         "lng": 126.7705,
         "price_krw": 110000
       },
       {
-        "id": "hotel_78565",
+        "id": "hotel_38340",
         "name_en": "Best Western Premier Kukdo",
         "lat": 37.6555,
         "lng": 126.775,
         "price_krw": 142000
       },
       {
-        "id": "hotel_37339",
+        "id": "hotel_20942",
         "name_en": "Ramada Encore Goyang",
         "lat": 37.658,
         "lng": 126.768,
         "price_krw": 128000
       },
       {
-        "id": "hotel_88333",
+        "id": "hotel_50185",
         "name_en": "Ilsan ARMY House",
         "lat": 37.6535,
         "lng": 126.766,
         "price_krw": 45000
       },
       {
-        "id": "hotel_21437",
+        "id": "hotel_34494",
         "name_en": "Ilsan Hostel 808",
         "lat": 37.649,
         "lng": 126.775,
         "price_krw": 28000
       },
       {
-        "id": "hotel_04986",
+        "id": "hotel_77702",
         "name_en": "Lake Park View Apt",
         "lat": 37.658,
         "lng": 126.759,
         "price_krw": 78000
       },
       {
-        "id": "hotel_25016",
+        "id": "hotel_95655",
         "name_en": "Hotel Castle Ilsan",
         "lat": 37.662,
         "lng": 126.7595,
@@ -186,7 +186,7 @@
   },
   "hotels": [
     {
-      "id": "hotel_90200",
+      "id": "hotel_53259",
       "name_en": "MVL Hotel Goyang",
       "price_krw": 185000,
       "rating": 4.5,
@@ -199,6 +199,12 @@
       },
       "lat": 37.656,
       "lng": 126.77,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 1min",
@@ -317,6 +323,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "MVL Hotel Goyang",
+          "lat": 37.656,
+          "lng": 126.77
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 0.2
+          },
+          {
+            "name_en": "La Festa Cafes",
+            "category": "cafe",
+            "spot_tag": "Trendy Cafe",
+            "lat": 37.6572,
+            "lng": 126.771,
+            "distance_km": 0.2
+          },
+          {
+            "name_en": "Ilsan Food Street",
+            "category": "restaurant",
+            "spot_tag": "Local Eats",
+            "lat": 37.658,
+            "lng": 126.772,
+            "distance_km": 0.3
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 0.9
+          },
+          {
+            "name_en": "Western Dom Food Court",
+            "category": "restaurant",
+            "spot_tag": "Food Court",
+            "lat": 37.663,
+            "lng": 126.762,
+            "distance_km": 1.0
+          }
+        ]
+      },
       "platform": {
         "name": "Agoda",
         "booking_url": ""
@@ -340,24 +400,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_53643",
+          "id": "hotel_75062",
           "name_en": "La Festa Residence",
           "price_krw": 110000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_15249",
+          "id": "hotel_41032",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_37339",
+          "id": "hotel_20942",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.3,
@@ -366,7 +426,7 @@
       ]
     },
     {
-      "id": "hotel_15249",
+      "id": "hotel_41032",
       "name_en": "Goyang Cozy Room",
       "price_krw": 65000,
       "rating": 4.3,
@@ -379,6 +439,12 @@
       },
       "lat": 37.656,
       "lng": 126.772,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 0min",
@@ -497,6 +563,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "Goyang Cozy Room",
+          "lat": 37.656,
+          "lng": 126.772
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "Ilsan Food Street",
+            "category": "restaurant",
+            "spot_tag": "Local Eats",
+            "lat": 37.658,
+            "lng": 126.772,
+            "distance_km": 0.2
+          },
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 0.2
+          },
+          {
+            "name_en": "La Festa Cafes",
+            "category": "cafe",
+            "spot_tag": "Trendy Cafe",
+            "lat": 37.6572,
+            "lng": 126.771,
+            "distance_km": 0.2
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 1.1
+          },
+          {
+            "name_en": "Western Dom Food Court",
+            "category": "restaurant",
+            "spot_tag": "Food Court",
+            "lat": 37.663,
+            "lng": 126.762,
+            "distance_km": 1.2
+          }
+        ]
+      },
       "platform": {
         "name": "Booking.com",
         "booking_url": ""
@@ -519,24 +639,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_90200",
+          "id": "hotel_53259",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_09648",
+          "id": "hotel_25731",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_53643",
+          "id": "hotel_75062",
           "name_en": "La Festa Residence",
           "price_krw": 110000,
           "distance_km": 0.2,
@@ -545,7 +665,7 @@
       ]
     },
     {
-      "id": "hotel_09648",
+      "id": "hotel_25731",
       "name_en": "Ilsan Residence",
       "price_krw": 95000,
       "rating": 4.0,
@@ -558,6 +678,12 @@
       },
       "lat": 37.6545,
       "lng": 126.773,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 2min",
@@ -676,6 +802,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "Ilsan Residence",
+          "lat": 37.6545,
+          "lng": 126.773
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "La Festa Cafes",
+            "category": "cafe",
+            "spot_tag": "Trendy Cafe",
+            "lat": 37.6572,
+            "lng": 126.771,
+            "distance_km": 0.3
+          },
+          {
+            "name_en": "Ilsan Food Street",
+            "category": "restaurant",
+            "spot_tag": "Local Eats",
+            "lat": 37.658,
+            "lng": 126.772,
+            "distance_km": 0.4
+          },
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 0.4
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 1.2
+          },
+          {
+            "name_en": "Ilsan Lake Park",
+            "category": "hotspot",
+            "spot_tag": "Must Visit",
+            "lat": 37.658,
+            "lng": 126.759,
+            "distance_km": 1.3
+          }
+        ]
+      },
       "platform": {
         "name": "야놀자",
         "booking_url": ""
@@ -698,24 +878,24 @@
         ],
         "foreigner_friendly": "partial"
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_78565",
+          "id": "hotel_38340",
           "name_en": "Best Western Premier Kukdo",
           "price_krw": 142000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_15249",
+          "id": "hotel_41032",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_90200",
+          "id": "hotel_53259",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.3,
@@ -724,7 +904,7 @@
       ]
     },
     {
-      "id": "hotel_53643",
+      "id": "hotel_75062",
       "name_en": "La Festa Residence",
       "price_krw": 110000,
       "rating": 4.1,
@@ -737,6 +917,12 @@
       },
       "lat": 37.6575,
       "lng": 126.7705,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 2min",
@@ -855,6 +1041,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "La Festa Residence",
+          "lat": 37.6575,
+          "lng": 126.7705
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 0.0
+          },
+          {
+            "name_en": "Ilsan Food Street",
+            "category": "restaurant",
+            "spot_tag": "Local Eats",
+            "lat": 37.658,
+            "lng": 126.772,
+            "distance_km": 0.1
+          },
+          {
+            "name_en": "La Festa Cafes",
+            "category": "cafe",
+            "spot_tag": "Trendy Cafe",
+            "lat": 37.6572,
+            "lng": 126.771,
+            "distance_km": 0.1
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 0.9
+          },
+          {
+            "name_en": "Western Dom Food Court",
+            "category": "restaurant",
+            "spot_tag": "Food Court",
+            "lat": 37.663,
+            "lng": 126.762,
+            "distance_km": 1.0
+          }
+        ]
+      },
       "platform": {
         "name": "Agoda",
         "booking_url": ""
@@ -878,24 +1118,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_90200",
+          "id": "hotel_53259",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_37339",
+          "id": "hotel_20942",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_15249",
+          "id": "hotel_41032",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.2,
@@ -904,7 +1144,7 @@
       ]
     },
     {
-      "id": "hotel_78565",
+      "id": "hotel_38340",
       "name_en": "Best Western Premier Kukdo",
       "price_krw": 142000,
       "rating": 4.2,
@@ -917,6 +1157,12 @@
       },
       "lat": 37.6555,
       "lng": 126.775,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 3min",
@@ -1035,6 +1281,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "Best Western Premier Kukdo",
+          "lat": 37.6555,
+          "lng": 126.775
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "Ilsan Food Street",
+            "category": "restaurant",
+            "spot_tag": "Local Eats",
+            "lat": 37.658,
+            "lng": 126.772,
+            "distance_km": 0.4
+          },
+          {
+            "name_en": "La Festa Cafes",
+            "category": "cafe",
+            "spot_tag": "Trendy Cafe",
+            "lat": 37.6572,
+            "lng": 126.771,
+            "distance_km": 0.4
+          },
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 0.5
+          },
+          {
+            "name_en": "Western Dom Food Court",
+            "category": "restaurant",
+            "spot_tag": "Food Court",
+            "lat": 37.663,
+            "lng": 126.762,
+            "distance_km": 1.4
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 1.4
+          }
+        ]
+      },
       "platform": {
         "name": "Booking.com",
         "booking_url": ""
@@ -1057,24 +1357,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_09648",
+          "id": "hotel_25731",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_15249",
+          "id": "hotel_41032",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.3,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_90200",
+          "id": "hotel_53259",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.4,
@@ -1083,7 +1383,7 @@
       ]
     },
     {
-      "id": "hotel_37339",
+      "id": "hotel_20942",
       "name_en": "Ramada Encore Goyang",
       "price_krw": 128000,
       "rating": 4.1,
@@ -1096,6 +1396,12 @@
       },
       "lat": 37.658,
       "lng": 126.768,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 4min",
@@ -1214,6 +1520,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "Ramada Encore Goyang",
+          "lat": 37.658,
+          "lng": 126.768
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 0.2
+          },
+          {
+            "name_en": "La Festa Cafes",
+            "category": "cafe",
+            "spot_tag": "Trendy Cafe",
+            "lat": 37.6572,
+            "lng": 126.771,
+            "distance_km": 0.3
+          },
+          {
+            "name_en": "Ilsan Food Street",
+            "category": "restaurant",
+            "spot_tag": "Local Eats",
+            "lat": 37.658,
+            "lng": 126.772,
+            "distance_km": 0.4
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 0.7
+          },
+          {
+            "name_en": "Western Dom Food Court",
+            "category": "restaurant",
+            "spot_tag": "Food Court",
+            "lat": 37.663,
+            "lng": 126.762,
+            "distance_km": 0.8
+          }
+        ]
+      },
       "platform": {
         "name": "Hotels.com",
         "booking_url": ""
@@ -1236,24 +1596,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_53643",
+          "id": "hotel_75062",
           "name_en": "La Festa Residence",
           "price_krw": 110000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_90200",
+          "id": "hotel_53259",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.3,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_15249",
+          "id": "hotel_41032",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.4,
@@ -1262,7 +1622,7 @@
       ]
     },
     {
-      "id": "hotel_88333",
+      "id": "hotel_50185",
       "name_en": "Ilsan ARMY House",
       "price_krw": 45000,
       "rating": 4.6,
@@ -1275,6 +1635,12 @@
       },
       "lat": 37.6535,
       "lng": 126.766,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 6min",
@@ -1393,6 +1759,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "Ilsan ARMY House",
+          "lat": 37.6535,
+          "lng": 126.766
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 0.6
+          },
+          {
+            "name_en": "La Festa Cafes",
+            "category": "cafe",
+            "spot_tag": "Trendy Cafe",
+            "lat": 37.6572,
+            "lng": 126.771,
+            "distance_km": 0.6
+          },
+          {
+            "name_en": "Ilsan Food Street",
+            "category": "restaurant",
+            "spot_tag": "Local Eats",
+            "lat": 37.658,
+            "lng": 126.772,
+            "distance_km": 0.7
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 0.8
+          },
+          {
+            "name_en": "Ilsan Lake Park",
+            "category": "hotspot",
+            "spot_tag": "Must Visit",
+            "lat": 37.658,
+            "lng": 126.759,
+            "distance_km": 0.8
+          }
+        ]
+      },
       "platform": {
         "name": "여기어때",
         "booking_url": ""
@@ -1415,24 +1835,24 @@
         ],
         "foreigner_friendly": "limited"
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_90200",
+          "id": "hotel_53259",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_37339",
+          "id": "hotel_20942",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.5,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_09648",
+          "id": "hotel_25731",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.6,
@@ -1441,7 +1861,7 @@
       ]
     },
     {
-      "id": "hotel_21437",
+      "id": "hotel_34494",
       "name_en": "Ilsan Hostel 808",
       "price_krw": 28000,
       "rating": 4.0,
@@ -1454,6 +1874,12 @@
       },
       "lat": 37.649,
       "lng": 126.775,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 9min",
@@ -1572,6 +1998,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "Ilsan Hostel 808",
+          "lat": 37.649,
+          "lng": 126.775
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "Ilsan Food Street",
+            "category": "restaurant",
+            "spot_tag": "Local Eats",
+            "lat": 37.658,
+            "lng": 126.772,
+            "distance_km": 1.0
+          },
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 1.0
+          },
+          {
+            "name_en": "La Festa Cafes",
+            "category": "cafe",
+            "spot_tag": "Trendy Cafe",
+            "lat": 37.6572,
+            "lng": 126.771,
+            "distance_km": 1.0
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 1.7
+          },
+          {
+            "name_en": "Ilsan Lake Park",
+            "category": "hotspot",
+            "spot_tag": "Must Visit",
+            "lat": 37.658,
+            "lng": 126.759,
+            "distance_km": 1.7
+          }
+        ]
+      },
       "platform": {
         "name": "Booking.com",
         "booking_url": ""
@@ -1594,24 +2074,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_09648",
+          "id": "hotel_25731",
           "name_en": "Ilsan Residence",
           "price_krw": 95000,
           "distance_km": 0.6,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_78565",
+          "id": "hotel_38340",
           "name_en": "Best Western Premier Kukdo",
           "price_krw": 142000,
           "distance_km": 0.7,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_15249",
+          "id": "hotel_41032",
           "name_en": "Goyang Cozy Room",
           "price_krw": 65000,
           "distance_km": 0.8,
@@ -1620,7 +2100,7 @@
       ]
     },
     {
-      "id": "hotel_04986",
+      "id": "hotel_77702",
       "name_en": "Lake Park View Apt",
       "price_krw": 78000,
       "rating": 4.4,
@@ -1633,6 +2113,12 @@
       },
       "lat": 37.658,
       "lng": 126.759,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 13min",
@@ -1751,6 +2237,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "Lake Park View Apt",
+          "lat": 37.658,
+          "lng": 126.759
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "Ilsan Lake Park",
+            "category": "hotspot",
+            "spot_tag": "Must Visit",
+            "lat": 37.658,
+            "lng": 126.759,
+            "distance_km": 0.0
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 0.1
+          },
+          {
+            "name_en": "Western Dom Food Court",
+            "category": "restaurant",
+            "spot_tag": "Food Court",
+            "lat": 37.663,
+            "lng": 126.762,
+            "distance_km": 0.6
+          },
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 1.0
+          },
+          {
+            "name_en": "One Mount",
+            "category": "hotspot",
+            "spot_tag": "Entertainment",
+            "lat": 37.665,
+            "lng": 126.751,
+            "distance_km": 1.0
+          }
+        ]
+      },
       "platform": {
         "name": "Agoda",
         "booking_url": ""
@@ -1774,24 +2314,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_25016",
+          "id": "hotel_95655",
           "name_en": "Hotel Castle Ilsan",
           "price_krw": 89000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_37339",
+          "id": "hotel_20942",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.8,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_88333",
+          "id": "hotel_50185",
           "name_en": "Ilsan ARMY House",
           "price_krw": 45000,
           "distance_km": 0.8,
@@ -1800,7 +2340,7 @@
       ]
     },
     {
-      "id": "hotel_25016",
+      "id": "hotel_95655",
       "name_en": "Hotel Castle Ilsan",
       "price_krw": 89000,
       "rating": 3.9,
@@ -1813,6 +2353,12 @@
       },
       "lat": 37.662,
       "lng": 126.7595,
+      "location": {
+        "area_en": "Ilsan",
+        "area_kr": "일산",
+        "address_en": "Ilsan, Goyang-si",
+        "address_kr": "고양시 일산"
+      },
       "distance": {
         "type": "walk",
         "display_en": "Walk 15min",
@@ -1931,6 +2477,60 @@
           }
         ]
       },
+      "map_detail": {
+        "hotel": {
+          "name_en": "Hotel Castle Ilsan",
+          "lat": 37.662,
+          "lng": 126.7595
+        },
+        "venue": {
+          "name_en": "Goyang Stadium",
+          "lat": 37.6556,
+          "lng": 126.7714
+        },
+        "nearby_spots": [
+          {
+            "name_en": "Western Dom Food Court",
+            "category": "restaurant",
+            "spot_tag": "Food Court",
+            "lat": 37.663,
+            "lng": 126.762,
+            "distance_km": 0.2
+          },
+          {
+            "name_en": "Ilsan Lake Park Cafe Street",
+            "category": "cafe",
+            "spot_tag": "Lake View",
+            "lat": 37.659,
+            "lng": 126.76,
+            "distance_km": 0.3
+          },
+          {
+            "name_en": "Ilsan Lake Park",
+            "category": "hotspot",
+            "spot_tag": "Must Visit",
+            "lat": 37.658,
+            "lng": 126.759,
+            "distance_km": 0.4
+          },
+          {
+            "name_en": "One Mount",
+            "category": "hotspot",
+            "spot_tag": "Entertainment",
+            "lat": 37.665,
+            "lng": 126.751,
+            "distance_km": 0.8
+          },
+          {
+            "name_en": "La Festa Restaurants",
+            "category": "restaurant",
+            "spot_tag": "Dining Hub",
+            "lat": 37.6575,
+            "lng": 126.7705,
+            "distance_km": 1.1
+          }
+        ]
+      },
       "platform": {
         "name": "Agoda",
         "booking_url": ""
@@ -1954,24 +2554,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-01-26 07:22:02",
+      "last_update": "2026-01-26 07:49:50",
       "nearby": [
         {
-          "id": "hotel_04986",
+          "id": "hotel_77702",
           "name_en": "Lake Park View Apt",
           "price_krw": 78000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_37339",
+          "id": "hotel_20942",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 128000,
           "distance_km": 0.9,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_90200",
+          "id": "hotel_53259",
           "name_en": "MVL Hotel Goyang",
           "price_krw": 185000,
           "distance_km": 1.1,
