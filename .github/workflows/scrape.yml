@@ -25,20 +25,26 @@ jobs:
         run: |
           pip install requests beautifulsoup4
 
-      - name: Run scraper
+      - name: Run scraper with notifications
+        env:
+          # 알림 웹훅 (GitHub Secrets에서 설정)
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           python run_scraper.py
 
       - name: Check for changes
         id: git-check
         run: |
-          git diff --quiet korean_ota_hotels.json || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet korean_ota_hotels.json availability_state.json 2>/dev/null || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push
         if: steps.git-check.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add korean_ota_hotels.json
+          git add korean_ota_hotels.json availability_state.json notification_log.json 2>/dev/null || true
           git commit -m "chore: Auto-update hotel data $(date +'%Y-%m-%d %H:%M UTC')"
           git push

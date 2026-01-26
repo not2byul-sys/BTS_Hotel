@@ -715,6 +715,17 @@ def run():
     engine.save_json(hotels)
 
     print(f"📊 예약가능: {sum(1 for h in hotels if h['is_available'])}/{len(hotels)}")
+
+    # 재입고 알림 발송
+    try:
+        from availability_tracker import check_and_notify
+        print("\n📢 재입고 알림 확인 중...")
+        check_and_notify(hotels)
+    except ImportError:
+        print("⚠️ 알림 모듈 없음 (availability_tracker.py)")
+    except Exception as e:
+        print(f"⚠️ 알림 발송 실패: {e}")
+
     print("✨ 완료!")
 
 
