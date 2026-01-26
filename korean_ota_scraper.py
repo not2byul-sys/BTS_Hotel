@@ -29,13 +29,73 @@ except ImportError:
     print("⚠️ BeautifulSoup not installed. Run: pip install beautifulsoup4")
 
 
+# ===== 다중 도시 설정 =====
+CITIES = {
+    "goyang": {
+        "name_en": "Goyang",
+        "name_kr": "고양",
+        "agoda_id": 14690,
+        "lat": 37.6556,
+        "lng": 126.7714,
+        "keywords": ["고양", "일산", "킨텍스", "Goyang", "Ilsan", "KINTEX"],
+    },
+    "hongdae": {
+        "name_en": "Hongdae",
+        "name_kr": "홍대",
+        "agoda_id": 16937,  # 마포구
+        "lat": 37.5563,
+        "lng": 126.9220,
+        "keywords": ["홍대", "합정", "상수", "Hongdae", "Mapo"],
+    },
+    "seongsu": {
+        "name_en": "Seongsu",
+        "name_kr": "성수",
+        "agoda_id": 17052,  # 성동구
+        "lat": 37.5443,
+        "lng": 127.0557,
+        "keywords": ["성수", "서울숲", "Seongsu", "Seoul Forest"],
+    },
+    "gwanghwamun": {
+        "name_en": "Gwanghwamun",
+        "name_kr": "광화문",
+        "agoda_id": 17015,  # 종로구
+        "lat": 37.5760,
+        "lng": 126.9769,
+        "keywords": ["광화문", "종로", "경복궁", "Gwanghwamun", "Jongno"],
+    },
+    "busan": {
+        "name_en": "Busan",
+        "name_kr": "부산",
+        "agoda_id": 16158,
+        "lat": 35.1796,
+        "lng": 129.0756,
+        "keywords": ["부산", "해운대", "서면", "Busan", "Haeundae"],
+    },
+    "paju": {
+        "name_en": "Paju",
+        "name_kr": "파주",
+        "agoda_id": 17565,
+        "lat": 37.7600,
+        "lng": 126.7800,
+        "keywords": ["파주", "헤이리", "Paju", "Heyri"],
+    },
+}
+
+# 기본 도시 목록 (스크래핑 순서)
+DEFAULT_CITIES = ["goyang", "hongdae", "seongsu", "gwanghwamun", "busan", "paju"]
+
+
 class BaseScraper(ABC):
     """모든 OTA 스크래퍼의 베이스 클래스"""
 
-    def __init__(self):
+    def __init__(self, city_key: str = "goyang"):
         self.name = "Base"
         self.name_kr = "기본"
         self.base_url = ""
+
+        # 도시 설정
+        self.city_key = city_key
+        self.city_config = CITIES.get(city_key, CITIES["goyang"])
 
         # 공통 헤더
         self.headers = {
@@ -47,9 +107,9 @@ class BaseScraper(ABC):
             "Upgrade-Insecure-Requests": "1",
         }
 
-        # 킨텍스/고양시 지역 설정
-        self.target_coords = {"lat": 37.6694, "lng": 126.7456}
-        self.target_areas = ["고양", "일산", "킨텍스", "Goyang", "Ilsan", "KINTEX"]
+        # 지역 설정 (도시 기반)
+        self.target_coords = {"lat": self.city_config["lat"], "lng": self.city_config["lng"]}
+        self.target_areas = self.city_config["keywords"]
 
     def _get_random_user_agent(self) -> str:
         """랜덤 User-Agent 선택"""
@@ -110,6 +170,10 @@ class BaseScraper(ABC):
             "booking_url": raw_data.get("booking_url", ""),
             "platform": self.name,
             "scraped_at": datetime.now().isoformat(),
+            # 도시/지역 정보
+            "city_key": self.city_key,
+            "city_en": self.city_config["name_en"],
+            "city_kr": self.city_config["name_kr"],
         }
 
     def _normalize_hotel_type(self, raw_type: str) -> str:
@@ -153,12 +217,12 @@ class BaseScraper(ABC):
 class AgodaScraper(BaseScraper):
     """Agoda 스크래퍼 - 글로벌 OTA"""
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, city_key: str = "goyang"):
+        super().__init__(city_key)
         self.name = "Agoda"
         self.name_kr = "아고다"
         self.base_url = "https://www.agoda.com"
-        self.city_id = 14690  # 고양시
+        self.city_id = self.city_config["agoda_id"]
 
     def _build_url(self, checkin: datetime, checkout: datetime) -> str:
         """검색 URL 생성"""
@@ -252,17 +316,18 @@ class AgodaScraper(BaseScraper):
 class NaverHotelScraper(BaseScraper):
     """네이버 호텔 스크래퍼"""
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, city_key: str = "goyang"):
+        super().__init__(city_key)
         self.name = "NaverHotel"
         self.name_kr = "네이버 호텔"
         self.base_url = "https://hotel.naver.com"
         self.api_url = "https://hotel.naver.com/api"
+        self.search_keyword = self.city_config["name_kr"]
 
     def _build_url(self, checkin: datetime, checkout: datetime) -> str:
         """API URL 생성"""
         params = {
-            "keyword": "고양",
+            "keyword": self.search_keyword,
             "checkIn": checkin.strftime("%Y-%m-%d"),
             "checkOut": checkout.strftime("%Y-%m-%d"),
             "rooms": 1,
@@ -274,7 +339,7 @@ class NaverHotelScraper(BaseScraper):
     def scrape(self, checkin: datetime, checkout: datetime) -> List[Dict]:
         """네이버 호텔 스크래핑"""
         # 네이버는 검색 결과 페이지에서 데이터 추출
-        search_url = f"{self.base_url}/domestic/search?keyword={quote('고양')}&checkIn={checkin.strftime('%Y-%m-%d')}&checkOut={checkout.strftime('%Y-%m-%d')}"
+        search_url = f"{self.base_url}/domestic/search?keyword={quote(self.search_keyword)}&checkIn={checkin.strftime('%Y-%m-%d')}&checkOut={checkout.strftime('%Y-%m-%d')}"
 
         print(f"🔍 [{self.name}] 검색 중...")
 
@@ -349,16 +414,17 @@ class NaverHotelScraper(BaseScraper):
 class GoodChoiceScraper(BaseScraper):
     """여기어때 스크래퍼"""
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, city_key: str = "goyang"):
+        super().__init__(city_key)
         self.name = "GoodChoice"
         self.name_kr = "여기어때"
         self.base_url = "https://www.goodchoice.kr"
+        self.search_keyword = self.city_config["name_kr"]
 
     def scrape(self, checkin: datetime, checkout: datetime) -> List[Dict]:
         """여기어때 스크래핑"""
         # 여기어때 모바일 웹 검색
-        search_url = f"{self.base_url}/search?keyword={quote('고양')}&check_in={checkin.strftime('%Y-%m-%d')}&check_out={checkout.strftime('%Y-%m-%d')}"
+        search_url = f"{self.base_url}/search?keyword={quote(self.search_keyword)}&check_in={checkin.strftime('%Y-%m-%d')}&check_out={checkout.strftime('%Y-%m-%d')}"
 
         print(f"🔍 [{self.name}] 검색 중...")
 
@@ -435,16 +501,17 @@ class GoodChoiceScraper(BaseScraper):
 class YanoljaScraper(BaseScraper):
     """야놀자 스크래퍼"""
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, city_key: str = "goyang"):
+        super().__init__(city_key)
         self.name = "Yanolja"
         self.name_kr = "야놀자"
         self.base_url = "https://www.yanolja.com"
+        self.search_keyword = self.city_config["name_kr"]
 
     def scrape(self, checkin: datetime, checkout: datetime) -> List[Dict]:
         """야놀자 스크래핑"""
-        # 야놀자 검색 (고양시 지역코드 사용)
-        search_url = f"{self.base_url}/search/{quote('고양')}?checkin={checkin.strftime('%Y-%m-%d')}&checkout={checkout.strftime('%Y-%m-%d')}"
+        # 야놀자 검색
+        search_url = f"{self.base_url}/search/{quote(self.search_keyword)}?checkin={checkin.strftime('%Y-%m-%d')}&checkout={checkout.strftime('%Y-%m-%d')}"
 
         print(f"🔍 [{self.name}] 검색 중...")
 
@@ -514,16 +581,17 @@ class YanoljaScraper(BaseScraper):
 class CoupangTravelScraper(BaseScraper):
     """쿠팡 트래블 스크래퍼"""
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, city_key: str = "goyang"):
+        super().__init__(city_key)
         self.name = "CoupangTravel"
         self.name_kr = "쿠팡 트래블"
         self.base_url = "https://travel.coupang.com"
+        self.search_keyword = self.city_config["name_kr"]
 
     def scrape(self, checkin: datetime, checkout: datetime) -> List[Dict]:
         """쿠팡 트래블 스크래핑"""
         # 쿠팡 트래블 검색
-        search_url = f"{self.base_url}/np/search/stays?q={quote('고양')}&checkin={checkin.strftime('%Y-%m-%d')}&checkout={checkout.strftime('%Y-%m-%d')}"
+        search_url = f"{self.base_url}/np/search/stays?q={quote(self.search_keyword)}&checkin={checkin.strftime('%Y-%m-%d')}&checkout={checkout.strftime('%Y-%m-%d')}"
 
         print(f"🔍 [{self.name}] 검색 중...")
 
@@ -587,42 +655,46 @@ class CoupangTravelScraper(BaseScraper):
 
 class KoreanOTAScraper:
     """
-    다중 플랫폼 한국 OTA 스크래퍼 매니저
+    다중 플랫폼/다중 도시 한국 OTA 스크래퍼 매니저
 
-    5개 플랫폼에서 분산 수집하여:
-    1. 리스크 분산 (각 플랫폼당 소량 요청)
-    2. 정보 풍부화 (가격 비교, 재고 교차 확인)
-    3. 신뢰성 향상 (여러 소스에서 데이터 검증)
+    지원 도시:
+    - 고양 (Goyang) - 콘서트 공연장
+    - 서울 홍대 (Hongdae)
+    - 서울 성수 (Seongsu)
+    - 서울 광화문 (Gwanghwamun)
+    - 부산 (Busan)
+    - 파주 (Paju)
     """
 
-    def __init__(self):
-        self.target_areas = ["Goyang", "Ilsan", "Paju", "Hongdae", "Sangam"]
-
-        # 지원 플랫폼
-        self.platforms = {
-            'agoda': {'scraper': AgodaScraper(), 'weight': 2},  # 글로벌, 영어 데이터
-            'naver': {'scraper': NaverHotelScraper(), 'weight': 2},  # 국내 최대
-            'goodchoice': {'scraper': GoodChoiceScraper(), 'weight': 1},
-            'yanolja': {'scraper': YanoljaScraper(), 'weight': 1},
-            'coupang': {'scraper': CoupangTravelScraper(), 'weight': 1},
-        }
+    def __init__(self, cities: List[str] = None):
+        # 스크래핑할 도시 목록
+        self.cities = cities or DEFAULT_CITIES
 
         # 콘서트 날짜 (D-Day)
         self.concert_date = datetime(2026, 6, 12)
 
+    def _get_scrapers_for_city(self, city_key: str) -> Dict:
+        """도시별 스크래퍼 생성"""
+        return {
+            'agoda': {'scraper': AgodaScraper(city_key), 'weight': 2},
+            'naver': {'scraper': NaverHotelScraper(city_key), 'weight': 2},
+            'goodchoice': {'scraper': GoodChoiceScraper(city_key), 'weight': 1},
+            'yanolja': {'scraper': YanoljaScraper(city_key), 'weight': 1},
+            'coupang': {'scraper': CoupangTravelScraper(city_key), 'weight': 1},
+        }
+
     def scrape_all(self, checkin: datetime = None, checkout: datetime = None,
-                   platforms: List[str] = None, max_per_platform: int = 2) -> Dict:
+                   platforms: List[str] = None) -> Dict:
         """
-        모든 플랫폼에서 호텔 정보 수집
+        모든 도시/플랫폼에서 호텔 정보 수집
 
         Args:
             checkin: 체크인 날짜 (기본: 콘서트 전날)
             checkout: 체크아웃 날짜 (기본: 콘서트 다음날)
-            platforms: 사용할 플랫폼 리스트 (기본: 전체)
-            max_per_platform: 플랫폼당 최대 요청 수
+            platforms: 사용할 플랫폼 리스트 (기본: agoda만)
 
         Returns:
-            플랫폼별 호텔 데이터 딕셔너리
+            도시별/플랫폼별 호텔 데이터 딕셔너리
         """
         if not checkin:
             checkin = self.concert_date - timedelta(days=1)
@@ -630,12 +702,13 @@ class KoreanOTAScraper:
             checkout = self.concert_date + timedelta(days=1)
 
         if not platforms:
-            platforms = list(self.platforms.keys())
+            platforms = ['agoda']  # 기본은 Agoda만
 
         print("=" * 60)
-        print(f"🚀 ARMY Stay Hub - 다중 플랫폼 스크래핑 시작")
+        print(f"🚀 ARMY Stay Hub - 다중 도시/플랫폼 스크래핑 시작")
         print(f"📅 체크인: {checkin.strftime('%Y-%m-%d')}")
         print(f"📅 체크아웃: {checkout.strftime('%Y-%m-%d')}")
+        print(f"🏙️ 도시: {', '.join([CITIES[c]['name_en'] for c in self.cities])}")
         print(f"🎯 플랫폼: {', '.join(platforms)}")
         print("=" * 60)
 
@@ -644,62 +717,76 @@ class KoreanOTAScraper:
                 "checkin": checkin.isoformat(),
                 "checkout": checkout.isoformat(),
                 "scraped_at": datetime.now().isoformat(),
+                "cities": self.cities,
                 "platforms_used": platforms,
             },
-            "by_platform": {},
+            "by_city": {},
             "all_hotels": [],
         }
 
-        # 플랫폼별 스크래핑 (순차적, 딜레이 포함)
-        for platform_name in platforms:
-            if platform_name not in self.platforms:
-                print(f"⚠️ 알 수 없는 플랫폼: {platform_name}")
+        # 도시별 스크래핑
+        for city_key in self.cities:
+            city_config = CITIES.get(city_key)
+            if not city_config:
+                print(f"⚠️ 알 수 없는 도시: {city_key}")
                 continue
 
-            platform = self.platforms[platform_name]
-            scraper = platform['scraper']
+            print(f"\n🏙️ [{city_config['name_en']}] 스크래핑 시작...")
+            city_hotels = []
 
-            try:
-                hotels = scraper.scrape(checkin, checkout)
-                results["by_platform"][platform_name] = {
-                    "name_kr": scraper.name_kr,
-                    "count": len(hotels),
-                    "hotels": hotels,
-                }
-                results["all_hotels"].extend(hotels)
+            # 해당 도시의 스크래퍼 생성
+            city_scrapers = self._get_scrapers_for_city(city_key)
 
-                # 플랫폼 간 딜레이 (5~10초)
-                if platform_name != platforms[-1]:
-                    delay = random.uniform(5, 10)
-                    print(f"⏳ 다음 플랫폼까지 {delay:.1f}초 대기...")
+            # 플랫폼별 스크래핑
+            for platform_name in platforms:
+                if platform_name not in city_scrapers:
+                    continue
+
+                scraper = city_scrapers[platform_name]['scraper']
+
+                try:
+                    hotels = scraper.scrape(checkin, checkout)
+                    city_hotels.extend(hotels)
+                    print(f"   ✅ [{scraper.name}] {len(hotels)}개 수집")
+
+                    # 플랫폼 간 딜레이
+                    delay = random.uniform(3, 6)
                     time.sleep(delay)
 
-            except Exception as e:
-                print(f"❌ [{platform_name}] 스크래핑 실패: {e}")
-                results["by_platform"][platform_name] = {
-                    "name_kr": scraper.name_kr,
-                    "count": 0,
-                    "hotels": [],
-                    "error": str(e),
-                }
+                except Exception as e:
+                    print(f"   ❌ [{platform_name}] 실패: {e}")
+
+            results["by_city"][city_key] = {
+                "name_en": city_config["name_en"],
+                "name_kr": city_config["name_kr"],
+                "count": len(city_hotels),
+                "hotels": city_hotels,
+            }
+            results["all_hotels"].extend(city_hotels)
+
+            # 도시 간 딜레이
+            if city_key != self.cities[-1]:
+                delay = random.uniform(5, 10)
+                print(f"⏳ 다음 도시까지 {delay:.1f}초 대기...")
+                time.sleep(delay)
 
         # 통계
         total = len(results["all_hotels"])
         print("\n" + "=" * 60)
         print(f"✅ 스크래핑 완료! 총 {total}개 호텔 수집")
-        for p_name, p_data in results["by_platform"].items():
-            print(f"   - {p_data['name_kr']}: {p_data['count']}개")
+        for city_key, city_data in results["by_city"].items():
+            print(f"   - {city_data['name_en']}: {city_data['count']}개")
         print("=" * 60)
 
         return results
 
     def scrape_distributed(self, checkin: datetime = None, checkout: datetime = None) -> List[Dict]:
         """
-        하루 10회 분산 스크래핑용 - 매 실행마다 다른 플랫폼 선택
+        분산 스크래핑 - 매 실행마다 다른 도시/플랫폼 선택
 
         분산 전략:
-        - 가중치 기반 랜덤 선택 (agoda, naver는 2배 확률)
-        - 한 번에 1~2개 플랫폼만 사용
+        - 1~2개 도시 랜덤 선택
+        - Agoda 플랫폼 사용 (가장 안정적)
         - 요청 간 충분한 딜레이
         """
         if not checkin:
@@ -707,20 +794,21 @@ class KoreanOTAScraper:
         if not checkout:
             checkout = self.concert_date + timedelta(days=1)
 
-        # 가중치 기반 플랫폼 선택
-        weighted_platforms = []
-        for name, config in self.platforms.items():
-            weighted_platforms.extend([name] * config['weight'])
+        # 1~2개 도시 랜덤 선택
+        num_cities = random.randint(1, 2)
+        selected_cities = random.sample(self.cities, min(num_cities, len(self.cities)))
 
-        # 1~2개 플랫폼 랜덤 선택
-        num_platforms = random.randint(1, 2)
-        selected = random.sample(weighted_platforms, min(num_platforms, len(set(weighted_platforms))))
-        selected = list(set(selected))  # 중복 제거
+        print(f"🎲 이번 실행 도시: {', '.join([CITIES[c]['name_en'] for c in selected_cities])}")
 
-        print(f"🎲 이번 실행 플랫폼: {', '.join(selected)}")
+        # 임시로 선택된 도시만 스크래핑
+        original_cities = self.cities
+        self.cities = selected_cities
 
-        # 선택된 플랫폼만 스크래핑
-        results = self.scrape_all(checkin, checkout, platforms=selected)
+        # Agoda만 사용 (가장 안정적)
+        results = self.scrape_all(checkin, checkout, platforms=['agoda'])
+
+        # 원래 도시 목록 복원
+        self.cities = original_cities
 
         return results["all_hotels"]
 

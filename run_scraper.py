@@ -138,9 +138,18 @@ class ARMYStayHubEngine:
 
         # 지역 정보 (좌표 기반 판단용)
         self.AREAS = [
+            # 고양
+            {"name_en": "Goyang", "name_kr": "고양", "lat": 37.6556, "lng": 126.7714, "radius_km": 5},
             {"name_en": "Ilsan", "name_kr": "일산", "lat": 37.6556, "lng": 126.7714, "radius_km": 3},
+            # 서울
             {"name_en": "Hongdae", "name_kr": "홍대", "lat": 37.5563, "lng": 126.9220, "radius_km": 2},
+            {"name_en": "Seongsu", "name_kr": "성수", "lat": 37.5443, "lng": 127.0557, "radius_km": 2},
+            {"name_en": "Gwanghwamun", "name_kr": "광화문", "lat": 37.5760, "lng": 126.9769, "radius_km": 2},
             {"name_en": "Sangam", "name_kr": "상암", "lat": 37.5786, "lng": 126.8918, "radius_km": 2},
+            # 부산
+            {"name_en": "Busan", "name_kr": "부산", "lat": 35.1796, "lng": 129.0756, "radius_km": 10},
+            {"name_en": "Haeundae", "name_kr": "해운대", "lat": 35.1631, "lng": 129.1636, "radius_km": 3},
+            # 파주
             {"name_en": "Paju", "name_kr": "파주", "lat": 37.7600, "lng": 126.7800, "radius_km": 5},
         ]
 
@@ -315,9 +324,32 @@ class ARMYStayHubEngine:
                 })
         return sorted(nearby, key=lambda x: x["distance_km"])[:5]  # 최대 5개
 
-    def _get_location(self, lat: float, lng: float) -> Dict:
-        """좌표 기반 위치 정보"""
-        # 가장 가까운 지역 찾기
+    def _get_location(self, lat: float, lng: float, scraped: Dict = None) -> Dict:
+        """좌표 기반 위치 정보 (스크래핑 데이터 우선)"""
+        # 스크래핑된 도시 정보가 있으면 사용
+        if scraped and scraped.get("city_en"):
+            city_en = scraped.get("city_en", "")
+            city_kr = scraped.get("city_kr", "")
+
+            # 지역명 매핑
+            region_map = {
+                "Goyang": ("Gyeonggi-do", "경기도"),
+                "Hongdae": ("Seoul", "서울"),
+                "Seongsu": ("Seoul", "서울"),
+                "Gwanghwamun": ("Seoul", "서울"),
+                "Busan": ("Busan", "부산"),
+                "Paju": ("Gyeonggi-do", "경기도"),
+            }
+            region = region_map.get(city_en, ("South Korea", "한국"))
+
+            return {
+                "area_en": city_en,
+                "area_kr": city_kr,
+                "address_en": f"{city_en}, {region[0]}",
+                "address_kr": f"{region[1]} {city_kr}"
+            }
+
+        # 좌표 기반 가장 가까운 지역 찾기
         nearest_area = None
         min_dist = float('inf')
 
@@ -328,18 +360,32 @@ class ARMYStayHubEngine:
                 nearest_area = area
 
         if nearest_area:
+            # 지역명 매핑
+            region_map = {
+                "Goyang": ("Gyeonggi-do", "경기도"),
+                "Ilsan": ("Gyeonggi-do", "경기도"),
+                "Hongdae": ("Seoul", "서울"),
+                "Seongsu": ("Seoul", "서울"),
+                "Gwanghwamun": ("Seoul", "서울"),
+                "Sangam": ("Seoul", "서울"),
+                "Busan": ("Busan", "부산"),
+                "Haeundae": ("Busan", "부산"),
+                "Paju": ("Gyeonggi-do", "경기도"),
+            }
+            region = region_map.get(nearest_area["name_en"], ("South Korea", "한국"))
+
             return {
                 "area_en": nearest_area["name_en"],
                 "area_kr": nearest_area["name_kr"],
-                "address_en": f"{nearest_area['name_en']}, Goyang-si",
-                "address_kr": f"고양시 {nearest_area['name_kr']}"
+                "address_en": f"{nearest_area['name_en']}, {region[0]}",
+                "address_kr": f"{region[1]} {nearest_area['name_kr']}"
             }
         else:
             return {
-                "area_en": "Goyang",
-                "area_kr": "고양",
-                "address_en": "Goyang-si, Gyeonggi-do",
-                "address_kr": "경기도 고양시"
+                "area_en": "Seoul",
+                "area_kr": "서울",
+                "address_en": "Seoul, South Korea",
+                "address_kr": "서울"
             }
 
     def _get_hotel_type_display(self, hotel_type: str, star_rating: int = 0) -> Dict:
@@ -500,8 +546,8 @@ class ARMYStayHubEngine:
             scraped.get("star_rating", 0)
         )
 
-        # 위치 정보
-        location = self._get_location(lat, lng)
+        # 위치 정보 (스크래핑된 도시 정보 우선 사용)
+        location = self._get_location(lat, lng, scraped)
 
         # 아미 밀집도
         army_density = self._get_army_density(lat, lng, hotel_type["label_en"], distance_km)
