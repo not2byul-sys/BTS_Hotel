@@ -1,0 +1,423 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+/* ===== App Container ===== */
+.app-container {
+    max-width: 430px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #f8f8f8;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.header-actions {
+    display: flex;
+    gap: 4px;
+}
+
+/* ===== Location Tabs ===== */
+.location-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.location-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.location-tab {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.location-tab.active {
+    background: #7C3AED;
+    color: #fff;
+}
+
+/* ===== Filter Tabs ===== */
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 0 16px 12px;
+}
+
+.filter-tab {
+    padding: 6px 12px;
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-tab.active {
+    border-color: #7C3AED;
+    color: #7C3AED;
+    background: #f5f0ff;
+}
+
+/* ===== Results Header ===== */
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.results-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.results-count {
+    font-size: 13px;
+    color: #888;
+}
+
+/* ===== Hotel List ===== */
+.hotel-list {
+    padding: 0 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ===== Hotel Card ===== */
+.hotel-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+}
+
+.hotel-image-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.hotel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rating-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.rating-badge svg {
+    color: #FBBF24;
+}
+
+.rooms-left-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    background: linear-gradient(135deg, #EC4899, #F43F5E);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.rooms-left-badge + .rating-badge {
+    left: auto;
+    right: 50px;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.favorite-btn:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+.favorite-btn svg {
+    color: #ccc;
+}
+
+.favorite-btn.active svg {
+    color: #EC4899;
+    fill: #EC4899;
+}
+
+/* ===== Hotel Info ===== */
+.hotel-info {
+    padding: 16px;
+}
+
+.hotel-name {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.hotel-location, .hotel-distance {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.hotel-location svg, .hotel-distance svg {
+    flex-shrink: 0;
+    color: #888;
+}
+
+.hotel-distance {
+    color: #7C3AED;
+}
+
+.hotel-distance svg {
+    color: #7C3AED;
+}
+
+/* ===== Tags ===== */
+.hotel-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.tag-army {
+    background: #DBEAFE;
+    color: #1D4ED8;
+}
+
+.tag-type {
+    background: #F3E8FF;
+    color: #7C3AED;
+}
+
+.tag-distance {
+    background: #D1FAE5;
+    color: #059669;
+}
+
+.tag-transport {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.tag-cancel {
+    background: #FCE7F3;
+    color: #DB2777;
+}
+
+/* ===== Price & Action ===== */
+.hotel-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.hotel-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-amount {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.price-unit {
+    font-size: 13px;
+    color: #888;
+    font-weight: 400;
+}
+
+.reserve-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 20px;
+    background: #7C3AED;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.reserve-btn:hover {
+    background: #6D28D9;
+    transform: translateY(-1px);
+}
+
+.reserve-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ===== Unavailable Card ===== */
+.hotel-card.unavailable {
+    opacity: 0.6;
+}
+
+.hotel-card.unavailable .hotel-image {
+    filter: grayscale(50%);
+}
+
+.hotel-card.unavailable .reserve-btn {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* ===== Loading State ===== */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: #888;
+}
+
+.loading-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #f0f0f0;
+    border-top-color: #7C3AED;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+}
+
+.empty-state svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 768px) {
+    .app-container {
+        margin-top: 20px;
+        border-radius: 24px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        min-height: calc(100vh - 40px);
+    }
+}
