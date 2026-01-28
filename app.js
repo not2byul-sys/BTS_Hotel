@@ -10,6 +10,7 @@ const SUPABASE_ANON_KEY = 'sb_publishable_jAssSpSYZI02lBTKczkrZw_jvGAB48d';
 // ===== Global State =====
 let hotelsData = [];
 let currentFilter = 'all';
+let currentLocation = 'all';
 let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
 let notificationSubscriptions = new Set(JSON.parse(localStorage.getItem('notifications') || '[]'));
 
@@ -175,6 +176,33 @@ function renderHotels(hotels) {
 function filterHotels(filter) {
     let filtered = [...hotelsData];
 
+    // Filter by location first
+    if (currentLocation !== 'all') {
+        filtered = filtered.filter(h => {
+            const area = (h.location?.area_en || '').toLowerCase();
+            const cityKey = (h.city_key || '').toLowerCase();
+
+            switch (currentLocation) {
+                case 'goyang':
+                    return area.includes('goyang') || area.includes('ilsan') || cityKey === 'goyang';
+                case 'seoul':
+                    return area.includes('hongdae') || area.includes('seongsu') ||
+                           area.includes('gwanghwamun') || area.includes('seoul') ||
+                           ['hongdae', 'seongsu', 'gwanghwamun'].includes(cityKey);
+                case 'busan':
+                    return area.includes('busan') || area.includes('haeundae') || cityKey === 'busan';
+                case 'paju':
+                    return area.includes('paju') || cityKey === 'paju';
+                case 'other':
+                    return !['goyang', 'ilsan', 'hongdae', 'seongsu', 'gwanghwamun', 'seoul', 'busan', 'haeundae', 'paju']
+                        .some(loc => area.includes(loc) || cityKey === loc);
+                default:
+                    return true;
+            }
+        });
+    }
+
+    // Then apply availability/sort filter
     switch (filter) {
         case 'near':
             filtered = filtered
@@ -425,12 +453,13 @@ async function init() {
             });
         });
 
-        // Setup location tabs (placeholder for now)
+        // Setup location tabs
         locationTabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 locationTabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
-                // Future: filter by location
+                currentLocation = tab.dataset.location;
+                filterHotels(currentFilter);
             });
         });
 
