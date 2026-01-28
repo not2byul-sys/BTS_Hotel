@@ -4,9 +4,8 @@
  */
 
 // ===== Supabase Config =====
-// TODO: 실제 Supabase URL과 anon key로 교체
-const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+const SUPABASE_URL = 'https://mjzuelvnowutvarghfbm.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_jAssSpSYZI02lBTKczkrZw_jvGAB48d';
 
 // ===== Global State =====
 let hotelsData = [];
