@@ -653,9 +653,440 @@ class CoupangTravelScraper(BaseScraper):
         return hotels
 
 
+# ===== 글로벌 OTA 스크래퍼 =====
+
+class TripComScraper(BaseScraper):
+    """Trip.com 스크래퍼 - 글로벌 OTA (중국 Ctrip)"""
+
+    def __init__(self, city_key: str = "goyang"):
+        super().__init__(city_key)
+        self.name = "Trip.com"
+        self.name_kr = "트립닷컴"
+        self.base_url = "https://www.trip.com"
+
+        # Trip.com 도시 ID 매핑
+        self.city_ids = {
+            "goyang": "seoul",  # 고양은 서울 근교로 검색
+            "hongdae": "seoul",
+            "seongsu": "seoul",
+            "gwanghwamun": "seoul",
+            "busan": "busan",
+            "paju": "seoul",
+        }
+
+    def _build_url(self, checkin: datetime, checkout: datetime) -> str:
+        """검색 URL 생성"""
+        city = self.city_ids.get(self.city_key, "seoul")
+        checkin_str = checkin.strftime("%Y-%m-%d")
+        checkout_str = checkout.strftime("%Y-%m-%d")
+
+        return (
+            f"{self.base_url}/hotels/list?"
+            f"city={city}"
+            f"&checkin={checkin_str}"
+            f"&checkout={checkout_str}"
+            f"&adult=2"
+            f"&searchBoxArg=t"
+        )
+
+    def scrape(self, checkin: datetime, checkout: datetime) -> List[Dict]:
+        """Trip.com 호텔 스크래핑"""
+        url = self._build_url(checkin, checkout)
+        print(f"🔍 [{self.name}] 검색 중...")
+
+        response = self._make_request(url)
+        if not response:
+            return []
+
+        hotels = self._parse_response(response.text)
+        print(f"✅ [{self.name}] {len(hotels)}개 호텔 수집")
+        return hotels
+
+    def _parse_response(self, html: str) -> List[Dict]:
+        """응답 파싱"""
+        hotels = []
+        if not BeautifulSoup:
+            return hotels
+
+        soup = BeautifulSoup(html, 'html.parser')
+
+        # __NEXT_DATA__ 또는 window.__INITIAL_STATE__ 파싱
+        for script in soup.find_all('script'):
+            if not script.string:
+                continue
+
+            # JSON 데이터 추출 시도
+            if '__INITIAL_STATE__' in script.string or 'hotelList' in script.string:
+                try:
+                    match = re.search(r'window\.__INITIAL_STATE__\s*=\s*(\{.+?\});', script.string, re.DOTALL)
+                    if match:
+                        data = json.loads(match.group(1))
+                        hotel_list = data.get('hotelList', {}).get('hotels', [])
+
+                        for item in hotel_list[:30]:
+                            hotel = self._normalize_hotel({
+                                "name": item.get('hotelName', ''),
+                                "name_en": item.get('hotelNameEn', item.get('hotelName', '')),
+                                "price_krw": int(item.get('price', 0) * 1350) if item.get('price', 0) < 1000 else item.get('price', 0),
+                                "rating": item.get('score', item.get('rating', 0)),
+                                "review_count": item.get('reviewCount', 0),
+                                "star_rating": item.get('star', 0),
+                                "address": item.get('address', ''),
+                                "latitude": item.get('lat', 0),
+                                "longitude": item.get('lng', 0),
+                                "image_url": item.get('imageUrl', item.get('picture', '')),
+                                "rooms_left": item.get('roomsLeft', -1),
+                                "booking_url": f"{self.base_url}/hotels/detail/?hotelId={item.get('hotelId', '')}",
+                            })
+                            if hotel["name"]:
+                                hotels.append(hotel)
+                except (json.JSONDecodeError, KeyError):
+                    pass
+
+        # HTML 폴백
+        if not hotels:
+            cards = soup.find_all('div', class_=re.compile(r'hotel-card|list-card', re.I))
+            for card in cards[:20]:
+                name_el = card.find(['h2', 'h3', 'a'], class_=re.compile(r'name|title', re.I))
+                price_el = card.find(['span', 'div'], class_=re.compile(r'price', re.I))
+
+                if name_el:
+                    price = 0
+                    if price_el:
+                        price_match = re.search(r'[\d,]+', price_el.get_text().replace(',', ''))
+                        if price_match:
+                            price = int(price_match.group())
+
+                    hotel = self._normalize_hotel({
+                        "name": name_el.get_text(strip=True),
+                        "price_krw": price,
+                    })
+                    hotels.append(hotel)
+
+        return hotels
+
+
+class HotelsComScraper(BaseScraper):
+    """Hotels.com 스크래퍼 - Expedia 그룹"""
+
+    def __init__(self, city_key: str = "goyang"):
+        super().__init__(city_key)
+        self.name = "Hotels.com"
+        self.name_kr = "호텔스닷컴"
+        self.base_url = "https://www.hotels.com"
+
+        # Hotels.com 검색어 매핑
+        self.search_queries = {
+            "goyang": "Goyang, Gyeonggi-do, South Korea",
+            "hongdae": "Hongdae, Seoul, South Korea",
+            "seongsu": "Seongsu-dong, Seoul, South Korea",
+            "gwanghwamun": "Gwanghwamun, Seoul, South Korea",
+            "busan": "Busan, South Korea",
+            "paju": "Paju, Gyeonggi-do, South Korea",
+        }
+
+    def _build_url(self, checkin: datetime, checkout: datetime) -> str:
+        """검색 URL 생성"""
+        query = self.search_queries.get(self.city_key, "Seoul, South Korea")
+        checkin_str = checkin.strftime("%Y-%m-%d")
+        checkout_str = checkout.strftime("%Y-%m-%d")
+
+        return (
+            f"{self.base_url}/Hotel-Search?"
+            f"destination={quote(query)}"
+            f"&startDate={checkin_str}"
+            f"&endDate={checkout_str}"
+            f"&adults=2"
+            f"&sort=PRICE_LOW_TO_HIGH"
+        )
+
+    def scrape(self, checkin: datetime, checkout: datetime) -> List[Dict]:
+        """Hotels.com 호텔 스크래핑"""
+        url = self._build_url(checkin, checkout)
+        print(f"🔍 [{self.name}] 검색 중...")
+
+        response = self._make_request(url)
+        if not response:
+            return []
+
+        hotels = self._parse_response(response.text)
+        print(f"✅ [{self.name}] {len(hotels)}개 호텔 수집")
+        return hotels
+
+    def _parse_response(self, html: str) -> List[Dict]:
+        """응답 파싱"""
+        hotels = []
+        if not BeautifulSoup:
+            return hotels
+
+        soup = BeautifulSoup(html, 'html.parser')
+
+        # __NEXT_DATA__ 파싱 (Hotels.com은 Next.js 사용)
+        script_tag = soup.find('script', {'id': '__NEXT_DATA__'})
+        if script_tag:
+            try:
+                data = json.loads(script_tag.string)
+                props = data.get('props', {}).get('pageProps', {})
+
+                # 다양한 경로 시도
+                search_results = (
+                    props.get('searchResults', {}).get('results', []) or
+                    props.get('listings', []) or
+                    props.get('properties', [])
+                )
+
+                for item in search_results[:30]:
+                    price_info = item.get('price', {}) or item.get('ratePlan', {}).get('price', {})
+                    price = price_info.get('lead', {}).get('amount', 0) if isinstance(price_info, dict) else 0
+
+                    hotel = self._normalize_hotel({
+                        "name": item.get('name', item.get('propertyName', '')),
+                        "price_krw": int(price * 1350) if price < 1000 else int(price),
+                        "rating": item.get('reviews', {}).get('score', item.get('guestReviews', {}).get('rating', 0)),
+                        "review_count": item.get('reviews', {}).get('count', 0),
+                        "star_rating": item.get('star', item.get('starRating', 0)),
+                        "address": item.get('address', {}).get('streetAddress', ''),
+                        "latitude": item.get('coordinate', {}).get('lat', 0),
+                        "longitude": item.get('coordinate', {}).get('lon', 0),
+                        "image_url": item.get('propertyImage', {}).get('image', {}).get('url', ''),
+                        "booking_url": f"{self.base_url}/ho{item.get('id', '')}",
+                    })
+                    if hotel["name"]:
+                        hotels.append(hotel)
+            except (json.JSONDecodeError, KeyError, TypeError):
+                pass
+
+        return hotels
+
+
+class BookingComScraper(BaseScraper):
+    """Booking.com 스크래퍼 - 세계 최대 OTA"""
+
+    def __init__(self, city_key: str = "goyang"):
+        super().__init__(city_key)
+        self.name = "Booking.com"
+        self.name_kr = "부킹닷컴"
+        self.base_url = "https://www.booking.com"
+
+        # Booking.com 목적지 ID (dest_id)
+        self.dest_ids = {
+            "goyang": "-716101",  # 고양시
+            "hongdae": "-716583",  # 마포구
+            "seongsu": "-716583",  # 서울
+            "gwanghwamun": "-716583",  # 서울
+            "busan": "-713900",  # 부산
+            "paju": "-715815",  # 파주
+        }
+
+    def _build_url(self, checkin: datetime, checkout: datetime) -> str:
+        """검색 URL 생성"""
+        dest_id = self.dest_ids.get(self.city_key, "-716583")
+        checkin_str = checkin.strftime("%Y-%m-%d")
+        checkout_str = checkout.strftime("%Y-%m-%d")
+
+        return (
+            f"{self.base_url}/searchresults.html?"
+            f"dest_id={dest_id}"
+            f"&dest_type=city"
+            f"&checkin={checkin_str}"
+            f"&checkout={checkout_str}"
+            f"&group_adults=2"
+            f"&no_rooms=1"
+            f"&order=price"
+        )
+
+    def scrape(self, checkin: datetime, checkout: datetime) -> List[Dict]:
+        """Booking.com 호텔 스크래핑"""
+        url = self._build_url(checkin, checkout)
+        print(f"🔍 [{self.name}] 검색 중...")
+
+        response = self._make_request(url)
+        if not response:
+            return []
+
+        hotels = self._parse_response(response.text)
+        print(f"✅ [{self.name}] {len(hotels)}개 호텔 수집")
+        return hotels
+
+    def _parse_response(self, html: str) -> List[Dict]:
+        """응답 파싱"""
+        hotels = []
+        if not BeautifulSoup:
+            return hotels
+
+        soup = BeautifulSoup(html, 'html.parser')
+
+        # Booking.com은 data-testid 속성 사용
+        property_cards = soup.find_all('div', {'data-testid': 'property-card'})
+
+        for card in property_cards[:30]:
+            try:
+                # 호텔명
+                name_el = card.find('div', {'data-testid': 'title'})
+                name = name_el.get_text(strip=True) if name_el else ""
+
+                # 가격
+                price = 0
+                price_el = card.find('span', {'data-testid': 'price-and-discounted-price'})
+                if price_el:
+                    price_text = price_el.get_text(strip=True)
+                    price_match = re.search(r'[\d,]+', price_text.replace(',', '').replace('₩', ''))
+                    if price_match:
+                        price = int(price_match.group())
+
+                # 평점
+                rating = 0
+                rating_el = card.find('div', {'data-testid': 'review-score'})
+                if rating_el:
+                    rating_match = re.search(r'(\d+\.?\d*)', rating_el.get_text())
+                    if rating_match:
+                        rating = float(rating_match.group(1))
+
+                # 이미지
+                img_el = card.find('img', {'data-testid': 'image'})
+                image_url = img_el.get('src', '') if img_el else ""
+
+                # 링크
+                link_el = card.find('a', {'data-testid': 'title-link'})
+                booking_url = self.base_url + link_el.get('href', '') if link_el else ""
+
+                if name:
+                    hotel = self._normalize_hotel({
+                        "name": name,
+                        "price_krw": price,
+                        "rating": rating,
+                        "image_url": image_url,
+                        "booking_url": booking_url,
+                    })
+                    hotels.append(hotel)
+
+            except Exception:
+                continue
+
+        # JSON-LD 데이터 폴백
+        if not hotels:
+            for script in soup.find_all('script', type='application/ld+json'):
+                try:
+                    data = json.loads(script.string)
+                    if isinstance(data, list):
+                        for item in data:
+                            if item.get('@type') == 'Hotel':
+                                hotel = self._normalize_hotel({
+                                    "name": item.get('name', ''),
+                                    "rating": item.get('aggregateRating', {}).get('ratingValue', 0),
+                                    "address": item.get('address', {}).get('streetAddress', ''),
+                                })
+                                if hotel["name"]:
+                                    hotels.append(hotel)
+                except:
+                    continue
+
+        return hotels
+
+
+class ExpediaScraper(BaseScraper):
+    """Expedia 스크래퍼 - 미국 최대 OTA"""
+
+    def __init__(self, city_key: str = "goyang"):
+        super().__init__(city_key)
+        self.name = "Expedia"
+        self.name_kr = "익스피디아"
+        self.base_url = "https://www.expedia.com"
+
+        # Expedia 검색어 매핑
+        self.search_queries = {
+            "goyang": "Goyang, South Korea",
+            "hongdae": "Hongdae, Seoul, South Korea",
+            "seongsu": "Seoul, South Korea",
+            "gwanghwamun": "Seoul, South Korea",
+            "busan": "Busan, South Korea",
+            "paju": "Paju, South Korea",
+        }
+
+    def _build_url(self, checkin: datetime, checkout: datetime) -> str:
+        """검색 URL 생성"""
+        query = self.search_queries.get(self.city_key, "Seoul, South Korea")
+        checkin_str = checkin.strftime("%Y-%m-%d")
+        checkout_str = checkout.strftime("%Y-%m-%d")
+
+        return (
+            f"{self.base_url}/Hotel-Search?"
+            f"destination={quote(query)}"
+            f"&startDate={checkin_str}"
+            f"&endDate={checkout_str}"
+            f"&adults=2"
+            f"&sort=PRICE_LOW_TO_HIGH"
+        )
+
+    def scrape(self, checkin: datetime, checkout: datetime) -> List[Dict]:
+        """Expedia 호텔 스크래핑"""
+        url = self._build_url(checkin, checkout)
+        print(f"🔍 [{self.name}] 검색 중...")
+
+        response = self._make_request(url)
+        if not response:
+            return []
+
+        hotels = self._parse_response(response.text)
+        print(f"✅ [{self.name}] {len(hotels)}개 호텔 수집")
+        return hotels
+
+    def _parse_response(self, html: str) -> List[Dict]:
+        """응답 파싱 (Hotels.com과 유사 - 같은 Expedia 그룹)"""
+        hotels = []
+        if not BeautifulSoup:
+            return hotels
+
+        soup = BeautifulSoup(html, 'html.parser')
+
+        # __NEXT_DATA__ 파싱
+        script_tag = soup.find('script', {'id': '__NEXT_DATA__'})
+        if script_tag:
+            try:
+                data = json.loads(script_tag.string)
+                props = data.get('props', {}).get('pageProps', {})
+
+                search_results = (
+                    props.get('searchResults', {}).get('results', []) or
+                    props.get('listings', [])
+                )
+
+                for item in search_results[:30]:
+                    price_info = item.get('price', {})
+                    price = price_info.get('lead', {}).get('amount', 0) if isinstance(price_info, dict) else 0
+
+                    hotel = self._normalize_hotel({
+                        "name": item.get('name', ''),
+                        "price_krw": int(price * 1350) if price < 1000 else int(price),
+                        "rating": item.get('reviews', {}).get('score', 0),
+                        "star_rating": item.get('star', 0),
+                        "image_url": item.get('propertyImage', {}).get('image', {}).get('url', ''),
+                        "booking_url": f"{self.base_url}/ho{item.get('id', '')}",
+                    })
+                    if hotel["name"]:
+                        hotels.append(hotel)
+            except (json.JSONDecodeError, KeyError, TypeError):
+                pass
+
+        return hotels
+
+
 class KoreanOTAScraper:
     """
-    다중 플랫폼/다중 도시 한국 OTA 스크래퍼 매니저
+    다중 플랫폼/다중 도시 OTA 스크래퍼 매니저
+
+    지원 플랫폼 (글로벌):
+    - Agoda
+    - Trip.com
+    - Hotels.com
+    - Booking.com
+    - Expedia
+
+    지원 플랫폼 (한국):
+    - 네이버 호텔
+    - 여기어때
+    - 야놀자
+    - 쿠팡 트래블
 
     지원 도시:
     - 고양 (Goyang) - 콘서트 공연장
@@ -676,8 +1107,14 @@ class KoreanOTAScraper:
     def _get_scrapers_for_city(self, city_key: str) -> Dict:
         """도시별 스크래퍼 생성"""
         return {
+            # 글로벌 OTA (안정적)
             'agoda': {'scraper': AgodaScraper(city_key), 'weight': 2},
-            'naver': {'scraper': NaverHotelScraper(city_key), 'weight': 2},
+            'tripcom': {'scraper': TripComScraper(city_key), 'weight': 2},
+            'hotelscom': {'scraper': HotelsComScraper(city_key), 'weight': 2},
+            'booking': {'scraper': BookingComScraper(city_key), 'weight': 2},
+            'expedia': {'scraper': ExpediaScraper(city_key), 'weight': 2},
+            # 한국 OTA
+            'naver': {'scraper': NaverHotelScraper(city_key), 'weight': 1},
             'goodchoice': {'scraper': GoodChoiceScraper(city_key), 'weight': 1},
             'yanolja': {'scraper': YanoljaScraper(city_key), 'weight': 1},
             'coupang': {'scraper': CoupangTravelScraper(city_key), 'weight': 1},
@@ -786,7 +1223,7 @@ class KoreanOTAScraper:
 
         분산 전략:
         - 1~2개 도시 랜덤 선택
-        - Agoda 플랫폼 사용 (가장 안정적)
+        - 2~3개 글로벌 OTA 랜덤 선택
         - 요청 간 충분한 딜레이
         """
         if not checkin:
@@ -798,14 +1235,20 @@ class KoreanOTAScraper:
         num_cities = random.randint(1, 2)
         selected_cities = random.sample(self.cities, min(num_cities, len(self.cities)))
 
+        # 2~3개 글로벌 OTA 랜덤 선택
+        global_otas = ['agoda', 'tripcom', 'hotelscom', 'booking', 'expedia']
+        num_platforms = random.randint(2, 3)
+        selected_platforms = random.sample(global_otas, num_platforms)
+
         print(f"🎲 이번 실행 도시: {', '.join([CITIES[c]['name_en'] for c in selected_cities])}")
+        print(f"🎯 이번 실행 플랫폼: {', '.join(selected_platforms)}")
 
         # 임시로 선택된 도시만 스크래핑
         original_cities = self.cities
         self.cities = selected_cities
 
-        # Agoda만 사용 (가장 안정적)
-        results = self.scrape_all(checkin, checkout, platforms=['agoda'])
+        # 선택된 글로벌 OTA 사용
+        results = self.scrape_all(checkin, checkout, platforms=selected_platforms)
 
         # 원래 도시 목록 복원
         self.cities = original_cities
