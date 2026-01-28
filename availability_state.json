@@ -1,0 +1,132 @@
+{
+  "6eca955b63f2": {
+    "name": "MVL Hotel Goyang",
+    "is_available": true,
+    "rooms_left": 5,
+    "price_krw": 185000,
+    "platform": {
+      "name": "Agoda",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
+  },
+  "3dafd47d9445": {
+    "name": "Goyang Cozy Room",
+    "is_available": true,
+    "rooms_left": 1,
+    "price_krw": 65000,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
+  },
+  "6f8273b58478": {
+    "name": "Ilsan Residence",
+    "is_available": true,
+    "rooms_left": 6,
+    "price_krw": 95000,
+    "platform": {
+      "name": "야놀자",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+  },
+  "47fc17826feb": {
+    "name": "La Festa Residence",
+    "is_available": true,
+    "rooms_left": 4,
+    "price_krw": 110000,
+    "platform": {
+      "name": "Agoda",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+  },
+  "761790b9665c": {
+    "name": "Best Western Premier Kukdo",
+    "is_available": true,
+    "rooms_left": 3,
+    "price_krw": 142000,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
+  },
+  "caf2fd9f6085": {
+    "name": "Ramada Encore Goyang",
+    "is_available": true,
+    "rooms_left": 8,
+    "price_krw": 128000,
+    "platform": {
+      "name": "Hotels.com",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
+  },
+  "fb11cf8fe2f7": {
+    "name": "Ilsan ARMY House",
+    "is_available": true,
+    "rooms_left": 2,
+    "price_krw": 45000,
+    "platform": {
+      "name": "여기어때",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
+  },
+  "b4d482fcdc74": {
+    "name": "Ilsan Hostel 808",
+    "is_available": true,
+    "rooms_left": 10,
+    "price_krw": 28000,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
+  },
+  "a8a1138a0522": {
+    "name": "Lake Park View Apt",
+    "is_available": false,
+    "rooms_left": 0,
+    "price_krw": 78000,
+    "platform": {
+      "name": "Agoda",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
+  },
+  "9440998c8130": {
+    "name": "Hotel Castle Ilsan",
+    "is_available": true,
+    "rooms_left": 2,
+    "price_krw": 89000,
+    "platform": {
+      "name": "Agoda",
+      "booking_url": ""
+    },
+    "location": "Goyang",
+    "booking_url": "",
+    "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
+  }
+}
