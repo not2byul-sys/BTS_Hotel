@@ -1,0 +1,14 @@
+[
+  {
+    "discord": false,
+    "telegram": false,
+    "slack": false,
+    "timestamp": "2026-01-30T12:41:35.109970",
+    "summary": {
+      "restocked": 0,
+      "sold_out": 0,
+      "low_stock": 14,
+      "new_hotels": 0
+    }
+  }
+]
