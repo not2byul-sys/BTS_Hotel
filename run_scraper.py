@@ -575,6 +575,7 @@ class ARMYStayHubEngine:
             "lat": lat,
             "lng": lng,
             "location": location,
+            "city_key": scraped.get("city_key", "goyang"),
             "army_density": army_density,
             "distance": self._get_distance_display(distance_km),
             "transport": self._get_transport(),
