@@ -1,327 +1,41 @@
 {
-  "36a2e445ab5c": {
-    "name": "서울 게스트하우스 외국인 전용",
+  "dc70b4bdce07": {
+    "name": "영광 초현 펜션",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 16,
+    "price_krw": 61,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoul-guesthouse.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=968622702_369287732_1_0_0%2C968622702_369287732_1_0_0&highlighted_blocks=968622702_369287732_1_0_0%2C968622702_369287732_1_0_0&matching_block_id=968622702_369287732_1_0_0&sr_pri_blocks=968622702_369287732_1_0_0__2363636%2C968622702_369287732_1_0_0__2363636&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/yeonggwang-chohyeon-pension.ko.html?aid=304142&label=mkt123sc-77ed046a-7215-4683-ba8e-9bf632c6c4fc&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716101&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=price&srpvid=7ddadd4811794cab40bafe58f508b949&srepoch=1769894209&all_sr_blocks=1277395207_401147527_0_0_0&highlighted_blocks=1277395207_401147527_0_0_0&matching_block_id=1277395207_401147527_0_0_0&sr_pri_blocks=1277395207_401147527_0_0_0__17672727&from=searchresults"
     },
-    "location": "Hongdae",
+    "location": "Goyang",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/433494322.webp?k=0bd3a96524ab66f1c9de9750e3f3c19884e713ea2a044de30586672d5d71e4a8&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/595635082.webp?k=4207cccff3454d1f4468ff2517dc9e008a887d4c1426327462d491a19f52b665&o="
   },
-  "0bac10b06a1e": {
-    "name": "Station Hostel In Namguro",
+  "507cc79ba088": {
+    "name": "고창 황토복분자펜션",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 26,
+    "price_krw": 120,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoul-namguroyeog-1bun-paemilrirum-101ho.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=5&hapos=5&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1461239001_417420081_2_0_0&highlighted_blocks=1461239001_417420081_2_0_0&matching_block_id=1461239001_417420081_2_0_0&sr_pri_blocks=1461239001_417420081_2_0_0__7363636&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/gochang-hwangto-bokbunja-pension.ko.html?aid=304142&label=mkt123sc-77ed046a-7215-4683-ba8e-9bf632c6c4fc&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716101&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=3&hapos=3&sr_order=price&srpvid=7ddadd4811794cab40bafe58f508b949&srepoch=1769894209&all_sr_blocks=1313555402_406186137_0_0_0&highlighted_blocks=1313555402_406186137_0_0_0&matching_block_id=1313555402_406186137_0_0_0&sr_pri_blocks=1313555402_406186137_0_0_0__34681818&from=searchresults"
     },
-    "location": "Hongdae",
+    "location": "Goyang",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/717301239.webp?k=f1e1c25285eb10e7da6e6ad0c8342c1ee07e2e950c4fee7b014955f5035f1d2c&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/616770687.webp?k=bda60de47d469753efd8a1fdb4a1e0c885817c63f3b56d53b69bb4b834cfdebc&o="
   },
-  "580f0a81bee4": {
-    "name": "코지 하우스",
+  "ee7fdb90025a": {
+    "name": "청백한옥펜션",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 28,
+    "price_krw": 45,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/sincug-pulob-opiseutel-koji-hauseu-204.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=7&hapos=7&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1437858202_415282182_2_0_0&highlighted_blocks=1437858202_415282182_2_0_0&matching_block_id=1437858202_415282182_2_0_0&sr_pri_blocks=1437858202_415282182_2_0_0__8100000&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/cheongbaek-hanok-pension.ko.html?aid=304142&label=mkt123sc-77ed046a-7215-4683-ba8e-9bf632c6c4fc&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716101&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=price&srpvid=7ddadd4811794cab40bafe58f508b949&srepoch=1769894209&all_sr_blocks=1313584803_406186833_0_0_0&highlighted_blocks=1313584803_406186833_0_0_0&matching_block_id=1313584803_406186833_0_0_0&sr_pri_blocks=1313584803_406186833_0_0_0__12881818&from=searchresults"
     },
-    "location": "Hongdae",
+    "location": "Goyang",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/697979006.webp?k=f49b40cae187f38be1c99376f6a39b8e225d237627072db74795bec31c8dcfee&o="
-  },
-  "bf885fd1447d": {
-    "name": "Tekkadan House",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 23,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/tekkadan-house.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1494471501_421109182_2_0_0&highlighted_blocks=1494471501_421109182_2_0_0&matching_block_id=1494471501_421109182_2_0_0&sr_pri_blocks=1494471501_421109182_2_0_0__6545455&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/781629364.webp?k=554735fc54e4cf26aeca6a5289085cc7192785c5c7c287134f9cfb3c4c531a1f&o="
-  },
-  "ef300bcf527b": {
-    "name": "버즈네스트 호스텔 홍대 - 외국인 전용",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 24,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/birdsnest-hostel.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=4&hapos=4&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=36764907_386591061_0_0_0%2C36764907_386591061_0_0_0&highlighted_blocks=36764907_386591061_0_0_0%2C36764907_386591061_0_0_0&matching_block_id=36764907_386591061_0_0_0&sr_pri_blocks=36764907_386591061_0_0_0__3518182%2C36764907_386591061_0_0_0__3518182&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/61638854.webp?k=319d8ec8ac03a39f23fde2c0f2413dd039ef2c8685c83df6e3cc476015dce3a6&o="
-  },
-  "9149a00e45ac": {
-    "name": "JTN 스튜디오 유닛",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 32,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/jtn-stuido-type.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=17&hapos=17&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1419890401_413649573_2_0_0_1087119&highlighted_blocks=1419890401_413649573_2_0_0_1087119&matching_block_id=1419890401_413649573_2_0_0_1087119&sr_pri_blocks=1419890401_413649573_2_0_0_1087119_9353182&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/686144447.webp?k=dede8454f395a126916c5a3ec1339aebc0a7c2ffa54759608d1f9f2fe5fb01c4&o="
-  },
-  "d3836dfdd43d": {
-    "name": "스프링 라이트",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 26,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/spring-light.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=6&hapos=6&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=516637106_179288019_0_0_0&highlighted_blocks=516637106_179288019_0_0_0&matching_block_id=516637106_179288019_0_0_0&sr_pri_blocks=516637106_179288019_0_0_0__7450000&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/329454863.webp?k=4d32ccde73798b309ec136a826de0a7a8fd83d728750e5f93dc6984f338785a5&o="
-  },
-  "3175b8d4408d": {
-    "name": "호스텔 코리아 - 오리지널",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 31,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/hostel-korea-original.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=10&hapos=10&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=54842503_359105894_0_1_0&highlighted_blocks=54842503_359105894_0_1_0&matching_block_id=54842503_359105894_0_1_0&sr_pri_blocks=54842503_359105894_0_1_0__8981818&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/136597371.webp?k=23108736ef367db8cb300bf857249eaa70b51fb8ce5efdc3d12f9541429f379d&o="
-  },
-  "40888023d71a": {
-    "name": "Ara house단독",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 32,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/arahauseu.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=14&hapos=14&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1221710002_401658105_0_0_0&highlighted_blocks=1221710002_401658105_0_0_0&matching_block_id=1221710002_401658105_0_0_0&sr_pri_blocks=1221710002_401658105_0_0_0__9090909&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/681647682.webp?k=e38c89d41a1151f89e042dd8fc1d33f27d5e44e71f3098b18898c76eed42a162&o="
-  },
-  "74a52c0ab50c": {
-    "name": "서울앤호텔 동대문",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 34,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoulnhotel.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=23&hapos=23&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=198130212_379297430_0_2_0%2C198130212_379297430_0_2_0&highlighted_blocks=198130212_379297430_0_2_0%2C198130212_379297430_0_2_0&matching_block_id=198130212_379297430_0_2_0&sr_pri_blocks=198130212_379297430_0_2_0__4963636%2C198130212_379297430_0_2_0__4963636&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/103588071.webp?k=70e14c2e8e5c64d9b13040cbf891d408d498ab54ab0f3e5e23596c3ae374c8f7&o="
-  },
-  "7cb0fc0155f0": {
-    "name": "아마존 게스트하우스",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 32,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/amazon-guesthouse.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=15&hapos=15&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=201417405_171843636_0_0_0%2C201417405_171843636_0_0_0&highlighted_blocks=201417405_171843636_0_0_0%2C201417405_171843636_0_0_0&matching_block_id=201417405_171843636_0_0_0&sr_pri_blocks=201417405_171843636_0_0_0__4636364%2C201417405_171843636_0_0_0__4636364&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/204809971.webp?k=2076895c90fbe62ff827488d80e3c0ed366c172052bce07cf491528f6f2577b3&o="
-  },
-  "4d36f9f0a185": {
-    "name": "NJ Affordable and cozy accommodation near Nakseongdae Station",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 33,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/nagseongdaeyeog-jeoryeomhago-ddaddeushan-sugso.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=19&hapos=19&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1315781711_421998532_2_0_0&highlighted_blocks=1315781711_421998532_2_0_0&matching_block_id=1315781711_421998532_2_0_0&sr_pri_blocks=1315781711_421998532_2_0_0__9454545&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/618384754.webp?k=ecfb59155c3c8dbda580cc3f6abc111997917ed07f6ec571aea2721795960f52&o="
-  },
-  "54075aeb13e5": {
-    "name": "From H US Hotel with Anook Seoul Gangseo Hwagok",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 31,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/peuromeici-eoseuhotel-gangseojeom-with-aneug-seoul.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=11&hapos=11&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1424466501_414060640_2_0_0&highlighted_blocks=1424466501_414060640_2_0_0&matching_block_id=1424466501_414060640_2_0_0&sr_pri_blocks=1424466501_414060640_2_0_0__9000000&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/693138885.webp?k=67dae519fe5cf81b48616ab53ed9f427c5e5829679d8b00a3a756c981f6fe4fb&o="
-  },
-  "431b36119777": {
-    "name": "Jinho's Guest House",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 32,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/jinho-house.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=13&hapos=13&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=697465903_368466540_2_0_0&highlighted_blocks=697465903_368466540_2_0_0&matching_block_id=697465903_368466540_2_0_0&sr_pri_blocks=697465903_368466540_2_0_0__9090909&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/285506527.webp?k=46803f59d80253bb3ef81c4864e08e05f94de01d1e9a30625d48f06825eddc78&o="
-  },
-  "4cf177e29177": {
-    "name": "루미에르h호텔",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 34,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/rumiereuhhotel.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=22&hapos=22&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1552390701_426420533_2_0_0&highlighted_blocks=1552390701_426420533_2_0_0&matching_block_id=1552390701_426420533_2_0_0&sr_pri_blocks=1552390701_426420533_2_0_0__9722727&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/798399499.webp?k=ba73f52e9ce3fabcb1ad60c40afdc85eb4981015a66496406e49eac3a66a23d6&o="
-  },
-  "93119baca09c": {
-    "name": "나비 모텔",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 30,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/navi.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=9&hapos=9&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1489147801_420567604_2_0_0&highlighted_blocks=1489147801_420567604_2_0_0&matching_block_id=1489147801_420567604_2_0_0&sr_pri_blocks=1489147801_420567604_2_0_0__8590909&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/742412160.webp?k=63250a68ba8b666002c2532891aebefe0b4bdab4114f6db63d5e0fb33129312e&o="
-  },
-  "da7fc748aeee": {
-    "name": "수정장 여관",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 32,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/sujeongjang-inn.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=12&hapos=12&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1069107515_380493398_2_0_0&highlighted_blocks=1069107515_380493398_2_0_0&matching_block_id=1069107515_380493398_2_0_0&sr_pri_blocks=1069107515_380493398_2_0_0__9090909&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/576487838.webp?k=a67fcc63fed9e1c41ef7aa8644d2164321e9f7f6fd5683d18bc0f470c953537a&o="
-  },
-  "d8fb57336081": {
-    "name": "해치 스테이 게스트하우스 - 외국인 전용",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 35,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/haechi-stay-guesthouse-for-foreigners-only.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=24&hapos=24&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1067318422_379130620_2_0_0&highlighted_blocks=1067318422_379130620_2_0_0&matching_block_id=1067318422_379130620_2_0_0&sr_pri_blocks=1067318422_379130620_2_0_0__10000000&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/512551907.webp?k=1272d3084b0e1cd4a83298432ac667e0aaf4ff63bd8a44bdb7e421e84eca484b&o="
-  },
-  "e2abc8e467da": {
-    "name": "킴스테이 9",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 33,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/korstay.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=21&hapos=21&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=49720210_295792248_2_1_0&highlighted_blocks=49720210_295792248_2_1_0&matching_block_id=49720210_295792248_2_1_0&sr_pri_blocks=49720210_295792248_2_1_0__9636382&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/252739045.webp?k=0aaf526cafcc81fa872db94edbe6457b489c7de9c8e53b411c81b2640e7fe088&o="
-  },
-  "c764936ff2a7": {
-    "name": "1975 Yurim Inn",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 24,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/1975-yurimjang.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=3&hapos=3&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1138944001_386607674_2_0_0&highlighted_blocks=1138944001_386607674_2_0_0&matching_block_id=1138944001_386607674_2_0_0&sr_pri_blocks=1138944001_386607674_2_0_0__6818182&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/524681837.webp?k=5b6d651a72a84841b64e0a0e8b726251990c9069eb52496ccbc9bb88d8238f41&o="
-  },
-  "eebb2826c347": {
-    "name": "명동 스튜디오 아파트먼트",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 32,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/spacious-studio-apt-myeong-dong.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=16&hapos=16&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1157083801_388483711_2_0_0&highlighted_blocks=1157083801_388483711_2_0_0&matching_block_id=1157083801_388483711_2_0_0&sr_pri_blocks=1157083801_388483711_2_0_0__9327273&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/640931786.webp?k=e7766af4de6e87a13194d7a47da417e3daef51f2a77b679822a376063c2732b8&o="
-  },
-  "075114949af4": {
-    "name": "하우재 이태원",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 33,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/hause-itaewon.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=18&hapos=18&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=214023406_421584100_0_0_0%2C214023406_421584100_0_0_0&highlighted_blocks=214023406_421584100_0_0_0%2C214023406_421584100_0_0_0&matching_block_id=214023406_421584100_0_0_0&sr_pri_blocks=214023406_421584100_0_0_0__4727273%2C214023406_421584100_0_0_0__4727273&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/186139806.webp?k=ecff2c5195af1f03a79ce7bb93f4a183a270700f0a995f19820d276a1d85cde2&o="
-  },
-  "0e4d50a3a8b4": {
-    "name": "마당이 넓은 Oak Tree House",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 29,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/oak-tree-house.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=8&hapos=8&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=1375513101_409694004_2_0_0&highlighted_blocks=1375513101_409694004_2_0_0&matching_block_id=1375513101_409694004_2_0_0&sr_pri_blocks=1375513101_409694004_2_0_0__8345455&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/657100966.webp?k=1d84cb71cb3c3e51ae18dbb539056c79c634505ca68a750bca7eedf05af0c620&o="
-  },
-  "366a6808091f": {
-    "name": "댓 하우스 홍대 게스트하우스",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 33,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/that-house.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=20&hapos=20&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=166732201_128134293_0_0_0%2C166732201_128134293_0_0_0&highlighted_blocks=166732201_128134293_0_0_0%2C166732201_128134293_0_0_0&matching_block_id=166732201_128134293_0_0_0&sr_pri_blocks=166732201_128134293_0_0_0__4818182%2C166732201_128134293_0_0_0__4818182&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/61802936.webp?k=d69c6742d66a81c8d169fce434c380d6b1ab7fa073035c0c923cbbe9d36d5a12&o="
-  },
-  "ea0cef4e95e1": {
-    "name": "커플 모텔",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 35,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/couple-motel-seoul1.ko.html?aid=304142&label=mkt123sc-a8ce33c4-934e-4408-b738-722639f3dd7a&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=25&hapos=25&sr_order=price&srpvid=e0fb057bccd5f7cab51859324493f47a&srepoch=1769890774&all_sr_blocks=886028101_358243750_2_0_0&highlighted_blocks=886028101_358243750_2_0_0&matching_block_id=886028101_358243750_2_0_0&sr_pri_blocks=886028101_358243750_2_0_0__10000000&from=searchresults"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/378118152.webp?k=65bcd6e2cba02f6f521245d6ed2e49475333030834f372f682acbbac861f2d6b&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/616780377.webp?k=e940126ffa7eefaa3f5ac45d5f07864c28205c743c8f2df9cae6a60ae5790ea8&o="
   }
 }
