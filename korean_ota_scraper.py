@@ -1071,189 +1071,6 @@ class ExpediaScraper(BaseScraper):
         return hotels
 
 
-class KorServiceScraper(BaseScraper):
-    """
-    한국관광공사 공공데이터 API 스크래퍼
-    API: KorService2 (국문 관광정보 서비스)
-    엔드포인트: https://apis.data.go.kr/B551011/KorService2
-    """
-
-    # 지역 코드 매핑 (한국관광공사 API용)
-    AREA_CODES = {
-        "goyang": 31,      # 경기도
-        "hongdae": 1,      # 서울
-        "seongsu": 1,      # 서울
-        "gwanghwamun": 1,  # 서울
-        "busan": 6,        # 부산
-        "paju": 31,        # 경기도
-    }
-
-    # 시군구 코드 (더 정확한 위치 필터링용)
-    SIGUNGU_CODES = {
-        "goyang": 10,      # 고양시
-        "paju": 22,        # 파주시
-    }
-
-    def __init__(self, city_key: str = "goyang", service_key: str = None):
-        super().__init__(city_key)
-        self.name = "KorService"
-        self.name_kr = "한국관광공사"
-        self.base_url = "https://apis.data.go.kr/B551011/KorService2"
-
-        # API 서비스 키 (공공데이터포털에서 발급)
-        self.service_key = service_key or "209151296de1d900cecb9fae281303b95838581d82971a10aadbb3ac98e6a192"
-
-        # 지역 코드 설정
-        self.area_code = self.AREA_CODES.get(city_key, 31)
-        self.sigungu_code = self.SIGUNGU_CODES.get(city_key)
-
-    def _make_api_request(self, endpoint: str, params: dict = None) -> Optional[dict]:
-        """한국관광공사 API 요청"""
-        url = f"{self.base_url}/{endpoint}"
-
-        base_params = {
-            "serviceKey": self.service_key,
-            "MobileOS": "ETC",
-            "MobileApp": "ARMYStayHub",
-            "_type": "json",
-            "numOfRows": 100,
-            "pageNo": 1,
-        }
-
-        if params:
-            base_params.update(params)
-
-        try:
-            response = requests.get(url, params=base_params, timeout=30)
-            response.raise_for_status()
-
-            data = response.json()
-
-            # API 응답 구조 확인
-            if "response" in data:
-                header = data["response"].get("header", {})
-                if header.get("resultCode") != "0000":
-                    print(f"❌ [{self.name}] API 오류: {header.get('resultMsg')}")
-                    return None
-                return data["response"].get("body", {})
-
-            return data
-
-        except requests.exceptions.RequestException as e:
-            print(f"❌ [{self.name}] 요청 실패: {e}")
-            return None
-        except json.JSONDecodeError as e:
-            print(f"❌ [{self.name}] JSON 파싱 실패: {e}")
-            return None
-
-    def scrape(self, checkin: datetime, checkout: datetime) -> List[Dict]:
-        """숙박 정보 조회"""
-        print(f"🔍 [{self.name}] {self.city_config['name_kr']} 숙박 정보 조회 중...")
-
-        params = {
-            "areaCode": self.area_code,
-            "contentTypeId": 32,  # 숙박
-        }
-
-        # 시군구 코드가 있으면 추가 (더 정확한 필터링)
-        if self.sigungu_code:
-            params["sigunguCode"] = self.sigungu_code
-
-        body = self._make_api_request("searchStay", params)
-        if not body:
-            return []
-
-        items = body.get("items", {}).get("item", [])
-        if not items:
-            print(f"   ⚠️ [{self.name}] 검색 결과 없음")
-            return []
-
-        # 리스트가 아닌 경우 (단일 결과)
-        if isinstance(items, dict):
-            items = [items]
-
-        hotels = []
-        for item in items:
-            hotel = self._parse_hotel(item)
-            if hotel:
-                hotels.append(hotel)
-
-        print(f"   ✅ [{self.name}] {len(hotels)}개 숙소 조회 완료")
-        return hotels
-
-    def _parse_hotel(self, item: dict) -> Optional[Dict]:
-        """API 응답 데이터 파싱"""
-        try:
-            # 좌표 정보
-            lat = float(item.get("mapy", 0)) if item.get("mapy") else 0
-            lng = float(item.get("mapx", 0)) if item.get("mapx") else 0
-
-            # 이미지 URL
-            image_url = item.get("firstimage") or item.get("firstimage2") or ""
-
-            # 호텔 ID 생성
-            content_id = item.get("contentid", "")
-            hotel_id = f"korservice_{content_id}"
-
-            raw_data = {
-                "id": hotel_id,
-                "name": item.get("title", ""),
-                "name_en": item.get("title", ""),  # 국문 API이므로 한글 이름
-                "address": item.get("addr1", "") + " " + item.get("addr2", ""),
-                "latitude": lat,
-                "longitude": lng,
-                "image_url": image_url,
-                "hotel_type": self._get_hotel_type(item.get("cat3", "")),
-                "rating": 0,  # 공공데이터에는 평점 없음
-                "price_krw": 0,  # 가격 정보는 상세 조회 필요
-                "booking_url": f"https://korean.visitkorea.or.kr/detail/detail_view.do?cotid={content_id}",
-                "tel": item.get("tel", ""),
-            }
-
-            return self._normalize_hotel(raw_data)
-
-        except Exception as e:
-            print(f"   ⚠️ 파싱 오류: {e}")
-            return None
-
-    def _get_hotel_type(self, cat3: str) -> str:
-        """카테고리3 코드로 숙소 타입 결정"""
-        type_map = {
-            "B02010100": "Hotel",       # 관광호텔
-            "B02010200": "Condo",       # 콘도미니엄
-            "B02010300": "Hostel",      # 유스호스텔
-            "B02010400": "Pension",     # 펜션
-            "B02010500": "Motel",       # 모텔
-            "B02010600": "Guesthouse",  # 민박
-            "B02010700": "Guesthouse",  # 게스트하우스
-            "B02010800": "Homestay",    # 홈스테이
-            "B02010900": "Hanok",       # 한옥
-            "B02011000": "Resort",      # 서비스드레지던스
-            "B02011100": "Hotel",       # 관광펜션
-        }
-        return type_map.get(cat3, "Hotel")
-
-    def get_detail(self, content_id: str) -> Optional[Dict]:
-        """숙소 상세 정보 조회"""
-        params = {
-            "contentId": content_id,
-            "contentTypeId": 32,
-            "defaultYN": "Y",
-            "firstImageYN": "Y",
-            "addrinfoYN": "Y",
-            "overviewYN": "Y",
-        }
-
-        body = self._make_api_request("detailCommon", params)
-        if not body:
-            return None
-
-        items = body.get("items", {}).get("item", [])
-        if items:
-            return items[0] if isinstance(items, list) else items
-        return None
-
-
 class KoreanOTAScraper:
     """
     다중 플랫폼/다중 도시 OTA 스크래퍼 매니저
@@ -1270,7 +1087,6 @@ class KoreanOTAScraper:
     - 여기어때
     - 야놀자
     - 쿠팡 트래블
-    - 한국관광공사 (KorService2 공공데이터 API)
 
     지원 도시:
     - 고양 (Goyang) - 콘서트 공연장
@@ -1297,8 +1113,6 @@ class KoreanOTAScraper:
             'hotelscom': {'scraper': HotelsComScraper(city_key), 'weight': 2},
             'booking': {'scraper': BookingComScraper(city_key), 'weight': 2},
             'expedia': {'scraper': ExpediaScraper(city_key), 'weight': 2},
-            # 공공데이터 API
-            'korservice': {'scraper': KorServiceScraper(city_key), 'weight': 3},
             # 한국 OTA
             'naver': {'scraper': NaverHotelScraper(city_key), 'weight': 1},
             'goodchoice': {'scraper': GoodChoiceScraper(city_key), 'weight': 1},
@@ -1425,9 +1239,6 @@ class KoreanOTAScraper:
         global_otas = ['agoda', 'tripcom', 'hotelscom', 'booking', 'expedia']
         num_platforms = random.randint(2, 3)
         selected_platforms = random.sample(global_otas, num_platforms)
-
-        # 한국관광공사 API는 항상 포함 (공공데이터이므로 안정적)
-        selected_platforms.append('korservice')
 
         print(f"🎲 이번 실행 도시: {', '.join([CITIES[c]['name_en'] for c in selected_cities])}")
         print(f"🎯 이번 실행 플랫폼: {', '.join(selected_platforms)}")
