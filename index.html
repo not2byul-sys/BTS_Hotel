@@ -29,7 +29,8 @@
             </div>
             <div class="header-actions">
                 <button class="icon-btn" id="login-btn">로그인</button>
-                <div id="user-info"></div> <button class="icon-btn">
+                <div id="user-info"></div>
+                <button class="icon-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="8" y1="6" x2="21" y2="6"></line>
                         <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -47,36 +48,27 @@
             <button class="location-tab" data-location="goyang">Goyang</button>
             <button class="location-tab" data-location="seoul">Seoul</button>
             <button class="location-tab" data-location="busan">Busan</button>
-            <button class="location-tab" data-location="paju">Paju</button>
         </div>
 
         <div class="filter-tabs">
             <button class="filter-tab active" data-filter="all">All</button>
             <button class="filter-tab" data-filter="near">Near Venue</button>
-            <button class="filter-tab" data-filter="price">Lowest Price</button>
         </div>
 
         <div class="results-header">
             <h2>Best Matches for You</h2>
-            <span class="results-count" id="results-count">9 hotels in goyang</span>
+            <span class="results-count" id="results-count">9 hotels</span>
         </div>
 
-        <div class="hotel-list" id="hotel-list">
-            </div>
+        <div class="hotel-list" id="hotel-list"></div>
     </div>
 
-    <div class="modal-overlay" id="notify-modal" onclick="if(event.target === this) closeNotifyModal()">
+    <div class="modal-overlay" id="notify-modal" style="display:none;">
         <div class="modal-content">
-            <button class="modal-close" onclick="closeNotifyModal()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
             <h3 class="modal-title">Get Notified</h3>
-            <p class="modal-subtitle">We'll notify you when <strong id="notify-hotel-name">this hotel</strong> becomes available.</p>
-            <input type="email" id="notify-email" class="modal-input" placeholder="Enter your email (required)" />
+            <input type="email" id="notify-email" class="modal-input" placeholder="Enter your email" />
             <button class="submit-btn" onclick="submitNotification()">Notify Me</button>
+            <button onclick="document.getElementById('notify-modal').style.display='none'">Close</button>
         </div>
     </div>
 
