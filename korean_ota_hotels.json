@@ -448,9 +448,193 @@
         "lng": 129.168,
         "price_krw": 280000
       }
-    ]
+  {
+    "id": "hotel_gw_0001",
+    "name_en": "Shilla Stay Gwanghwamun",
+    "lat": 37.5716,
+    "lng": 126.9769,
+    "price_krw": 170000
   },
+  {
+    "id": "hotel_gw_0002",
+    "name_en": "Somerset Palace Seoul",
+    "lat": 37.5765,
+    "lng": 126.9850,
+    "price_krw": 230000
+  },
+  {
+    "id": "hotel_gw_0003",
+    "name_en": "Nine Tree by Parnas Seoul Insadong",
+    "lat": 37.5730,
+    "lng": 126.9857,
+    "price_krw": 160000
+  },
+  {
+    "id": "hotel_gw_0004",
+    "name_en": "ibis Ambassador Seoul Insadong",
+    "lat": 37.5727,
+    "lng": 126.9896,
+    "price_krw": 140000
+  },
+    ]
+  
   "hotels": [
+  {
+    "id": "hotel_gw_0001",
+    "name_en": "Shilla Stay Gwanghwamun",
+    "price_krw": 170000,
+    "rating": 4.2,
+    "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200",
+    "rooms_left": 6,
+    "is_available": true,
+    "hotel_type": { "label_en": "Hotel", "color": "#CD7F32" },
+    "cancellation": { "type": "unknown", "label_en": "Check Policy", "label_kr": "정책 확인", "is_refundable": null },
+    "tags": {
+      "list_en": ["#Gwanghwamun", "#Walkable"],
+      "list_kr": ["#광화문", "#도보권"],
+      "display_en": "#Walkable",
+      "display_kr": "#도보권"
+    },
+    "lat": 37.5716,
+    "lng": 126.9769,
+    "location": {
+      "area_en": "Gwanghwamun",
+      "area_kr": "광화문",
+      "address_en": "Jongno-gu, Seoul",
+      "address_kr": "서울 종로구"
+    },
+    "city_key": "seoul",
+    "army_density": { "value": 70, "level_en": "High", "level_kr": "높음", "label_en": "ARMY 70%", "label_kr": "아미 70%" },
+    "distance": { "type": "walk", "display_en": "Walk 5–10min", "minutes": 8, "distance_km": 0.7 },
+    "transport": { "station_en": "Gwanghwamun", "line_en": "Line 5", "line_color": "#996CAC", "display_en": "Gwanghwamun (Line 5)" },
+    "safe_return": { "venue_en": "Gwanghwamun Square", "route_en": "Walk → Hotel", "transport": "walk", "time_min": 8, "last_train": null, "taxi_krw": 0 },
+    "platform": { "name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/search?city=KR&searchTerm=Shilla+Stay+Gwanghwamun" },
+    "booking_guide": {
+      "steps_en": ["1. Open Agoda", "2. Select dates", "3. Book"],
+      "tips_en": ["Prices can spike near concert dates."],
+      "payment_methods": ["Credit Card", "PayPal"],
+      "foreigner_friendly": true
+    },
+    "last_update": "2026-02-02 00:00:00",
+    "nearby": []
+  },
+  {
+    "id": "hotel_gw_0002",
+    "name_en": "Somerset Palace Seoul",
+    "price_krw": 230000,
+    "rating": 4.3,
+    "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200",
+    "rooms_left": 4,
+    "is_available": true,
+    "hotel_type": { "label_en": "Serviced Apartment", "color": "#6B7280" },
+    "cancellation": { "type": "unknown", "label_en": "Check Policy", "label_kr": "정책 확인", "is_refundable": null },
+    "tags": {
+      "list_en": ["#Jongno", "#FamilyFriendly"],
+      "list_kr": ["#종로", "#가족여행"],
+      "display_en": "#Jongno",
+      "display_kr": "#종로"
+    },
+    "lat": 37.5765,
+    "lng": 126.9850,
+    "location": {
+      "area_en": "Jongno",
+      "area_kr": "종로",
+      "address_en": "Jongno-gu, Seoul",
+      "address_kr": "서울 종로구"
+    },
+    "city_key": "seoul",
+    "army_density": { "value": 65, "level_en": "High", "level_kr": "높음", "label_en": "ARMY 65%", "label_kr": "아미 65%" },
+    "distance": { "type": "walk", "display_en": "Walk 10–15min", "minutes": 14, "distance_km": 1.2 },
+    "transport": { "station_en": "Anguk", "line_en": "Line 3", "line_color": "#F97316", "display_en": "Anguk (Line 3)" },
+    "safe_return": { "venue_en": "Gwanghwamun Square", "route_en": "Walk → Hotel", "transport": "walk", "time_min": 14, "last_train": null, "taxi_krw": 0 },
+    "platform": { "name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/search?city=KR&searchTerm=Somerset+Palace+Seoul" },
+    "booking_guide": {
+      "steps_en": ["1. Open Agoda", "2. Select dates", "3. Book"],
+      "tips_en": ["Good for longer stays."],
+      "payment_methods": ["Credit Card", "PayPal"],
+      "foreigner_friendly": true
+    },
+    "last_update": "2026-02-02 00:00:00",
+    "nearby": []
+  },
+  {
+    "id": "hotel_gw_0003",
+    "name_en": "Nine Tree by Parnas Seoul Insadong",
+    "price_krw": 160000,
+    "rating": 4.4,
+    "image_url": "https://images.unsplash.com/photo-1551887373-6d4f5f21f78e?w=1200",
+    "rooms_left": 7,
+    "is_available": true,
+    "hotel_type": { "label_en": "Hotel", "color": "#CD7F32" },
+    "cancellation": { "type": "unknown", "label_en": "Check Policy", "label_kr": "정책 확인", "is_refundable": null },
+    "tags": {
+      "list_en": ["#Insadong", "#GreatLocation"],
+      "list_kr": ["#인사동", "#위치좋음"],
+      "display_en": "#Insadong",
+      "display_kr": "#인사동"
+    },
+    "lat": 37.5730,
+    "lng": 126.9857,
+    "location": {
+      "area_en": "Insadong",
+      "area_kr": "인사동",
+      "address_en": "Jongno-gu, Seoul",
+      "address_kr": "서울 종로구"
+    },
+    "city_key": "seoul",
+    "army_density": { "value": 60, "level_en": "Medium", "level_kr": "보통", "label_en": "ARMY 60%", "label_kr": "아미 60%" },
+    "distance": { "type": "walk", "display_en": "Walk 12–18min", "minutes": 16, "distance_km": 1.4 },
+    "transport": { "station_en": "Jonggak", "line_en": "Line 1", "line_color": "#2563EB", "display_en": "Jonggak (Line 1)" },
+    "safe_return": { "venue_en": "Gwanghwamun Square", "route_en": "Walk → Hotel", "transport": "walk", "time_min": 16, "last_train": null, "taxi_krw": 0 },
+    "platform": { "name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/search?city=KR&searchTerm=Nine+Tree+Parnas+Insadong" },
+    "booking_guide": {
+      "steps_en": ["1. Open Agoda", "2. Select dates", "3. Book"],
+      "tips_en": ["Great access to Insa-dong area."],
+      "payment_methods": ["Credit Card", "PayPal"],
+      "foreigner_friendly": true
+    },
+    "last_update": "2026-02-02 00:00:00",
+    "nearby": []
+  },
+  {
+    "id": "hotel_gw_0004",
+    "name_en": "ibis Ambassador Seoul Insadong",
+    "price_krw": 140000,
+    "rating": 4.1,
+    "image_url": "https://images.unsplash.com/photo-1560067174-8943bd5d0b25?w=1200",
+    "rooms_left": 9,
+    "is_available": true,
+    "hotel_type": { "label_en": "Hotel", "color": "#CD7F32" },
+    "cancellation": { "type": "unknown", "label_en": "Check Policy", "label_kr": "정책 확인", "is_refundable": null },
+    "tags": {
+      "list_en": ["#Insadong", "#Value"],
+      "list_kr": ["#인사동", "#가성비"],
+      "display_en": "#Value",
+      "display_kr": "#가성비"
+    },
+    "lat": 37.5727,
+    "lng": 126.9896,
+    "location": {
+      "area_en": "Insadong",
+      "area_kr": "인사동",
+      "address_en": "Jongno-gu, Seoul",
+      "address_kr": "서울 종로구"
+    },
+    "city_key": "seoul",
+    "army_density": { "value": 55, "level_en": "Medium", "level_kr": "보통", "label_en": "ARMY 55%", "label_kr": "아미 55%" },
+    "distance": { "type": "walk", "display_en": "Walk 15–20min", "minutes": 19, "distance_km": 1.7 },
+    "transport": { "station_en": "Anguk", "line_en": "Line 3", "line_color": "#F97316", "display_en": "Anguk (Line 3)" },
+    "safe_return": { "venue_en": "Gwanghwamun Square", "route_en": "Walk → Hotel", "transport": "walk", "time_min": 19, "last_train": null, "taxi_krw": 0 },
+    "platform": { "name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/search?city=KR&searchTerm=ibis+Ambassador+Insadong" },
+    "booking_guide": {
+      "steps_en": ["1. Open Agoda", "2. Select dates", "3. Book"],
+      "tips_en": ["Solid budget option near Jongno."],
+      "payment_methods": ["Credit Card", "PayPal"],
+      "foreigner_friendly": true
+    },
+    "last_update": "2026-02-02 00:00:00",
+    "nearby": []
+  }
     {
       "id": "hotel_44577",
       "name_en": "La Festa Residence",
