@@ -1,626 +1,327 @@
 {
-  "f247e246dbb4": {
-    "name": "La Festa Residence",
+  "9e8455a50289": {
+    "name": "스프링 라이트",
     "is_available": true,
-    "rooms_left": 2,
-    "price_krw": 95000,
-    "platform": {
-      "name": "Expedia",
-      "booking_url": "https://www.expedia.com/Goyang-Hotels-La-Festa.h12345.Hotel-Information"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-  },
-  "59132752b5e2": {
-    "name": "Ilsan Hotel M",
-    "is_available": true,
-    "rooms_left": 10,
-    "price_krw": 72000,
-    "platform": {
-      "name": "야놀자",
-      "booking_url": "https://www.yanolja.com/hotel/ilsan-hotel-m"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
-  },
-  "28d84d3f9907": {
-    "name": "Goyang Airbnb Studio",
-    "is_available": true,
-    "rooms_left": 1,
-    "price_krw": 58000,
-    "platform": {
-      "name": "여기어때",
-      "booking_url": "https://www.goodchoice.kr/product/detail?ano=12345"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
-  },
-  "63990a5595e2": {
-    "name": "Sono Calm Goyang",
-    "is_available": true,
-    "rooms_left": 3,
-    "price_krw": 135000,
+    "rooms_left": -1,
+    "price_krw": 26,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/sono-calm-goyang.html"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
-  },
-  "cb17abe5b45b": {
-    "name": "Antives Hotel Ilsan",
-    "is_available": true,
-    "rooms_left": 8,
-    "price_krw": 75000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/antives-hotel-ilsan/hotel/goyang-si-kr.html"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
-  },
-  "326fdc4e688f": {
-    "name": "Yellow 8 Hotel Goyang",
-    "is_available": true,
-    "rooms_left": 12,
-    "price_krw": 55000,
-    "platform": {
-      "name": "Hotels.com",
-      "booking_url": "https://www.hotels.com/ho-yellow-8-goyang/"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"
-  },
-  "68c27cf28abc": {
-    "name": "Ilsan Lake Park View",
-    "is_available": true,
-    "rooms_left": 1,
-    "price_krw": 85000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/ilsan-lake-park-view/hotel/goyang-si-kr.html"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-  },
-  "d993b0151f5b": {
-    "name": "Ramada Encore Goyang",
-    "is_available": false,
-    "rooms_left": 0,
-    "price_krw": 115000,
-    "platform": {
-      "name": "Trip.com",
-      "booking_url": "https://www.trip.com/hotels/goyang-si-hotel-detail-ramada/"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
-  },
-  "0474b76bfff6": {
-    "name": "Best Western Premier Guro",
-    "is_available": true,
-    "rooms_left": 7,
-    "price_krw": 125000,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/best-western-premier-guro.html"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
-  },
-  "85795e04a87c": {
-    "name": "Hotel Claum Ilsan",
-    "is_available": true,
-    "rooms_left": 6,
-    "price_krw": 68000,
-    "platform": {
-      "name": "Trip.com",
-      "booking_url": "https://www.trip.com/hotels/goyang-si-hotel-detail-claum/"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
-  },
-  "b936bd0db4d3": {
-    "name": "Kintex by K-Tree",
-    "is_available": true,
-    "rooms_left": 5,
-    "price_krw": 89000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/kintex-by-k-tree/hotel/goyang-si-kr.html"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
-  },
-  "1a397c565ab9": {
-    "name": "MVL Hotel Kintex",
-    "is_available": true,
-    "rooms_left": 4,
-    "price_krw": 195000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/mvl-hotel-kintex/hotel/goyang-si-kr.html"
-    },
-    "location": "Goyang",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
-  },
-  "bbc4302dda10": {
-    "name": "Paju Farm Stay",
-    "is_available": true,
-    "rooms_left": 2,
-    "price_krw": 78000,
-    "platform": {
-      "name": "여기어때",
-      "booking_url": "https://www.goodchoice.kr/product/detail?ano=22222"
-    },
-    "location": "Paju",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-  },
-  "0e528d597662": {
-    "name": "Lotte Premium Outlet Paju",
-    "is_available": true,
-    "rooms_left": 6,
-    "price_krw": 145000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/lotte-premium-outlet-paju/hotel/paju-kr.html"
-    },
-    "location": "Paju",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
-  },
-  "8322c078fb7d": {
-    "name": "Paju Heyri Art Valley Hotel",
-    "is_available": true,
-    "rooms_left": 9,
-    "price_krw": 98000,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/paju-heyri-art-valley.html"
-    },
-    "location": "Paju",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
-  },
-  "64eb3722495b": {
-    "name": "DMZ Resort Paju",
-    "is_available": true,
-    "rooms_left": 3,
-    "price_krw": 175000,
-    "platform": {
-      "name": "Trip.com",
-      "booking_url": "https://www.trip.com/hotels/paju-hotel-detail-dmz-resort/"
-    },
-    "location": "Paju",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
-  },
-  "4995f6e22a67": {
-    "name": "Nine Tree Premier Hotel",
-    "is_available": false,
-    "rooms_left": 0,
-    "price_krw": 145000,
-    "platform": {
-      "name": "Trip.com",
-      "booking_url": "https://www.trip.com/hotels/seoul-hotel-detail-nine-tree/"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
-  },
-  "976a53d8978e": {
-    "name": "Mercure Ambassador Seoul Hongdae",
-    "is_available": true,
-    "rooms_left": 5,
-    "price_krw": 155000,
-    "platform": {
-      "name": "Hotels.com",
-      "booking_url": "https://www.hotels.com/ho-mercure-hongdae/"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
-  },
-  "41f30e4c64ea": {
-    "name": "RYSE Autograph Collection",
-    "is_available": true,
-    "rooms_left": 4,
-    "price_krw": 280000,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/ryse-autograph-collection.html"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
-  },
-  "81340b469e41": {
-    "name": "L7 Hongdae by Lotte",
-    "is_available": true,
-    "rooms_left": 7,
-    "price_krw": 165000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/l7-hongdae-by-lotte/hotel/seoul-kr.html"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
-  },
-  "e0bb1728b37a": {
-    "name": "Hongdae Purple House",
-    "is_available": true,
-    "rooms_left": 3,
-    "price_krw": 45000,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/hongdae-purple-house.html"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
-  },
-  "45ee463471d1": {
-    "name": "Marigold Hotel Hongdae",
-    "is_available": true,
-    "rooms_left": 9,
-    "price_krw": 89000,
-    "platform": {
-      "name": "Expedia",
-      "booking_url": "https://www.expedia.com/Seoul-Hotels-Marigold-Hongdae.h12345.Hotel-Information"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
-  },
-  "006c980770d2": {
-    "name": "Hongdae Stay Inn",
-    "is_available": true,
-    "rooms_left": 11,
-    "price_krw": 62000,
-    "platform": {
-      "name": "야놀자",
-      "booking_url": "https://www.yanolja.com/hotel/hongdae-stay-inn"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"
-  },
-  "7655edf070d2": {
-    "name": "Zzzip Guesthouse Hongdae",
-    "is_available": true,
-    "rooms_left": 8,
-    "price_krw": 28000,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/zzzip-guesthouse-hongdae.html"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
-  },
-  "8837007dc846": {
-    "name": "Hongdae ARMS Residence",
-    "is_available": true,
-    "rooms_left": 2,
-    "price_krw": 98000,
-    "platform": {
-      "name": "여기어때",
-      "booking_url": "https://www.goodchoice.kr/product/detail?ano=67890"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-  },
-  "acd99cb24df5": {
-    "name": "Stanford Hotel Seoul",
-    "is_available": true,
-    "rooms_left": 6,
-    "price_krw": 138000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/stanford-hotel-seoul/hotel/seoul-kr.html"
-    },
-    "location": "Hongdae",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
-  },
-  "94a74fb75a42": {
-    "name": "Four Seasons Hotel Seoul",
-    "is_available": true,
-    "rooms_left": 3,
-    "price_krw": 420000,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/four-seasons-seoul.html"
-    },
-    "location": "Gwanghwamun",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
-  },
-  "c6e2323739fb": {
-    "name": "Gwanghwamun Guesthouse",
-    "is_available": true,
-    "rooms_left": 4,
-    "price_krw": 55000,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/gwanghwamun-guesthouse.html"
-    },
-    "location": "Gwanghwamun",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
-  },
-  "7c949367d747": {
-    "name": "Somerset Palace Seoul",
-    "is_available": true,
-    "rooms_left": 4,
-    "price_krw": 250000,
-    "platform": {
-      "name": "Hotels.com",
-      "booking_url": "https://www.hotels.com/ho-somerset-palace-seoul/"
-    },
-    "location": "Gwanghwamun",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-  },
-  "9938434f488a": {
-    "name": "Fraser Place Central Seoul",
-    "is_available": true,
-    "rooms_left": 8,
-    "price_krw": 195000,
-    "platform": {
-      "name": "Expedia",
-      "booking_url": "https://www.expedia.com/Seoul-Hotels-Fraser-Place.h12345.Hotel-Information"
-    },
-    "location": "Gwanghwamun",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
-  },
-  "19c648db9c17": {
-    "name": "Lotte Hotel Seoul",
-    "is_available": true,
-    "rooms_left": 6,
-    "price_krw": 320000,
-    "platform": {
-      "name": "Trip.com",
-      "booking_url": "https://www.trip.com/hotels/seoul-hotel-detail-lotte-seoul/"
-    },
-    "location": "Gwanghwamun",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
-  },
-  "13f614a08799": {
-    "name": "The Westin Chosun Seoul",
-    "is_available": true,
-    "rooms_left": 5,
-    "price_krw": 380000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/the-westin-chosun-seoul/hotel/seoul-kr.html"
-    },
-    "location": "Gwanghwamun",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
-  },
-  "79f641928896": {
-    "name": "Glad Live Gangnam",
-    "is_available": true,
-    "rooms_left": 7,
-    "price_krw": 155000,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/glad-live-gangnam.html"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/spring-light.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=5&hapos=5&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=516637106_179288019_0_0_0&highlighted_blocks=516637106_179288019_0_0_0&matching_block_id=516637106_179288019_0_0_0&sr_pri_blocks=516637106_179288019_0_0_0__7450000&from=searchresults"
     },
     "location": "Seongsu",
     "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/329454863.webp?k=4d32ccde73798b309ec136a826de0a7a8fd83d728750e5f93dc6984f338785a5&o="
   },
-  "d9841034bbea": {
-    "name": "Hotel Cappuccino Seongsu",
+  "7b211ba5998f": {
+    "name": "하우재 이태원",
     "is_available": true,
-    "rooms_left": 4,
-    "price_krw": 175000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/hotel-cappuccino-seongsu/hotel/seoul-kr.html"
-    },
-    "location": "Seongsu",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
-  },
-  "570730bae9a5": {
-    "name": "Seongsu Urban Stay",
-    "is_available": true,
-    "rooms_left": 3,
-    "price_krw": 125000,
-    "platform": {
-      "name": "여기어때",
-      "booking_url": "https://www.goodchoice.kr/product/detail?ano=11111"
-    },
-    "location": "Seongsu",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
-  },
-  "552064d4d9c1": {
-    "name": "Ttukseom Guesthouse",
-    "is_available": true,
-    "rooms_left": 6,
-    "price_krw": 48000,
-    "platform": {
-      "name": "야놀자",
-      "booking_url": "https://www.yanolja.com/hotel/ttukseom-guesthouse"
-    },
-    "location": "Seongsu",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
-  },
-  "2c11efff3308": {
-    "name": "Seongsu Stay",
-    "is_available": true,
-    "rooms_left": 5,
-    "price_krw": 95000,
-    "platform": {
-      "name": "Trip.com",
-      "booking_url": "https://www.trip.com/hotels/seoul-hotel-detail-seongsu-stay/"
-    },
-    "location": "Seongsu",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
-  },
-  "054e90a52700": {
-    "name": "Seongsu Boutique Hotel",
-    "is_available": true,
-    "rooms_left": 2,
-    "price_krw": 145000,
-    "platform": {
-      "name": "Expedia",
-      "booking_url": "https://www.expedia.com/Seoul-Hotels-Seongsu-Boutique.h12345.Hotel-Information"
-    },
-    "location": "Seongsu",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
-  },
-  "6d786b66bfdd": {
-    "name": "Park Hyatt Busan",
-    "is_available": true,
-    "rooms_left": 2,
-    "price_krw": 350000,
-    "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/park-hyatt-busan/hotel/busan-kr.html"
-    },
-    "location": "Busan",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
-  },
-  "9f0a7a9f5060": {
-    "name": "Shilla Stay Haeundae",
-    "is_available": true,
-    "rooms_left": 5,
-    "price_krw": 185000,
-    "platform": {
-      "name": "Hotels.com",
-      "booking_url": "https://www.hotels.com/ho-shilla-stay-haeundae/"
-    },
-    "location": "Busan",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
-  },
-  "3a3a723fbcbe": {
-    "name": "Lotte Hotel Busan",
-    "is_available": true,
-    "rooms_left": 4,
-    "price_krw": 265000,
+    "rooms_left": -1,
+    "price_krw": 33,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/lotte-busan.html"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/hause-itaewon.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=14&hapos=14&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=214023406_421584100_0_0_0%2C214023406_421584100_0_0_0&highlighted_blocks=214023406_421584100_0_0_0%2C214023406_421584100_0_0_0&matching_block_id=214023406_421584100_0_0_0&sr_pri_blocks=214023406_421584100_0_0_0__4727273%2C214023406_421584100_0_0_0__4727273&from=searchresults"
     },
-    "location": "Busan",
+    "location": "Seongsu",
     "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/186139806.webp?k=ecff2c5195af1f03a79ce7bb93f4a183a270700f0a995f19820d276a1d85cde2&o="
   },
-  "1925ac5869ac": {
-    "name": "Toyoko Inn Busan Haeundae",
+  "e82bab4bb09e": {
+    "name": "킴스테이 9",
     "is_available": true,
-    "rooms_left": 15,
-    "price_krw": 65000,
+    "rooms_left": -1,
+    "price_krw": 33,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.com/hotel/kr/toyoko-inn-busan-haeundae.html"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/korstay.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=17&hapos=17&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=49720210_295792248_2_1_0&highlighted_blocks=49720210_295792248_2_1_0&matching_block_id=49720210_295792248_2_1_0&sr_pri_blocks=49720210_295792248_2_1_0__9636382&from=searchresults"
     },
-    "location": "Busan",
+    "location": "Seongsu",
     "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/252739045.webp?k=0aaf526cafcc81fa872db94edbe6457b489c7de9c8e53b411c81b2640e7fe088&o="
   },
-  "c49809439329": {
-    "name": "Novotel Ambassador Busan",
+  "10ffac466b81": {
+    "name": "1975 Yurim Inn",
     "is_available": true,
-    "rooms_left": 6,
-    "price_krw": 220000,
+    "rooms_left": -1,
+    "price_krw": 24,
     "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/novotel-ambassador-busan/hotel/busan-kr.html"
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/1975-yurimjang.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1138944001_386607674_2_0_0&highlighted_blocks=1138944001_386607674_2_0_0&matching_block_id=1138944001_386607674_2_0_0&sr_pri_blocks=1138944001_386607674_2_0_0__6818182&from=searchresults"
     },
-    "location": "Busan",
+    "location": "Seongsu",
     "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/524681837.webp?k=5b6d651a72a84841b64e0a0e8b726251990c9069eb52496ccbc9bb88d8238f41&o="
   },
-  "4dd7d981fffb": {
-    "name": "Haeundae Grand Hotel",
+  "2c13b7187c0b": {
+    "name": "호스텔 코리아 - 오리지널",
     "is_available": true,
-    "rooms_left": 8,
-    "price_krw": 145000,
+    "rooms_left": -1,
+    "price_krw": 31,
     "platform": {
-      "name": "Expedia",
-      "booking_url": "https://www.expedia.com/Busan-Hotels-Haeundae-Grand.h12345.Hotel-Information"
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/hostel-korea-original.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=8&hapos=8&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=54842503_359105894_0_1_0&highlighted_blocks=54842503_359105894_0_1_0&matching_block_id=54842503_359105894_0_1_0&sr_pri_blocks=54842503_359105894_0_1_0__8981818&from=searchresults"
     },
-    "location": "Busan",
+    "location": "Seongsu",
     "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/136597371.webp?k=23108736ef367db8cb300bf857249eaa70b51fb8ce5efdc3d12f9541429f379d&o="
   },
-  "032f3b953357": {
-    "name": "Haeundae Seacloud Hotel",
-    "is_available": false,
-    "rooms_left": 0,
-    "price_krw": 165000,
-    "platform": {
-      "name": "Hotels.com",
-      "booking_url": "https://www.hotels.com/ho-seacloud-hotel/"
-    },
-    "location": "Busan",
-    "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
-  },
-  "838cd82f95b2": {
-    "name": "Busan Backpackers Hostel",
+  "10d0702072ea": {
+    "name": "루미에르h호텔",
     "is_available": true,
-    "rooms_left": 20,
-    "price_krw": 25000,
+    "rooms_left": -1,
+    "price_krw": 34,
     "platform": {
-      "name": "야놀자",
-      "booking_url": "https://www.yanolja.com/hotel/busan-backpackers"
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/rumiereuhhotel.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=18&hapos=18&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1552390701_426420533_2_0_0&highlighted_blocks=1552390701_426420533_2_0_0&matching_block_id=1552390701_426420533_2_0_0&sr_pri_blocks=1552390701_426420533_2_0_0__9722727&from=searchresults"
     },
-    "location": "Busan",
+    "location": "Seongsu",
     "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/798399499.webp?k=ba73f52e9ce3fabcb1ad60c40afdc85eb4981015a66496406e49eac3a66a23d6&o="
   },
-  "009505c6efde": {
-    "name": "Haeundae Beach Airbnb",
+  "bdf2f3816b09": {
+    "name": "호스텔 서울",
     "is_available": true,
-    "rooms_left": 1,
-    "price_krw": 95000,
+    "rooms_left": -1,
+    "price_krw": 36,
     "platform": {
-      "name": "Agoda",
-      "booking_url": "https://www.agoda.com/haeundae-beach-airbnb/hotel/busan-kr.html"
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/star-hostel-seoul-dongdaemun-come.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=22&hapos=22&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=119180201_365122476_0_0_0&highlighted_blocks=119180201_365122476_0_0_0&matching_block_id=119180201_365122476_0_0_0&sr_pri_blocks=119180201_365122476_0_0_0__10309091&from=searchresults"
     },
-    "location": "Busan",
+    "location": "Seongsu",
     "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/337419903.webp?k=168426d79b393f29905e957746c0e5b81e6dbeb14c91d91bea3f7a19a126c583&o="
   },
-  "e6eefaa320ac": {
-    "name": "Paradise Hotel Busan",
+  "9545effe40c4": {
+    "name": "From H US Hotel with Anook Seoul Gangseo Hwagok",
     "is_available": true,
-    "rooms_left": 3,
-    "price_krw": 280000,
+    "rooms_left": -1,
+    "price_krw": 31,
     "platform": {
-      "name": "Trip.com",
-      "booking_url": "https://www.trip.com/hotels/busan-hotel-detail-paradise/"
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/peuromeici-eoseuhotel-gangseojeom-with-aneug-seoul.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=9&hapos=9&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1424466501_414060640_2_0_0&highlighted_blocks=1424466501_414060640_2_0_0&matching_block_id=1424466501_414060640_2_0_0&sr_pri_blocks=1424466501_414060640_2_0_0__9000000&from=searchresults"
     },
-    "location": "Busan",
+    "location": "Seongsu",
     "booking_url": "",
-    "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/693138885.webp?k=67dae519fe5cf81b48616ab53ed9f427c5e5829679d8b00a3a756c981f6fe4fb&o="
+  },
+  "a2cf093deb2c": {
+    "name": "아마존 게스트하우스",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 32,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/amazon-guesthouse.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=12&hapos=12&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=201417405_171843636_0_0_0%2C201417405_171843636_0_0_0&highlighted_blocks=201417405_171843636_0_0_0%2C201417405_171843636_0_0_0&matching_block_id=201417405_171843636_0_0_0&sr_pri_blocks=201417405_171843636_0_0_0__4636364%2C201417405_171843636_0_0_0__4636364&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/204809971.webp?k=2076895c90fbe62ff827488d80e3c0ed366c172052bce07cf491528f6f2577b3&o="
+  },
+  "ebd28a9b1f14": {
+    "name": "서울 달빛 동대문 게스트하우스",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 33,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoul-dalbit-guesthouse.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=15&hapos=15&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=154467804_420652136_0_0_0&highlighted_blocks=154467804_420652136_0_0_0&matching_block_id=154467804_420652136_0_0_0&sr_pri_blocks=154467804_420652136_0_0_0__9545455&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/60558901.webp?k=341cf6cd0494c088362804a26c07b2e57616de64bbea974a8aa18d18583bf8ab&o="
+  },
+  "fbf4d3f1a167": {
+    "name": "댓 하우스 홍대 게스트하우스",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 33,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/that-house.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=16&hapos=16&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=166732206_128134293_0_0_0%2C166732201_128134293_0_0_0&highlighted_blocks=166732206_128134293_0_0_0%2C166732201_128134293_0_0_0&matching_block_id=166732206_128134293_0_0_0&sr_pri_blocks=166732206_128134293_0_0_0__4818182%2C166732201_128134293_0_0_0__4818182&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/61802936.webp?k=d69c6742d66a81c8d169fce434c380d6b1ab7fa073035c0c923cbbe9d36d5a12&o="
+  },
+  "67db12c2abc6": {
+    "name": "선라이즈 인",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 36,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/sunrise-inn.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=23&hapos=23&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1362613001_408564138_2_0_0&highlighted_blocks=1362613001_408564138_2_0_0&matching_block_id=1362613001_408564138_2_0_0&sr_pri_blocks=1362613001_408564138_2_0_0__10309091&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/648791141.webp?k=db5f62185e389dcc83eb2fa058a8a2838c860bed926de842c0733305df222950&o="
+  },
+  "6b2263a9e61a": {
+    "name": "서울 게스트하우스 외국인 전용",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 16,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoul-guesthouse.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=968622702_369287732_1_0_0%2C968622702_369287732_1_0_0&highlighted_blocks=968622702_369287732_1_0_0%2C968622702_369287732_1_0_0&matching_block_id=968622702_369287732_1_0_0&sr_pri_blocks=968622702_369287732_1_0_0__2363636%2C968622702_369287732_1_0_0__2363636&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/433494322.webp?k=0bd3a96524ab66f1c9de9750e3f3c19884e713ea2a044de30586672d5d71e4a8&o="
+  },
+  "d3bf98ecd92e": {
+    "name": "버즈네스트 호스텔 홍대 - 외국인 전용",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 24,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/birdsnest-hostel.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=3&hapos=3&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=36764907_386591061_0_0_0%2C36764907_386591061_0_0_0&highlighted_blocks=36764907_386591061_0_0_0%2C36764907_386591061_0_0_0&matching_block_id=36764907_386591061_0_0_0&sr_pri_blocks=36764907_386591061_0_0_0__3518182%2C36764907_386591061_0_0_0__3518182&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/61638854.webp?k=319d8ec8ac03a39f23fde2c0f2413dd039ef2c8685c83df6e3cc476015dce3a6&o="
+  },
+  "9522e1a8cded": {
+    "name": "이뜰이",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 27,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/iddeuli.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=6&hapos=6&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1574016401_428446704_2_0_0&highlighted_blocks=1574016401_428446704_2_0_0&matching_block_id=1574016401_428446704_2_0_0&sr_pri_blocks=1574016401_428446704_2_0_0__7854545&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/816655720.webp?k=36201e7a93a9a700f534d3b19eacde3e3448ee19bbf7ad4d77376b8d78f3b75d&o="
+  },
+  "5c14c33ca9a5": {
+    "name": "나비 모텔",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 30,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/navi.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=7&hapos=7&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1489147801_420567604_2_0_0&highlighted_blocks=1489147801_420567604_2_0_0&matching_block_id=1489147801_420567604_2_0_0&sr_pri_blocks=1489147801_420567604_2_0_0__8590909&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/742412160.webp?k=63250a68ba8b666002c2532891aebefe0b4bdab4114f6db63d5e0fb33129312e&o="
+  },
+  "5a9899e7bedf": {
+    "name": "명동 스튜디오 아파트먼트",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 32,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/spacious-studio-apt-myeong-dong.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=13&hapos=13&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1157083801_388483711_2_0_0&highlighted_blocks=1157083801_388483711_2_0_0&matching_block_id=1157083801_388483711_2_0_0&sr_pri_blocks=1157083801_388483711_2_0_0__9327273&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/640931786.webp?k=e7766af4de6e87a13194d7a47da417e3daef51f2a77b679822a376063c2732b8&o="
+  },
+  "07d761acfe2b": {
+    "name": "서울앤호텔 동대문",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 34,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoulnhotel.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=19&hapos=19&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=198130212_379297430_0_2_0%2C198130212_379297430_0_2_0&highlighted_blocks=198130212_379297430_0_2_0%2C198130212_379297430_0_2_0&matching_block_id=198130212_379297430_0_2_0&sr_pri_blocks=198130212_379297430_0_2_0__4963636%2C198130212_379297430_0_2_0__4963636&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/103588071.webp?k=70e14c2e8e5c64d9b13040cbf891d408d498ab54ab0f3e5e23596c3ae374c8f7&o="
+  },
+  "ead19e47a0f2": {
+    "name": "해치 스테이 게스트하우스 - 외국인 전용",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 35,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/haechi-stay-guesthouse-for-foreigners-only.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=20&hapos=20&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1067318422_379130620_2_0_0&highlighted_blocks=1067318422_379130620_2_0_0&matching_block_id=1067318422_379130620_2_0_0&sr_pri_blocks=1067318422_379130620_2_0_0__10000000&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/512551907.webp?k=1272d3084b0e1cd4a83298432ac667e0aaf4ff63bd8a44bdb7e421e84eca484b&o="
+  },
+  "2c8b48dbb67c": {
+    "name": "커플 모텔",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 35,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/couple-motel-seoul1.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=21&hapos=21&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=886028101_358243750_2_0_0&highlighted_blocks=886028101_358243750_2_0_0&matching_block_id=886028101_358243750_2_0_0&sr_pri_blocks=886028101_358243750_2_0_0__10000000&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/378118152.webp?k=65bcd6e2cba02f6f521245d6ed2e49475333030834f372f682acbbac861f2d6b&o="
+  },
+  "1c372dd55b40": {
+    "name": "Jinho's Guest House",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 32,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/jinho-house.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=11&hapos=11&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=697465903_368466540_2_0_0&highlighted_blocks=697465903_368466540_2_0_0&matching_block_id=697465903_368466540_2_0_0&sr_pri_blocks=697465903_368466540_2_0_0__9090909&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/285506527.webp?k=46803f59d80253bb3ef81c4864e08e05f94de01d1e9a30625d48f06825eddc78&o="
+  },
+  "8d64eefffd60": {
+    "name": "Station Hostel In Namguro",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 26,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoul-namguroyeog-1bun-paemilrirum-101ho.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=4&hapos=4&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1461239001_417420081_2_0_0&highlighted_blocks=1461239001_417420081_2_0_0&matching_block_id=1461239001_417420081_2_0_0&sr_pri_blocks=1461239001_417420081_2_0_0__7363636&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/717301239.webp?k=f1e1c25285eb10e7da6e6ad0c8342c1ee07e2e950c4fee7b014955f5035f1d2c&o="
+  },
+  "a78d637c2954": {
+    "name": "수정장 여관",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 32,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/sujeongjang-inn.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=10&hapos=10&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1069107515_380493398_2_0_0&highlighted_blocks=1069107515_380493398_2_0_0&matching_block_id=1069107515_380493398_2_0_0&sr_pri_blocks=1069107515_380493398_2_0_0__9090909&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/576487838.webp?k=a67fcc63fed9e1c41ef7aa8644d2164321e9f7f6fd5683d18bc0f470c953537a&o="
+  },
+  "85ab792364c5": {
+    "name": "Only for Woman - Sadang House 3rd floor",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 36,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/only-for-female-sadang-house-301.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=24&hapos=24&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=1297265018_402637330_0_0_0%2C1297265019_402637330_0_0_0&highlighted_blocks=1297265018_402637330_0_0_0%2C1297265019_402637330_0_0_0&matching_block_id=1297265018_402637330_0_0_0&sr_pri_blocks=1297265018_402637330_0_0_0__5154545%2C1297265019_402637330_0_0_0__5154545&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/606406696.webp?k=bd644976708a926e7b78f05e8f7af107b100aa37029ed4a46839fff7ccabeb6f&o="
+  },
+  "8c0662e5c78e": {
+    "name": "호스텔메트로",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 36,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/sinseoldong-station-residence.ko.html?aid=304142&label=mkt123sc-051a7901-fc99-47b4-8a16-8311cabb8416&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=25&hapos=25&sr_order=price&srpvid=0a66db2469149fa1f2860323bdca8a4c&srepoch=1770053649&all_sr_blocks=55064402_370854046_0_0_0&highlighted_blocks=55064402_370854046_0_0_0&matching_block_id=55064402_370854046_0_0_0&sr_pri_blocks=55064402_370854046_0_0_0__10309091&from=searchresults"
+    },
+    "location": "Seongsu",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/347396462.webp?k=7c1f0b9976683cfb1e3b37abed27a1f37ecb5ba731d3bfbe9d08b5c349b76c16&o="
   }
 }
