@@ -118,7 +118,7 @@
         "lat": 37.6575,
         "lng": 126.7705,
         "price_krw": 95000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=La%20Festa%20Residence"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=La%20Festa%20Residence%20Goyang"
       },
       {
         "id": "hotel_69304",
@@ -126,7 +126,7 @@
         "lat": 37.654,
         "lng": 126.773,
         "price_krw": 72000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Ilsan%20Hotel%20M"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Ilsan%20Hotel%20M%20Goyang"
       },
       {
         "id": "hotel_41495",
@@ -134,7 +134,7 @@
         "lat": 37.656,
         "lng": 126.769,
         "price_krw": 58000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Goyang%20Airbnb%20Studio"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Goyang%20Airbnb%20Studio%20Goyang"
       },
       {
         "id": "hotel_19685",
@@ -142,7 +142,7 @@
         "lat": 37.658,
         "lng": 126.77,
         "price_krw": 135000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Sono%20Calm%20Goyang"
+        "booking_url": "https://www.agoda.com/ko-kr/the-mvl-hotel-goyang/hotel/goyang-si-kr.html"
       },
       {
         "id": "hotel_71135",
@@ -150,7 +150,7 @@
         "lat": 37.6555,
         "lng": 126.775,
         "price_krw": 75000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Antives%20Hotel%20Ilsan"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Antives%20Hotel%20Ilsan%20Goyang"
       },
       {
         "id": "hotel_72852",
@@ -158,7 +158,7 @@
         "lat": 37.652,
         "lng": 126.768,
         "price_krw": 55000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Yellow%208%20Hotel%20Goyang"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Yellow%208%20Hotel%20Goyang%20Goyang"
       },
       {
         "id": "hotel_57882",
@@ -166,7 +166,7 @@
         "lat": 37.6585,
         "lng": 126.765,
         "price_krw": 85000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Ilsan%20Lake%20Park%20View"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Ilsan%20Lake%20Park%20View%20Goyang"
       },
       {
         "id": "hotel_48482",
@@ -174,7 +174,7 @@
         "lat": 37.662,
         "lng": 126.76,
         "price_krw": 115000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Ramada%20Encore%20Goyang"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Ramada%20Encore%20Goyang%20Goyang"
       },
       {
         "id": "hotel_22827",
@@ -182,7 +182,7 @@
         "lat": 37.665,
         "lng": 126.752,
         "price_krw": 125000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Best%20Western%20Premier%20Guro"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Best%20Western%20Premier%20Guro%20Goyang"
       },
       {
         "id": "hotel_55221",
@@ -190,7 +190,7 @@
         "lat": 37.6715,
         "lng": 126.7495,
         "price_krw": 68000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Hotel%20Claum%20Ilsan"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Hotel%20Claum%20Ilsan%20Goyang"
       },
       {
         "id": "hotel_19004",
@@ -198,7 +198,7 @@
         "lat": 37.6693,
         "lng": 126.7458,
         "price_krw": 89000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Kintex%20by%20K-Tree"
+        "booking_url": "https://www.agoda.com/ko-kr/kintex-by-k-tree/hotel/goyang-si-kr.html"
       },
       {
         "id": "hotel_89931",
@@ -206,7 +206,7 @@
         "lat": 37.6701,
         "lng": 126.7445,
         "price_krw": 195000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=MVL%20Hotel%20Kintex"
+        "booking_url": "https://www.agoda.com/ko-kr/the-mvl-hotel-kintex/hotel/goyang-si-kr.html"
       },
       {
         "id": "hotel_85853",
@@ -214,7 +214,7 @@
         "lat": 37.715,
         "lng": 126.725,
         "price_krw": 78000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Paju%20Farm%20Stay"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Paju%20Farm%20Stay%20Paju"
       },
       {
         "id": "hotel_55660",
@@ -222,7 +222,7 @@
         "lat": 37.718,
         "lng": 126.715,
         "price_krw": 145000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Lotte%20Premium%20Outlet%20Paju"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Lotte%20Premium%20Outlet%20Paju%20Paju"
       },
       {
         "id": "hotel_10820",
@@ -230,7 +230,7 @@
         "lat": 37.725,
         "lng": 126.72,
         "price_krw": 98000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Paju%20Heyri%20Art%20Valley%20Hotel"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Paju%20Heyri%20Art%20Valley%20Hotel%20Paju"
       },
       {
         "id": "hotel_35387",
@@ -238,7 +238,7 @@
         "lat": 37.73,
         "lng": 126.71,
         "price_krw": 175000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=DMZ%20Resort%20Paju"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=DMZ%20Resort%20Paju%20Paju"
       },
       {
         "id": "hotel_62824",
@@ -246,7 +246,7 @@
         "lat": 37.56,
         "lng": 126.918,
         "price_krw": 145000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Nine%20Tree%20Premier%20Hotel"
+        "booking_url": "https://www.agoda.com/ko-kr/nine-tree-premier-hotel-insadong/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_99279",
@@ -254,7 +254,7 @@
         "lat": 37.558,
         "lng": 126.921,
         "price_krw": 155000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Mercure%20Ambassador%20Seoul%20Hongdae"
+        "booking_url": "https://www.agoda.com/ko-kr/mercure-ambassador-seoul-hongdae/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_20887",
@@ -262,7 +262,7 @@
         "lat": 37.5563,
         "lng": 126.922,
         "price_krw": 280000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=RYSE%20Autograph%20Collection"
+        "booking_url": "https://www.agoda.com/ko-kr/ryse-autograph-collection_2/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_41184",
@@ -270,7 +270,7 @@
         "lat": 37.557,
         "lng": 126.9235,
         "price_krw": 165000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=L7%20Hongdae%20by%20Lotte"
+        "booking_url": "https://www.agoda.com/ko-kr/l7-hongdae-by-lotte/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_43014",
@@ -278,7 +278,7 @@
         "lat": 37.5545,
         "lng": 126.92,
         "price_krw": 45000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20Purple%20House"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20Purple%20House%20Seoul%20Hongdae"
       },
       {
         "id": "hotel_21568",
@@ -286,7 +286,7 @@
         "lat": 37.5535,
         "lng": 126.9195,
         "price_krw": 89000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Marigold%20Hotel%20Hongdae"
+        "booking_url": "https://www.agoda.com/ko-kr/marigold-hotel/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_18462",
@@ -294,7 +294,7 @@
         "lat": 37.556,
         "lng": 126.924,
         "price_krw": 62000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20Stay%20Inn"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20Stay%20Inn%20Seoul%20Hongdae"
       },
       {
         "id": "hotel_66198",
@@ -302,7 +302,7 @@
         "lat": 37.555,
         "lng": 126.9225,
         "price_krw": 28000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Zzzip%20Guesthouse%20Hongdae"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Zzzip%20Guesthouse%20Hongdae%20Seoul%20Hongdae"
       },
       {
         "id": "hotel_70733",
@@ -310,7 +310,7 @@
         "lat": 37.554,
         "lng": 126.9215,
         "price_krw": 98000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20ARMS%20Residence"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20ARMS%20Residence%20Seoul%20Hongdae"
       },
       {
         "id": "hotel_47087",
@@ -318,7 +318,7 @@
         "lat": 37.5555,
         "lng": 126.925,
         "price_krw": 138000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Stanford%20Hotel%20Seoul"
+        "booking_url": "https://www.agoda.com/ko-kr/stanford-hotel-seoul/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_97212",
@@ -326,7 +326,7 @@
         "lat": 37.576,
         "lng": 126.9769,
         "price_krw": 420000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Four%20Seasons%20Hotel%20Seoul"
+        "booking_url": "https://www.agoda.com/ko-kr/four-seasons-hotel-seoul/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_38784",
@@ -334,7 +334,7 @@
         "lat": 37.575,
         "lng": 126.9775,
         "price_krw": 55000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Gwanghwamun%20Guesthouse"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Gwanghwamun%20Guesthouse%20Seoul"
       },
       {
         "id": "hotel_99082",
@@ -342,7 +342,7 @@
         "lat": 37.5755,
         "lng": 126.978,
         "price_krw": 250000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Somerset%20Palace%20Seoul"
+        "booking_url": "https://www.agoda.com/ko-kr/somerset-palace-seoul/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_91729",
@@ -350,7 +350,7 @@
         "lat": 37.5665,
         "lng": 126.9795,
         "price_krw": 195000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Fraser%20Place%20Central%20Seoul"
+        "booking_url": "https://www.agoda.com/ko-kr/fraser-place-central-seoul-residence/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_07871",
@@ -358,7 +358,7 @@
         "lat": 37.5659,
         "lng": 126.9805,
         "price_krw": 320000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Lotte%20Hotel%20Seoul"
+        "booking_url": "https://www.agoda.com/ko-kr/lotte-hotel-seoul/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_08635",
@@ -366,7 +366,7 @@
         "lat": 37.5658,
         "lng": 126.9813,
         "price_krw": 380000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=The%20Westin%20Chosun%20Seoul"
+        "booking_url": "https://www.agoda.com/ko-kr/the-westin-chosun-seoul/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_72150",
@@ -374,7 +374,7 @@
         "lat": 37.546,
         "lng": 127.054,
         "price_krw": 155000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Glad%20Live%20Gangnam"
+        "booking_url": "https://www.agoda.com/ko-kr/glad-live-gangnam_2/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_42100",
@@ -382,7 +382,7 @@
         "lat": 37.5443,
         "lng": 127.0557,
         "price_krw": 175000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Hotel%20Cappuccino%20Seongsu"
+        "booking_url": "https://www.agoda.com/ko-kr/hotel-cappuccino-seoul/hotel/seoul-kr.html"
       },
       {
         "id": "hotel_05084",
@@ -390,7 +390,7 @@
         "lat": 37.5435,
         "lng": 127.055,
         "price_krw": 125000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Urban%20Stay"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Urban%20Stay%20Seoul%20Seongsu"
       },
       {
         "id": "hotel_56387",
@@ -398,7 +398,7 @@
         "lat": 37.544,
         "lng": 127.0545,
         "price_krw": 48000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Ttukseom%20Guesthouse"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Ttukseom%20Guesthouse%20Seoul%20Seongsu"
       },
       {
         "id": "hotel_64879",
@@ -406,7 +406,7 @@
         "lat": 37.545,
         "lng": 127.0565,
         "price_krw": 95000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Stay"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Stay%20Seoul%20Seongsu"
       },
       {
         "id": "hotel_43665",
@@ -414,7 +414,7 @@
         "lat": 37.5455,
         "lng": 127.057,
         "price_krw": 145000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Boutique%20Hotel"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Boutique%20Hotel%20Seoul%20Seongsu"
       },
       {
         "id": "hotel_55132",
@@ -422,7 +422,7 @@
         "lat": 35.1631,
         "lng": 129.1636,
         "price_krw": 350000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Park%20Hyatt%20Busan"
+        "booking_url": "https://www.agoda.com/ko-kr/park-hyatt-busan/hotel/busan-kr.html"
       },
       {
         "id": "hotel_82865",
@@ -430,7 +430,7 @@
         "lat": 35.162,
         "lng": 129.165,
         "price_krw": 185000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Shilla%20Stay%20Haeundae"
+        "booking_url": "https://www.agoda.com/ko-kr/shilla-stay-haeundae/hotel/busan-kr.html"
       },
       {
         "id": "hotel_46786",
@@ -438,7 +438,7 @@
         "lat": 35.1615,
         "lng": 129.1635,
         "price_krw": 265000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Lotte%20Hotel%20Busan"
+        "booking_url": "https://www.agoda.com/ko-kr/lotte-hotel-busan/hotel/busan-kr.html"
       },
       {
         "id": "hotel_39528",
@@ -446,7 +446,7 @@
         "lat": 35.16,
         "lng": 129.162,
         "price_krw": 65000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Toyoko%20Inn%20Busan%20Haeundae"
+        "booking_url": "https://www.agoda.com/ko-kr/toyoko-inn-busan-haeundae-1_4/hotel/busan-kr.html"
       },
       {
         "id": "hotel_70763",
@@ -454,7 +454,7 @@
         "lat": 35.161,
         "lng": 129.164,
         "price_krw": 220000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Novotel%20Ambassador%20Busan"
+        "booking_url": "https://www.agoda.com/ko-kr/novotel-ambassador-busan_8/hotel/busan-kr.html"
       },
       {
         "id": "hotel_30919",
@@ -462,7 +462,7 @@
         "lat": 35.1625,
         "lng": 129.166,
         "price_krw": 145000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Grand%20Hotel"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Grand%20Hotel%20Busan"
       },
       {
         "id": "hotel_10776",
@@ -470,7 +470,7 @@
         "lat": 35.1595,
         "lng": 129.1625,
         "price_krw": 165000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Seacloud%20Hotel"
+        "booking_url": "https://www.agoda.com/ko-kr/haeundae-seacloud-hotel-residence/hotel/busan-kr.html"
       },
       {
         "id": "hotel_21259",
@@ -478,7 +478,7 @@
         "lat": 35.158,
         "lng": 129.161,
         "price_krw": 25000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Busan%20Backpackers%20Hostel"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Busan%20Backpackers%20Hostel%20Busan"
       },
       {
         "id": "hotel_86273",
@@ -486,7 +486,7 @@
         "lat": 35.1605,
         "lng": 129.1645,
         "price_krw": 95000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Beach%20Airbnb"
+        "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Beach%20Airbnb%20Busan"
       },
       {
         "id": "hotel_91771",
@@ -494,7 +494,7 @@
         "lat": 35.159,
         "lng": 129.168,
         "price_krw": 280000,
-        "booking_url": "https://www.agoda.com/ko-kr/search?q=Paradise%20Hotel%20Busan"
+        "booking_url": "https://www.agoda.com/ko-kr/paradise-hotel-busan/hotel/busan-kr.html"
       }
     ]
   },
@@ -764,7 +764,7 @@
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=La%20Festa%20Residence"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=La%20Festa%20Residence%20Goyang"
     },
     {
       "id": "hotel_69304",
@@ -1030,7 +1030,7 @@
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Ilsan%20Hotel%20M"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Ilsan%20Hotel%20M%20Goyang"
     },
     {
       "id": "hotel_41495",
@@ -1298,7 +1298,7 @@
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Goyang%20Airbnb%20Studio"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Goyang%20Airbnb%20Studio%20Goyang"
     },
     {
       "id": "hotel_19685",
@@ -1564,7 +1564,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Sono%20Calm%20Goyang"
+      "booking_url": "https://www.agoda.com/ko-kr/the-mvl-hotel-goyang/hotel/goyang-si-kr.html"
     },
     {
       "id": "hotel_71135",
@@ -1833,7 +1833,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Antives%20Hotel%20Ilsan"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Antives%20Hotel%20Ilsan%20Goyang"
     },
     {
       "id": "hotel_72852",
@@ -2101,7 +2101,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Yellow%208%20Hotel%20Goyang"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Yellow%208%20Hotel%20Goyang%20Goyang"
     },
     {
       "id": "hotel_57882",
@@ -2372,7 +2372,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Ilsan%20Lake%20Park%20View"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Ilsan%20Lake%20Park%20View%20Goyang"
     },
     {
       "id": "hotel_48482",
@@ -2637,7 +2637,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Ramada%20Encore%20Goyang"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Ramada%20Encore%20Goyang%20Goyang"
     },
     {
       "id": "hotel_22827",
@@ -2903,7 +2903,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Best%20Western%20Premier%20Guro"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Best%20Western%20Premier%20Guro%20Goyang"
     },
     {
       "id": "hotel_55221",
@@ -3168,7 +3168,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Hotel%20Claum%20Ilsan"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Hotel%20Claum%20Ilsan%20Goyang"
     },
     {
       "id": "hotel_19004",
@@ -3435,7 +3435,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Kintex%20by%20K-Tree"
+      "booking_url": "https://www.agoda.com/ko-kr/kintex-by-k-tree/hotel/goyang-si-kr.html"
     },
     {
       "id": "hotel_89931",
@@ -3704,7 +3704,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=MVL%20Hotel%20Kintex"
+      "booking_url": "https://www.agoda.com/ko-kr/the-mvl-hotel-kintex/hotel/goyang-si-kr.html"
     },
     {
       "id": "hotel_85853",
@@ -3923,7 +3923,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Paju%20Farm%20Stay"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Paju%20Farm%20Stay%20Paju"
     },
     {
       "id": "hotel_55660",
@@ -4147,7 +4147,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Lotte%20Premium%20Outlet%20Paju"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Lotte%20Premium%20Outlet%20Paju%20Paju"
     },
     {
       "id": "hotel_10820",
@@ -4370,7 +4370,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Paju%20Heyri%20Art%20Valley%20Hotel"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Paju%20Heyri%20Art%20Valley%20Hotel%20Paju"
     },
     {
       "id": "hotel_35387",
@@ -4590,7 +4590,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=DMZ%20Resort%20Paju"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=DMZ%20Resort%20Paju%20Paju"
     },
     {
       "id": "hotel_62824",
@@ -4827,7 +4827,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Nine%20Tree%20Premier%20Hotel"
+      "booking_url": "https://www.agoda.com/ko-kr/nine-tree-premier-hotel-insadong/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_99279",
@@ -5067,7 +5067,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Mercure%20Ambassador%20Seoul%20Hongdae"
+      "booking_url": "https://www.agoda.com/ko-kr/mercure-ambassador-seoul-hongdae/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_20887",
@@ -5309,7 +5309,7 @@
           "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=RYSE%20Autograph%20Collection"
+      "booking_url": "https://www.agoda.com/ko-kr/ryse-autograph-collection_2/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_41184",
@@ -5550,7 +5550,7 @@
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=L7%20Hongdae%20by%20Lotte"
+      "booking_url": "https://www.agoda.com/ko-kr/l7-hongdae-by-lotte/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_43014",
@@ -5794,7 +5794,7 @@
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20Purple%20House"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20Purple%20House%20Seoul%20Hongdae"
     },
     {
       "id": "hotel_21568",
@@ -6031,7 +6031,7 @@
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Marigold%20Hotel%20Hongdae"
+      "booking_url": "https://www.agoda.com/ko-kr/marigold-hotel/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_18462",
@@ -6267,7 +6267,7 @@
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20Stay%20Inn"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20Stay%20Inn%20Seoul%20Hongdae"
     },
     {
       "id": "hotel_66198",
@@ -6511,7 +6511,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Zzzip%20Guesthouse%20Hongdae"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Zzzip%20Guesthouse%20Hongdae%20Seoul%20Hongdae"
     },
     {
       "id": "hotel_70733",
@@ -6747,7 +6747,7 @@
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20ARMS%20Residence"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Hongdae%20ARMS%20Residence%20Seoul%20Hongdae"
     },
     {
       "id": "hotel_47087",
@@ -6988,7 +6988,7 @@
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Stanford%20Hotel%20Seoul"
+      "booking_url": "https://www.agoda.com/ko-kr/stanford-hotel-seoul/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_97212",
@@ -7222,7 +7222,7 @@
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Four%20Seasons%20Hotel%20Seoul"
+      "booking_url": "https://www.agoda.com/ko-kr/four-seasons-hotel-seoul/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_38784",
@@ -7456,7 +7456,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Gwanghwamun%20Guesthouse"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Gwanghwamun%20Guesthouse%20Seoul"
     },
     {
       "id": "hotel_99082",
@@ -7688,7 +7688,7 @@
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Somerset%20Palace%20Seoul"
+      "booking_url": "https://www.agoda.com/ko-kr/somerset-palace-seoul/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_91729",
@@ -7917,7 +7917,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Fraser%20Place%20Central%20Seoul"
+      "booking_url": "https://www.agoda.com/ko-kr/fraser-place-central-seoul-residence/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_07871",
@@ -8150,7 +8150,7 @@
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Lotte%20Hotel%20Seoul"
+      "booking_url": "https://www.agoda.com/ko-kr/lotte-hotel-seoul/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_08635",
@@ -8385,7 +8385,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=The%20Westin%20Chosun%20Seoul"
+      "booking_url": "https://www.agoda.com/ko-kr/the-westin-chosun-seoul/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_72150",
@@ -8633,7 +8633,7 @@
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Glad%20Live%20Gangnam"
+      "booking_url": "https://www.agoda.com/ko-kr/glad-live-gangnam_2/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_42100",
@@ -8882,7 +8882,7 @@
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Hotel%20Cappuccino%20Seongsu"
+      "booking_url": "https://www.agoda.com/ko-kr/hotel-cappuccino-seoul/hotel/seoul-kr.html"
     },
     {
       "id": "hotel_05084",
@@ -9126,7 +9126,7 @@
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Urban%20Stay"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Urban%20Stay%20Seoul%20Seongsu"
     },
     {
       "id": "hotel_56387",
@@ -9374,7 +9374,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Ttukseom%20Guesthouse"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Ttukseom%20Guesthouse%20Seoul%20Seongsu"
     },
     {
       "id": "hotel_64879",
@@ -9619,7 +9619,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Stay"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Stay%20Seoul%20Seongsu"
     },
     {
       "id": "hotel_43665",
@@ -9864,7 +9864,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Boutique%20Hotel"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Seongsu%20Boutique%20Hotel%20Seoul%20Seongsu"
     },
     {
       "id": "hotel_55132",
@@ -10090,7 +10090,7 @@
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Park%20Hyatt%20Busan"
+      "booking_url": "https://www.agoda.com/ko-kr/park-hyatt-busan/hotel/busan-kr.html"
     },
     {
       "id": "hotel_82865",
@@ -10313,7 +10313,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Shilla%20Stay%20Haeundae"
+      "booking_url": "https://www.agoda.com/ko-kr/shilla-stay-haeundae/hotel/busan-kr.html"
     },
     {
       "id": "hotel_46786",
@@ -10538,7 +10538,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Lotte%20Hotel%20Busan"
+      "booking_url": "https://www.agoda.com/ko-kr/lotte-hotel-busan/hotel/busan-kr.html"
     },
     {
       "id": "hotel_39528",
@@ -10761,7 +10761,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Toyoko%20Inn%20Busan%20Haeundae"
+      "booking_url": "https://www.agoda.com/ko-kr/toyoko-inn-busan-haeundae-1_4/hotel/busan-kr.html"
     },
     {
       "id": "hotel_70763",
@@ -10987,7 +10987,7 @@
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Novotel%20Ambassador%20Busan"
+      "booking_url": "https://www.agoda.com/ko-kr/novotel-ambassador-busan_8/hotel/busan-kr.html"
     },
     {
       "id": "hotel_30919",
@@ -11207,7 +11207,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Grand%20Hotel"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Grand%20Hotel%20Busan"
     },
     {
       "id": "hotel_10776",
@@ -11430,7 +11430,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Seacloud%20Hotel"
+      "booking_url": "https://www.agoda.com/ko-kr/haeundae-seacloud-hotel-residence/hotel/busan-kr.html"
     },
     {
       "id": "hotel_21259",
@@ -11653,7 +11653,7 @@
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Busan%20Backpackers%20Hostel"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Busan%20Backpackers%20Hostel%20Busan"
     },
     {
       "id": "hotel_86273",
@@ -11879,7 +11879,7 @@
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Beach%20Airbnb"
+      "booking_url": "https://www.agoda.com/ko-kr/search?q=Haeundae%20Beach%20Airbnb%20Busan"
     },
     {
       "id": "hotel_91771",
@@ -12103,7 +12103,7 @@
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         }
       ],
-      "booking_url": "https://www.agoda.com/ko-kr/search?q=Paradise%20Hotel%20Busan"
+      "booking_url": "https://www.agoda.com/ko-kr/paradise-hotel-busan/hotel/busan-kr.html"
     }
   ]
 }
