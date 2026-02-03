@@ -1,11 +1,11 @@
 name: Auto Scrape Hotels
 
 on:
-  # 매시간 실행 (UTC 기준)
-  schedule:
-    - cron: '0 * * * *'
+  # 자동 스크래핑 비활성화됨 (2026-02-03)
+  # schedule:
+  #   - cron: '0 * * * *'
 
-  # 수동 실행 가능
+  # 수동 실행만 가능
   workflow_dispatch:
 
 jobs:
