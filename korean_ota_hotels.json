@@ -6,8 +6,8 @@
       "lat": 37.6556,
       "lng": 126.7714
     },
-    "available_count": 72,
-    "total_count": 75,
+    "available_count": 87,
+    "total_count": 90,
     "lowest_price_krw": 22000,
     "last_update": "2026-02-04 12:00:00"
   },
@@ -207,6 +207,126 @@
         "lng": 126.7445,
         "price_krw": 195000,
         "booking_url": "https://www.agoda.com/ko-kr/the-mvl-hotel-kintex/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy001",
+        "name_en": "Ramada Encore by Wyndham Goyang Soho",
+        "lat": 37.6543,
+        "lng": 126.7689,
+        "price_krw": 95000,
+        "booking_url": "https://www.agoda.com/ko-kr/ramada-encore-by-wyndham-goyang-soho/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy002",
+        "name_en": "N Hotel Kintex",
+        "lat": 37.6685,
+        "lng": 126.7502,
+        "price_krw": 85000,
+        "booking_url": "https://www.agoda.com/ko-kr/n-hotel-kintex/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy003",
+        "name_en": "Stars Hotel Ilsan",
+        "lat": 37.6578,
+        "lng": 126.7732,
+        "price_krw": 68000,
+        "booking_url": "https://www.agoda.com/ko-kr/stars-hotel-ilsan/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy004",
+        "name_en": "Benikea Premier Hotel Central Plaza",
+        "lat": 37.6512,
+        "lng": 126.7756,
+        "price_krw": 110000,
+        "booking_url": "https://www.agoda.com/ko-kr/benikea-premier-central-plaza-hotel/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy005",
+        "name_en": "Hotel Queen Ilsan",
+        "lat": 37.6567,
+        "lng": 126.7698,
+        "price_krw": 72000,
+        "booking_url": "https://www.agoda.com/ko-kr/hotel-queen-ilsan/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy006",
+        "name_en": "Stay Hotel Goyang",
+        "lat": 37.6598,
+        "lng": 126.7665,
+        "price_krw": 59000,
+        "booking_url": "https://www.agoda.com/ko-kr/stay-hotel-goyang/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy007",
+        "name_en": "Kobos Hotel Ilsan",
+        "lat": 37.6545,
+        "lng": 126.7778,
+        "price_krw": 78000,
+        "booking_url": "https://www.agoda.com/ko-kr/kobos-hotel/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy008",
+        "name_en": "Hotel Morning Calm Goyang",
+        "lat": 37.6489,
+        "lng": 126.7823,
+        "price_krw": 65000,
+        "booking_url": "https://www.agoda.com/ko-kr/hotel-morning-calm-goyang/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy009",
+        "name_en": "Luce Hotel Ilsan",
+        "lat": 37.6534,
+        "lng": 126.7712,
+        "price_krw": 82000,
+        "booking_url": "https://www.agoda.com/ko-kr/luce-hotel-ilsan/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy010",
+        "name_en": "Hotel M Kintex",
+        "lat": 37.6672,
+        "lng": 126.7534,
+        "price_krw": 98000,
+        "booking_url": "https://www.agoda.com/ko-kr/hotel-m-kintex/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy011",
+        "name_en": "Hotel Inspire Ilsan",
+        "lat": 37.6556,
+        "lng": 126.7745,
+        "price_krw": 75000,
+        "booking_url": "https://www.agoda.com/ko-kr/hotel-inspire-ilsan/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy012",
+        "name_en": "Kintex Hotel",
+        "lat": 37.6698,
+        "lng": 126.7478,
+        "price_krw": 105000,
+        "booking_url": "https://www.agoda.com/ko-kr/kintex-hotel/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy013",
+        "name_en": "Palace Hotel Ilsan",
+        "lat": 37.6523,
+        "lng": 126.7801,
+        "price_krw": 88000,
+        "booking_url": "https://www.agoda.com/ko-kr/palace-hotel-ilsan/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy014",
+        "name_en": "Hotel Diamond Ilsan",
+        "lat": 37.6601,
+        "lng": 126.7678,
+        "price_krw": 69000,
+        "booking_url": "https://www.agoda.com/ko-kr/hotel-diamond-ilsan/hotel/goyang-si-kr.html"
+      },
+      {
+        "id": "hotel_gy015",
+        "name_en": "Grand Hotel Goyang",
+        "lat": 37.6478,
+        "lng": 126.7856,
+        "price_krw": 125000,
+        "booking_url": "https://www.agoda.com/ko-kr/grand-hotel-goyang/hotel/goyang-si-kr.html"
       },
       {
         "id": "hotel_85853",
@@ -3928,6 +4048,1388 @@
         "Free WiFi",
         "Meeting Room"
       ]
+    },
+    {
+      "id": "hotel_gy001",
+      "name_en": "Ramada Encore by Wyndham Goyang Soho",
+      "name_ko": "라마다 앙코르 바이 윈덤 고양 소호",
+      "price_krw": 95000,
+      "rating": 4.1,
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+      "rooms_left": 5,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#ARMYPopular", "#WalkToVenue", "#Breakfast"],
+        "list_kr": ["#아미인기", "#도보가능", "#조식포함"],
+        "display_en": "#ARMYPopular #WalkToVenue #Breakfast",
+        "display_kr": "#아미인기 #도보가능 #조식포함"
+      },
+      "lat": 37.6543,
+      "lng": 126.7689,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 65,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 65%",
+        "label_kr": "아미 65%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 5min",
+        "minutes": 5,
+        "distance_km": 0.4
+      },
+      "transport": {
+        "station_en": "Jeongbalsan",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Jeongbalsan (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 5,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.2, "lat": 37.5786, "lng": 126.8918},
+          {"name_en": "Hongdae Busking Street", "spot_tag": "Trainee Memory", "description_en": "Pre-debut busking spot", "distance_km": 17.8, "lat": 37.5563, "lng": 126.922}
+        ],
+        "restaurant": [
+          {"name_en": "La Festa Restaurants", "spot_tag": "Dining Hub", "description_en": "Restaurant complex", "distance_km": 0.3, "lat": 37.6575, "lng": 126.7705},
+          {"name_en": "Ilsan Food Street", "spot_tag": "Local Eats", "description_en": "Local food street", "distance_km": 0.4, "lat": 37.658, "lng": 126.772}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 0.3, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 1.2, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Ramada Encore by Wyndham Goyang Soho", "lat": 37.6543, "lng": 126.7689},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/ramada-encore-by-wyndham-goyang-soho/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Pay at Hotel option available", "Check cancellation policy"],
+        "payment_methods": ["Credit Card", "PayPal", "Pay at Hotel"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/ramada-encore-by-wyndham-goyang-soho/hotel/goyang-si-kr.html",
+      "star_rating": 4,
+      "review_count": 245,
+      "amenities": ["Fitness Center", "Restaurant", "Free WiFi", "Business Center"]
+    },
+    {
+      "id": "hotel_gy002",
+      "name_en": "N Hotel Kintex",
+      "name_ko": "엔호텔 킨텍스",
+      "price_krw": 85000,
+      "rating": 4.0,
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+      "rooms_left": 8,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#NearKintex", "#ValueForMoney"],
+        "list_kr": ["#킨텍스인근", "#가성비"],
+        "display_en": "#NearKintex #ValueForMoney",
+        "display_kr": "#킨텍스인근 #가성비"
+      },
+      "lat": 37.6685,
+      "lng": 126.7502,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Kintex, Ilsanseo-gu, Goyang",
+        "address_kr": "고양시 일산서구 킨텍스"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 58,
+        "level_en": "Medium",
+        "level_kr": "보통",
+        "label_en": "ARMY 58%",
+        "label_kr": "아미 58%"
+      },
+      "distance": {
+        "type": "car",
+        "display_en": "Drive 5min",
+        "minutes": 5,
+        "distance_km": 2.5
+      },
+      "transport": {
+        "station_en": "Daehwa",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Daehwa (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Goyang Stadium → Taxi → Hotel",
+        "transport": "taxi",
+        "time_min": 5,
+        "last_train": "23:50",
+        "taxi_krw": 6000
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 16.0, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Western Dom Food Court", "spot_tag": "Food Court", "description_en": "Food court", "distance_km": 1.2, "lat": 37.663, "lng": 126.762}
+        ],
+        "cafe": [
+          {"name_en": "Ilsan Lake Park Cafe Street", "spot_tag": "Lake View", "description_en": "Scenic cafes", "distance_km": 1.5, "lat": 37.659, "lng": 126.76}
+        ],
+        "hotspot": [
+          {"name_en": "One Mount", "spot_tag": "Entertainment", "description_en": "Theme park", "distance_km": 0.5, "lat": 37.665, "lng": 126.751}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "N Hotel Kintex", "lat": 37.6685, "lng": 126.7502},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/n-hotel-kintex/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Pay at Hotel option available"],
+        "payment_methods": ["Credit Card", "PayPal", "Pay at Hotel"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/n-hotel-kintex/hotel/goyang-si-kr.html",
+      "star_rating": 3,
+      "review_count": 180,
+      "amenities": ["Free WiFi", "Parking", "24h Front Desk"]
+    },
+    {
+      "id": "hotel_gy003",
+      "name_en": "Stars Hotel Ilsan",
+      "name_ko": "스타즈 호텔 일산",
+      "price_krw": 68000,
+      "rating": 3.8,
+      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
+      "rooms_left": 10,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "partial",
+        "label_en": "Partial Refund",
+        "label_kr": "부분 환불",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#Budget", "#WalkToVenue"],
+        "list_kr": ["#저렴", "#도보가능"],
+        "display_en": "#Budget #WalkToVenue",
+        "display_kr": "#저렴 #도보가능"
+      },
+      "lat": 37.6578,
+      "lng": 126.7732,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 62,
+        "level_en": "Medium",
+        "level_kr": "보통",
+        "label_en": "ARMY 62%",
+        "label_kr": "아미 62%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 3min",
+        "minutes": 3,
+        "distance_km": 0.25
+      },
+      "transport": {
+        "station_en": "Jeongbalsan",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Jeongbalsan (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 3,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.0, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Ilsan Food Street", "spot_tag": "Local Eats", "description_en": "Local food street", "distance_km": 0.1, "lat": 37.658, "lng": 126.772}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 0.2, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 1.5, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Stars Hotel Ilsan", "lat": 37.6578, "lng": 126.7732},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/stars-hotel-ilsan/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Budget-friendly option"],
+        "payment_methods": ["Credit Card", "PayPal"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/stars-hotel-ilsan/hotel/goyang-si-kr.html",
+      "star_rating": 3,
+      "review_count": 120,
+      "amenities": ["Free WiFi", "Parking"]
+    },
+    {
+      "id": "hotel_gy004",
+      "name_en": "Benikea Premier Hotel Central Plaza",
+      "name_ko": "베니키아 프리미어 호텔 센트럴 플라자",
+      "price_krw": 110000,
+      "rating": 4.2,
+      "image_url": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800",
+      "rooms_left": 4,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#ARMYPopular", "#NearVenue", "#Breakfast"],
+        "list_kr": ["#아미인기", "#공연장근처", "#조식포함"],
+        "display_en": "#ARMYPopular #NearVenue #Breakfast",
+        "display_kr": "#아미인기 #공연장근처 #조식포함"
+      },
+      "lat": 37.6512,
+      "lng": 126.7756,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 70,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 70%",
+        "label_kr": "아미 70%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 6min",
+        "minutes": 6,
+        "distance_km": 0.5
+      },
+      "transport": {
+        "station_en": "Madu",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Madu (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 6,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.5, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Ilsan Food Street", "spot_tag": "Local Eats", "description_en": "Local food street", "distance_km": 0.7, "lat": 37.658, "lng": 126.772}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 0.8, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 1.8, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Benikea Premier Hotel Central Plaza", "lat": 37.6512, "lng": 126.7756},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/benikea-premier-central-plaza-hotel/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Breakfast included options available"],
+        "payment_methods": ["Credit Card", "PayPal", "Pay at Hotel"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/benikea-premier-central-plaza-hotel/hotel/goyang-si-kr.html",
+      "star_rating": 4,
+      "review_count": 320,
+      "amenities": ["Restaurant", "Fitness Center", "Free WiFi", "Business Center", "Parking"]
+    },
+    {
+      "id": "hotel_gy005",
+      "name_en": "Hotel Queen Ilsan",
+      "name_ko": "호텔 퀸 일산",
+      "price_krw": 72000,
+      "rating": 3.9,
+      "image_url": "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800",
+      "rooms_left": 6,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "partial",
+        "label_en": "Partial Refund",
+        "label_kr": "부분 환불",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#Budget", "#WalkToVenue"],
+        "list_kr": ["#저렴", "#도보가능"],
+        "display_en": "#Budget #WalkToVenue",
+        "display_kr": "#저렴 #도보가능"
+      },
+      "lat": 37.6567,
+      "lng": 126.7698,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 60,
+        "level_en": "Medium",
+        "level_kr": "보통",
+        "label_en": "ARMY 60%",
+        "label_kr": "아미 60%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 2min",
+        "minutes": 2,
+        "distance_km": 0.2
+      },
+      "transport": {
+        "station_en": "Jeongbalsan",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Jeongbalsan (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 2,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.0, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "La Festa Restaurants", "spot_tag": "Dining Hub", "description_en": "Restaurant complex", "distance_km": 0.1, "lat": 37.6575, "lng": 126.7705}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 0.2, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 1.0, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Hotel Queen Ilsan", "lat": 37.6567, "lng": 126.7698},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/hotel-queen-ilsan/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Budget-friendly option near venue"],
+        "payment_methods": ["Credit Card", "PayPal"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/hotel-queen-ilsan/hotel/goyang-si-kr.html",
+      "star_rating": 3,
+      "review_count": 95,
+      "amenities": ["Free WiFi", "Parking", "24h Front Desk"]
+    },
+    {
+      "id": "hotel_gy006",
+      "name_en": "Stay Hotel Goyang",
+      "name_ko": "스테이 호텔 고양",
+      "price_krw": 59000,
+      "rating": 3.7,
+      "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
+      "rooms_left": 12,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "partial",
+        "label_en": "Partial Refund",
+        "label_kr": "부분 환불",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#Budget", "#NearVenue"],
+        "list_kr": ["#저렴", "#공연장근처"],
+        "display_en": "#Budget #NearVenue",
+        "display_kr": "#저렴 #공연장근처"
+      },
+      "lat": 37.6598,
+      "lng": 126.7665,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 55,
+        "level_en": "Medium",
+        "level_kr": "보통",
+        "label_en": "ARMY 55%",
+        "label_kr": "아미 55%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 7min",
+        "minutes": 7,
+        "distance_km": 0.6
+      },
+      "transport": {
+        "station_en": "Jeongbalsan",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Jeongbalsan (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 7,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.3, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Western Dom Food Court", "spot_tag": "Food Court", "description_en": "Food court", "distance_km": 0.5, "lat": 37.663, "lng": 126.762}
+        ],
+        "cafe": [
+          {"name_en": "Ilsan Lake Park Cafe Street", "spot_tag": "Lake View", "description_en": "Scenic cafes", "distance_km": 0.7, "lat": 37.659, "lng": 126.76}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 0.8, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Stay Hotel Goyang", "lat": 37.6598, "lng": 126.7665},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/stay-hotel-goyang/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Most affordable option"],
+        "payment_methods": ["Credit Card", "PayPal"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/stay-hotel-goyang/hotel/goyang-si-kr.html",
+      "star_rating": 2,
+      "review_count": 85,
+      "amenities": ["Free WiFi", "Parking"]
+    },
+    {
+      "id": "hotel_gy007",
+      "name_en": "Kobos Hotel Ilsan",
+      "name_ko": "코보스 호텔 일산",
+      "price_krw": 78000,
+      "rating": 3.9,
+      "image_url": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800",
+      "rooms_left": 7,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "partial",
+        "label_en": "Partial Refund",
+        "label_kr": "부분 환불",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#ValueForMoney", "#NearVenue"],
+        "list_kr": ["#가성비", "#공연장근처"],
+        "display_en": "#ValueForMoney #NearVenue",
+        "display_kr": "#가성비 #공연장근처"
+      },
+      "lat": 37.6545,
+      "lng": 126.7778,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 58,
+        "level_en": "Medium",
+        "level_kr": "보통",
+        "label_en": "ARMY 58%",
+        "label_kr": "아미 58%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 5min",
+        "minutes": 5,
+        "distance_km": 0.45
+      },
+      "transport": {
+        "station_en": "Madu",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Madu (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 5,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.2, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Ilsan Food Street", "spot_tag": "Local Eats", "description_en": "Local food street", "distance_km": 0.4, "lat": 37.658, "lng": 126.772}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 0.6, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 1.8, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Kobos Hotel Ilsan", "lat": 37.6545, "lng": 126.7778},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/kobos-hotel/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Good value for money"],
+        "payment_methods": ["Credit Card", "PayPal"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/kobos-hotel/hotel/goyang-si-kr.html",
+      "star_rating": 3,
+      "review_count": 110,
+      "amenities": ["Free WiFi", "Parking", "Restaurant"]
+    },
+    {
+      "id": "hotel_gy008",
+      "name_en": "Hotel Morning Calm Goyang",
+      "name_ko": "호텔 모닝캄 고양",
+      "price_krw": 65000,
+      "rating": 3.8,
+      "image_url": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800",
+      "rooms_left": 9,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "partial",
+        "label_en": "Partial Refund",
+        "label_kr": "부분 환불",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#Budget", "#QuietArea"],
+        "list_kr": ["#저렴", "#조용한지역"],
+        "display_en": "#Budget #QuietArea",
+        "display_kr": "#저렴 #조용한지역"
+      },
+      "lat": 37.6489,
+      "lng": 126.7823,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 52,
+        "level_en": "Medium",
+        "level_kr": "보통",
+        "label_en": "ARMY 52%",
+        "label_kr": "아미 52%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 10min",
+        "minutes": 10,
+        "distance_km": 0.85
+      },
+      "transport": {
+        "station_en": "Madu",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Madu (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 10,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.8, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Ilsan Food Street", "spot_tag": "Local Eats", "description_en": "Local food street", "distance_km": 1.0, "lat": 37.658, "lng": 126.772}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 1.2, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 2.3, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Hotel Morning Calm Goyang", "lat": 37.6489, "lng": 126.7823},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/hotel-morning-calm-goyang/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Quiet neighborhood"],
+        "payment_methods": ["Credit Card", "PayPal"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/hotel-morning-calm-goyang/hotel/goyang-si-kr.html",
+      "star_rating": 3,
+      "review_count": 75,
+      "amenities": ["Free WiFi", "Parking"]
+    },
+    {
+      "id": "hotel_gy009",
+      "name_en": "Luce Hotel Ilsan",
+      "name_ko": "루체 호텔 일산",
+      "price_krw": 82000,
+      "rating": 4.0,
+      "image_url": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800",
+      "rooms_left": 5,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#ARMYPopular", "#WalkToVenue"],
+        "list_kr": ["#아미인기", "#도보가능"],
+        "display_en": "#ARMYPopular #WalkToVenue",
+        "display_kr": "#아미인기 #도보가능"
+      },
+      "lat": 37.6534,
+      "lng": 126.7712,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 66,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 66%",
+        "label_kr": "아미 66%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 3min",
+        "minutes": 3,
+        "distance_km": 0.25
+      },
+      "transport": {
+        "station_en": "Jeongbalsan",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Jeongbalsan (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 3,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.0, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "La Festa Restaurants", "spot_tag": "Dining Hub", "description_en": "Restaurant complex", "distance_km": 0.4, "lat": 37.6575, "lng": 126.7705}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 0.4, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 1.2, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Luce Hotel Ilsan", "lat": 37.6534, "lng": 126.7712},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/luce-hotel-ilsan/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Popular among concert-goers"],
+        "payment_methods": ["Credit Card", "PayPal", "Pay at Hotel"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/luce-hotel-ilsan/hotel/goyang-si-kr.html",
+      "star_rating": 3,
+      "review_count": 145,
+      "amenities": ["Free WiFi", "Parking", "Restaurant"]
+    },
+    {
+      "id": "hotel_gy010",
+      "name_en": "Hotel M Kintex",
+      "name_ko": "호텔 엠 킨텍스",
+      "price_krw": 98000,
+      "rating": 4.1,
+      "image_url": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800",
+      "rooms_left": 6,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#NearKintex", "#Modern"],
+        "list_kr": ["#킨텍스인근", "#모던"],
+        "display_en": "#NearKintex #Modern",
+        "display_kr": "#킨텍스인근 #모던"
+      },
+      "lat": 37.6672,
+      "lng": 126.7534,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Kintex, Ilsanseo-gu, Goyang",
+        "address_kr": "고양시 일산서구 킨텍스"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 60,
+        "level_en": "Medium",
+        "level_kr": "보통",
+        "label_en": "ARMY 60%",
+        "label_kr": "아미 60%"
+      },
+      "distance": {
+        "type": "car",
+        "display_en": "Drive 5min",
+        "minutes": 5,
+        "distance_km": 2.2
+      },
+      "transport": {
+        "station_en": "Daehwa",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Daehwa (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Goyang Stadium → Taxi → Hotel",
+        "transport": "taxi",
+        "time_min": 5,
+        "last_train": "23:50",
+        "taxi_krw": 5500
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 15.8, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Western Dom Food Court", "spot_tag": "Food Court", "description_en": "Food court", "distance_km": 1.0, "lat": 37.663, "lng": 126.762}
+        ],
+        "cafe": [
+          {"name_en": "Ilsan Lake Park Cafe Street", "spot_tag": "Lake View", "description_en": "Scenic cafes", "distance_km": 1.3, "lat": 37.659, "lng": 126.76}
+        ],
+        "hotspot": [
+          {"name_en": "One Mount", "spot_tag": "Entertainment", "description_en": "Theme park", "distance_km": 0.3, "lat": 37.665, "lng": 126.751}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Hotel M Kintex", "lat": 37.6672, "lng": 126.7534},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/hotel-m-kintex/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Modern facilities near Kintex"],
+        "payment_methods": ["Credit Card", "PayPal", "Pay at Hotel"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/hotel-m-kintex/hotel/goyang-si-kr.html",
+      "star_rating": 4,
+      "review_count": 200,
+      "amenities": ["Fitness Center", "Restaurant", "Free WiFi", "Meeting Room"]
+    },
+    {
+      "id": "hotel_gy011",
+      "name_en": "Hotel Inspire Ilsan",
+      "name_ko": "호텔 인스파이어 일산",
+      "price_krw": 75000,
+      "rating": 3.9,
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+      "rooms_left": 8,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "partial",
+        "label_en": "Partial Refund",
+        "label_kr": "부분 환불",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#WalkToVenue", "#ValueForMoney"],
+        "list_kr": ["#도보가능", "#가성비"],
+        "display_en": "#WalkToVenue #ValueForMoney",
+        "display_kr": "#도보가능 #가성비"
+      },
+      "lat": 37.6556,
+      "lng": 126.7745,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 64,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 64%",
+        "label_kr": "아미 64%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 4min",
+        "minutes": 4,
+        "distance_km": 0.3
+      },
+      "transport": {
+        "station_en": "Jeongbalsan",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Jeongbalsan (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 4,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.0, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Ilsan Food Street", "spot_tag": "Local Eats", "description_en": "Local food street", "distance_km": 0.3, "lat": 37.658, "lng": 126.772}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 0.4, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 1.5, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Hotel Inspire Ilsan", "lat": 37.6556, "lng": 126.7745},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/hotel-inspire-ilsan/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Very close to the venue"],
+        "payment_methods": ["Credit Card", "PayPal"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/hotel-inspire-ilsan/hotel/goyang-si-kr.html",
+      "star_rating": 3,
+      "review_count": 130,
+      "amenities": ["Free WiFi", "Parking", "24h Front Desk"]
+    },
+    {
+      "id": "hotel_gy012",
+      "name_en": "Kintex Hotel",
+      "name_ko": "킨텍스 호텔",
+      "price_krw": 105000,
+      "rating": 4.2,
+      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+      "rooms_left": 4,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#ARMYPopular", "#NearKintex", "#Breakfast"],
+        "list_kr": ["#아미인기", "#킨텍스인근", "#조식포함"],
+        "display_en": "#ARMYPopular #NearKintex #Breakfast",
+        "display_kr": "#아미인기 #킨텍스인근 #조식포함"
+      },
+      "lat": 37.6698,
+      "lng": 126.7478,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Kintex, Ilsanseo-gu, Goyang",
+        "address_kr": "고양시 일산서구 킨텍스"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 68,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 68%",
+        "label_kr": "아미 68%"
+      },
+      "distance": {
+        "type": "car",
+        "display_en": "Drive 6min",
+        "minutes": 6,
+        "distance_km": 2.8
+      },
+      "transport": {
+        "station_en": "Daehwa",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Daehwa (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Goyang Stadium → Taxi → Hotel",
+        "transport": "taxi",
+        "time_min": 6,
+        "last_train": "23:50",
+        "taxi_krw": 6000
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 16.2, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Western Dom Food Court", "spot_tag": "Food Court", "description_en": "Food court", "distance_km": 1.5, "lat": 37.663, "lng": 126.762}
+        ],
+        "cafe": [
+          {"name_en": "Ilsan Lake Park Cafe Street", "spot_tag": "Lake View", "description_en": "Scenic cafes", "distance_km": 1.7, "lat": 37.659, "lng": 126.76}
+        ],
+        "hotspot": [
+          {"name_en": "One Mount", "spot_tag": "Entertainment", "description_en": "Theme park", "distance_km": 0.6, "lat": 37.665, "lng": 126.751}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Kintex Hotel", "lat": 37.6698, "lng": 126.7478},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/kintex-hotel/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Official Kintex area hotel", "Breakfast options available"],
+        "payment_methods": ["Credit Card", "PayPal", "Pay at Hotel"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/kintex-hotel/hotel/goyang-si-kr.html",
+      "star_rating": 4,
+      "review_count": 280,
+      "amenities": ["Fitness Center", "Restaurant", "Free WiFi", "Business Center", "Parking"]
+    },
+    {
+      "id": "hotel_gy013",
+      "name_en": "Palace Hotel Ilsan",
+      "name_ko": "팔래스 호텔 일산",
+      "price_krw": 88000,
+      "rating": 4.0,
+      "image_url": "https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=800",
+      "rooms_left": 5,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#NearVenue", "#Comfortable"],
+        "list_kr": ["#공연장근처", "#편안함"],
+        "display_en": "#NearVenue #Comfortable",
+        "display_kr": "#공연장근처 #편안함"
+      },
+      "lat": 37.6523,
+      "lng": 126.7801,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 62,
+        "level_en": "Medium",
+        "level_kr": "보통",
+        "label_en": "ARMY 62%",
+        "label_kr": "아미 62%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 8min",
+        "minutes": 8,
+        "distance_km": 0.65
+      },
+      "transport": {
+        "station_en": "Madu",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Madu (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 8,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.5, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Ilsan Food Street", "spot_tag": "Local Eats", "description_en": "Local food street", "distance_km": 0.6, "lat": 37.658, "lng": 126.772}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 0.9, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 2.1, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Palace Hotel Ilsan", "lat": 37.6523, "lng": 126.7801},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/palace-hotel-ilsan/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Comfortable stay near venue"],
+        "payment_methods": ["Credit Card", "PayPal", "Pay at Hotel"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/palace-hotel-ilsan/hotel/goyang-si-kr.html",
+      "star_rating": 3,
+      "review_count": 160,
+      "amenities": ["Free WiFi", "Parking", "Restaurant", "24h Front Desk"]
+    },
+    {
+      "id": "hotel_gy014",
+      "name_en": "Hotel Diamond Ilsan",
+      "name_ko": "호텔 다이아몬드 일산",
+      "price_krw": 69000,
+      "rating": 3.8,
+      "image_url": "https://images.unsplash.com/photo-1598598166540-ac4f58e1becc?w=800",
+      "rooms_left": 11,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "partial",
+        "label_en": "Partial Refund",
+        "label_kr": "부분 환불",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#Budget", "#NearVenue"],
+        "list_kr": ["#저렴", "#공연장근처"],
+        "display_en": "#Budget #NearVenue",
+        "display_kr": "#저렴 #공연장근처"
+      },
+      "lat": 37.6601,
+      "lng": 126.7678,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 56,
+        "level_en": "Medium",
+        "level_kr": "보통",
+        "label_en": "ARMY 56%",
+        "label_kr": "아미 56%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 6min",
+        "minutes": 6,
+        "distance_km": 0.5
+      },
+      "transport": {
+        "station_en": "Jeongbalsan",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Jeongbalsan (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 6,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 14.2, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Western Dom Food Court", "spot_tag": "Food Court", "description_en": "Food court", "distance_km": 0.6, "lat": 37.663, "lng": 126.762}
+        ],
+        "cafe": [
+          {"name_en": "Ilsan Lake Park Cafe Street", "spot_tag": "Lake View", "description_en": "Scenic cafes", "distance_km": 0.8, "lat": 37.659, "lng": 126.76}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 0.9, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Hotel Diamond Ilsan", "lat": 37.6601, "lng": 126.7678},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/hotel-diamond-ilsan/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Affordable option with good location"],
+        "payment_methods": ["Credit Card", "PayPal"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/hotel-diamond-ilsan/hotel/goyang-si-kr.html",
+      "star_rating": 3,
+      "review_count": 90,
+      "amenities": ["Free WiFi", "Parking"]
+    },
+    {
+      "id": "hotel_gy015",
+      "name_en": "Grand Hotel Goyang",
+      "name_ko": "그랜드 호텔 고양",
+      "price_krw": 125000,
+      "rating": 4.3,
+      "image_url": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800",
+      "rooms_left": 3,
+      "is_available": true,
+      "hotel_type": {
+        "label_en": "Hotel",
+        "color": "#FFD700"
+      },
+      "cancellation": {
+        "type": "free",
+        "label_en": "Free Cancellation",
+        "label_kr": "무료 취소",
+        "is_refundable": true
+      },
+      "tags": {
+        "list_en": ["#ARMYPopular", "#Luxury", "#Breakfast"],
+        "list_kr": ["#아미인기", "#럭셔리", "#조식포함"],
+        "display_en": "#ARMYPopular #Luxury #Breakfast",
+        "display_kr": "#아미인기 #럭셔리 #조식포함"
+      },
+      "lat": 37.6478,
+      "lng": 126.7856,
+      "location": {
+        "area_en": "Goyang",
+        "area_kr": "고양",
+        "address_en": "Ilsandong-gu, Goyang",
+        "address_kr": "고양시 일산동구"
+      },
+      "city_key": "goyang",
+      "army_density": {
+        "value": 72,
+        "level_en": "High",
+        "level_kr": "높음",
+        "label_en": "ARMY 72%",
+        "label_kr": "아미 72%"
+      },
+      "distance": {
+        "type": "walk",
+        "display_en": "Walk 12min",
+        "minutes": 12,
+        "distance_km": 1.0
+      },
+      "transport": {
+        "station_en": "Madu",
+        "line_en": "Line 3",
+        "line_color": "#EF7C1C",
+        "display_en": "Madu (Line 3)"
+      },
+      "safe_return": {
+        "venue_en": "Goyang Stadium",
+        "route_en": "Walk from Goyang Stadium → Hotel",
+        "transport": "walk",
+        "time_min": 12,
+        "last_train": "23:50",
+        "taxi_krw": 0
+      },
+      "army_local_guide": {
+        "bts": [
+          {"name_en": "MBC Sangam", "spot_tag": "Music Show", "description_en": "Music show filming", "distance_km": 15.0, "lat": 37.5786, "lng": 126.8918}
+        ],
+        "restaurant": [
+          {"name_en": "Ilsan Food Street", "spot_tag": "Local Eats", "description_en": "Local food street", "distance_km": 1.2, "lat": 37.658, "lng": 126.772}
+        ],
+        "cafe": [
+          {"name_en": "La Festa Cafes", "spot_tag": "Trendy Cafe", "description_en": "Trendy cafes", "distance_km": 1.5, "lat": 37.6572, "lng": 126.771}
+        ],
+        "hotspot": [
+          {"name_en": "Ilsan Lake Park", "spot_tag": "Must Visit", "description_en": "Beautiful lake park", "distance_km": 2.5, "lat": 37.658, "lng": 126.759}
+        ]
+      },
+      "map_detail": {
+        "hotel": {"name_en": "Grand Hotel Goyang", "lat": 37.6478, "lng": 126.7856},
+        "venue": {"name_en": "Goyang Stadium", "lat": 37.6556, "lng": 126.7714}
+      },
+      "platform": {"name": "Agoda", "booking_url": "https://www.agoda.com/ko-kr/grand-hotel-goyang/hotel/goyang-si-kr.html"},
+      "booking_guide": {
+        "steps_en": ["1. Select dates and search", "2. Choose room, click 'Book Now'", "3. Enter passport name", "4. Pay with credit card or PayPal", "5. Get instant confirmation"],
+        "tips_en": ["Premium hotel with excellent facilities", "Breakfast included options available"],
+        "payment_methods": ["Credit Card", "PayPal", "Pay at Hotel"],
+        "foreigner_friendly": true
+      },
+      "last_update": "2026-02-04 12:00:00",
+      "booking_url": "https://www.agoda.com/ko-kr/grand-hotel-goyang/hotel/goyang-si-kr.html",
+      "star_rating": 4,
+      "review_count": 350,
+      "amenities": ["Fitness Center", "Restaurant", "Spa", "Free WiFi", "Business Center", "Parking", "Pool"]
     },
     {
       "id": "hotel_85853",
