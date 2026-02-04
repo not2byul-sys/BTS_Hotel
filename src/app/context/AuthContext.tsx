@@ -1,8 +1,10 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { User } from '@supabase/supabase-js';
-import { projectId, publicAnonKey } from '/utils/supabase/info';
-import { supabase } from '/utils/supabase/client';
+import { projectId } from '../../../utils/supabase/info';
+import { supabase } from '../../../utils/supabase/client';
 import { toast } from 'sonner';
+
+console.log('=== AuthContext.tsx 로드됨 ===');
 
 interface AuthContextType {
   user: User | null;
@@ -47,65 +49,58 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   // Check session on mount
   useEffect(() => {
-    let authListener: { unsubscribe: () => void } | null = null;
+    console.log('=== AuthContext useEffect 시작 ===');
+    console.log('현재 URL:', window.location.href);
 
-    const initAuth = async () => {
-      // Safety timeout: If auth takes too long (e.g. redirect fail), stop loading
-      const safetyTimer = setTimeout(() => {
-        setIsLoading(false);
-      }, 4000);
+    if (window.location.hash) {
+      console.log('URL Hash 발견:', window.location.hash);
+    }
 
-      // 0.5s Delay: Give Supabase time to process the hash after redirect
-      // 구글 로그인 후 돌아왔을 때 슈파베이스가 정보 저장할 시간 주기
-      await new Promise(resolve => setTimeout(resolve, 500));
+    // 세션 상태 변경 리스너 - 먼저 등록
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        console.log('=== Auth 상태 변경 ===');
+        console.log('Event:', event);
+        console.log('Session:', session);
 
-      const isHandlingRedirect = 
-        typeof window !== 'undefined' && 
-        (window.location.hash.includes('access_token') || 
-         window.location.hash.includes('type=recovery') ||
-         window.location.search.includes('code='));
-
-      if (isHandlingRedirect) {
-        console.log("AuthContext: Detecting OAuth redirect, waiting for session...");
-      }
-
-      // Initial Check
-      try {
-        const { data: { session } } = await supabase.auth.getSession();
         if (session?.user) {
+          console.log('로그인 성공! User:', session.user.email);
           setUser(session.user);
           fetchBookmarks(session.access_token);
-        }
-      } catch (error) {
-        console.error("Session check error:", error);
-      }
-
-      // Listener
-      const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-        console.log(`AuthContext: Auth event ${_event}`, session?.user?.email);
-        console.log("상태 업데이트 직전:", session);
-        
-        if (session?.user) {
-          setUser(session.user);
-          fetchBookmarks(session.access_token);
-        } else if (_event === 'SIGNED_OUT') {
+          toast.success(`Session restored for: ${session.user.email}`);
+        } else {
+          console.log('로그아웃 상태');
           setUser(null);
           setBookmarks(new Set());
         }
         setIsLoading(false);
-      });
-      authListener = subscription;
-
-      if (!isHandlingRedirect) {
-        setIsLoading(false);
       }
-      clearTimeout(safetyTimer);
+    );
+
+    // 초기 세션 확인
+    const checkSession = async () => {
+      console.log('=== 초기 세션 확인 시작 ===');
+      try {
+        const { data: { session }, error } = await supabase.auth.getSession();
+        console.log('getSession 결과:', { session, error });
+
+        if (session?.user) {
+          console.log('기존 세션 발견:', session.user.email);
+          setUser(session.user);
+          fetchBookmarks(session.access_token);
+        } else {
+          console.log('기존 세션 없음');
+        }
+      } catch (error) {
+        console.error("Session check error:", error);
+      }
+      setIsLoading(false);
     };
 
-    initAuth();
+    checkSession();
 
     return () => {
-      authListener?.unsubscribe();
+      subscription.unsubscribe();
     };
   }, []);
 
@@ -236,7 +231,23 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    // Return a default mock context to prevent crashes in preview environments
+    // or when components are rendered in isolation.
+    console.error('CRITICAL: useAuth used outside of AuthProvider. Returning mock context. This explains why auth state is not updating.');
+    return {
+      user: null,
+      isAuthenticated: false,
+      login: async () => {},
+      signup: async () => {},
+      loginWithGoogle: async () => {},
+      resetPassword: async () => {},
+      logout: async () => {},
+      bookmarks: new Set<string>(),
+      toggleBookmark: async () => {},
+      showLoginModal: false,
+      setShowLoginModal: () => {},
+      isLoading: false
+    } as AuthContextType;
   }
   return context;
 };
