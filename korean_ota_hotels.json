@@ -6,10 +6,10 @@
       "lat": 37.6556,
       "lng": 126.7714
     },
-    "available_count": 45,
-    "total_count": 48,
-    "lowest_price_krw": 25000,
-    "last_update": "2026-01-30 17:29:28"
+    "available_count": 72,
+    "total_count": 75,
+    "lowest_price_krw": 22000,
+    "last_update": "2026-02-04 12:00:00"
   },
   "map": {
     "venue": {
@@ -495,6 +495,222 @@
         "lng": 129.168,
         "price_krw": 280000,
         "booking_url": "https://www.agoda.com/ko-kr/paradise-hotel-busan/hotel/busan-kr.html"
+      },
+      {
+        "id": "hotel_gw001",
+        "name_en": "Shilla Stay Gwanghwamun",
+        "lat": 37.5712,
+        "lng": 126.9769,
+        "price_krw": 185000,
+        "booking_url": "https://www.agoda.com/shilla-stay-gwanghwamun/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw002",
+        "name_en": "Four Seasons Hotel Seoul",
+        "lat": 37.5725,
+        "lng": 126.976,
+        "price_krw": 650000,
+        "booking_url": "https://www.agoda.com/four-seasons-hotel-seoul/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw003",
+        "name_en": "Somerset Palace Seoul",
+        "lat": 37.5756,
+        "lng": 126.985,
+        "price_krw": 280000,
+        "booking_url": "https://www.agoda.com/somerset-palace-seoul/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw004",
+        "name_en": "Nine Tree Premier Hotel Insadong",
+        "lat": 37.5735,
+        "lng": 126.987,
+        "price_krw": 165000,
+        "booking_url": "https://www.agoda.com/nine-tree-premier-hotel-insadong/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw005",
+        "name_en": "Sunbee Hotel Insadong Seoul",
+        "lat": 37.5728,
+        "lng": 126.9865,
+        "price_krw": 95000,
+        "booking_url": "https://www.agoda.com/sunbee-hotel-insadong-seoul/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw006",
+        "name_en": "Center Mark Hotel (AMID Hotel Seoul)",
+        "lat": 37.5701,
+        "lng": 126.9875,
+        "price_krw": 145000,
+        "booking_url": "https://www.agoda.com/center-mark-hotel/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw007",
+        "name_en": "Dormy Inn EXPRESS Seoul Insadong",
+        "lat": 37.5732,
+        "lng": 126.9858,
+        "price_krw": 135000,
+        "booking_url": "https://www.agoda.com/hotel-kuretakeso-insadong_2/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw008",
+        "name_en": "Koreana Hotel",
+        "lat": 37.5695,
+        "lng": 126.978,
+        "price_krw": 155000,
+        "booking_url": "https://www.agoda.com/koreana-hotel/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw009",
+        "name_en": "President Hotel",
+        "lat": 37.568,
+        "lng": 126.9775,
+        "price_krw": 145000,
+        "booking_url": "https://www.agoda.com/president-hotel/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw010",
+        "name_en": "Prima Hotel Seoul",
+        "lat": 37.5715,
+        "lng": 126.9895,
+        "price_krw": 125000,
+        "booking_url": "https://www.agoda.com/prima-hotel/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw011",
+        "name_en": "Orakai Insadong Suites",
+        "lat": 37.5738,
+        "lng": 126.9862,
+        "price_krw": 195000,
+        "booking_url": "https://www.agoda.com/orakai-insadong-suites/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw012",
+        "name_en": "GRID INN Hotel",
+        "lat": 37.5705,
+        "lng": 126.989,
+        "price_krw": 85000,
+        "booking_url": "https://www.agoda.com/grid-inn/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw013",
+        "name_en": "ibis Ambassador Seoul Insadong",
+        "lat": 37.5742,
+        "lng": 126.9855,
+        "price_krw": 115000,
+        "booking_url": "https://www.agoda.com/ibis-ambassador-seoul-insadong-hotel/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw014",
+        "name_en": "Nostalgia Hanok Hotel",
+        "lat": 37.5785,
+        "lng": 126.985,
+        "price_krw": 185000,
+        "booking_url": "https://www.agoda.com/nostalgia-hanok-hotel-h80950018/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw015",
+        "name_en": "Hanok Hotel Daam",
+        "lat": 37.579,
+        "lng": 126.9845,
+        "price_krw": 165000,
+        "booking_url": "https://www.agoda.com/hotel-daam/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw016",
+        "name_en": "Nouvelle Hotel and Spa Jongro by Aank",
+        "lat": 37.572,
+        "lng": 126.9905,
+        "price_krw": 95000,
+        "booking_url": "https://www.agoda.com/nouvelle-hotel-and-spa-seoul-jongno/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw017",
+        "name_en": "New Seoul Hotel",
+        "lat": 37.5645,
+        "lng": 126.9815,
+        "price_krw": 125000,
+        "booking_url": "https://www.agoda.com/new-seoul-hotel/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw018",
+        "name_en": "Hotel Midcity Myeongdong",
+        "lat": 37.5635,
+        "lng": 126.9825,
+        "price_krw": 135000,
+        "booking_url": "https://www.agoda.com/afirst-hotel-myeongdong-h9472980/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw019",
+        "name_en": "24 Guesthouse Seoul Jongno",
+        "lat": 37.571,
+        "lng": 126.99,
+        "price_krw": 45000,
+        "booking_url": "https://www.agoda.com/24-guesthouse-seoul-jongno/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw020",
+        "name_en": "G House Guesthouse Jongno",
+        "lat": 37.5705,
+        "lng": 126.9895,
+        "price_krw": 38000,
+        "booking_url": "https://www.agoda.com/g-house-guesthouse-jongno/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw021",
+        "name_en": "Beewon Guest House",
+        "lat": 37.5725,
+        "lng": 126.9905,
+        "price_krw": 42000,
+        "booking_url": "https://www.agoda.com/beewon-guest-house/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw022",
+        "name_en": "Hostel Chloe Jongno",
+        "lat": 37.5698,
+        "lng": 126.9888,
+        "price_krw": 28000,
+        "booking_url": "https://www.agoda.com/hostel-chloe-jongno/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw023",
+        "name_en": "Goodstay Saewha Hostel",
+        "lat": 37.5692,
+        "lng": 126.988,
+        "price_krw": 25000,
+        "booking_url": "https://www.agoda.com/goodstay-saewha-hostel/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw024",
+        "name_en": "Hostel Tommy",
+        "lat": 37.5702,
+        "lng": 126.9892,
+        "price_krw": 22000,
+        "booking_url": "https://www.agoda.com/hostel-tommy_2/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw025",
+        "name_en": "Hostel Korea Original",
+        "lat": 37.5708,
+        "lng": 126.9898,
+        "price_krw": 30000,
+        "booking_url": "https://www.agoda.com/hostel-korea-original/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw026",
+        "name_en": "Insadong Crown Hotel",
+        "lat": 37.574,
+        "lng": 126.986,
+        "price_krw": 105000,
+        "booking_url": "https://www.agoda.com/insadong-crown-hotel/hotel/seoul-kr.html"
+      },
+      {
+        "id": "hotel_gw027",
+        "name_en": "Hotel Biz Jongno Insadong",
+        "lat": 37.573,
+        "lng": 126.9875,
+        "price_krw": 78000,
+        "booking_url": "https://www.agoda.com/hotel-biz-jongno-insadong/hotel/seoul-kr.html"
       }
     ]
   },
@@ -12262,6 +12478,808 @@
         "Beach Access",
         "Restaurant"
       ]
+    },
+    {
+      "id": "hotel_gw001",
+      "name_en": "Shilla Stay Gwanghwamun",
+      "name_ko": "신라스테이 광화문",
+      "location": "Seoul",
+      "area": "Gwanghwamun",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 8,
+      "price_krw": 185000,
+      "price_tier": 3,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/shilla-stay-gwanghwamun/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/485/485145/485145_17082514520055589366.jpg",
+      "distance_km": 15.2,
+      "lat": 37.5712,
+      "lng": 126.9769,
+      "transport": "지하철 5호선 광화문역 도보 3분",
+      "highlights": [
+        "비즈니스 호텔",
+        "광화문 중심"
+      ],
+      "features": [
+        "WiFi",
+        "피트니스",
+        "레스토랑"
+      ],
+      "type": "Hotel",
+      "notes": "광화문 중심 비즈니스 호텔"
+    },
+    {
+      "id": "hotel_gw002",
+      "name_en": "Four Seasons Hotel Seoul",
+      "name_ko": "포시즌스 호텔 서울",
+      "location": "Seoul",
+      "area": "Gwanghwamun",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 5,
+      "price_krw": 650000,
+      "price_tier": 5,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/four-seasons-hotel-seoul/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/875/8754521/8754521_19080209430079039067.jpg",
+      "distance_km": 15.5,
+      "lat": 37.5725,
+      "lng": 126.976,
+      "transport": "지하철 5호선 광화문역 도보 5분",
+      "highlights": [
+        "최고급 럭셔리",
+        "경복궁 인접"
+      ],
+      "features": [
+        "스파",
+        "수영장",
+        "미슐랭 레스토랑"
+      ],
+      "type": "Hotel",
+      "notes": "광화문 최고급 럭셔리 호텔"
+    },
+    {
+      "id": "hotel_gw003",
+      "name_en": "Somerset Palace Seoul",
+      "name_ko": "서머셋 팰리스 서울",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 12,
+      "price_krw": 280000,
+      "price_tier": 4,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/somerset-palace-seoul/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/290/29017/29017_15071517110032291181.jpg",
+      "distance_km": 14.8,
+      "lat": 37.5756,
+      "lng": 126.985,
+      "transport": "지하철 3호선 안국역 도보 7분",
+      "highlights": [
+        "서비스드 레지던스",
+        "가족/장기체류"
+      ],
+      "features": [
+        "키친",
+        "세탁기",
+        "피트니스"
+      ],
+      "type": "Serviced Residence",
+      "notes": "가족/장기체류 적합"
+    },
+    {
+      "id": "hotel_gw004",
+      "name_en": "Nine Tree Premier Hotel Insadong",
+      "name_ko": "나인트리 프리미어 호텔 인사동",
+      "location": "Seoul",
+      "area": "Insadong",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 15,
+      "price_krw": 165000,
+      "price_tier": 3,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/nine-tree-premier-hotel-insadong/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/111/1117920/1117920_16022414550040058689.jpg",
+      "distance_km": 14.5,
+      "lat": 37.5735,
+      "lng": 126.987,
+      "transport": "지하철 3호선 안국역 도보 5분",
+      "highlights": [
+        "인사동 도보권",
+        "모던 디자인"
+      ],
+      "features": [
+        "WiFi",
+        "조식",
+        "라운지"
+      ],
+      "type": "Hotel",
+      "notes": "인사동 도보권"
+    },
+    {
+      "id": "hotel_gw005",
+      "name_en": "Sunbee Hotel Insadong Seoul",
+      "name_ko": "선비 호텔 인사동",
+      "location": "Seoul",
+      "area": "Insadong",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 20,
+      "price_krw": 95000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/sunbee-hotel-insadong-seoul/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/487/487487/487487_14062016300019927489.jpg",
+      "distance_km": 14.6,
+      "lat": 37.5728,
+      "lng": 126.9865,
+      "transport": "지하철 3호선 안국역 도보 3분",
+      "highlights": [
+        "가성비 호텔",
+        "인사동 중심"
+      ],
+      "features": [
+        "WiFi",
+        "조식 가능"
+      ],
+      "type": "Hotel",
+      "notes": "인사동 가성비 호텔"
+    },
+    {
+      "id": "hotel_gw006",
+      "name_en": "Center Mark Hotel (AMID Hotel Seoul)",
+      "name_ko": "센터마크 호텔 (어미드 호텔)",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 18,
+      "price_krw": 145000,
+      "price_tier": 3,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/center-mark-hotel/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/193/193289/193289_15071517100032291116.jpg",
+      "distance_km": 14.9,
+      "lat": 37.5701,
+      "lng": 126.9875,
+      "transport": "지하철 1호선 종각역 도보 3분",
+      "highlights": [
+        "종로 중심",
+        "명동 인접"
+      ],
+      "features": [
+        "WiFi",
+        "피트니스",
+        "레스토랑"
+      ],
+      "type": "Hotel",
+      "notes": "종로 중심"
+    },
+    {
+      "id": "hotel_gw007",
+      "name_en": "Dormy Inn EXPRESS Seoul Insadong",
+      "name_ko": "도미인 익스프레스 서울 인사동",
+      "location": "Seoul",
+      "area": "Insadong",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 10,
+      "price_krw": 135000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/hotel-kuretakeso-insadong_2/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/710/710080/710080_15072117280032749766.jpg",
+      "distance_km": 14.7,
+      "lat": 37.5732,
+      "lng": 126.9858,
+      "transport": "지하철 3호선 종로3가역 도보 5분",
+      "highlights": [
+        "대욕장 보유",
+        "일본식 서비스"
+      ],
+      "features": [
+        "대욕장",
+        "WiFi",
+        "야식 라멘"
+      ],
+      "type": "Hotel",
+      "notes": "대욕장 보유"
+    },
+    {
+      "id": "hotel_gw008",
+      "name_en": "Koreana Hotel",
+      "name_ko": "코리아나 호텔",
+      "location": "Seoul",
+      "area": "Gwanghwamun",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 25,
+      "price_krw": 155000,
+      "price_tier": 3,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/koreana-hotel/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/6846/684660/684660_14060516440019716485.jpg",
+      "distance_km": 15.1,
+      "lat": 37.5695,
+      "lng": 126.978,
+      "transport": "지하철 1호선 시청역 도보 5분",
+      "highlights": [
+        "비즈니스 호텔",
+        "시청 인접"
+      ],
+      "features": [
+        "WiFi",
+        "조식",
+        "비즈니스센터"
+      ],
+      "type": "Hotel",
+      "notes": "광화문 비즈니스 호텔"
+    },
+    {
+      "id": "hotel_gw009",
+      "name_en": "President Hotel",
+      "name_ko": "프레지던트 호텔",
+      "location": "Seoul",
+      "area": "Gwanghwamun",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 22,
+      "price_krw": 145000,
+      "price_tier": 3,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/president-hotel/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/290/29088/29088_14062509400020027186.jpg",
+      "distance_km": 15.3,
+      "lat": 37.568,
+      "lng": 126.9775,
+      "transport": "지하철 1호선 시청역 도보 3분",
+      "highlights": [
+        "광화문/시청 인접",
+        "전통 있는 호텔"
+      ],
+      "features": [
+        "WiFi",
+        "레스토랑",
+        "비즈니스센터"
+      ],
+      "type": "Hotel",
+      "notes": "광화문/시청 인접"
+    },
+    {
+      "id": "hotel_gw010",
+      "name_en": "Prima Hotel Seoul",
+      "name_ko": "프리마 호텔 서울",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 15,
+      "price_krw": 125000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/prima-hotel/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/290/290989/290989_14062509400020027190.jpg",
+      "distance_km": 14.8,
+      "lat": 37.5715,
+      "lng": 126.9895,
+      "transport": "지하철 1호선 종로3가역 도보 3분",
+      "highlights": [
+        "종로 메인",
+        "접근성 좋음"
+      ],
+      "features": [
+        "WiFi",
+        "조식"
+      ],
+      "type": "Hotel",
+      "notes": "종로 메인 호텔"
+    },
+    {
+      "id": "hotel_gw011",
+      "name_en": "Orakai Insadong Suites",
+      "name_ko": "오라카이 인사동 스위트",
+      "location": "Seoul",
+      "area": "Insadong",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 8,
+      "price_krw": 195000,
+      "price_tier": 3,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/orakai-insadong-suites/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/554/5549180/5549180_18090414170067972513.jpg",
+      "distance_km": 14.6,
+      "lat": 37.5738,
+      "lng": 126.9862,
+      "transport": "지하철 3호선 안국역 도보 5분",
+      "highlights": [
+        "레지던스형",
+        "넓은 객실"
+      ],
+      "features": [
+        "키친",
+        "WiFi",
+        "세탁기"
+      ],
+      "type": "Serviced Residence",
+      "notes": "레지던스형"
+    },
+    {
+      "id": "hotel_gw012",
+      "name_en": "GRID INN Hotel",
+      "name_ko": "그리드 인 호텔",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 12,
+      "price_krw": 85000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/grid-inn/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/272/2723936/2723936_17091209490056259127.jpg",
+      "distance_km": 14.9,
+      "lat": 37.5705,
+      "lng": 126.989,
+      "transport": "지하철 1호선 종로3가역 도보 5분",
+      "highlights": [
+        "평점 높음",
+        "가성비"
+      ],
+      "features": [
+        "WiFi",
+        "깔끔한 시설"
+      ],
+      "type": "Hotel",
+      "notes": "평점 높은 중소형 호텔"
+    },
+    {
+      "id": "hotel_gw013",
+      "name_en": "ibis Ambassador Seoul Insadong",
+      "name_ko": "이비스 앰배서더 서울 인사동",
+      "location": "Seoul",
+      "area": "Insadong",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 30,
+      "price_krw": 115000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/ibis-ambassador-seoul-insadong-hotel/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/290/29045/29045_15081309260034156437.jpg",
+      "distance_km": 14.5,
+      "lat": 37.5742,
+      "lng": 126.9855,
+      "transport": "지하철 3호선 안국역 도보 3분",
+      "highlights": [
+        "글로벌 체인",
+        "가성비"
+      ],
+      "features": [
+        "WiFi",
+        "조식",
+        "24시간 프론트"
+      ],
+      "type": "Hotel",
+      "notes": "글로벌 체인 가성비"
+    },
+    {
+      "id": "hotel_gw014",
+      "name_en": "Nostalgia Hanok Hotel",
+      "name_ko": "노스탤지어 한옥호텔",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 4,
+      "price_krw": 185000,
+      "price_tier": 3,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/nostalgia-hanok-hotel-h80950018/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/270/2704010/2704010_17082814230055756219.jpg",
+      "distance_km": 14.7,
+      "lat": 37.5785,
+      "lng": 126.985,
+      "transport": "지하철 3호선 안국역 도보 10분",
+      "highlights": [
+        "한옥 스타일",
+        "전통 체험"
+      ],
+      "features": [
+        "한옥",
+        "온돌",
+        "전통 조식"
+      ],
+      "type": "Hanok Hotel",
+      "notes": "한옥 스타일"
+    },
+    {
+      "id": "hotel_gw015",
+      "name_en": "Hanok Hotel Daam",
+      "name_ko": "한옥호텔 다암",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 3,
+      "price_krw": 165000,
+      "price_tier": 3,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/hotel-daam/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/691/6913823/6913823_19022611460072492515.jpg",
+      "distance_km": 14.8,
+      "lat": 37.579,
+      "lng": 126.9845,
+      "transport": "지하철 3호선 안국역 도보 12분",
+      "highlights": [
+        "전통 한옥",
+        "북촌 인접"
+      ],
+      "features": [
+        "한옥",
+        "온돌",
+        "정원"
+      ],
+      "type": "Hanok Hotel",
+      "notes": "전통 한옥 숙소"
+    },
+    {
+      "id": "hotel_gw016",
+      "name_en": "Nouvelle Hotel and Spa Jongro by Aank",
+      "name_ko": "누벨 호텔 앤 스파 종로 바이 앙크",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 15,
+      "price_krw": 95000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/nouvelle-hotel-and-spa-seoul-jongno/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/485/4854848/4854848_18040914040063334556.jpg",
+      "distance_km": 14.6,
+      "lat": 37.572,
+      "lng": 126.9905,
+      "transport": "지하철 1호선 종로3가역 도보 3분",
+      "highlights": [
+        "스파형 호텔",
+        "가성비"
+      ],
+      "features": [
+        "스파",
+        "WiFi",
+        "24시간"
+      ],
+      "type": "Hotel",
+      "notes": "스파형 호텔"
+    },
+    {
+      "id": "hotel_gw017",
+      "name_en": "New Seoul Hotel",
+      "name_ko": "뉴서울 호텔",
+      "location": "Seoul",
+      "area": "Myeongdong",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 20,
+      "price_krw": 125000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/new-seoul-hotel/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/290/290143/290143_16052509470042571178.jpg",
+      "distance_km": 15.5,
+      "lat": 37.5645,
+      "lng": 126.9815,
+      "transport": "지하철 2호선 을지로입구역 도보 5분",
+      "highlights": [
+        "명동/광화문 중간",
+        "접근성"
+      ],
+      "features": [
+        "WiFi",
+        "조식"
+      ],
+      "type": "Hotel",
+      "notes": "광화문 도보 가능"
+    },
+    {
+      "id": "hotel_gw018",
+      "name_en": "Hotel Midcity Myeongdong",
+      "name_ko": "호텔 미드시티 명동",
+      "location": "Seoul",
+      "area": "Myeongdong",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 18,
+      "price_krw": 135000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/afirst-hotel-myeongdong-h9472980/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/548/5487636/5487636_18082017040067628698.jpg",
+      "distance_km": 15.6,
+      "lat": 37.5635,
+      "lng": 126.9825,
+      "transport": "지하철 4호선 명동역 도보 5분",
+      "highlights": [
+        "명동/광화문 중간",
+        "쇼핑 편리"
+      ],
+      "features": [
+        "WiFi",
+        "카페"
+      ],
+      "type": "Hotel",
+      "notes": "명동/광화문 중간"
+    },
+    {
+      "id": "hotel_gw019",
+      "name_en": "24 Guesthouse Seoul Jongno",
+      "name_ko": "24 게스트하우스 서울 종로",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 8,
+      "price_krw": 45000,
+      "price_tier": 1,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/24-guesthouse-seoul-jongno/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/564/564567/564567_15062914250030499685.jpg",
+      "distance_km": 14.7,
+      "lat": 37.571,
+      "lng": 126.99,
+      "transport": "지하철 1호선 종로3가역 도보 3분",
+      "highlights": [
+        "게스트하우스",
+        "저예산"
+      ],
+      "features": [
+        "WiFi",
+        "공용주방",
+        "라운지"
+      ],
+      "type": "Guesthouse",
+      "notes": "게스트하우스"
+    },
+    {
+      "id": "hotel_gw020",
+      "name_en": "G House Guesthouse Jongno",
+      "name_ko": "G하우스 게스트하우스 종로",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 6,
+      "price_krw": 38000,
+      "price_tier": 1,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/g-house-guesthouse-jongno/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/675/6757475/6757475_19021914180072334818.jpg",
+      "distance_km": 14.8,
+      "lat": 37.5705,
+      "lng": 126.9895,
+      "transport": "지하철 1호선 종로3가역 도보 5분",
+      "highlights": [
+        "저예산 숙소",
+        "깔끔함"
+      ],
+      "features": [
+        "WiFi",
+        "공용주방"
+      ],
+      "type": "Guesthouse",
+      "notes": "저예산 숙소"
+    },
+    {
+      "id": "hotel_gw021",
+      "name_en": "Beewon Guest House",
+      "name_ko": "비원 게스트하우스",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 10,
+      "price_krw": 42000,
+      "price_tier": 1,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/beewon-guest-house/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/587/587587/587587_15062914150030498764.jpg",
+      "distance_km": 14.6,
+      "lat": 37.5725,
+      "lng": 126.9905,
+      "transport": "지하철 1호선 종각역 도보 5분",
+      "highlights": [
+        "외국인 이용 많음",
+        "친절함"
+      ],
+      "features": [
+        "WiFi",
+        "조식",
+        "라운지"
+      ],
+      "type": "Guesthouse",
+      "notes": "외국인 이용 많음"
+    },
+    {
+      "id": "hotel_gw022",
+      "name_en": "Hostel Chloe Jongno",
+      "name_ko": "호스텔 클로이 종로",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 15,
+      "price_krw": 28000,
+      "price_tier": 1,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/hostel-chloe-jongno/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/618/6187185/6187185_18111416180069699419.jpg",
+      "distance_km": 14.9,
+      "lat": 37.5698,
+      "lng": 126.9888,
+      "transport": "지하철 1호선 종로3가역 도보 3분",
+      "highlights": [
+        "호스텔",
+        "초저가"
+      ],
+      "features": [
+        "WiFi",
+        "공용주방",
+        "도미토리"
+      ],
+      "type": "Hostel",
+      "notes": "호스텔"
+    },
+    {
+      "id": "hotel_gw023",
+      "name_en": "Goodstay Saewha Hostel",
+      "name_ko": "굿스테이 세화 호스텔",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 20,
+      "price_krw": 25000,
+      "price_tier": 1,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/goodstay-saewha-hostel/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/525/5255/5255_14062509160020026859.jpg",
+      "distance_km": 15.0,
+      "lat": 37.5692,
+      "lng": 126.988,
+      "transport": "지하철 1호선 종각역 도보 5분",
+      "highlights": [
+        "초저가",
+        "굿스테이 인증"
+      ],
+      "features": [
+        "WiFi",
+        "공용주방"
+      ],
+      "type": "Hostel",
+      "notes": "초저가"
+    },
+    {
+      "id": "hotel_gw024",
+      "name_en": "Hostel Tommy",
+      "name_ko": "호스텔 토미",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 12,
+      "price_krw": 22000,
+      "price_tier": 1,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/hostel-tommy_2/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/580/580580/580580_15071517040032290810.jpg",
+      "distance_km": 14.8,
+      "lat": 37.5702,
+      "lng": 126.9892,
+      "transport": "지하철 1호선 종로3가역 도보 5분",
+      "highlights": [
+        "백패커용",
+        "최저가"
+      ],
+      "features": [
+        "WiFi",
+        "도미토리",
+        "라운지"
+      ],
+      "type": "Hostel",
+      "notes": "백패커용"
+    },
+    {
+      "id": "hotel_gw025",
+      "name_en": "Hostel Korea Original",
+      "name_ko": "호스텔 코리아 오리지널",
+      "location": "Seoul",
+      "area": "Jongno",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 18,
+      "price_krw": 30000,
+      "price_tier": 1,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/hostel-korea-original/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/290/290989/290989_15071517070032290985.jpg",
+      "distance_km": 14.7,
+      "lat": 37.5708,
+      "lng": 126.9898,
+      "transport": "지하철 1호선 종각역 도보 5분",
+      "highlights": [
+        "인기 호스텔",
+        "분위기 좋음"
+      ],
+      "features": [
+        "WiFi",
+        "라운지",
+        "이벤트"
+      ],
+      "type": "Hostel",
+      "notes": "인기 호스텔"
+    },
+    {
+      "id": "hotel_gw026",
+      "name_en": "Insadong Crown Hotel",
+      "name_ko": "인사동 크라운 호텔",
+      "location": "Seoul",
+      "area": "Insadong",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 25,
+      "price_krw": 105000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/insadong-crown-hotel/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/290/290989/290989_16052509470042571179.jpg",
+      "distance_km": 14.5,
+      "lat": 37.574,
+      "lng": 126.986,
+      "transport": "지하철 3호선 안국역 도보 5분",
+      "highlights": [
+        "인사동 중심",
+        "전통시장 인접"
+      ],
+      "features": [
+        "WiFi",
+        "조식",
+        "관광 편리"
+      ],
+      "type": "Hotel",
+      "notes": "인사동 크라운 호텔"
+    },
+    {
+      "id": "hotel_gw027",
+      "name_en": "Hotel Biz Jongno Insadong",
+      "name_ko": "호텔 비즈 종로 인사동",
+      "location": "Seoul",
+      "area": "Insadong",
+      "city": "Seoul",
+      "is_available": true,
+      "rooms_left": 15,
+      "price_krw": 78000,
+      "price_tier": 2,
+      "platform": "Agoda",
+      "booking_url": "https://www.agoda.com/hotel-biz-jongno-insadong/hotel/seoul-kr.html",
+      "image_url": "https://pix8.agoda.net/hotelImages/871/8719290/8719290_19072315410078452898.jpg",
+      "distance_km": 14.6,
+      "lat": 37.573,
+      "lng": 126.9875,
+      "transport": "지하철 3호선 종로3가역 도보 3분",
+      "highlights": [
+        "비즈니스",
+        "가성비"
+      ],
+      "features": [
+        "WiFi",
+        "24시간 프론트"
+      ],
+      "type": "Hotel",
+      "notes": "비즈니스 가성비"
     }
   ]
 }
