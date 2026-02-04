@@ -1,327 +1,327 @@
 {
-  "c8f5241ecf5a": {
-    "name": "하운드호텔 포항송도해수욕장",
+  "ccae93319114": {
+    "name": "하우재 이태원",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 91,
+    "price_krw": 33,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/pohang-hound-songdo-beach.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=3&hapos=3&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1495848302_421256562_2_0_0&highlighted_blocks=1495848302_421256562_2_0_0&matching_block_id=1495848302_421256562_2_0_0&sr_pri_blocks=1495848302_421256562_2_0_0__26363636&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/hause-itaewon.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=15&hapos=15&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=214023406_421584100_0_0_0%2C214023406_421584100_0_0_0&highlighted_blocks=214023406_421584100_0_0_0%2C214023406_421584100_0_0_0&matching_block_id=214023406_421584100_0_0_0&sr_pri_blocks=214023406_421584100_0_0_0__4727273%2C214023406_421584100_0_0_0__4727273&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/762877642.webp?k=fa2cf473d4e7a12c319a8abed96317b5c8cc18563ff94e8ff3cb83235d9d6cd8&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/186139806.webp?k=ecff2c5195af1f03a79ce7bb93f4a183a270700f0a995f19820d276a1d85cde2&o="
   },
-  "4c7adfa22fae": {
-    "name": "애플트리 호텔",
+  "09400addb551": {
+    "name": "호스텔 코리아 - 오리지널",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 24,
+    "price_krw": 31,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/appletree.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=13&hapos=13&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=44904901_129608019_2_0_0&highlighted_blocks=44904901_129608019_2_0_0&matching_block_id=44904901_129608019_2_0_0&sr_pri_blocks=44904901_129608019_2_0_0__7081818&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/hostel-korea-original.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=9&hapos=9&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=54842503_359105894_0_1_0&highlighted_blocks=54842503_359105894_0_1_0&matching_block_id=54842503_359105894_0_1_0&sr_pri_blocks=54842503_359105894_0_1_0__8981818&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/232525084.webp?k=0e41007fa975746efb49b4bc746846346183f6511c69ba83fc946f36b7858d99&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/136597371.webp?k=23108736ef367db8cb300bf857249eaa70b51fb8ce5efdc3d12f9541429f379d&o="
   },
-  "97e6394982d4": {
-    "name": "영덕 힐링턴호텔리조트펜션",
+  "595ee3c3c6e2": {
+    "name": "웨이홈 가산",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 84,
+    "price_krw": 33,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/yeongdeok-hillington-resort-pension-yeongdeok-gun-gyeongsangbuk-do.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=19&hapos=19&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1471733405_421582801_0_0_0&highlighted_blocks=1471733405_421582801_0_0_0&matching_block_id=1471733405_421582801_0_0_0&sr_pri_blocks=1471733405_421582801_0_0_0__24198000&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/weihom-gasan.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=16&hapos=16&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1511076301_423868069_2_0_0&highlighted_blocks=1511076301_423868069_2_0_0&matching_block_id=1511076301_423868069_2_0_0&sr_pri_blocks=1511076301_423868069_2_0_0__9454545&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/727616047.webp?k=10884a9fe497546afdeeecc51fdb3c65fd07839979227758918135b164849885&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/788060120.webp?k=0ff9e9e9b4de13771ec4ae12a0f1cd0be4b4ac2282e266173d40c6b1b56c5b94&o="
   },
-  "b9eee8b979b7": {
-    "name": "포항 더원썬라이즈펜션",
+  "8df83da74878": {
+    "name": "From H US Hotel with Anook Seoul Gangseo Hwagok",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 243,
+    "price_krw": 31,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/pohang-the-one-sunrise-pension.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=23&hapos=23&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1313574302_405022207_0_0_0&highlighted_blocks=1313574302_405022207_0_0_0&matching_block_id=1313574302_405022207_0_0_0&sr_pri_blocks=1313574302_405022207_0_0_0__70354545&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/peuromeici-eoseuhotel-gangseojeom-with-aneug-seoul.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=10&hapos=10&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1424466501_414060640_2_0_0&highlighted_blocks=1424466501_414060640_2_0_0&matching_block_id=1424466501_414060640_2_0_0&sr_pri_blocks=1424466501_414060640_2_0_0__9000000&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/616771697.webp?k=9c0cf6e6fc272d6e9e3e6484e96bf71671c82822722e48d288c4222c6208dbef&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/693138885.webp?k=67dae519fe5cf81b48616ab53ed9f427c5e5829679d8b00a3a756c981f6fe4fb&o="
   },
-  "0b6db9a4d762": {
-    "name": "포항 영일대 게스트하우스",
+  "767b32b284c5": {
+    "name": "Station Hostel In Namguro",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 72,
+    "price_krw": 25,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/youngildae-guesthouse.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=183259809_91652078_3_1_0&highlighted_blocks=183259809_91652078_3_1_0&matching_block_id=183259809_91652078_3_1_0&sr_pri_blocks=183259809_91652078_3_1_0__20909091&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoul-namguroyeog-1bun-paemilrirum-101ho.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=4&hapos=4&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1461239001_417420081_2_0_0&highlighted_blocks=1461239001_417420081_2_0_0&matching_block_id=1461239001_417420081_2_0_0&sr_pri_blocks=1461239001_417420081_2_0_0__7363636&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/468263892.webp?k=4d38918a449d264e5ade1b504cc1187ab3c2997dbbd1ba370808e129d11da160&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/717301239.webp?k=f1e1c25285eb10e7da6e6ad0c8342c1ee07e2e950c4fee7b014955f5035f1d2c&o="
   },
-  "55f68107ab63": {
-    "name": "포항 파인웨이브 스파펜션",
+  "72b707155249": {
+    "name": "아마존 게스트하우스",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 99,
+    "price_krw": 32,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/pohang-pine-wave-spa-pension.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=20&hapos=20&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1400567002_416766337_0_0_0&highlighted_blocks=1400567002_416766337_0_0_0&matching_block_id=1400567002_416766337_0_0_0&sr_pri_blocks=1400567002_416766337_0_0_0__28538182&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/amazon-guesthouse.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=13&hapos=13&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=201417405_171843636_0_0_0%2C201417405_171843636_0_0_0&highlighted_blocks=201417405_171843636_0_0_0%2C201417405_171843636_0_0_0&matching_block_id=201417405_171843636_0_0_0&sr_pri_blocks=201417405_171843636_0_0_0__4636364%2C201417405_171843636_0_0_0__4636364&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/674639405.webp?k=74a646a5d6c4b74f4ce6657f3c26cf4052f005ed74ed89c464f68236ffdd2ca9&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/204809971.webp?k=2076895c90fbe62ff827488d80e3c0ed366c172052bce07cf491528f6f2577b3&o="
   },
-  "7e2827f3cbbf": {
-    "name": "월드하우스호텔",
+  "c924c0887496": {
+    "name": "댓 하우스 홍대 게스트하우스",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 170,
+    "price_krw": 33,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/weoldeuhauseu.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=9&hapos=9&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1387206001_410731342_0_1_0&highlighted_blocks=1387206001_410731342_0_1_0&matching_block_id=1387206001_410731342_0_1_0&sr_pri_blocks=1387206001_410731342_0_1_0__49090909&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/that-house.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=20&hapos=20&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=166732206_128134293_0_0_0%2C166732201_128134293_0_0_0&highlighted_blocks=166732206_128134293_0_0_0%2C166732201_128134293_0_0_0&matching_block_id=166732206_128134293_0_0_0&sr_pri_blocks=166732206_128134293_0_0_0__4818182%2C166732201_128134293_0_0_0__4818182&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/666408257.webp?k=4e4a9e56de1b81a9fa5f46c2a2463d24a25dd370db91d0542fcb1ae5a2f6ce91&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/61802936.webp?k=d69c6742d66a81c8d169fce434c380d6b1ab7fa073035c0c923cbbe9d36d5a12&o="
   },
-  "6b53c4212b55": {
-    "name": "Pohang Legends",
+  "8b86002d3d4b": {
+    "name": "루미에르h호텔",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 113,
+    "price_krw": 34,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/pohang-legends.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=5&hapos=5&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1500828501_421753663_3_0_0&highlighted_blocks=1500828501_421753663_3_0_0&matching_block_id=1500828501_421753663_3_0_0&sr_pri_blocks=1500828501_421753663_3_0_0__32727273&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/rumiereuhhotel.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=22&hapos=22&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1552390701_426420533_2_0_0&highlighted_blocks=1552390701_426420533_2_0_0&matching_block_id=1552390701_426420533_2_0_0&sr_pri_blocks=1552390701_426420533_2_0_0__9722727&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/754806764.webp?k=d8e70157b01a1b4474bb8efe04ee5ea208d61a57c8641a5cf2416c0061af6c36&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/798399499.webp?k=ba73f52e9ce3fabcb1ad60c40afdc85eb4981015a66496406e49eac3a66a23d6&o="
   },
-  "2a02caa8353c": {
-    "name": "Stay 아늑",
+  "40e286727f68": {
+    "name": "Only for Woman - Happy House",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 144,
+    "price_krw": 33,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/pohang-seutaelra.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=8&hapos=8&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1278396701_407526544_2_0_0&highlighted_blocks=1278396701_407526544_2_0_0&matching_block_id=1278396701_407526544_2_0_0&sr_pri_blocks=1278396701_407526544_2_0_0__45727273&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/only-for-female-sadang-house-4th-floor-seoul.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=17&hapos=17&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1306477626_403471691_1_0_0%2C1306477628_403471691_1_0_0&highlighted_blocks=1306477626_403471691_1_0_0%2C1306477628_403471691_1_0_0&matching_block_id=1306477626_403471691_1_0_0&sr_pri_blocks=1306477626_403471691_1_0_0__4727273%2C1306477628_403471691_1_0_0__4727273&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/596186479.webp?k=74ca75fdb83ef1657220a5ff55dca20da787f76481e6dbfbfc606ee76d188856&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/611795245.webp?k=a287d513e5448d8b5122e3f6b39c126e26d0c2da29fdf8ef1d5e0285c6705085&o="
   },
-  "69ecdfb88ab2": {
-    "name": "에이치에비뉴호텔 영일대점",
+  "61780496bcf7": {
+    "name": "킴스테이 9",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 314,
+    "price_krw": 33,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/h-avenue-yeongildae-branch.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=11&hapos=11&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1569645801_428059653_2_0_0&highlighted_blocks=1569645801_428059653_2_0_0&matching_block_id=1569645801_428059653_2_0_0&sr_pri_blocks=1569645801_428059653_2_0_0__90909091&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/korstay.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=21&hapos=21&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=49720210_295792248_2_1_0&highlighted_blocks=49720210_295792248_2_1_0&matching_block_id=49720210_295792248_2_1_0&sr_pri_blocks=49720210_295792248_2_1_0__9636382&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/813059395.webp?k=e295f759ec5056ebe58756b0a3ed4f08723f4f744f73075d5d6d689a107a1c67&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/252739045.webp?k=0aaf526cafcc81fa872db94edbe6457b489c7de9c8e53b411c81b2640e7fe088&o="
   },
-  "cc2f081640ce": {
-    "name": "경주 한옥 펜타운",
+  "9947029020ac": {
+    "name": "커플 모텔",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 54,
+    "price_krw": 35,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/gyeongju-hanok-pentown.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=16&hapos=16&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1241475702_397490086_0_0_0&highlighted_blocks=1241475702_397490086_0_0_0&matching_block_id=1241475702_397490086_0_0_0&sr_pri_blocks=1241475702_397490086_0_0_0__15512727&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/couple-motel-seoul1.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=25&hapos=25&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=886028101_358243750_2_0_0&highlighted_blocks=886028101_358243750_2_0_0&matching_block_id=886028101_358243750_2_0_0&sr_pri_blocks=886028101_358243750_2_0_0__10000000&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/577559344.webp?k=4614a74e8c903706b743bb28169a52482e9fb3b2cfc11bee2aa02930bedce1f5&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/378118152.webp?k=65bcd6e2cba02f6f521245d6ed2e49475333030834f372f682acbbac861f2d6b&o="
   },
-  "89fc8c5d7a82": {
-    "name": "연화문 호텔 영덕",
+  "c953e602401a": {
+    "name": "봄스테이",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 151,
+    "price_krw": 33,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/yeonhwamunhotel-yeongdeog-yeongdeog.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=22&hapos=22&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=876389001_360524960_2_2_0&highlighted_blocks=876389001_360524960_2_2_0&matching_block_id=876389001_360524960_2_2_0&sr_pri_blocks=876389001_360524960_2_2_0__43781818&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/bomseutei.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=18&hapos=18&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1575313402_428624564_2_0_0&highlighted_blocks=1575313402_428624564_2_0_0&matching_block_id=1575313402_428624564_2_0_0&sr_pri_blocks=1575313402_428624564_2_0_0__9530182&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/535750827.webp?k=fce96975b742d29946133517577ddd27810e5ce6e1bb95e2bdda05b0f7b0a8f0&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/817732561.webp?k=3e021798c98fd0fbff978d6c86f54cb77809984cfed5c8d636acc17a61c3dbde&o="
   },
-  "48887aac9f2d": {
-    "name": "라한호텔 포항",
+  "e78c40b9f3fc": {
+    "name": "서울 달빛 동대문 게스트하우스",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 104,
+    "price_krw": 33,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/best-western-pohang-pohang2.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=4&hapos=4&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=137016001_235914570_2_2_0&highlighted_blocks=137016001_235914570_2_2_0&matching_block_id=137016001_235914570_2_2_0&sr_pri_blocks=137016001_235914570_2_2_0__30000000&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoul-dalbit-guesthouse.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=19&hapos=19&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=154467801_420652136_2_0_0&highlighted_blocks=154467801_420652136_2_0_0&matching_block_id=154467801_420652136_2_0_0&sr_pri_blocks=154467801_420652136_2_0_0__9545455&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/562750066.webp?k=3644dd9a5a9671fb4bc0031cd7af7d91b7d6047ec34d9573f9f4e626fec31e4a&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/60558901.webp?k=341cf6cd0494c088362804a26c07b2e57616de64bbea974a8aa18d18583bf8ab&o="
   },
-  "06368f111cd5": {
-    "name": "오션 하우스 PH",
+  "3497eaba73c5": {
+    "name": "해치 스테이 게스트하우스 - 외국인 전용",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 118,
+    "price_krw": 35,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/osyeonhauseu.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=6&hapos=6&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1462904201_424981928_2_0_0&highlighted_blocks=1462904201_424981928_2_0_0&matching_block_id=1462904201_424981928_2_0_0&sr_pri_blocks=1462904201_424981928_2_0_0__34027273&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/haechi-stay-guesthouse-for-foreigners-only.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=24&hapos=24&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1067318422_379130620_2_0_0&highlighted_blocks=1067318422_379130620_2_0_0&matching_block_id=1067318422_379130620_2_0_0&sr_pri_blocks=1067318422_379130620_2_0_0__10000000&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/719493049.webp?k=3676c036da31293eb0fe9a5cd5a1cfb59154a92a183afe26101d7f2e6f3c548b&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/512551907.webp?k=1272d3084b0e1cd4a83298432ac667e0aaf4ff63bd8a44bdb7e421e84eca484b&o="
   },
-  "de20af1bab03": {
-    "name": "포항 파티 하우스",
-    "is_available": true,
-    "rooms_left": -1,
-    "price_krw": 19,
-    "platform": {
-      "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/pohang-patirum-sugbagggalggeum.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=12&hapos=12&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1484990007_419976575_4_0_0&highlighted_blocks=1484990007_419976575_4_0_0&matching_block_id=1484990007_419976575_4_0_0&sr_pri_blocks=1484990007_419976575_4_0_0__5454545&from=searchresults"
-    },
-    "location": "Paju",
-    "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/772625650.webp?k=18fc51cca72f5a62a40cc2bb5687a2939a7cc693dc1fcbc5e26eff6b5f0f1fda&o="
-  },
-  "1ff25cae9017": {
-    "name": "잉카의 작은마을 모텔",
+  "2951dc054c34": {
+    "name": "이뜰이",
     "is_available": true,
     "rooms_left": -1,
     "price_krw": 27,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/ingkayi-jageunmaeul.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=14&hapos=14&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1296310001_402809565_2_0_0&highlighted_blocks=1296310001_402809565_2_0_0&matching_block_id=1296310001_402809565_2_0_0&sr_pri_blocks=1296310001_402809565_2_0_0__7727273&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/iddeuli.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=6&hapos=6&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1574016401_428446704_2_0_0&highlighted_blocks=1574016401_428446704_2_0_0&matching_block_id=1574016401_428446704_2_0_0&sr_pri_blocks=1574016401_428446704_2_0_0__7854545&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/605908227.webp?k=f3fb24034140b626ca8de67b24b18f1811163c30b0eac9cca9276cbd1528b033&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/816655720.webp?k=36201e7a93a9a700f534d3b19eacde3e3448ee19bbf7ad4d77376b8d78f3b75d&o="
   },
-  "b64efb197df0": {
-    "name": "베니키아호텔  포항",
+  "10ac7b35514f": {
+    "name": "서울 게스트하우스 외국인 전용",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 49,
+    "price_krw": 16,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/benikea-pohang-pohang.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=15&hapos=15&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=130323201_184476776_2_2_0&highlighted_blocks=130323201_184476776_2_2_0&matching_block_id=130323201_184476776_2_2_0&sr_pri_blocks=130323201_184476776_2_2_0__14090909&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoul-guesthouse.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=968622702_369287732_1_0_0%2C968622702_369287732_1_0_0&highlighted_blocks=968622702_369287732_1_0_0%2C968622702_369287732_1_0_0&matching_block_id=968622702_369287732_1_0_0&sr_pri_blocks=968622702_369287732_1_0_0__2363636%2C968622702_369287732_1_0_0__2363636&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/476034276.webp?k=2b951cf7b487e8c5643117f218896f3d6e53a13dec080f2893a12072f6b6e304&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/433494322.webp?k=0bd3a96524ab66f1c9de9750e3f3c19884e713ea2a044de30586672d5d71e4a8&o="
   },
-  "c633c4aa5c98": {
-    "name": "XYM호텔 문덕점",
+  "839fb44560f5": {
+    "name": "1975 Yurim Inn",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 107,
+    "price_krw": 24,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/hotelxym-mundeogjeom.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=21&hapos=21&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1127951402_398128048_2_1_0&highlighted_blocks=1127951402_398128048_2_1_0&matching_block_id=1127951402_398128048_2_1_0&sr_pri_blocks=1127951402_398128048_2_1_0__30909091&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/1975-yurimjang.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1138944001_386607674_2_0_0&highlighted_blocks=1138944001_386607674_2_0_0&matching_block_id=1138944001_386607674_2_0_0&sr_pri_blocks=1138944001_386607674_2_0_0__6818182&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/616830787.webp?k=7c32807e3a478e2563e58fd0ff342ba6092542c5eb4ece53f3917736d9269d2d&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/524681837.webp?k=5b6d651a72a84841b64e0a0e8b726251990c9069eb52496ccbc9bb88d8238f41&o="
   },
-  "79cce2ea0720": {
-    "name": "엘리시안 풀빌라",
+  "ae3cf9087bb6": {
+    "name": "J2 Us#1",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 249,
+    "price_krw": 26,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/elrisian-pulbilra-pohangsi.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=10&hapos=10&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1552943901_426466129_4_0_0&highlighted_blocks=1552943901_426466129_4_0_0&matching_block_id=1552943901_426466129_4_0_0&sr_pri_blocks=1552943901_426466129_4_0_0__72000000&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/j2-us-1.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=8&hapos=8&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1574089401_428454246_2_0_0&highlighted_blocks=1574089401_428454246_2_0_0&matching_block_id=1574089401_428454246_2_0_0&sr_pri_blocks=1574089401_428454246_2_0_0__8600000&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/799160056.webp?k=f18cb911873ab4b47aae8f39935620b6c3040f466473eee9a6a2d255860bcd9c&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/816706261.webp?k=7757757d41fa086e07cea3037beb0013f5f00d6af21059eff4a7323af0a1f3ed&o="
   },
-  "5d0c6c2ab57d": {
-    "name": "노블리온 호텔",
+  "d4edc7d1b4d5": {
+    "name": "Jinho's Guest House",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 75,
+    "price_krw": 31,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/pohang-noblion.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=18&hapos=18&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1111940301_384145102_2_0_0&highlighted_blocks=1111940301_384145102_2_0_0&matching_block_id=1111940301_384145102_2_0_0&sr_pri_blocks=1111940301_384145102_2_0_0__21590909&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/jinho-house.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=12&hapos=12&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=697465903_368466540_2_0_0&highlighted_blocks=697465903_368466540_2_0_0&matching_block_id=697465903_368466540_2_0_0&sr_pri_blocks=697465903_368466540_2_0_0__9090909&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/508299129.webp?k=7888c7d7a3278ec619892774d02fe2d57d5c627d8402f38cb9eeff2e740821df&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/285506527.webp?k=46803f59d80253bb3ef81c4864e08e05f94de01d1e9a30625d48f06825eddc78&o="
   },
-  "d395a38aeb13": {
-    "name": "포항 오도리펜션",
+  "b764406fd48b": {
+    "name": "스프링 라이트",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 58,
+    "price_krw": 26,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/pohang-odori-pension.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1313594302_405023204_0_0_0&highlighted_blocks=1313594302_405023204_0_0_0&matching_block_id=1313594302_405023204_0_0_0&sr_pri_blocks=1313594302_405023204_0_0_0__16845455&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/spring-light.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=5&hapos=5&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=516637106_179288019_0_0_0&highlighted_blocks=516637106_179288019_0_0_0&matching_block_id=516637106_179288019_0_0_0&sr_pri_blocks=516637106_179288019_0_0_0__7450000&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/616787587.webp?k=d036ec8a958057e7b857e79128d3a74384c21695fb40c31bf9afb490a8ceb796&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/329454863.webp?k=4d32ccde73798b309ec136a826de0a7a8fd83d728750e5f93dc6984f338785a5&o="
   },
-  "e7dbf47f91ec": {
-    "name": "온더웨이브하우스",
+  "7dce32705d6b": {
+    "name": "나비 모텔",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 108,
+    "price_krw": 30,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/ondeoweibeuhauseu.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=7&hapos=7&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1242768101_396203295_4_0_0&highlighted_blocks=1242768101_396203295_4_0_0&matching_block_id=1242768101_396203295_4_0_0&sr_pri_blocks=1242768101_396203295_4_0_0__35090909&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/navi.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=7&hapos=7&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1489147801_420567604_2_0_0&highlighted_blocks=1489147801_420567604_2_0_0&matching_block_id=1489147801_420567604_2_0_0&sr_pri_blocks=1489147801_420567604_2_0_0__8590909&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/578126481.webp?k=16467a2db620b9d9f56687971491b61701d2160993fb8b2388d293f7cad72b16&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/742412160.webp?k=63250a68ba8b666002c2532891aebefe0b4bdab4114f6db63d5e0fb33129312e&o="
   },
-  "949b297ed850": {
-    "name": "포항 썬라이즈풀빌라",
+  "26a5860b6009": {
+    "name": "수정장 여관",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 219,
+    "price_krw": 31,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/pohang-sunrise-pool-villa.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=24&hapos=24&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1313548502_405017555_0_0_0&highlighted_blocks=1313548502_405017555_0_0_0&matching_block_id=1313548502_405017555_0_0_0&sr_pri_blocks=1313548502_405017555_0_0_0__63418182&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/sujeongjang-inn.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=11&hapos=11&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1069107515_380493398_2_0_0&highlighted_blocks=1069107515_380493398_2_0_0&matching_block_id=1069107515_380493398_2_0_0&sr_pri_blocks=1069107515_380493398_2_0_0__9090909&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/616772488.webp?k=3e68b72b7bd50d88c2be1b2f51e478b0a564df6ada8c82a177f4163f20c8514c&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/576487838.webp?k=a67fcc63fed9e1c41ef7aa8644d2164321e9f7f6fd5683d18bc0f470c953537a&o="
   },
-  "d8ab34ef6892": {
-    "name": "엑시트 풀빌라",
+  "c650ae4cf04f": {
+    "name": "서울앤호텔 동대문",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 283,
+    "price_krw": 34,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/egsiteupulbilra.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=25&hapos=25&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1449924801_416365623_2_0_0&highlighted_blocks=1449924801_416365623_2_0_0&matching_block_id=1449924801_416365623_2_0_0&sr_pri_blocks=1449924801_416365623_2_0_0__81818182&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/seoulnhotel.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=23&hapos=23&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=198130212_379297430_0_2_0%2C198130212_379297430_0_2_0&highlighted_blocks=198130212_379297430_0_2_0%2C198130212_379297430_0_2_0&matching_block_id=198130212_379297430_0_2_0&sr_pri_blocks=198130212_379297430_0_2_0__4963636%2C198130212_379297430_0_2_0__4963636&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/707187438.webp?k=746642e85b1be2eb912fc5b7236eb44914bbeb81146cf99713125cb032dec945&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/103588071.webp?k=70e14c2e8e5c64d9b13040cbf891d408d498ab54ab0f3e5e23596c3ae374c8f7&o="
   },
-  "ece806a560c5": {
-    "name": "노을이 아름다운 호미곶 캠핑카",
+  "d683dc6ffecc": {
+    "name": "버즈네스트 호스텔 홍대 - 외국인 전용",
     "is_available": true,
     "rooms_left": -1,
-    "price_krw": 61,
+    "price_krw": 24,
     "platform": {
       "name": "Booking.com",
-      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/noeuli-areumdaun-homigoj-kaempingka.ko.html?aid=304142&label=mkt123sc-1ad43058-6360-4db8-9946-35a3bc8486d3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-715815&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=17&hapos=17&sr_order=price&srpvid=d3efca5d0ce050a55045cf1e8bb153ae&srepoch=1770243684&all_sr_blocks=1551207201_426311391_2_0_0&highlighted_blocks=1551207201_426311391_2_0_0&matching_block_id=1551207201_426311391_2_0_0&sr_pri_blocks=1551207201_426311391_2_0_0__17672727&from=searchresults"
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/birdsnest-hostel.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=3&hapos=3&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=36764907_386591061_0_0_0%2C36764907_386591061_0_0_0&highlighted_blocks=36764907_386591061_0_0_0%2C36764907_386591061_0_0_0&matching_block_id=36764907_386591061_0_0_0&sr_pri_blocks=36764907_386591061_0_0_0__3518182%2C36764907_386591061_0_0_0__3518182&from=searchresults"
     },
-    "location": "Paju",
+    "location": "Hongdae",
     "booking_url": "",
-    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/797139977.webp?k=bbf110370370dd8c394102878f4b44c959d4577971148928d39a67e2ac2abfca&o="
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/61638854.webp?k=319d8ec8ac03a39f23fde2c0f2413dd039ef2c8685c83df6e3cc476015dce3a6&o="
+  },
+  "87bf9b260c5f": {
+    "name": "명동 스튜디오 아파트먼트",
+    "is_available": true,
+    "rooms_left": -1,
+    "price_krw": 32,
+    "platform": {
+      "name": "Booking.com",
+      "booking_url": "https://www.booking.comhttps://www.booking.com/hotel/kr/spacious-studio-apt-myeong-dong.ko.html?aid=304142&label=mkt123sc-4c02218b-b762-4e0a-82f3-7af4405694a3&ucfs=1&arphpl=1&checkin=2026-06-11&checkout=2026-06-13&dest_id=-716583&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=14&hapos=14&sr_order=price&srpvid=375ad8fd5029909dc2dce94bc34ee8a3&srepoch=1770247306&all_sr_blocks=1157083801_388483711_2_0_0&highlighted_blocks=1157083801_388483711_2_0_0&matching_block_id=1157083801_388483711_2_0_0&sr_pri_blocks=1157083801_388483711_2_0_0__9327273&from=searchresults"
+    },
+    "location": "Hongdae",
+    "booking_url": "",
+    "image_url": "https://cf.bstatic.com/xdata/images/hotel/square240/640931786.webp?k=e7766af4de6e87a13194d7a47da417e3daef51f2a77b679822a376063c2732b8&o="
   }
 }
