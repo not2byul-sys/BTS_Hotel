@@ -77,6 +77,47 @@
         </div>
     </div>
 
+    <!-- Hotel Detail Modal -->
+    <div class="modal-overlay" id="hotel-detail-modal" onclick="if(event.target === this) closeDetailModal()">
+        <div class="detail-modal-content">
+            <button class="modal-close" onclick="closeDetailModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="detail-image" id="detail-image"></div>
+
+            <div class="detail-info">
+                <h2 class="detail-name" id="detail-name"></h2>
+                <p class="detail-location" id="detail-location"></p>
+
+                <div class="detail-tags" id="detail-tags"></div>
+
+                <div class="detail-section">
+                    <h4>Venue Distance</h4>
+                    <p id="detail-distance"></p>
+                </div>
+
+                <div class="detail-footer">
+                    <div class="detail-price">
+                        <span class="price-label">1 night from</span>
+                        <span class="price-value" id="detail-price"></span>
+                    </div>
+                    <button class="reserve-btn" id="detail-reserve-btn" onclick="openAgodaBooking()">
+                        Book on Agoda
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Notification Modal -->
     <div class="modal-overlay" id="notify-modal" onclick="if(event.target === this) closeNotifyModal()">
         <div class="modal-content">
