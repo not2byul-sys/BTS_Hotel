@@ -910,5 +910,17 @@
       "low_stock": 14,
       "new_hotels": 0
     }
+  },
+  {
+    "discord": false,
+    "telegram": false,
+    "slack": false,
+    "timestamp": "2026-02-06T23:20:24.597440",
+    "summary": {
+      "restocked": 0,
+      "sold_out": 0,
+      "low_stock": 14,
+      "new_hotels": 0
+    }
   }
 ]
