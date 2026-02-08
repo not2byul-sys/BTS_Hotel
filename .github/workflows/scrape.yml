@@ -38,16 +38,20 @@ jobs:
         run: |
           python run_scraper.py
 
+      - name: Generate concert recommendations
+        run: |
+          python concert_hotel_recommender.py
+
       - name: Check for changes
         id: git-check
         run: |
-          git diff --quiet korean_ota_hotels.json availability_state.json 2>/dev/null || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet korean_ota_hotels.json availability_state.json concert_recommendations.json 2>/dev/null || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push
         if: steps.git-check.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add korean_ota_hotels.json availability_state.json notification_log.json 2>/dev/null || true
-          git commit -m "chore: Auto-update hotel data $(date +'%Y-%m-%d %H:%M UTC')"
+          git add korean_ota_hotels.json availability_state.json notification_log.json concert_recommendations.json reddit_fan_analysis.json 2>/dev/null || true
+          git commit -m "chore: Auto-update hotel data + recommendations $(date +'%Y-%m-%d %H:%M UTC')"
           git push

@@ -11,11 +11,16 @@ import { DateRange } from 'react-day-picker';
 import { ArrowUp } from 'lucide-react';
 import { AuthProvider, useAuth } from '@/app/context/AuthContext';
 import { ErrorBoundary } from '@/app/components/ErrorBoundary';
+import type { ConcertRecommendationData } from '@/app/components/ConcertInsights';
 
 type Screen = 'landing' | 'results' | 'detail' | 'bookmarks';
 export type SortOption = 'recommended' | 'lowest_price' | 'distance' | 'available' | 'popular' | 'army_density' | 'closing_soon';
 
-const DATA_URL = "https://raw.githubusercontent.com/not2byul-sys/BTS_Hotel/claude/document-project-architecture-nGfgr/korean_ota_hotels.json";
+// Primary: bundled local data (always up-to-date with deployment)
+// Fallback: remote GitHub data (for backwards compatibility)
+const DATA_URL = "/data/hotels.json";
+const DATA_URL_FALLBACK = "https://raw.githubusercontent.com/not2byul-sys/BTS_Hotel/main/korean_ota_hotels.json";
+const CONCERT_REC_URL = "/data/concert_recommendations.json";
 
 // Helper to calculate distance in km (Haversine formula approximation)
 const calculateDistance = (lat1: number, lng1: number, lat2: number, lng2: number) => {
@@ -38,6 +43,7 @@ function ArmyStayApp() {
   const [initialSort, setInitialSort] = useState<SortOption>('recommended');
   const [initialCity, setInitialCity] = useState<City>('goyang');
   const [fetchedData, setFetchedData] = useState<any>(null);
+  const [concertData, setConcertData] = useState<ConcertRecommendationData | null>(null);
   const [showTopBtn, setShowTopBtn] = useState(false);
   
   const { isAuthenticated, setShowLoginModal } = useAuth();
@@ -61,11 +67,17 @@ function ArmyStayApp() {
     }
   }, []);
 
-  // Fetch Data from External JSON
+  // Fetch Data: local bundled first, remote fallback
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${DATA_URL}?t=${new Date().getTime()}`);
+        // Try local bundled data first (always matches deployed version)
+        let response = await fetch(`${DATA_URL}?t=${new Date().getTime()}`);
+        if (!response.ok) {
+          // Fallback to remote GitHub if local not available
+          console.log("Local data not found, trying remote fallback...");
+          response = await fetch(`${DATA_URL_FALLBACK}?t=${new Date().getTime()}`);
+        }
         if (!response.ok) throw new Error("Failed to fetch data");
         const json = await response.json();
         setFetchedData(json);
@@ -75,6 +87,22 @@ function ArmyStayApp() {
     };
 
     fetchData();
+  }, []);
+
+  // Fetch Concert Recommendation Data (Reddit fan analysis + hotel matching)
+  useEffect(() => {
+    const fetchConcertData = async () => {
+      try {
+        const response = await fetch(`${CONCERT_REC_URL}?t=${new Date().getTime()}`);
+        if (!response.ok) throw new Error("Failed to fetch concert data");
+        const json = await response.json();
+        setConcertData(json);
+      } catch (error) {
+        console.log("Concert recommendations not available yet:", error);
+      }
+    };
+
+    fetchConcertData();
   }, []);
 
   // Scroll listener for Top Button
@@ -362,12 +390,15 @@ function ArmyStayApp() {
         
         <main className={currentScreen !== 'detail' ? 'pt-14' : ''}>
           {currentScreen === 'landing' && (
-            <Landing 
-              onSearch={handleSearch} 
-              t={t} 
+            <Landing
+              onSearch={handleSearch}
+              t={t}
               dateRange={dateRange}
               setDateRange={setDateRange}
               stats={homeStats}
+              concertData={concertData}
+              language={language}
+              onSelectHotel={handleSelectHotel}
             />
           )}
           

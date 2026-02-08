@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, Search, Shield, Wallet, Coffee, ChevronRight, X, Sparkles, TrendingDown, Home, Users, MapPin, CheckCircle, Ticket } from 'lucide-react';
 import { clsx } from 'clsx';
-import { translations } from '@/translations';
+import { translations, Language } from '@/translations';
 import { initialItems } from '@/app/data';
 import { DayPicker, DateRange } from 'react-day-picker';
 import { format } from 'date-fns';
 import 'react-day-picker/dist/style.css';
 import type { SortOption } from '@/app/App';
 import type { City } from '@/app/components/Results';
+import { ConcertInsights, ConcertRecommendationData } from '@/app/components/ConcertInsights';
 
 interface LandingProps {
   onSearch: (sortBy?: SortOption, city?: City) => void;
@@ -19,9 +20,12 @@ interface LandingProps {
     availableCount: number;
     lowestPrice: number;
   };
+  concertData?: ConcertRecommendationData | null;
+  language?: Language;
+  onSelectHotel?: (hotelId: string) => void;
 }
 
-export const Landing = ({ onSearch, t, dateRange, setDateRange, stats }: LandingProps) => {
+export const Landing = ({ onSearch, t, dateRange, setDateRange, stats, concertData, language = 'en', onSelectHotel }: LandingProps) => {
   const [preferences, setPreferences] = useState<string[]>(['venue']);
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [isConcertOpen, setIsConcertOpen] = useState(false);
@@ -327,6 +331,19 @@ export const Landing = ({ onSearch, t, dateRange, setDateRange, stats }: Landing
           </>
         )}
       
+
+      {/* Concert Insights from Reddit Analysis */}
+      {concertData && (
+        <div className="px-5 mt-4">
+          <ConcertInsights
+            data={concertData}
+            language={language}
+            onSelectHotel={onSelectHotel}
+            currencySymbol={(t as any).currencySymbol || '$'}
+            currencyRate={(t as any).currencyRate || 1}
+          />
+        </div>
+      )}
 
       {/* Date Picker Modal */}
       

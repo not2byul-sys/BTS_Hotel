@@ -1,0 +1,1735 @@
+{
+  "meta": {
+    "generated_at": "2026-02-07T04:34:40.635927",
+    "concert_name": "BTS WORLD TOUR 'ARIRANG' IN GOYANG",
+    "concert_dates": [
+      "2026-04-09",
+      "2026-04-11",
+      "2026-04-12"
+    ],
+    "venue": "Goyang Sports Complex Main Stadium",
+    "venue_coords": {
+      "lat": 37.6556,
+      "lng": 126.7714
+    }
+  },
+  "fan_insights": {
+    "need_priorities": {
+      "budget": 95,
+      "location": 88,
+      "cancellation": 82,
+      "safety": 75,
+      "concert_logistics": 70,
+      "language": 65,
+      "booking_platform": 60,
+      "group_booking": 50,
+      "amenities": 45
+    },
+    "insights": [
+      {
+        "category": "budget",
+        "label": "Price Gouging Alert: Hotels near Goyang inflated 5-10x during concert dates",
+        "priority_score": 95,
+        "type": "critical_alert",
+        "detail": "Hotels normally $50/night charging $300-500. Some cancelling existing bookings to resell at higher prices."
+      },
+      {
+        "category": "location",
+        "label": "Jeongbalsan Station area (10 min walk from venue) most strategic",
+        "priority_score": 88,
+        "type": "top_need",
+        "detail": "Subway Line 3 Jeongbalsan Station. Restaurants and convenience stores nearby."
+      },
+      {
+        "category": "cancellation",
+        "label": "Free cancellation policies are critical - forced cancellations reported",
+        "priority_score": 82,
+        "type": "top_need",
+        "detail": "Multiple reports of hotels cancelling confirmed bookings. Choose platforms with cancellation protection."
+      },
+      {
+        "category": "safety",
+        "label": "Post-concert return safety - 30,000 fans leaving at once",
+        "priority_score": 75,
+        "type": "top_need",
+        "detail": "Last train back to Seoul around 00:15. Consider staying near venue or arranging taxi/shuttle."
+      },
+      {
+        "category": "concert_logistics",
+        "label": "Official shuttle packages available from select Seoul hotels",
+        "priority_score": 70,
+        "type": "recommendation",
+        "detail": "NOL World Play&Stay packages include shuttle from Swiss Grand, Marina Bay, Paradise City hotels."
+      },
+      {
+        "category": "demographics",
+        "label": "Top visitors: Japan (30%), Taiwan (18%), Philippines (15%), Hong Kong (10%)",
+        "priority_score": 60,
+        "type": "demographics",
+        "detail": "Based on Agoda search data. Japanese fans largest segment. English + basic amenities essential."
+      },
+      {
+        "category": "booking_platform",
+        "label": "Agoda saw 8x search surge for Goyang after tour announcement",
+        "priority_score": 60,
+        "type": "platform_insight",
+        "detail": "Agoda, Booking.com most used by international fans. Korean platforms (Yanolja, GoodChoice) cheaper but Korean-only."
+      }
+    ],
+    "budget_target_usd": 70,
+    "top_countries": [
+      "Japan",
+      "Taiwan",
+      "Philippines",
+      "Hong Kong",
+      "China"
+    ],
+    "fan_tips": [
+      "Book NOW with free cancellation - prices will only go up",
+      "Goyang/Ilsan is cheapest but Seoul Hongdae offers more nightlife",
+      "Download Naver Maps - Google Maps doesn't work well in Korea",
+      "Leave hotel 2-3 hours before concert for security + transit",
+      "Consider grabbing late-night food near venue to avoid rush",
+      "T-money card essential for all public transit",
+      "Pre-order concert merch online to avoid lines",
+      "Check Agoda's 'Pay at Hotel' option for flexibility"
+    ]
+  },
+  "recommendations": [
+    {
+      "id": "hotel_55584",
+      "name": "Sono Calm Goyang",
+      "name_kr": "",
+      "fan_match_score": 77.3,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 100,
+        "rating": 45.0,
+        "safety": 75,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 135000,
+      "distance_km": 0.29,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 4.5,
+      "nearest_station": {
+        "name": "Jeongbalsan",
+        "name_kr": "정발산",
+        "line": 3,
+        "distance_km": 0.05,
+        "walk_min": 1
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+      "booking_url": "https://www.booking.com/hotel/kr/sono-calm-goyang.html",
+      "rooms_left": 3
+    },
+    {
+      "id": "hotel_16795",
+      "name": "La Festa Residence",
+      "name_kr": "",
+      "fan_match_score": 76.8,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 100,
+        "rating": 42.0,
+        "safety": 75,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 95000,
+      "distance_km": 0.23,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 4.2,
+      "nearest_station": {
+        "name": "Jeongbalsan",
+        "name_kr": "정발산",
+        "line": 3,
+        "distance_km": 0.12,
+        "walk_min": 1
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "booking_url": "https://www.expedia.com/Goyang-Hotels-La-Festa.h12345.Hotel-Information",
+      "rooms_left": 2
+    },
+    {
+      "id": "hotel_84990",
+      "name": "Antives Hotel Ilsan",
+      "name_kr": "",
+      "fan_match_score": 76.2,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 100,
+        "rating": 41.0,
+        "safety": 75,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 75000,
+      "distance_km": 0.32,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 4.1,
+      "nearest_station": {
+        "name": "Jeongbalsan",
+        "name_kr": "정발산",
+        "line": 3,
+        "distance_km": 0.57,
+        "walk_min": 7
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+      "booking_url": "https://www.agoda.com/antives-hotel-ilsan/hotel/goyang-si-kr.html",
+      "rooms_left": 8
+    },
+    {
+      "id": "hotel_07492",
+      "name": "Yellow 8 Hotel Goyang",
+      "name_kr": "",
+      "fan_match_score": 75.8,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 100,
+        "rating": 38.0,
+        "safety": 75,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 55000,
+      "distance_km": 0.5,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 3.8,
+      "nearest_station": {
+        "name": "Jeongbalsan",
+        "name_kr": "정발산",
+        "line": 3,
+        "distance_km": 0.73,
+        "walk_min": 9
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
+      "booking_url": "https://www.hotels.com/ho-yellow-8-goyang/",
+      "rooms_left": 12
+    },
+    {
+      "id": "hotel_81161",
+      "name": "MVL Hotel Kintex",
+      "name_kr": "",
+      "fan_match_score": 74.9,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 90,
+        "rating": 46.0,
+        "safety": 75,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 195000,
+      "distance_km": 2.86,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 4.6,
+      "nearest_station": {
+        "name": "Daehwa",
+        "name_kr": "대화",
+        "line": 3,
+        "distance_km": 0.3,
+        "walk_min": 4
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+      "booking_url": "https://www.agoda.com/mvl-hotel-kintex/hotel/goyang-si-kr.html",
+      "rooms_left": 4
+    },
+    {
+      "id": "hotel_42971",
+      "name": "Ilsan Lake Park View",
+      "name_kr": "",
+      "fan_match_score": 74.5,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 100,
+        "rating": 45.0,
+        "safety": 75,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 85000,
+      "distance_km": 0.65,
+      "area": "goyang",
+      "hotel_type": "Airbnb",
+      "rating": 4.5,
+      "nearest_station": {
+        "name": "Jeongbalsan",
+        "name_kr": "정발산",
+        "line": 3,
+        "distance_km": 0.41,
+        "walk_min": 5
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "booking_url": "https://www.agoda.com/ilsan-lake-park-view/hotel/goyang-si-kr.html",
+      "rooms_left": 1
+    },
+    {
+      "id": "hotel_83843",
+      "name": "Kintex by K-Tree",
+      "name_kr": "",
+      "fan_match_score": 74.0,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 90,
+        "rating": 43.0,
+        "safety": 75,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 89000,
+      "distance_km": 2.72,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 4.3,
+      "nearest_station": {
+        "name": "Daehwa",
+        "name_kr": "대화",
+        "line": 3,
+        "distance_km": 0.3,
+        "walk_min": 4
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+      "booking_url": "https://www.agoda.com/kintex-by-k-tree/hotel/goyang-si-kr.html",
+      "rooms_left": 5
+    },
+    {
+      "id": "hotel_84306",
+      "name": "Ilsan Hotel M",
+      "name_kr": "",
+      "fan_match_score": 73.9,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 100,
+        "rating": 39.0,
+        "safety": 75,
+        "english_friendly": 60,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 72000,
+      "distance_km": 0.23,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 3.9,
+      "nearest_station": {
+        "name": "Jeongbalsan",
+        "name_kr": "정발산",
+        "line": 3,
+        "distance_km": 0.57,
+        "walk_min": 7
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+      "booking_url": "https://www.yanolja.com/hotel/ilsan-hotel-m",
+      "rooms_left": 10
+    },
+    {
+      "id": "hotel_06532",
+      "name": "Best Western Premier Guro",
+      "name_kr": "",
+      "fan_match_score": 73.8,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 90,
+        "rating": 42.0,
+        "safety": 75,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 125000,
+      "distance_km": 2.0,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 4.2,
+      "nearest_station": {
+        "name": "Juyeop",
+        "name_kr": "주엽",
+        "line": 3,
+        "distance_km": 0.64,
+        "walk_min": 8
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+      "booking_url": "https://www.booking.com/hotel/kr/best-western-premier-guro.html",
+      "rooms_left": 7
+    },
+    {
+      "id": "hotel_19092",
+      "name": "Goyang Airbnb Studio",
+      "name_kr": "",
+      "fan_match_score": 72.4,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 100,
+        "rating": 44.0,
+        "safety": 75,
+        "english_friendly": 60,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 58000,
+      "distance_km": 0.22,
+      "area": "goyang",
+      "hotel_type": "Airbnb",
+      "rating": 4.4,
+      "nearest_station": {
+        "name": "Jeongbalsan",
+        "name_kr": "정발산",
+        "line": 3,
+        "distance_km": 0.27,
+        "walk_min": 3
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800",
+      "booking_url": "https://www.goodchoice.kr/product/detail?ano=12345",
+      "rooms_left": 1
+    },
+    {
+      "id": "hotel_92204",
+      "name": "Ramada Encore Goyang",
+      "name_kr": "",
+      "fan_match_score": 71.7,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 90,
+        "rating": 41.0,
+        "safety": 75,
+        "english_friendly": 60,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 115000,
+      "distance_km": 1.23,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 4.1,
+      "nearest_station": {
+        "name": "Juyeop",
+        "name_kr": "주엽",
+        "line": 3,
+        "distance_km": 0.76,
+        "walk_min": 9
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+      "booking_url": "https://www.trip.com/hotels/goyang-si-hotel-detail-ramada/",
+      "rooms_left": 0
+    },
+    {
+      "id": "hotel_54553",
+      "name": "Hotel Claum Ilsan",
+      "name_kr": "",
+      "fan_match_score": 71.5,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 90,
+        "rating": 40.0,
+        "safety": 75,
+        "english_friendly": 60,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 68000,
+      "distance_km": 2.62,
+      "area": "goyang",
+      "hotel_type": "Hotel",
+      "rating": 4.0,
+      "nearest_station": {
+        "name": "Daehwa",
+        "name_kr": "대화",
+        "line": 3,
+        "distance_km": 0.21,
+        "walk_min": 2
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
+      "booking_url": "https://www.trip.com/hotels/goyang-si-hotel-detail-claum/",
+      "rooms_left": 6
+    },
+    {
+      "id": "hotel_10769",
+      "name": "RYSE Autograph Collection",
+      "name_kr": "",
+      "fan_match_score": 61.8,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 47.0,
+        "safety": 82,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 280000,
+      "distance_km": 17.26,
+      "area": "hongdae",
+      "hotel_type": "Hotel",
+      "rating": 4.7,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.17,
+        "walk_min": 2
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+      "booking_url": "https://www.booking.com/hotel/kr/ryse-autograph-collection.html",
+      "rooms_left": 4
+    },
+    {
+      "id": "hotel_62074",
+      "name": "L7 Hongdae by Lotte",
+      "name_kr": "",
+      "fan_match_score": 61.0,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 45.0,
+        "safety": 82,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 165000,
+      "distance_km": 17.31,
+      "area": "hongdae",
+      "hotel_type": "Hotel",
+      "rating": 4.5,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.01,
+        "walk_min": 0
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+      "booking_url": "https://www.agoda.com/l7-hongdae-by-lotte/hotel/seoul-kr.html",
+      "rooms_left": 7
+    },
+    {
+      "id": "hotel_24959",
+      "name": "Hongdae Purple House",
+      "name_kr": "",
+      "fan_match_score": 61.0,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 46.0,
+        "safety": 82,
+        "english_friendly": 95,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 45000,
+      "distance_km": 17.26,
+      "area": "hongdae",
+      "hotel_type": "Guesthouse",
+      "rating": 4.6,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.43,
+        "walk_min": 5
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
+      "booking_url": "https://www.booking.com/hotel/kr/hongdae-purple-house.html",
+      "rooms_left": 3
+    },
+    {
+      "id": "hotel_02389",
+      "name": "Mercure Ambassador Seoul Hongdae",
+      "name_kr": "",
+      "fan_match_score": 60.9,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 44.0,
+        "safety": 82,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 155000,
+      "distance_km": 17.07,
+      "area": "hongdae",
+      "hotel_type": "Hotel",
+      "rating": 4.4,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.25,
+        "walk_min": 3
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+      "booking_url": "https://www.hotels.com/ho-mercure-hongdae/",
+      "rooms_left": 5
+    },
+    {
+      "id": "hotel_13211",
+      "name": "Stanford Hotel Seoul",
+      "name_kr": "",
+      "fan_match_score": 60.7,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 43.0,
+        "safety": 82,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 138000,
+      "distance_km": 17.52,
+      "area": "hongdae",
+      "hotel_type": "Hotel",
+      "rating": 4.3,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.22,
+        "walk_min": 3
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
+      "booking_url": "https://www.agoda.com/stanford-hotel-seoul/hotel/seoul-kr.html",
+      "rooms_left": 6
+    },
+    {
+      "id": "hotel_52499",
+      "name": "Marigold Hotel Hongdae",
+      "name_kr": "",
+      "fan_match_score": 60.4,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 41.0,
+        "safety": 82,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 89000,
+      "distance_km": 17.29,
+      "area": "hongdae",
+      "hotel_type": "Hotel",
+      "rating": 4.1,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.54,
+        "walk_min": 6
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+      "booking_url": "https://www.expedia.com/Seoul-Hotels-Marigold-Hongdae.h12345.Hotel-Information",
+      "rooms_left": 9
+    },
+    {
+      "id": "hotel_75776",
+      "name": "Lotte Premium Outlet Paju",
+      "name_kr": "",
+      "fan_match_score": 60.2,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 60,
+        "rating": 43.0,
+        "safety": 65,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 145000,
+      "distance_km": 8.53,
+      "area": "default",
+      "hotel_type": "Hotel",
+      "rating": 4.3,
+      "nearest_station": {
+        "name": "Daehwa",
+        "name_kr": "대화",
+        "line": 3,
+        "distance_km": 5.87,
+        "walk_min": 70
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+      "booking_url": "https://www.agoda.com/lotte-premium-outlet-paju/hotel/paju-kr.html",
+      "rooms_left": 6
+    },
+    {
+      "id": "hotel_43986",
+      "name": "Paju Heyri Art Valley Hotel",
+      "name_kr": "",
+      "fan_match_score": 59.9,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 60,
+        "rating": 41.0,
+        "safety": 65,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 98000,
+      "distance_km": 8.94,
+      "area": "default",
+      "hotel_type": "Hotel",
+      "rating": 4.1,
+      "nearest_station": {
+        "name": "Daehwa",
+        "name_kr": "대화",
+        "line": 3,
+        "distance_km": 6.38,
+        "walk_min": 77
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+      "booking_url": "https://www.booking.com/hotel/kr/paju-heyri-art-valley.html",
+      "rooms_left": 9
+    },
+    {
+      "id": "hotel_98762",
+      "name": "Hongdae ARMS Residence",
+      "name_kr": "",
+      "fan_match_score": 59.2,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 43.0,
+        "safety": 82,
+        "english_friendly": 60,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 98000,
+      "distance_km": 17.39,
+      "area": "hongdae",
+      "hotel_type": "Hotel",
+      "rating": 4.3,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.39,
+        "walk_min": 5
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "booking_url": "https://www.goodchoice.kr/product/detail?ano=67890",
+      "rooms_left": 2
+    },
+    {
+      "id": "hotel_33610",
+      "name": "Zzzip Guesthouse Hongdae",
+      "name_kr": "",
+      "fan_match_score": 59.1,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 42.0,
+        "safety": 82,
+        "english_friendly": 95,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 28000,
+      "distance_km": 17.39,
+      "area": "hongdae",
+      "hotel_type": "Hostel",
+      "rating": 4.2,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.25,
+        "walk_min": 3
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
+      "booking_url": "https://www.booking.com/hotel/kr/zzzip-guesthouse-hongdae.html",
+      "rooms_left": 8
+    },
+    {
+      "id": "hotel_34346",
+      "name": "Paju Farm Stay",
+      "name_kr": "",
+      "fan_match_score": 59.0,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 60,
+        "rating": 45.0,
+        "safety": 65,
+        "english_friendly": 60,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 78000,
+      "distance_km": 7.77,
+      "area": "default",
+      "hotel_type": "Hotel",
+      "rating": 4.5,
+      "nearest_station": {
+        "name": "Daehwa",
+        "name_kr": "대화",
+        "line": 3,
+        "distance_km": 5.19,
+        "walk_min": 62
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "booking_url": "https://www.goodchoice.kr/product/detail?ano=22222",
+      "rooms_left": 2
+    },
+    {
+      "id": "hotel_52543",
+      "name": "DMZ Resort Paju",
+      "name_kr": "",
+      "fan_match_score": 58.9,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 60,
+        "rating": 44.0,
+        "safety": 65,
+        "english_friendly": 60,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 175000,
+      "distance_km": 9.88,
+      "area": "default",
+      "hotel_type": "Hotel",
+      "rating": 4.4,
+      "nearest_station": {
+        "name": "Daehwa",
+        "name_kr": "대화",
+        "line": 3,
+        "distance_km": 7.25,
+        "walk_min": 87
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+      "booking_url": "https://www.trip.com/hotels/paju-hotel-detail-dmz-resort/",
+      "rooms_left": 3
+    },
+    {
+      "id": "hotel_89261",
+      "name": "Nine Tree Premier Hotel",
+      "name_kr": "",
+      "fan_match_score": 58.9,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 44.0,
+        "safety": 82,
+        "english_friendly": 60,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 145000,
+      "distance_km": 16.73,
+      "area": "hongdae",
+      "hotel_type": "Hotel",
+      "rating": 4.4,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.59,
+        "walk_min": 7
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+      "booking_url": "https://www.trip.com/hotels/seoul-hotel-detail-nine-tree/",
+      "rooms_left": 0
+    },
+    {
+      "id": "hotel_35020",
+      "name": "Hongdae Stay Inn",
+      "name_kr": "",
+      "fan_match_score": 58.1,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 40,
+        "rating": 39.0,
+        "safety": 82,
+        "english_friendly": 60,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 62000,
+      "distance_km": 17.42,
+      "area": "hongdae",
+      "hotel_type": "Hotel",
+      "rating": 3.9,
+      "nearest_station": {
+        "name": "Hongdae",
+        "name_kr": "홍대입구",
+        "line": 2,
+        "distance_km": 0.13,
+        "walk_min": 2
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
+      "booking_url": "https://www.yanolja.com/hotel/hongdae-stay-inn",
+      "rooms_left": 11
+    },
+    {
+      "id": "hotel_11420",
+      "name": "Four Seasons Hotel Seoul",
+      "name_kr": "",
+      "fan_match_score": 51.5,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 9.9,
+        "rating": 49.0,
+        "safety": 80,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 420000,
+      "distance_km": 20.15,
+      "area": "jongno",
+      "hotel_type": "Hotel",
+      "rating": 4.9,
+      "nearest_station": {
+        "name": "Seoul Station",
+        "name_kr": "서울역",
+        "line": 1,
+        "distance_km": 2.43,
+        "walk_min": 29
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+      "booking_url": "https://www.booking.com/hotel/kr/four-seasons-seoul.html",
+      "rooms_left": 3
+    },
+    {
+      "id": "hotel_75007",
+      "name": "Somerset Palace Seoul",
+      "name_kr": "",
+      "fan_match_score": 50.9,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 9.7,
+        "rating": 45.0,
+        "safety": 80,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 70
+      },
+      "price_usd": 0.0,
+      "price_krw": 250000,
+      "distance_km": 20.26,
+      "area": "jongno",
+      "hotel_type": "Hotel",
+      "rating": 4.5,
+      "nearest_station": {
+        "name": "Seoul Station",
+        "name_kr": "서울역",
+        "line": 1,
+        "distance_km": 2.4,
+        "walk_min": 29
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "booking_url": "https://www.hotels.com/ho-somerset-palace-seoul/",
+      "rooms_left": 4
+    },
+    {
+      "id": "hotel_32315",
+      "name": "The Westin Chosun Seoul",
+      "name_kr": "",
+      "fan_match_score": 50.5,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 9.0,
+        "rating": 47.0,
+        "safety": 80,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 380000,
+      "distance_km": 21.01,
+      "area": "jongno",
+      "hotel_type": "Hotel",
+      "rating": 4.7,
+      "nearest_station": {
+        "name": "Seoul Station",
+        "name_kr": "서울역",
+        "line": 1,
+        "distance_km": 1.55,
+        "walk_min": 19
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+      "booking_url": "https://www.agoda.com/the-westin-chosun-seoul/hotel/seoul-kr.html",
+      "rooms_left": 5
+    },
+    {
+      "id": "hotel_62901",
+      "name": "Fraser Place Central Seoul",
+      "name_kr": "",
+      "fan_match_score": 50.1,
+      "score_breakdown": {
+        "price": 50,
+        "distance": 9.2,
+        "rating": 44.0,
+        "safety": 80,
+        "english_friendly": 85,
+        "cancellation": 50,
+        "amenities": 60
+      },
+      "price_usd": 0.0,
+      "price_krw": 195000,
+      "distance_km": 20.84,
+      "area": "jongno",
+      "hotel_type": "Hotel",
+      "rating": 4.4,
+      "nearest_station": {
+        "name": "Seoul Station",
+        "name_kr": "서울역",
+        "line": 1,
+        "distance_km": 1.52,
+        "walk_min": 18
+      },
+      "is_price_gouging": false,
+      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
+      "booking_url": "https://www.expedia.com/Seoul-Hotels-Fraser-Place.h12345.Hotel-Information",
+      "rooms_left": 8
+    }
+  ],
+  "categories": {
+    "best_value": {
+      "label": "Best Value for ARMY",
+      "label_kr": "아미를 위한 베스트 가성비",
+      "hotels": [
+        {
+          "id": "hotel_55584",
+          "name": "Sono Calm Goyang",
+          "name_kr": "",
+          "fan_match_score": 77.3,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 45.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 135000,
+          "distance_km": 0.29,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.5,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.05,
+            "walk_min": 1
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+          "booking_url": "https://www.booking.com/hotel/kr/sono-calm-goyang.html",
+          "rooms_left": 3
+        },
+        {
+          "id": "hotel_16795",
+          "name": "La Festa Residence",
+          "name_kr": "",
+          "fan_match_score": 76.8,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 42.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 95000,
+          "distance_km": 0.23,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.2,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.12,
+            "walk_min": 1
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+          "booking_url": "https://www.expedia.com/Goyang-Hotels-La-Festa.h12345.Hotel-Information",
+          "rooms_left": 2
+        },
+        {
+          "id": "hotel_84990",
+          "name": "Antives Hotel Ilsan",
+          "name_kr": "",
+          "fan_match_score": 76.2,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 41.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 60
+          },
+          "price_usd": 0.0,
+          "price_krw": 75000,
+          "distance_km": 0.32,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.1,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.57,
+            "walk_min": 7
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+          "booking_url": "https://www.agoda.com/antives-hotel-ilsan/hotel/goyang-si-kr.html",
+          "rooms_left": 8
+        },
+        {
+          "id": "hotel_07492",
+          "name": "Yellow 8 Hotel Goyang",
+          "name_kr": "",
+          "fan_match_score": 75.8,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 38.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 60
+          },
+          "price_usd": 0.0,
+          "price_krw": 55000,
+          "distance_km": 0.5,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 3.8,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.73,
+            "walk_min": 9
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
+          "booking_url": "https://www.hotels.com/ho-yellow-8-goyang/",
+          "rooms_left": 12
+        },
+        {
+          "id": "hotel_81161",
+          "name": "MVL Hotel Kintex",
+          "name_kr": "",
+          "fan_match_score": 74.9,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 90,
+            "rating": 46.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 195000,
+          "distance_km": 2.86,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.6,
+          "nearest_station": {
+            "name": "Daehwa",
+            "name_kr": "대화",
+            "line": 3,
+            "distance_km": 0.3,
+            "walk_min": 4
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+          "booking_url": "https://www.agoda.com/mvl-hotel-kintex/hotel/goyang-si-kr.html",
+          "rooms_left": 4
+        }
+      ]
+    },
+    "nearest_venue": {
+      "label": "Closest to Venue",
+      "label_kr": "공연장 최근접",
+      "hotels": [
+        {
+          "id": "hotel_16795",
+          "name": "La Festa Residence",
+          "name_kr": "",
+          "fan_match_score": 76.8,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 42.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 95000,
+          "distance_km": 0.23,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.2,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.12,
+            "walk_min": 1
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+          "booking_url": "https://www.expedia.com/Goyang-Hotels-La-Festa.h12345.Hotel-Information",
+          "rooms_left": 2
+        },
+        {
+          "id": "hotel_55584",
+          "name": "Sono Calm Goyang",
+          "name_kr": "",
+          "fan_match_score": 77.3,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 45.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 135000,
+          "distance_km": 0.29,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.5,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.05,
+            "walk_min": 1
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+          "booking_url": "https://www.booking.com/hotel/kr/sono-calm-goyang.html",
+          "rooms_left": 3
+        },
+        {
+          "id": "hotel_84990",
+          "name": "Antives Hotel Ilsan",
+          "name_kr": "",
+          "fan_match_score": 76.2,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 41.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 60
+          },
+          "price_usd": 0.0,
+          "price_krw": 75000,
+          "distance_km": 0.32,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.1,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.57,
+            "walk_min": 7
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+          "booking_url": "https://www.agoda.com/antives-hotel-ilsan/hotel/goyang-si-kr.html",
+          "rooms_left": 8
+        },
+        {
+          "id": "hotel_07492",
+          "name": "Yellow 8 Hotel Goyang",
+          "name_kr": "",
+          "fan_match_score": 75.8,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 38.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 60
+          },
+          "price_usd": 0.0,
+          "price_krw": 55000,
+          "distance_km": 0.5,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 3.8,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.73,
+            "walk_min": 9
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
+          "booking_url": "https://www.hotels.com/ho-yellow-8-goyang/",
+          "rooms_left": 12
+        },
+        {
+          "id": "hotel_81161",
+          "name": "MVL Hotel Kintex",
+          "name_kr": "",
+          "fan_match_score": 74.9,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 90,
+            "rating": 46.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 195000,
+          "distance_km": 2.86,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.6,
+          "nearest_station": {
+            "name": "Daehwa",
+            "name_kr": "대화",
+            "line": 3,
+            "distance_km": 0.3,
+            "walk_min": 4
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+          "booking_url": "https://www.agoda.com/mvl-hotel-kintex/hotel/goyang-si-kr.html",
+          "rooms_left": 4
+        }
+      ]
+    },
+    "safest_return": {
+      "label": "Safest Late-Night Return",
+      "label_kr": "안전한 야간 귀환",
+      "hotels": [
+        {
+          "id": "hotel_55584",
+          "name": "Sono Calm Goyang",
+          "name_kr": "",
+          "fan_match_score": 77.3,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 45.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 135000,
+          "distance_km": 0.29,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.5,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.05,
+            "walk_min": 1
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
+          "booking_url": "https://www.booking.com/hotel/kr/sono-calm-goyang.html",
+          "rooms_left": 3
+        },
+        {
+          "id": "hotel_16795",
+          "name": "La Festa Residence",
+          "name_kr": "",
+          "fan_match_score": 76.8,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 42.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 95000,
+          "distance_km": 0.23,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.2,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.12,
+            "walk_min": 1
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+          "booking_url": "https://www.expedia.com/Goyang-Hotels-La-Festa.h12345.Hotel-Information",
+          "rooms_left": 2
+        },
+        {
+          "id": "hotel_84990",
+          "name": "Antives Hotel Ilsan",
+          "name_kr": "",
+          "fan_match_score": 76.2,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 41.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 60
+          },
+          "price_usd": 0.0,
+          "price_krw": 75000,
+          "distance_km": 0.32,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.1,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.57,
+            "walk_min": 7
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
+          "booking_url": "https://www.agoda.com/antives-hotel-ilsan/hotel/goyang-si-kr.html",
+          "rooms_left": 8
+        },
+        {
+          "id": "hotel_07492",
+          "name": "Yellow 8 Hotel Goyang",
+          "name_kr": "",
+          "fan_match_score": 75.8,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 100,
+            "rating": 38.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 60
+          },
+          "price_usd": 0.0,
+          "price_krw": 55000,
+          "distance_km": 0.5,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 3.8,
+          "nearest_station": {
+            "name": "Jeongbalsan",
+            "name_kr": "정발산",
+            "line": 3,
+            "distance_km": 0.73,
+            "walk_min": 9
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
+          "booking_url": "https://www.hotels.com/ho-yellow-8-goyang/",
+          "rooms_left": 12
+        },
+        {
+          "id": "hotel_81161",
+          "name": "MVL Hotel Kintex",
+          "name_kr": "",
+          "fan_match_score": 74.9,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 90,
+            "rating": 46.0,
+            "safety": 75,
+            "english_friendly": 85,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 195000,
+          "distance_km": 2.86,
+          "area": "goyang",
+          "hotel_type": "Hotel",
+          "rating": 4.6,
+          "nearest_station": {
+            "name": "Daehwa",
+            "name_kr": "대화",
+            "line": 3,
+            "distance_km": 0.3,
+            "walk_min": 4
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
+          "booking_url": "https://www.agoda.com/mvl-hotel-kintex/hotel/goyang-si-kr.html",
+          "rooms_left": 4
+        }
+      ]
+    },
+    "army_social": {
+      "label": "Meet Fellow ARMY",
+      "label_kr": "아미 친구 만나기",
+      "hotels": [
+        {
+          "id": "hotel_24959",
+          "name": "Hongdae Purple House",
+          "name_kr": "",
+          "fan_match_score": 61.0,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 40,
+            "rating": 46.0,
+            "safety": 82,
+            "english_friendly": 95,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 45000,
+          "distance_km": 17.26,
+          "area": "hongdae",
+          "hotel_type": "Guesthouse",
+          "rating": 4.6,
+          "nearest_station": {
+            "name": "Hongdae",
+            "name_kr": "홍대입구",
+            "line": 2,
+            "distance_km": 0.43,
+            "walk_min": 5
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
+          "booking_url": "https://www.booking.com/hotel/kr/hongdae-purple-house.html",
+          "rooms_left": 3
+        },
+        {
+          "id": "hotel_33610",
+          "name": "Zzzip Guesthouse Hongdae",
+          "name_kr": "",
+          "fan_match_score": 59.1,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 40,
+            "rating": 42.0,
+            "safety": 82,
+            "english_friendly": 95,
+            "cancellation": 50,
+            "amenities": 60
+          },
+          "price_usd": 0.0,
+          "price_krw": 28000,
+          "distance_km": 17.39,
+          "area": "hongdae",
+          "hotel_type": "Hostel",
+          "rating": 4.2,
+          "nearest_station": {
+            "name": "Hongdae",
+            "name_kr": "홍대입구",
+            "line": 2,
+            "distance_km": 0.25,
+            "walk_min": 3
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
+          "booking_url": "https://www.booking.com/hotel/kr/zzzip-guesthouse-hongdae.html",
+          "rooms_left": 8
+        },
+        {
+          "id": "hotel_70916",
+          "name": "Gwanghwamun Guesthouse",
+          "name_kr": "",
+          "fan_match_score": 49.7,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 9.8,
+            "rating": 42.0,
+            "safety": 80,
+            "english_friendly": 95,
+            "cancellation": 50,
+            "amenities": 70
+          },
+          "price_usd": 0.0,
+          "price_krw": 55000,
+          "distance_km": 20.25,
+          "area": "jongno",
+          "hotel_type": "Guesthouse",
+          "rating": 4.2,
+          "nearest_station": {
+            "name": "Seoul Station",
+            "name_kr": "서울역",
+            "line": 1,
+            "distance_km": 2.34,
+            "walk_min": 28
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
+          "booking_url": "https://www.booking.com/hotel/kr/gwanghwamun-guesthouse.html",
+          "rooms_left": 4
+        },
+        {
+          "id": "hotel_42790",
+          "name": "Ttukseom Guesthouse",
+          "name_kr": "",
+          "fan_match_score": 42.6,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 2.1,
+            "rating": 40.0,
+            "safety": 65,
+            "english_friendly": 70,
+            "cancellation": 50,
+            "amenities": 60
+          },
+          "price_usd": 0.0,
+          "price_krw": 48000,
+          "distance_km": 27.86,
+          "area": "default",
+          "hotel_type": "Guesthouse",
+          "rating": 4.0,
+          "nearest_station": {
+            "name": "Seoul Station",
+            "name_kr": "서울역",
+            "line": 1,
+            "distance_km": 7.48,
+            "walk_min": 90
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
+          "booking_url": "https://www.yanolja.com/hotel/ttukseom-guesthouse",
+          "rooms_left": 6
+        },
+        {
+          "id": "hotel_16497",
+          "name": "Busan Backpackers Hostel",
+          "name_kr": "",
+          "fan_match_score": 41.5,
+          "score_breakdown": {
+            "price": 50,
+            "distance": 0,
+            "rating": 41.0,
+            "safety": 65,
+            "english_friendly": 70,
+            "cancellation": 50,
+            "amenities": 60
+          },
+          "price_usd": 0.0,
+          "price_krw": 25000,
+          "distance_km": 350.48,
+          "area": "default",
+          "hotel_type": "Hostel",
+          "rating": 4.1,
+          "nearest_station": {
+            "name": "Seoul Station",
+            "name_kr": "서울역",
+            "line": 1,
+            "distance_km": 330.87,
+            "walk_min": 3970
+          },
+          "is_price_gouging": false,
+          "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
+          "booking_url": "https://www.yanolja.com/hotel/busan-backpackers",
+          "rooms_left": 20
+        }
+      ]
+    },
+    "budget_friendly": {
+      "label": "Budget ARMY Picks",
+      "label_kr": "예산 아미 추천",
+      "hotels": []
+    }
+  },
+  "price_gouging_alert": {
+    "count": 0,
+    "warning": "Some hotels have inflated prices for concert dates. Look for fan_match_score > 60 for fair-priced options."
+  }
+}
