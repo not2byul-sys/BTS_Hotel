@@ -9,7 +9,7 @@
     "available_count": 45,
     "total_count": 48,
     "lowest_price_krw": 25000,
-    "last_update": "2026-02-07 04:03:56"
+    "last_update": "2026-02-08 14:23:02"
   },
   "map": {
     "venue": {
@@ -113,336 +113,336 @@
     ],
     "hotels": [
       {
-        "id": "hotel_16795",
+        "id": "hotel_16532",
         "name_en": "La Festa Residence",
         "lat": 37.6575,
         "lng": 126.7705,
         "price_krw": 95000
       },
       {
-        "id": "hotel_84306",
+        "id": "hotel_78541",
         "name_en": "Ilsan Hotel M",
         "lat": 37.654,
         "lng": 126.773,
         "price_krw": 72000
       },
       {
-        "id": "hotel_19092",
+        "id": "hotel_98041",
         "name_en": "Goyang Airbnb Studio",
         "lat": 37.656,
         "lng": 126.769,
         "price_krw": 58000
       },
       {
-        "id": "hotel_55584",
+        "id": "hotel_13462",
         "name_en": "Sono Calm Goyang",
         "lat": 37.658,
         "lng": 126.77,
         "price_krw": 135000
       },
       {
-        "id": "hotel_84990",
+        "id": "hotel_47531",
         "name_en": "Antives Hotel Ilsan",
         "lat": 37.6555,
         "lng": 126.775,
         "price_krw": 75000
       },
       {
-        "id": "hotel_07492",
+        "id": "hotel_50707",
         "name_en": "Yellow 8 Hotel Goyang",
         "lat": 37.652,
         "lng": 126.768,
         "price_krw": 55000
       },
       {
-        "id": "hotel_42971",
+        "id": "hotel_24521",
         "name_en": "Ilsan Lake Park View",
         "lat": 37.6585,
         "lng": 126.765,
         "price_krw": 85000
       },
       {
-        "id": "hotel_92204",
+        "id": "hotel_73814",
         "name_en": "Ramada Encore Goyang",
         "lat": 37.662,
         "lng": 126.76,
         "price_krw": 115000
       },
       {
-        "id": "hotel_06532",
+        "id": "hotel_11565",
         "name_en": "Best Western Premier Guro",
         "lat": 37.665,
         "lng": 126.752,
         "price_krw": 125000
       },
       {
-        "id": "hotel_54553",
+        "id": "hotel_97637",
         "name_en": "Hotel Claum Ilsan",
         "lat": 37.6715,
         "lng": 126.7495,
         "price_krw": 68000
       },
       {
-        "id": "hotel_83843",
+        "id": "hotel_03777",
         "name_en": "Kintex by K-Tree",
         "lat": 37.6693,
         "lng": 126.7458,
         "price_krw": 89000
       },
       {
-        "id": "hotel_81161",
+        "id": "hotel_99417",
         "name_en": "MVL Hotel Kintex",
         "lat": 37.6701,
         "lng": 126.7445,
         "price_krw": 195000
       },
       {
-        "id": "hotel_34346",
+        "id": "hotel_85156",
         "name_en": "Paju Farm Stay",
         "lat": 37.715,
         "lng": 126.725,
         "price_krw": 78000
       },
       {
-        "id": "hotel_75776",
+        "id": "hotel_42815",
         "name_en": "Lotte Premium Outlet Paju",
         "lat": 37.718,
         "lng": 126.715,
         "price_krw": 145000
       },
       {
-        "id": "hotel_43986",
+        "id": "hotel_58520",
         "name_en": "Paju Heyri Art Valley Hotel",
         "lat": 37.725,
         "lng": 126.72,
         "price_krw": 98000
       },
       {
-        "id": "hotel_52543",
+        "id": "hotel_03044",
         "name_en": "DMZ Resort Paju",
         "lat": 37.73,
         "lng": 126.71,
         "price_krw": 175000
       },
       {
-        "id": "hotel_89261",
+        "id": "hotel_59009",
         "name_en": "Nine Tree Premier Hotel",
         "lat": 37.56,
         "lng": 126.918,
         "price_krw": 145000
       },
       {
-        "id": "hotel_02389",
+        "id": "hotel_75196",
         "name_en": "Mercure Ambassador Seoul Hongdae",
         "lat": 37.558,
         "lng": 126.921,
         "price_krw": 155000
       },
       {
-        "id": "hotel_10769",
+        "id": "hotel_56892",
         "name_en": "RYSE Autograph Collection",
         "lat": 37.5563,
         "lng": 126.922,
         "price_krw": 280000
       },
       {
-        "id": "hotel_62074",
+        "id": "hotel_07636",
         "name_en": "L7 Hongdae by Lotte",
         "lat": 37.557,
         "lng": 126.9235,
         "price_krw": 165000
       },
       {
-        "id": "hotel_24959",
+        "id": "hotel_42103",
         "name_en": "Hongdae Purple House",
         "lat": 37.5545,
         "lng": 126.92,
         "price_krw": 45000
       },
       {
-        "id": "hotel_52499",
+        "id": "hotel_48609",
         "name_en": "Marigold Hotel Hongdae",
         "lat": 37.5535,
         "lng": 126.9195,
         "price_krw": 89000
       },
       {
-        "id": "hotel_35020",
+        "id": "hotel_05922",
         "name_en": "Hongdae Stay Inn",
         "lat": 37.556,
         "lng": 126.924,
         "price_krw": 62000
       },
       {
-        "id": "hotel_33610",
+        "id": "hotel_55376",
         "name_en": "Zzzip Guesthouse Hongdae",
         "lat": 37.555,
         "lng": 126.9225,
         "price_krw": 28000
       },
       {
-        "id": "hotel_98762",
+        "id": "hotel_35148",
         "name_en": "Hongdae ARMS Residence",
         "lat": 37.554,
         "lng": 126.9215,
         "price_krw": 98000
       },
       {
-        "id": "hotel_13211",
+        "id": "hotel_44755",
         "name_en": "Stanford Hotel Seoul",
         "lat": 37.5555,
         "lng": 126.925,
         "price_krw": 138000
       },
       {
-        "id": "hotel_11420",
+        "id": "hotel_98837",
         "name_en": "Four Seasons Hotel Seoul",
         "lat": 37.576,
         "lng": 126.9769,
         "price_krw": 420000
       },
       {
-        "id": "hotel_70916",
+        "id": "hotel_18873",
         "name_en": "Gwanghwamun Guesthouse",
         "lat": 37.575,
         "lng": 126.9775,
         "price_krw": 55000
       },
       {
-        "id": "hotel_75007",
+        "id": "hotel_64375",
         "name_en": "Somerset Palace Seoul",
         "lat": 37.5755,
         "lng": 126.978,
         "price_krw": 250000
       },
       {
-        "id": "hotel_62901",
+        "id": "hotel_03553",
         "name_en": "Fraser Place Central Seoul",
         "lat": 37.5665,
         "lng": 126.9795,
         "price_krw": 195000
       },
       {
-        "id": "hotel_55754",
+        "id": "hotel_77217",
         "name_en": "Lotte Hotel Seoul",
         "lat": 37.5659,
         "lng": 126.9805,
         "price_krw": 320000
       },
       {
-        "id": "hotel_32315",
+        "id": "hotel_95407",
         "name_en": "The Westin Chosun Seoul",
         "lat": 37.5658,
         "lng": 126.9813,
         "price_krw": 380000
       },
       {
-        "id": "hotel_96692",
+        "id": "hotel_76982",
         "name_en": "Glad Live Gangnam",
         "lat": 37.546,
         "lng": 127.054,
         "price_krw": 155000
       },
       {
-        "id": "hotel_38244",
+        "id": "hotel_38695",
         "name_en": "Hotel Cappuccino Seongsu",
         "lat": 37.5443,
         "lng": 127.0557,
         "price_krw": 175000
       },
       {
-        "id": "hotel_39868",
+        "id": "hotel_92967",
         "name_en": "Seongsu Urban Stay",
         "lat": 37.5435,
         "lng": 127.055,
         "price_krw": 125000
       },
       {
-        "id": "hotel_42790",
+        "id": "hotel_43967",
         "name_en": "Ttukseom Guesthouse",
         "lat": 37.544,
         "lng": 127.0545,
         "price_krw": 48000
       },
       {
-        "id": "hotel_58049",
+        "id": "hotel_80359",
         "name_en": "Seongsu Stay",
         "lat": 37.545,
         "lng": 127.0565,
         "price_krw": 95000
       },
       {
-        "id": "hotel_61222",
+        "id": "hotel_75210",
         "name_en": "Seongsu Boutique Hotel",
         "lat": 37.5455,
         "lng": 127.057,
         "price_krw": 145000
       },
       {
-        "id": "hotel_76366",
+        "id": "hotel_51316",
         "name_en": "Park Hyatt Busan",
         "lat": 35.1631,
         "lng": 129.1636,
         "price_krw": 350000
       },
       {
-        "id": "hotel_74316",
+        "id": "hotel_26410",
         "name_en": "Shilla Stay Haeundae",
         "lat": 35.162,
         "lng": 129.165,
         "price_krw": 185000
       },
       {
-        "id": "hotel_03026",
+        "id": "hotel_18616",
         "name_en": "Lotte Hotel Busan",
         "lat": 35.1615,
         "lng": 129.1635,
         "price_krw": 265000
       },
       {
-        "id": "hotel_03668",
+        "id": "hotel_58754",
         "name_en": "Toyoko Inn Busan Haeundae",
         "lat": 35.16,
         "lng": 129.162,
         "price_krw": 65000
       },
       {
-        "id": "hotel_67751",
+        "id": "hotel_20537",
         "name_en": "Novotel Ambassador Busan",
         "lat": 35.161,
         "lng": 129.164,
         "price_krw": 220000
       },
       {
-        "id": "hotel_33287",
+        "id": "hotel_02280",
         "name_en": "Haeundae Grand Hotel",
         "lat": 35.1625,
         "lng": 129.166,
         "price_krw": 145000
       },
       {
-        "id": "hotel_07102",
+        "id": "hotel_94677",
         "name_en": "Haeundae Seacloud Hotel",
         "lat": 35.1595,
         "lng": 129.1625,
         "price_krw": 165000
       },
       {
-        "id": "hotel_16497",
+        "id": "hotel_41088",
         "name_en": "Busan Backpackers Hostel",
         "lat": 35.158,
         "lng": 129.161,
         "price_krw": 25000
       },
       {
-        "id": "hotel_32544",
+        "id": "hotel_91807",
         "name_en": "Haeundae Beach Airbnb",
         "lat": 35.1605,
         "lng": 129.1645,
         "price_krw": 95000
       },
       {
-        "id": "hotel_82462",
+        "id": "hotel_96006",
         "name_en": "Paradise Hotel Busan",
         "lat": 35.159,
         "lng": 129.168,
@@ -452,11 +452,11 @@
   },
   "hotels": [
     {
-      "id": "hotel_16795",
+      "id": "hotel_16532",
       "name_en": "La Festa Residence",
       "price_krw": 95000,
       "rating": 4.2,
-      "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
       "rooms_left": 2,
       "is_available": true,
       "hotel_type": {
@@ -692,24 +692,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_55584",
+          "id": "hotel_13462",
           "name_en": "Sono Calm Goyang",
           "price_krw": 135000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_19092",
+          "id": "hotel_98041",
           "name_en": "Goyang Airbnb Studio",
           "price_krw": 58000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_84306",
+          "id": "hotel_78541",
           "name_en": "Ilsan Hotel M",
           "price_krw": 72000,
           "distance_km": 0.4,
@@ -718,11 +718,11 @@
       ]
     },
     {
-      "id": "hotel_84306",
+      "id": "hotel_78541",
       "name_en": "Ilsan Hotel M",
       "price_krw": 72000,
       "rating": 3.9,
-      "image_url": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
       "rooms_left": 10,
       "is_available": true,
       "hotel_type": {
@@ -957,24 +957,24 @@
         ],
         "foreigner_friendly": "partial"
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_84990",
+          "id": "hotel_47531",
           "name_en": "Antives Hotel Ilsan",
           "price_krw": 75000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_16795",
+          "id": "hotel_16532",
           "name_en": "La Festa Residence",
           "price_krw": 95000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_19092",
+          "id": "hotel_98041",
           "name_en": "Goyang Airbnb Studio",
           "price_krw": 58000,
           "distance_km": 0.4,
@@ -983,11 +983,11 @@
       ]
     },
     {
-      "id": "hotel_19092",
+      "id": "hotel_98041",
       "name_en": "Goyang Airbnb Studio",
       "price_krw": 58000,
       "rating": 4.4,
-      "image_url": "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800",
       "rooms_left": 1,
       "is_available": true,
       "hotel_type": {
@@ -1224,24 +1224,24 @@
         ],
         "foreigner_friendly": "limited"
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_55584",
+          "id": "hotel_13462",
           "name_en": "Sono Calm Goyang",
           "price_krw": 135000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_16795",
+          "id": "hotel_16532",
           "name_en": "La Festa Residence",
           "price_krw": 95000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_84306",
+          "id": "hotel_78541",
           "name_en": "Ilsan Hotel M",
           "price_krw": 72000,
           "distance_km": 0.4,
@@ -1250,11 +1250,11 @@
       ]
     },
     {
-      "id": "hotel_55584",
+      "id": "hotel_13462",
       "name_en": "Sono Calm Goyang",
       "price_krw": 135000,
       "rating": 4.5,
-      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
       "rooms_left": 3,
       "is_available": true,
       "hotel_type": {
@@ -1489,24 +1489,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_16795",
+          "id": "hotel_16532",
           "name_en": "La Festa Residence",
           "price_krw": 95000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_19092",
+          "id": "hotel_98041",
           "name_en": "Goyang Airbnb Studio",
           "price_krw": 58000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_42971",
+          "id": "hotel_24521",
           "name_en": "Ilsan Lake Park View",
           "price_krw": 85000,
           "distance_km": 0.4,
@@ -1515,11 +1515,11 @@
       ]
     },
     {
-      "id": "hotel_84990",
+      "id": "hotel_47531",
       "name_en": "Antives Hotel Ilsan",
       "price_krw": 75000,
       "rating": 4.1,
-      "image_url": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
       "rooms_left": 8,
       "is_available": true,
       "hotel_type": {
@@ -1757,24 +1757,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_84306",
+          "id": "hotel_78541",
           "name_en": "Ilsan Hotel M",
           "price_krw": 72000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_55584",
+          "id": "hotel_13462",
           "name_en": "Sono Calm Goyang",
           "price_krw": 135000,
           "distance_km": 0.5,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_16795",
+          "id": "hotel_16532",
           "name_en": "La Festa Residence",
           "price_krw": 95000,
           "distance_km": 0.5,
@@ -1783,11 +1783,11 @@
       ]
     },
     {
-      "id": "hotel_07492",
+      "id": "hotel_50707",
       "name_en": "Yellow 8 Hotel Goyang",
       "price_krw": 55000,
       "rating": 3.8,
-      "image_url": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
       "rooms_left": 12,
       "is_available": true,
       "hotel_type": {
@@ -2024,24 +2024,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_84306",
+          "id": "hotel_78541",
           "name_en": "Ilsan Hotel M",
           "price_krw": 72000,
           "distance_km": 0.5,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_19092",
+          "id": "hotel_98041",
           "name_en": "Goyang Airbnb Studio",
           "price_krw": 58000,
           "distance_km": 0.5,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_16795",
+          "id": "hotel_16532",
           "name_en": "La Festa Residence",
           "price_krw": 95000,
           "distance_km": 0.6,
@@ -2050,11 +2050,11 @@
       ]
     },
     {
-      "id": "hotel_42971",
+      "id": "hotel_24521",
       "name_en": "Ilsan Lake Park View",
       "price_krw": 85000,
       "rating": 4.5,
-      "image_url": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
       "rooms_left": 1,
       "is_available": true,
       "hotel_type": {
@@ -2294,24 +2294,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_55584",
+          "id": "hotel_13462",
           "name_en": "Sono Calm Goyang",
           "price_krw": 135000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_19092",
+          "id": "hotel_98041",
           "name_en": "Goyang Airbnb Studio",
           "price_krw": 58000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800"
         },
         {
-          "id": "hotel_16795",
+          "id": "hotel_16532",
           "name_en": "La Festa Residence",
           "price_krw": 95000,
           "distance_km": 0.5,
@@ -2320,11 +2320,11 @@
       ]
     },
     {
-      "id": "hotel_92204",
+      "id": "hotel_73814",
       "name_en": "Ramada Encore Goyang",
       "price_krw": 115000,
       "rating": 4.1,
-      "image_url": "https://images.unsplash.com/photo-1606402179428-a57976d71fa4?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       "rooms_left": 0,
       "is_available": false,
       "hotel_type": {
@@ -2558,24 +2558,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_42971",
+          "id": "hotel_24521",
           "name_en": "Ilsan Lake Park View",
           "price_krw": 85000,
           "distance_km": 0.6,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_06532",
+          "id": "hotel_11565",
           "name_en": "Best Western Premier Guro",
           "price_krw": 125000,
           "distance_km": 0.8,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_55584",
+          "id": "hotel_13462",
           "name_en": "Sono Calm Goyang",
           "price_krw": 135000,
           "distance_km": 1.0,
@@ -2584,11 +2584,11 @@
       ]
     },
     {
-      "id": "hotel_06532",
+      "id": "hotel_11565",
       "name_en": "Best Western Premier Guro",
       "price_krw": 125000,
       "rating": 4.2,
-      "image_url": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
       "rooms_left": 7,
       "is_available": true,
       "hotel_type": {
@@ -2823,24 +2823,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_83843",
+          "id": "hotel_03777",
           "name_en": "Kintex by K-Tree",
           "price_krw": 89000,
           "distance_km": 0.7,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_54553",
+          "id": "hotel_97637",
           "name_en": "Hotel Claum Ilsan",
           "price_krw": 68000,
           "distance_km": 0.8,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_92204",
+          "id": "hotel_73814",
           "name_en": "Ramada Encore Goyang",
           "price_krw": 115000,
           "distance_km": 0.8,
@@ -2849,11 +2849,11 @@
       ]
     },
     {
-      "id": "hotel_54553",
+      "id": "hotel_97637",
       "name_en": "Hotel Claum Ilsan",
       "price_krw": 68000,
       "rating": 4.0,
-      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
       "rooms_left": 6,
       "is_available": true,
       "hotel_type": {
@@ -3087,24 +3087,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_83843",
+          "id": "hotel_03777",
           "name_en": "Kintex by K-Tree",
           "price_krw": 89000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_81161",
+          "id": "hotel_99417",
           "name_en": "MVL Hotel Kintex",
           "price_krw": 195000,
           "distance_km": 0.5,
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         },
         {
-          "id": "hotel_06532",
+          "id": "hotel_11565",
           "name_en": "Best Western Premier Guro",
           "price_krw": 125000,
           "distance_km": 0.8,
@@ -3113,11 +3113,11 @@
       ]
     },
     {
-      "id": "hotel_83843",
+      "id": "hotel_03777",
       "name_en": "Kintex by K-Tree",
       "price_krw": 89000,
       "rating": 4.3,
-      "image_url": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       "rooms_left": 5,
       "is_available": true,
       "hotel_type": {
@@ -3353,24 +3353,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_81161",
+          "id": "hotel_99417",
           "name_en": "MVL Hotel Kintex",
           "price_krw": 195000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         },
         {
-          "id": "hotel_54553",
+          "id": "hotel_97637",
           "name_en": "Hotel Claum Ilsan",
           "price_krw": 68000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_06532",
+          "id": "hotel_11565",
           "name_en": "Best Western Premier Guro",
           "price_krw": 125000,
           "distance_km": 0.7,
@@ -3379,11 +3379,11 @@
       ]
     },
     {
-      "id": "hotel_81161",
+      "id": "hotel_99417",
       "name_en": "MVL Hotel Kintex",
       "price_krw": 195000,
       "rating": 4.6,
-      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
       "rooms_left": 4,
       "is_available": true,
       "hotel_type": {
@@ -3621,24 +3621,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_83843",
+          "id": "hotel_03777",
           "name_en": "Kintex by K-Tree",
           "price_krw": 89000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_54553",
+          "id": "hotel_97637",
           "name_en": "Hotel Claum Ilsan",
           "price_krw": 68000,
           "distance_km": 0.5,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_06532",
+          "id": "hotel_11565",
           "name_en": "Best Western Premier Guro",
           "price_krw": 125000,
           "distance_km": 0.9,
@@ -3647,11 +3647,11 @@
       ]
     },
     {
-      "id": "hotel_34346",
+      "id": "hotel_85156",
       "name_en": "Paju Farm Stay",
       "price_krw": 78000,
       "rating": 4.5,
-      "image_url": "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
       "rooms_left": 2,
       "is_available": true,
       "hotel_type": {
@@ -3839,24 +3839,24 @@
         ],
         "foreigner_friendly": "limited"
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_75776",
+          "id": "hotel_42815",
           "name_en": "Lotte Premium Outlet Paju",
           "price_krw": 145000,
           "distance_km": 0.9,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_43986",
+          "id": "hotel_58520",
           "name_en": "Paju Heyri Art Valley Hotel",
           "price_krw": 98000,
           "distance_km": 1.2,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_52543",
+          "id": "hotel_03044",
           "name_en": "DMZ Resort Paju",
           "price_krw": 175000,
           "distance_km": 2.1,
@@ -3865,11 +3865,11 @@
       ]
     },
     {
-      "id": "hotel_75776",
+      "id": "hotel_42815",
       "name_en": "Lotte Premium Outlet Paju",
       "price_krw": 145000,
       "rating": 4.3,
-      "image_url": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       "rooms_left": 6,
       "is_available": true,
       "hotel_type": {
@@ -4062,24 +4062,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_43986",
+          "id": "hotel_58520",
           "name_en": "Paju Heyri Art Valley Hotel",
           "price_krw": 98000,
           "distance_km": 0.9,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_34346",
+          "id": "hotel_85156",
           "name_en": "Paju Farm Stay",
           "price_krw": 78000,
           "distance_km": 0.9,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_52543",
+          "id": "hotel_03044",
           "name_en": "DMZ Resort Paju",
           "price_krw": 175000,
           "distance_km": 1.4,
@@ -4088,11 +4088,11 @@
       ]
     },
     {
-      "id": "hotel_43986",
+      "id": "hotel_58520",
       "name_en": "Paju Heyri Art Valley Hotel",
       "price_krw": 98000,
       "rating": 4.1,
-      "image_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
       "rooms_left": 9,
       "is_available": true,
       "hotel_type": {
@@ -4284,24 +4284,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_75776",
+          "id": "hotel_42815",
           "name_en": "Lotte Premium Outlet Paju",
           "price_krw": 145000,
           "distance_km": 0.9,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_52543",
+          "id": "hotel_03044",
           "name_en": "DMZ Resort Paju",
           "price_krw": 175000,
           "distance_km": 1.0,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_34346",
+          "id": "hotel_85156",
           "name_en": "Paju Farm Stay",
           "price_krw": 78000,
           "distance_km": 1.2,
@@ -4310,11 +4310,11 @@
       ]
     },
     {
-      "id": "hotel_52543",
+      "id": "hotel_03044",
       "name_en": "DMZ Resort Paju",
       "price_krw": 175000,
       "rating": 4.4,
-      "image_url": "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
       "rooms_left": 3,
       "is_available": true,
       "hotel_type": {
@@ -4503,24 +4503,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_43986",
+          "id": "hotel_58520",
           "name_en": "Paju Heyri Art Valley Hotel",
           "price_krw": 98000,
           "distance_km": 1.0,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_75776",
+          "id": "hotel_42815",
           "name_en": "Lotte Premium Outlet Paju",
           "price_krw": 145000,
           "distance_km": 1.4,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_34346",
+          "id": "hotel_85156",
           "name_en": "Paju Farm Stay",
           "price_krw": 78000,
           "distance_km": 2.1,
@@ -4529,11 +4529,11 @@
       ]
     },
     {
-      "id": "hotel_89261",
+      "id": "hotel_59009",
       "name_en": "Nine Tree Premier Hotel",
       "price_krw": 145000,
       "rating": 4.4,
-      "image_url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
       "rooms_left": 0,
       "is_available": false,
       "hotel_type": {
@@ -4739,24 +4739,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_02389",
+          "id": "hotel_75196",
           "name_en": "Mercure Ambassador Seoul Hongdae",
           "price_krw": 155000,
           "distance_km": 0.3,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_10769",
+          "id": "hotel_56892",
           "name_en": "RYSE Autograph Collection",
           "price_krw": 280000,
           "distance_km": 0.5,
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         },
         {
-          "id": "hotel_62074",
+          "id": "hotel_07636",
           "name_en": "L7 Hongdae by Lotte",
           "price_krw": 165000,
           "distance_km": 0.6,
@@ -4765,11 +4765,11 @@
       ]
     },
     {
-      "id": "hotel_02389",
+      "id": "hotel_75196",
       "name_en": "Mercure Ambassador Seoul Hongdae",
       "price_krw": 155000,
       "rating": 4.4,
-      "image_url": "https://images.unsplash.com/photo-1549638441-b787d2e11f14?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       "rooms_left": 5,
       "is_available": true,
       "hotel_type": {
@@ -4978,24 +4978,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_10769",
+          "id": "hotel_56892",
           "name_en": "RYSE Autograph Collection",
           "price_krw": 280000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         },
         {
-          "id": "hotel_62074",
+          "id": "hotel_07636",
           "name_en": "L7 Hongdae by Lotte",
           "price_krw": 165000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_89261",
+          "id": "hotel_59009",
           "name_en": "Nine Tree Premier Hotel",
           "price_krw": 145000,
           "distance_km": 0.3,
@@ -5004,11 +5004,11 @@
       ]
     },
     {
-      "id": "hotel_10769",
+      "id": "hotel_56892",
       "name_en": "RYSE Autograph Collection",
       "price_krw": 280000,
       "rating": 4.7,
-      "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
       "rooms_left": 4,
       "is_available": true,
       "hotel_type": {
@@ -5219,24 +5219,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_62074",
+          "id": "hotel_07636",
           "name_en": "L7 Hongdae by Lotte",
           "price_krw": 165000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_02389",
+          "id": "hotel_75196",
           "name_en": "Mercure Ambassador Seoul Hongdae",
           "price_krw": 155000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_35020",
+          "id": "hotel_05922",
           "name_en": "Hongdae Stay Inn",
           "price_krw": 62000,
           "distance_km": 0.2,
@@ -5245,11 +5245,11 @@
       ]
     },
     {
-      "id": "hotel_62074",
+      "id": "hotel_07636",
       "name_en": "L7 Hongdae by Lotte",
       "price_krw": 165000,
       "rating": 4.5,
-      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       "rooms_left": 7,
       "is_available": true,
       "hotel_type": {
@@ -5459,24 +5459,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_35020",
+          "id": "hotel_05922",
           "name_en": "Hongdae Stay Inn",
           "price_krw": 62000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"
         },
         {
-          "id": "hotel_10769",
+          "id": "hotel_56892",
           "name_en": "RYSE Autograph Collection",
           "price_krw": 280000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         },
         {
-          "id": "hotel_13211",
+          "id": "hotel_44755",
           "name_en": "Stanford Hotel Seoul",
           "price_krw": 138000,
           "distance_km": 0.2,
@@ -5485,11 +5485,11 @@
       ]
     },
     {
-      "id": "hotel_24959",
+      "id": "hotel_42103",
       "name_en": "Hongdae Purple House",
       "price_krw": 45000,
       "rating": 4.6,
-      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
       "rooms_left": 3,
       "is_available": true,
       "hotel_type": {
@@ -5702,24 +5702,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_52499",
+          "id": "hotel_48609",
           "name_en": "Marigold Hotel Hongdae",
           "price_krw": 89000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_98762",
+          "id": "hotel_35148",
           "name_en": "Hongdae ARMS Residence",
           "price_krw": 98000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_33610",
+          "id": "hotel_55376",
           "name_en": "Zzzip Guesthouse Hongdae",
           "price_krw": 28000,
           "distance_km": 0.2,
@@ -5728,11 +5728,11 @@
       ]
     },
     {
-      "id": "hotel_52499",
+      "id": "hotel_48609",
       "name_en": "Marigold Hotel Hongdae",
       "price_krw": 89000,
       "rating": 4.1,
-      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
       "rooms_left": 9,
       "is_available": true,
       "hotel_type": {
@@ -5938,24 +5938,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_24959",
+          "id": "hotel_42103",
           "name_en": "Hongdae Purple House",
           "price_krw": 45000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         },
         {
-          "id": "hotel_98762",
+          "id": "hotel_35148",
           "name_en": "Hongdae ARMS Residence",
           "price_krw": 98000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_33610",
+          "id": "hotel_55376",
           "name_en": "Zzzip Guesthouse Hongdae",
           "price_krw": 28000,
           "distance_km": 0.3,
@@ -5964,11 +5964,11 @@
       ]
     },
     {
-      "id": "hotel_35020",
+      "id": "hotel_05922",
       "name_en": "Hongdae Stay Inn",
       "price_krw": 62000,
       "rating": 3.9,
-      "image_url": "https://images.unsplash.com/photo-1586611292717-f828b167408c?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
       "rooms_left": 11,
       "is_available": true,
       "hotel_type": {
@@ -6173,24 +6173,24 @@
         ],
         "foreigner_friendly": "partial"
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_62074",
+          "id": "hotel_07636",
           "name_en": "L7 Hongdae by Lotte",
           "price_krw": 165000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_13211",
+          "id": "hotel_44755",
           "name_en": "Stanford Hotel Seoul",
           "price_krw": 138000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_10769",
+          "id": "hotel_56892",
           "name_en": "RYSE Autograph Collection",
           "price_krw": 280000,
           "distance_km": 0.2,
@@ -6199,11 +6199,11 @@
       ]
     },
     {
-      "id": "hotel_33610",
+      "id": "hotel_55376",
       "name_en": "Zzzip Guesthouse Hongdae",
       "price_krw": 28000,
       "rating": 4.2,
-      "image_url": "https://images.unsplash.com/photo-1520277739336-7bf67edfa768?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
       "rooms_left": 8,
       "is_available": true,
       "hotel_type": {
@@ -6416,24 +6416,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_98762",
+          "id": "hotel_35148",
           "name_en": "Hongdae ARMS Residence",
           "price_krw": 98000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_10769",
+          "id": "hotel_56892",
           "name_en": "RYSE Autograph Collection",
           "price_krw": 280000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         },
         {
-          "id": "hotel_62074",
+          "id": "hotel_07636",
           "name_en": "L7 Hongdae by Lotte",
           "price_krw": 165000,
           "distance_km": 0.2,
@@ -6442,11 +6442,11 @@
       ]
     },
     {
-      "id": "hotel_98762",
+      "id": "hotel_35148",
       "name_en": "Hongdae ARMS Residence",
       "price_krw": 98000,
       "rating": 4.3,
-      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
       "rooms_left": 2,
       "is_available": true,
       "hotel_type": {
@@ -6651,24 +6651,24 @@
         ],
         "foreigner_friendly": "limited"
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_24959",
+          "id": "hotel_42103",
           "name_en": "Hongdae Purple House",
           "price_krw": 45000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         },
         {
-          "id": "hotel_33610",
+          "id": "hotel_55376",
           "name_en": "Zzzip Guesthouse Hongdae",
           "price_krw": 28000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         },
         {
-          "id": "hotel_52499",
+          "id": "hotel_48609",
           "name_en": "Marigold Hotel Hongdae",
           "price_krw": 89000,
           "distance_km": 0.2,
@@ -6677,11 +6677,11 @@
       ]
     },
     {
-      "id": "hotel_13211",
+      "id": "hotel_44755",
       "name_en": "Stanford Hotel Seoul",
       "price_krw": 138000,
       "rating": 4.3,
-      "image_url": "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
       "rooms_left": 6,
       "is_available": true,
       "hotel_type": {
@@ -6891,24 +6891,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_35020",
+          "id": "hotel_05922",
           "name_en": "Hongdae Stay Inn",
           "price_krw": 62000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"
         },
         {
-          "id": "hotel_62074",
+          "id": "hotel_07636",
           "name_en": "L7 Hongdae by Lotte",
           "price_krw": 165000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_33610",
+          "id": "hotel_55376",
           "name_en": "Zzzip Guesthouse Hongdae",
           "price_krw": 28000,
           "distance_km": 0.2,
@@ -6917,11 +6917,11 @@
       ]
     },
     {
-      "id": "hotel_11420",
+      "id": "hotel_98837",
       "name_en": "Four Seasons Hotel Seoul",
       "price_krw": 420000,
       "rating": 4.9,
-      "image_url": "https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
       "rooms_left": 3,
       "is_available": true,
       "hotel_type": {
@@ -7124,24 +7124,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_75007",
+          "id": "hotel_64375",
           "name_en": "Somerset Palace Seoul",
           "price_krw": 250000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_70916",
+          "id": "hotel_18873",
           "name_en": "Gwanghwamun Guesthouse",
           "price_krw": 55000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         },
         {
-          "id": "hotel_62901",
+          "id": "hotel_03553",
           "name_en": "Fraser Place Central Seoul",
           "price_krw": 195000,
           "distance_km": 1.1,
@@ -7150,11 +7150,11 @@
       ]
     },
     {
-      "id": "hotel_70916",
+      "id": "hotel_18873",
       "name_en": "Gwanghwamun Guesthouse",
       "price_krw": 55000,
       "rating": 4.2,
-      "image_url": "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
       "rooms_left": 4,
       "is_available": true,
       "hotel_type": {
@@ -7357,24 +7357,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_11420",
+          "id": "hotel_98837",
           "name_en": "Four Seasons Hotel Seoul",
           "price_krw": 420000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         },
         {
-          "id": "hotel_75007",
+          "id": "hotel_64375",
           "name_en": "Somerset Palace Seoul",
           "price_krw": 250000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_55754",
+          "id": "hotel_77217",
           "name_en": "Lotte Hotel Seoul",
           "price_krw": 320000,
           "distance_km": 1.0,
@@ -7383,11 +7383,11 @@
       ]
     },
     {
-      "id": "hotel_75007",
+      "id": "hotel_64375",
       "name_en": "Somerset Palace Seoul",
       "price_krw": 250000,
       "rating": 4.5,
-      "image_url": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
       "rooms_left": 4,
       "is_available": true,
       "hotel_type": {
@@ -7588,24 +7588,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_11420",
+          "id": "hotel_98837",
           "name_en": "Four Seasons Hotel Seoul",
           "price_krw": 420000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         },
         {
-          "id": "hotel_70916",
+          "id": "hotel_18873",
           "name_en": "Gwanghwamun Guesthouse",
           "price_krw": 55000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         },
         {
-          "id": "hotel_62901",
+          "id": "hotel_03553",
           "name_en": "Fraser Place Central Seoul",
           "price_krw": 195000,
           "distance_km": 1.0,
@@ -7614,11 +7614,11 @@
       ]
     },
     {
-      "id": "hotel_62901",
+      "id": "hotel_03553",
       "name_en": "Fraser Place Central Seoul",
       "price_krw": 195000,
       "rating": 4.4,
-      "image_url": "https://images.unsplash.com/photo-1594563703937-fdc640497dcd?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
       "rooms_left": 8,
       "is_available": true,
       "hotel_type": {
@@ -7816,24 +7816,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_55754",
+          "id": "hotel_77217",
           "name_en": "Lotte Hotel Seoul",
           "price_krw": 320000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_32315",
+          "id": "hotel_95407",
           "name_en": "The Westin Chosun Seoul",
           "price_krw": 380000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_75007",
+          "id": "hotel_64375",
           "name_en": "Somerset Palace Seoul",
           "price_krw": 250000,
           "distance_km": 1.0,
@@ -7842,11 +7842,11 @@
       ]
     },
     {
-      "id": "hotel_55754",
+      "id": "hotel_77217",
       "name_en": "Lotte Hotel Seoul",
       "price_krw": 320000,
       "rating": 4.6,
-      "image_url": "https://images.unsplash.com/photo-1543968332-f99478b1ebdc?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
       "rooms_left": 6,
       "is_available": true,
       "hotel_type": {
@@ -8048,24 +8048,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_32315",
+          "id": "hotel_95407",
           "name_en": "The Westin Chosun Seoul",
           "price_krw": 380000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_62901",
+          "id": "hotel_03553",
           "name_en": "Fraser Place Central Seoul",
           "price_krw": 195000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_70916",
+          "id": "hotel_18873",
           "name_en": "Gwanghwamun Guesthouse",
           "price_krw": 55000,
           "distance_km": 1.0,
@@ -8074,11 +8074,11 @@
       ]
     },
     {
-      "id": "hotel_32315",
+      "id": "hotel_95407",
       "name_en": "The Westin Chosun Seoul",
       "price_krw": 380000,
       "rating": 4.7,
-      "image_url": "https://images.unsplash.com/photo-1568495248636-6432b97bd949?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       "rooms_left": 5,
       "is_available": true,
       "hotel_type": {
@@ -8282,24 +8282,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_55754",
+          "id": "hotel_77217",
           "name_en": "Lotte Hotel Seoul",
           "price_krw": 320000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_62901",
+          "id": "hotel_03553",
           "name_en": "Fraser Place Central Seoul",
           "price_krw": 195000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_75007",
+          "id": "hotel_64375",
           "name_en": "Somerset Palace Seoul",
           "price_krw": 250000,
           "distance_km": 1.1,
@@ -8308,11 +8308,11 @@
       ]
     },
     {
-      "id": "hotel_96692",
+      "id": "hotel_76982",
       "name_en": "Glad Live Gangnam",
       "price_krw": 155000,
       "rating": 4.4,
-      "image_url": "https://images.unsplash.com/photo-1580041065738-e72023775cdc?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       "rooms_left": 7,
       "is_available": true,
       "hotel_type": {
@@ -8529,24 +8529,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_38244",
+          "id": "hotel_38695",
           "name_en": "Hotel Cappuccino Seongsu",
           "price_krw": 175000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_58049",
+          "id": "hotel_80359",
           "name_en": "Seongsu Stay",
           "price_krw": 95000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_42790",
+          "id": "hotel_43967",
           "name_en": "Ttukseom Guesthouse",
           "price_krw": 48000,
           "distance_km": 0.2,
@@ -8555,11 +8555,11 @@
       ]
     },
     {
-      "id": "hotel_38244",
+      "id": "hotel_38695",
       "name_en": "Hotel Cappuccino Seongsu",
       "price_krw": 175000,
       "rating": 4.6,
-      "image_url": "https://images.unsplash.com/photo-1595576508898-0ad5c879a061?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
       "rooms_left": 4,
       "is_available": true,
       "hotel_type": {
@@ -8777,24 +8777,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_58049",
+          "id": "hotel_80359",
           "name_en": "Seongsu Stay",
           "price_krw": 95000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_39868",
+          "id": "hotel_92967",
           "name_en": "Seongsu Urban Stay",
           "price_krw": 125000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_42790",
+          "id": "hotel_43967",
           "name_en": "Ttukseom Guesthouse",
           "price_krw": 48000,
           "distance_km": 0.1,
@@ -8803,11 +8803,11 @@
       ]
     },
     {
-      "id": "hotel_39868",
+      "id": "hotel_92967",
       "name_en": "Seongsu Urban Stay",
       "price_krw": 125000,
       "rating": 4.3,
-      "image_url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
       "rooms_left": 3,
       "is_available": true,
       "hotel_type": {
@@ -9020,24 +9020,24 @@
         ],
         "foreigner_friendly": "limited"
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_38244",
+          "id": "hotel_38695",
           "name_en": "Hotel Cappuccino Seongsu",
           "price_krw": 175000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_42790",
+          "id": "hotel_43967",
           "name_en": "Ttukseom Guesthouse",
           "price_krw": 48000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800"
         },
         {
-          "id": "hotel_58049",
+          "id": "hotel_80359",
           "name_en": "Seongsu Stay",
           "price_krw": 95000,
           "distance_km": 0.2,
@@ -9046,11 +9046,11 @@
       ]
     },
     {
-      "id": "hotel_42790",
+      "id": "hotel_43967",
       "name_en": "Ttukseom Guesthouse",
       "price_krw": 48000,
       "rating": 4.0,
-      "image_url": "https://images.unsplash.com/photo-1515362655824-9a74989f318e?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
       "rooms_left": 6,
       "is_available": true,
       "hotel_type": {
@@ -9267,24 +9267,24 @@
         ],
         "foreigner_friendly": "partial"
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_38244",
+          "id": "hotel_38695",
           "name_en": "Hotel Cappuccino Seongsu",
           "price_krw": 175000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_39868",
+          "id": "hotel_92967",
           "name_en": "Seongsu Urban Stay",
           "price_krw": 125000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
         },
         {
-          "id": "hotel_96692",
+          "id": "hotel_76982",
           "name_en": "Glad Live Gangnam",
           "price_krw": 155000,
           "distance_km": 0.2,
@@ -9293,11 +9293,11 @@
       ]
     },
     {
-      "id": "hotel_58049",
+      "id": "hotel_80359",
       "name_en": "Seongsu Stay",
       "price_krw": 95000,
       "rating": 4.2,
-      "image_url": "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
       "rooms_left": 5,
       "is_available": true,
       "hotel_type": {
@@ -9511,24 +9511,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_38244",
+          "id": "hotel_38695",
           "name_en": "Hotel Cappuccino Seongsu",
           "price_krw": 175000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_61222",
+          "id": "hotel_75210",
           "name_en": "Seongsu Boutique Hotel",
           "price_krw": 145000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_96692",
+          "id": "hotel_76982",
           "name_en": "Glad Live Gangnam",
           "price_krw": 155000,
           "distance_km": 0.2,
@@ -9537,11 +9537,11 @@
       ]
     },
     {
-      "id": "hotel_61222",
+      "id": "hotel_75210",
       "name_en": "Seongsu Boutique Hotel",
       "price_krw": 145000,
       "rating": 4.5,
-      "image_url": "https://images.unsplash.com/photo-1587874522487-fe10e954d035?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
       "rooms_left": 2,
       "is_available": true,
       "hotel_type": {
@@ -9755,24 +9755,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_58049",
+          "id": "hotel_80359",
           "name_en": "Seongsu Stay",
           "price_krw": 95000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800"
         },
         {
-          "id": "hotel_38244",
+          "id": "hotel_38695",
           "name_en": "Hotel Cappuccino Seongsu",
           "price_krw": 175000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_96692",
+          "id": "hotel_76982",
           "name_en": "Glad Live Gangnam",
           "price_krw": 155000,
           "distance_km": 0.3,
@@ -9781,11 +9781,11 @@
       ]
     },
     {
-      "id": "hotel_76366",
+      "id": "hotel_51316",
       "name_en": "Park Hyatt Busan",
       "price_krw": 350000,
       "rating": 4.8,
-      "image_url": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
       "rooms_left": 2,
       "is_available": true,
       "hotel_type": {
@@ -9980,24 +9980,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_74316",
+          "id": "hotel_26410",
           "name_en": "Shilla Stay Haeundae",
           "price_krw": 185000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_67751",
+          "id": "hotel_20537",
           "name_en": "Novotel Ambassador Busan",
           "price_krw": 220000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_33287",
+          "id": "hotel_02280",
           "name_en": "Haeundae Grand Hotel",
           "price_krw": 145000,
           "distance_km": 0.2,
@@ -10006,11 +10006,11 @@
       ]
     },
     {
-      "id": "hotel_74316",
+      "id": "hotel_26410",
       "name_en": "Shilla Stay Haeundae",
       "price_krw": 185000,
       "rating": 4.5,
-      "image_url": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       "rooms_left": 5,
       "is_available": true,
       "hotel_type": {
@@ -10202,24 +10202,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_67751",
+          "id": "hotel_20537",
           "name_en": "Novotel Ambassador Busan",
           "price_krw": 220000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_33287",
+          "id": "hotel_02280",
           "name_en": "Haeundae Grand Hotel",
           "price_krw": 145000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800"
         },
         {
-          "id": "hotel_03026",
+          "id": "hotel_18616",
           "name_en": "Lotte Hotel Busan",
           "price_krw": 265000,
           "distance_km": 0.1,
@@ -10228,11 +10228,11 @@
       ]
     },
     {
-      "id": "hotel_03026",
+      "id": "hotel_18616",
       "name_en": "Lotte Hotel Busan",
       "price_krw": 265000,
       "rating": 4.7,
-      "image_url": "https://images.unsplash.com/photo-1519449556851-5720b33024e7?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
       "rooms_left": 4,
       "is_available": true,
       "hotel_type": {
@@ -10426,24 +10426,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_74316",
+          "id": "hotel_26410",
           "name_en": "Shilla Stay Haeundae",
           "price_krw": 185000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_67751",
+          "id": "hotel_20537",
           "name_en": "Novotel Ambassador Busan",
           "price_krw": 220000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_32544",
+          "id": "hotel_91807",
           "name_en": "Haeundae Beach Airbnb",
           "price_krw": 95000,
           "distance_km": 0.1,
@@ -10452,11 +10452,11 @@
       ]
     },
     {
-      "id": "hotel_03668",
+      "id": "hotel_58754",
       "name_en": "Toyoko Inn Busan Haeundae",
       "price_krw": 65000,
       "rating": 4.0,
-      "image_url": "https://images.unsplash.com/photo-1585123334904-845d60e97b29?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
       "rooms_left": 15,
       "is_available": true,
       "hotel_type": {
@@ -10648,24 +10648,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_07102",
+          "id": "hotel_94677",
           "name_en": "Haeundae Seacloud Hotel",
           "price_krw": 165000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_67751",
+          "id": "hotel_20537",
           "name_en": "Novotel Ambassador Busan",
           "price_krw": 220000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_03026",
+          "id": "hotel_18616",
           "name_en": "Lotte Hotel Busan",
           "price_krw": 265000,
           "distance_km": 0.2,
@@ -10674,11 +10674,11 @@
       ]
     },
     {
-      "id": "hotel_67751",
+      "id": "hotel_20537",
       "name_en": "Novotel Ambassador Busan",
       "price_krw": 220000,
       "rating": 4.5,
-      "image_url": "https://images.unsplash.com/photo-1574643156929-51fa098b0394?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
       "rooms_left": 6,
       "is_available": true,
       "hotel_type": {
@@ -10873,24 +10873,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_74316",
+          "id": "hotel_26410",
           "name_en": "Shilla Stay Haeundae",
           "price_krw": 185000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_03026",
+          "id": "hotel_18616",
           "name_en": "Lotte Hotel Busan",
           "price_krw": 265000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_32544",
+          "id": "hotel_91807",
           "name_en": "Haeundae Beach Airbnb",
           "price_krw": 95000,
           "distance_km": 0.1,
@@ -10899,11 +10899,11 @@
       ]
     },
     {
-      "id": "hotel_33287",
+      "id": "hotel_02280",
       "name_en": "Haeundae Grand Hotel",
       "price_krw": 145000,
       "rating": 4.2,
-      "image_url": "https://images.unsplash.com/photo-1573052905904-34ad8c27f0cc?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
       "rooms_left": 8,
       "is_available": true,
       "hotel_type": {
@@ -11092,24 +11092,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_74316",
+          "id": "hotel_26410",
           "name_en": "Shilla Stay Haeundae",
           "price_krw": 185000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_76366",
+          "id": "hotel_51316",
           "name_en": "Park Hyatt Busan",
           "price_krw": 350000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800"
         },
         {
-          "id": "hotel_67751",
+          "id": "hotel_20537",
           "name_en": "Novotel Ambassador Busan",
           "price_krw": 220000,
           "distance_km": 0.2,
@@ -11118,11 +11118,11 @@
       ]
     },
     {
-      "id": "hotel_07102",
+      "id": "hotel_94677",
       "name_en": "Haeundae Seacloud Hotel",
       "price_krw": 165000,
       "rating": 4.4,
-      "image_url": "https://images.unsplash.com/photo-1559599238-308793637427?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800",
       "rooms_left": 0,
       "is_available": false,
       "hotel_type": {
@@ -11314,24 +11314,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_03668",
+          "id": "hotel_58754",
           "name_en": "Toyoko Inn Busan Haeundae",
           "price_krw": 65000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"
         },
         {
-          "id": "hotel_67751",
+          "id": "hotel_20537",
           "name_en": "Novotel Ambassador Busan",
           "price_krw": 220000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_03026",
+          "id": "hotel_18616",
           "name_en": "Lotte Hotel Busan",
           "price_krw": 265000,
           "distance_km": 0.2,
@@ -11340,11 +11340,11 @@
       ]
     },
     {
-      "id": "hotel_16497",
+      "id": "hotel_41088",
       "name_en": "Busan Backpackers Hostel",
       "price_krw": 25000,
       "rating": 4.1,
-      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800",
       "rooms_left": 20,
       "is_available": true,
       "hotel_type": {
@@ -11536,24 +11536,24 @@
         ],
         "foreigner_friendly": "partial"
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_03668",
+          "id": "hotel_58754",
           "name_en": "Toyoko Inn Busan Haeundae",
           "price_krw": 65000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800"
         },
         {
-          "id": "hotel_07102",
+          "id": "hotel_94677",
           "name_en": "Haeundae Seacloud Hotel",
           "price_krw": 165000,
           "distance_km": 0.2,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_67751",
+          "id": "hotel_20537",
           "name_en": "Novotel Ambassador Busan",
           "price_krw": 220000,
           "distance_km": 0.4,
@@ -11562,11 +11562,11 @@
       ]
     },
     {
-      "id": "hotel_32544",
+      "id": "hotel_91807",
       "name_en": "Haeundae Beach Airbnb",
       "price_krw": 95000,
       "rating": 4.6,
-      "image_url": "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
       "rooms_left": 1,
       "is_available": true,
       "hotel_type": {
@@ -11761,24 +11761,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_67751",
+          "id": "hotel_20537",
           "name_en": "Novotel Ambassador Busan",
           "price_krw": 220000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_03026",
+          "id": "hotel_18616",
           "name_en": "Lotte Hotel Busan",
           "price_krw": 265000,
           "distance_km": 0.1,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_74316",
+          "id": "hotel_26410",
           "name_en": "Shilla Stay Haeundae",
           "price_krw": 185000,
           "distance_km": 0.2,
@@ -11787,11 +11787,11 @@
       ]
     },
     {
-      "id": "hotel_82462",
+      "id": "hotel_96006",
       "name_en": "Paradise Hotel Busan",
       "price_krw": 280000,
       "rating": 4.6,
-      "image_url": "https://images.unsplash.com/photo-1561501900-3701fa6a0864?w=800&q=80",
+      "image_url": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
       "rooms_left": 3,
       "is_available": true,
       "hotel_type": {
@@ -11984,24 +11984,24 @@
         ],
         "foreigner_friendly": true
       },
-      "last_update": "2026-02-07 04:03:56",
+      "last_update": "2026-02-08 14:23:02",
       "nearby": [
         {
-          "id": "hotel_74316",
+          "id": "hotel_26410",
           "name_en": "Shilla Stay Haeundae",
           "price_krw": 185000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
         },
         {
-          "id": "hotel_67751",
+          "id": "hotel_20537",
           "name_en": "Novotel Ambassador Busan",
           "price_krw": 220000,
           "distance_km": 0.4,
           "image_url": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
         },
         {
-          "id": "hotel_33287",
+          "id": "hotel_02280",
           "name_en": "Haeundae Grand Hotel",
           "price_krw": 145000,
           "distance_km": 0.4,
