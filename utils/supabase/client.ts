@@ -1,5 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
-import { projectId, publicAnonKey } from '/utils/supabase/info';
+import { projectId, publicAnonKey } from './info';
+
+console.log('=== Supabase client.ts 로드됨 ===');
 
 const supabaseUrl = `https://${projectId}.supabase.co`;
 
