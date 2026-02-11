@@ -232,7 +232,7 @@ function ArmyStayApp() {
       const detectCity = () => {
         if (item.city_key) {
            const ck = item.city_key.toLowerCase();
-           if (ck === 'seongsu') return 'seoul';
+           if (['seongsu', 'hongdae', 'gwanghwamun', 'insadong', 'jongno', 'myeongdong', 'gangnam', 'mapo', 'yongsan'].includes(ck)) return 'seoul';
            if (['seoul', 'busan', 'paju', 'goyang'].includes(ck)) return ck;
         }
         if (item.city) return item.city.toLowerCase();
