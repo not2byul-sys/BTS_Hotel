@@ -300,7 +300,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
     return filtered;
   }, [activeCity, activeCategory, items, activeSort, showAvailableOnly]);
 
-  const hotels = useMemo(() => filteredItems.filter(i => i.type === 'stay'), [filteredItems]);
+  const hotels = useMemo(() => filteredItems.filter(i => i.type !== 'food' && i.type !== 'spot'), [filteredItems]);
   const selectedItem = useMemo(() => items.find(i => i.id === selectedMarkerId), [selectedMarkerId, items]);
 
   const sortOptions: { id: SortOption; label: string; icon: React.ReactNode }[] = [
