@@ -16,7 +16,10 @@ import type { ConcertRecommendationData } from '@/app/components/ConcertInsights
 type Screen = 'landing' | 'results' | 'detail' | 'bookmarks';
 export type SortOption = 'recommended' | 'lowest_price' | 'distance' | 'available' | 'popular' | 'army_density' | 'closing_soon';
 
-const DATA_URL = "https://raw.githubusercontent.com/not2byul-sys/BTS_Hotel/claude/document-project-architecture-nGfgr/korean_ota_hotels.json";
+// Primary: local bundled data (guaranteed available)
+// Fallback: remote GitHub data
+const DATA_URL = "/data/hotels.json";
+const DATA_URL_FALLBACK = "https://raw.githubusercontent.com/not2byul-sys/BTS_Hotel/claude/document-project-architecture-nGfgr/korean_ota_hotels.json";
 const CONCERT_REC_URL = "/data/concert_recommendations.json";
 
 // Helper to calculate distance in km (Haversine formula approximation)
@@ -64,19 +67,23 @@ function ArmyStayApp() {
     }
   }, []);
 
-  // Fetch Data from GitHub
+  // Fetch Data: local bundled first, GitHub fallback
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${DATA_URL}?t=${new Date().getTime()}`);
-        if (!response.ok) throw new Error("Failed to fetch data");
+        let response = await fetch(DATA_URL);
+        if (!response.ok) {
+          console.log("Local data not available, trying GitHub fallback...");
+          response = await fetch(DATA_URL_FALLBACK);
+        }
+        if (!response.ok) throw new Error("Failed to fetch data from all sources");
         const json = await response.json();
+        console.log(`Loaded ${json.hotels?.length || 0} hotels`);
         setFetchedData(json);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
   }, []);
 
