@@ -46,7 +46,7 @@ const createCategoryIcon = (color: string, iconHtml: string, isSelected: boolean
   iconAnchor: [18, 18]
 });
 
-type SortOption = 'lowest_price' | 'distance' | 'available' | 'popular' | 'army_density' | 'closing_soon';
+type SortOption = 'recommended' | 'lowest_price' | 'distance' | 'available' | 'popular' | 'army_density' | 'closing_soon';
 
 interface ResultsProps {
   onSelectHotel: (hotelId: string) => void;
@@ -300,7 +300,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
     return filtered;
   }, [activeCity, activeCategory, items, activeSort, showAvailableOnly]);
 
-  const hotels = useMemo(() => filteredItems.filter(i => i.type !== 'food' && i.type !== 'spot'), [filteredItems]);
+  const hotels = filteredItems;
   const selectedItem = useMemo(() => items.find(i => i.id === selectedMarkerId), [selectedMarkerId, items]);
 
   const sortOptions: { id: SortOption; label: string; icon: React.ReactNode }[] = [
@@ -454,6 +454,30 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                 </Popover.Root>
             </div>
             {/* Removed the old city chips row */}
+          </div>
+
+          <div className="px-5 pt-4 pb-0">
+            <div className="flex gap-2 overflow-x-auto hide-scrollbar">
+              {([
+                { id: 'all' as Category, label: t.filterAll, icon: <List size={14} /> },
+                { id: 'stay' as Category, label: t.filterStay, icon: <MapPin size={14} /> },
+                { id: 'food' as Category, label: t.filterFood, icon: <Utensils size={14} /> },
+                { id: 'spot' as Category, label: t.filterSpot, icon: <Camera size={14} /> },
+              ]).map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap flex items-center gap-1.5 ${
+                    activeCategory === cat.id
+                      ? 'bg-purple-700 text-white shadow-md'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  {cat.icon}
+                  {cat.label}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="pr-[0px] pl-[20px] pt-[16px] pb-[10px] mb-6 flex items-center justify-between">
