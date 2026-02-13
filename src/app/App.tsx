@@ -131,7 +131,7 @@ function ArmyStayApp() {
     const lang = language; 
     const btsSpots = fetchedData?.map?.local_spots?.filter((s: any) => s.category === 'bts') || [];
     
-    return sourceData.map((item: any, index: number) => {
+    const hotelItems = sourceData.map((item: any, index: number) => {
       // New Structure Handling
       const name = item.hotel_name || item[`name_${lang}`] || item.name_en || item.name;
       const images = item.images || [];
@@ -305,6 +305,55 @@ function ArmyStayApp() {
         rooms_left: item.rooms_left ?? 99
       };
     });
+
+    // Add local_spots (food, BTS spots, cafes, hotspots) as filterable items
+    const localSpots = (fetchedData?.map?.local_spots || []).map((spot: any, idx: number) => {
+      const cat = (spot.category || '').toLowerCase();
+      let itemType = 'spot';
+      if (cat === 'restaurant' || cat === 'cafe') itemType = 'food';
+
+      const sLat = spot.lat || 0;
+      const sLng = spot.lng || 0;
+      let spotCity = 'goyang';
+      if (sLat > 37.4 && sLat < 37.6 && sLng > 126.85 && sLng < 127.15) spotCity = 'seoul';
+      else if (sLat < 36) spotCity = 'busan';
+      else if (sLat > 37.7) spotCity = 'paju';
+
+      const defaultImages: Record<string, string> = {
+        bts: 'https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?auto=format&fit=crop&q=80&w=1080',
+        restaurant: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1080',
+        cafe: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1080',
+        hotspot: 'https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&q=80&w=1080',
+      };
+
+      const dist = calculateDistance(sLat, sLng, 37.6695, 126.7490);
+
+      return {
+        id: `local-${idx}`,
+        name: spot.name_en || spot.name || 'Local Spot',
+        location: spot.spot_tag || (itemType === 'food' ? 'Restaurant' : 'BTS Spot'),
+        price: 0,
+        type: itemType,
+        city: spotCity,
+        coords: { lat: sLat, lng: sLng },
+        rating: cat === 'bts' ? 4.8 : 4.5,
+        tags: [
+          spot.spot_tag,
+          cat === 'bts' ? 'BTS' : cat === 'cafe' ? 'Cafe' : cat === 'restaurant' ? 'Restaurant' : 'Hotspot',
+        ].filter(Boolean),
+        image: defaultImages[cat] || defaultImages.hotspot,
+        link: '',
+        rooms_left: 99,
+        army_density: {
+          value: cat === 'bts' ? 95 : 50,
+          label: cat === 'bts' ? 'ARMY 95%' : 'ARMY 50%',
+          level: cat === 'bts' ? 'Very High' : 'Normal'
+        },
+        _distToVenue: dist,
+      };
+    });
+
+    return [...hotelItems, ...localSpots];
   }, [fetchedData, language, t]);
 
   const homeStats = useMemo(() => {
