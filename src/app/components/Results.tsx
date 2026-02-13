@@ -304,7 +304,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
   const selectedItem = useMemo(() => items.find(i => i.id === selectedMarkerId), [selectedMarkerId, items]);
 
   const sortOptions: { id: SortOption; label: string; icon: React.ReactNode }[] = [
-    { id: 'recommended', label: 'All', icon: <List size={12} /> },
+    { id: 'recommended', label: currentLang === 'ko' ? '추천순' : currentLang === 'ja' ? 'おすすめ' : currentLang === 'zh' ? '推荐' : 'Recommended', icon: <List size={12} /> },
     { id: 'distance', label: t.sortDistance, icon: <MapPin size={12} /> },
     { id: 'lowest_price', label: t.sortLowest, icon: <TrendingUp size={12} className="rotate-180" /> },
     { id: 'army_density', label: t.sortArmyDensity, icon: <Users size={12} /> },
