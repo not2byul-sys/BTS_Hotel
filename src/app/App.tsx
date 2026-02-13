@@ -19,7 +19,7 @@ export type SortOption = 'recommended' | 'lowest_price' | 'distance' | 'availabl
 // Primary: local bundled data (guaranteed available)
 // Fallback: remote GitHub data
 const DATA_URL = "/data/hotels.json";
-const DATA_URL_FALLBACK = "https://raw.githubusercontent.com/not2byul-sys/BTS_Hotel/claude/document-project-architecture-nGfgr/korean_ota_hotels.json";
+const DATA_URL_FALLBACK = "https://raw.githubusercontent.com/not2byul-sys/BTS_Hotel/main/korean_ota_hotels.json";
 const CONCERT_REC_URL = "/data/concert_recommendations.json";
 
 // Helper to calculate distance in km (Haversine formula approximation)
@@ -282,7 +282,7 @@ function ArmyStayApp() {
         location: safeLocation,
         price: priceKrw ? Math.round(priceKrw / 1350) : (typeof priceVal === 'number' ? priceVal : 0),
         price_krw: priceKrw, 
-        type: item.type || 'stay',
+        type: 'stay',
         city: detectedCity, 
         coords: coords2,
         rating: ratingVal,
@@ -310,7 +310,7 @@ function ArmyStayApp() {
   const homeStats = useMemo(() => {
     if (fetchedData?.home) {
       return {
-        availableCount: fetchedData.home.available_count,
+        availableCount: fetchedData.home.total_count || fetchedData.home.available_count,
         lowestPrice: Math.round(fetchedData.home.lowest_price_krw / 1350)
       };
     }
