@@ -264,7 +264,8 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
       return cityMatch && categoryMatch && availabilityMatch;
     });
 
-    if (activeCategory === 'stay' || activeCategory === 'all') {
+    // Sort applies to all categories
+    {
        switch (activeSort) {
          case 'lowest_price':
            filtered.sort((a, b) => (a.price || 0) - (b.price || 0));
@@ -653,38 +654,64 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                       </div>
     
                       <div className="mt-auto flex items-end justify-between border-t border-gray-50 pt-4">
-                        <div data-layername="Price">
-                          {hotel.cancellation?.type === 'free' && (
-                            <span className="text-[10px] font-bold text-green-600 block mb-0">
-                              Free Cancellation
-                            </span>
-                          )}
-                          <span className="text-xs text-gray-400 line-through mr-2 block">
-                            {hotel.originalPrice && formatPrice(hotel.originalPrice)}
-                          </span>
-                          <div className="flex items-baseline gap-1">
-                            <span className="text-[22px] font-extrabold text-gray-900">
-                              {price}
-                            </span>
-                            {!hotel.price_usd && <span className="text-xs text-gray-500 font-medium">{t.night}</span>}
-                          </div>
-                        </div>
-                        
-                        <button 
-                          onClick={() => {
-                            if (hotel.rooms_left === 0) return; 
-                            onSelectHotel(hotel.id);
-                          }}
-                          disabled={hotel.rooms_left === 0}
-                          className={`px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg transition-all flex items-center gap-2 shrink-0 ${
-                            hotel.rooms_left === 0
-                              ? 'bg-gray-200 text-gray-400 cursor-not-allowed shadow-none'
-                              : 'bg-purple-700 text-white hover:bg-purple-800'
-                          }`}
-                        >
-                          {hotel.rooms_left === 0 ? 'Sold Out' : t.reserveBtn}
-                          {hotel.rooms_left !== 0 && <ChevronRight size={16} />}
-                        </button>
+                        {hotel.type === 'stay' ? (
+                          <>
+                            <div data-layername="Price">
+                              {hotel.cancellation?.type === 'free' && (
+                                <span className="text-[10px] font-bold text-green-600 block mb-0">
+                                  Free Cancellation
+                                </span>
+                              )}
+                              <span className="text-xs text-gray-400 line-through mr-2 block">
+                                {hotel.originalPrice && formatPrice(hotel.originalPrice)}
+                              </span>
+                              <div className="flex items-baseline gap-1">
+                                <span className="text-[22px] font-extrabold text-gray-900">
+                                  {price}
+                                </span>
+                                {!hotel.price_usd && <span className="text-xs text-gray-500 font-medium">{t.night}</span>}
+                              </div>
+                            </div>
+
+                            <button
+                              onClick={() => {
+                                if (hotel.rooms_left === 0) return;
+                                onSelectHotel(hotel.id);
+                              }}
+                              disabled={hotel.rooms_left === 0}
+                              className={`px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg transition-all flex items-center gap-2 shrink-0 ${
+                                hotel.rooms_left === 0
+                                  ? 'bg-gray-200 text-gray-400 cursor-not-allowed shadow-none'
+                                  : 'bg-purple-700 text-white hover:bg-purple-800'
+                              }`}
+                            >
+                              {hotel.rooms_left === 0 ? 'Sold Out' : t.reserveBtn}
+                              {hotel.rooms_left !== 0 && <ChevronRight size={16} />}
+                            </button>
+                          </>
+                        ) : (
+                          <>
+                            <div>
+                              <span className={`text-sm font-bold ${hotel.type === 'food' ? 'text-orange-600' : 'text-blue-600'}`}>
+                                {hotel.type === 'food' ? (currentLang === 'ko' ? '맛집' : 'Local Eats') : (currentLang === 'ko' ? 'BTS 성지' : 'BTS Spot')}
+                              </span>
+                              <p className="text-xs text-gray-400 mt-0.5">
+                                {calculateDistance(
+                                  hotel.coords.lat, hotel.coords.lng,
+                                  SPECIAL_LOCATIONS[activeCity]?.venue?.lat || JAMSIL_COORDS.lat,
+                                  SPECIAL_LOCATIONS[activeCity]?.venue?.lng || JAMSIL_COORDS.lng
+                                ).toFixed(1)}km from venue
+                              </p>
+                            </div>
+                            <button
+                              onClick={() => onSelectHotel(hotel.id)}
+                              className="px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg transition-all flex items-center gap-2 shrink-0 bg-purple-700 text-white hover:bg-purple-800"
+                            >
+                              {currentLang === 'ko' ? '자세히' : 'Details'}
+                              <ChevronRight size={16} />
+                            </button>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
