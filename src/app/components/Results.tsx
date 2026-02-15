@@ -63,13 +63,14 @@ interface ResultsProps {
 }
 
 type Category = 'all' | 'stay' | 'food' | 'spot';
-export type City = 'seoul' | 'goyang' | 'busan' | 'paju' | 'other';
+export type City = 'seoul' | 'goyang' | 'busan' | 'paju' | 'gwanghwamun' | 'other';
 
 const CITY_COORDS: Record<City, { lat: number; lng: number }> = {
   seoul: { lat: 37.5300, lng: 127.0500 }, 
   goyang: { lat: 37.6584, lng: 126.7640 }, 
   paju: { lat: 37.7590, lng: 126.7750 }, 
   busan: { lat: 35.1900, lng: 129.0700 }, 
+  gwanghwamun: { lat: 37.5759, lng: 126.9768 },
   other: { lat: 37.5, lng: 127.0 } 
 };
 
@@ -88,6 +89,14 @@ const SPECIAL_LOCATIONS: Record<string, { venue: any, stations: any[] }> = {
     venue: { ...GOYANG_COORDS, name: 'BTS Venue' },
     stations: [
       { lat: 37.6761, lng: 126.7475, name: 'Daehwa Station' }
+    ]
+  },
+  gwanghwamun: {
+    venue: { ...GOYANG_COORDS, name: 'BTS Venue' },
+    stations: [
+      { lat: 37.5716, lng: 126.9768, name: 'Gwanghwamun' },
+      { lat: 37.5702, lng: 126.9831, name: 'Jonggak' },
+      { lat: 37.5766, lng: 126.9854, name: 'Anguk' }
     ]
   },
   busan: {
@@ -215,7 +224,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
   const [tempDateRange, setTempDateRange] = useState<DateRange | undefined>(dateRange);
 
   const [isCityOpen, setIsCityOpen] = useState(false);
-  const cities: City[] = ['goyang', 'seoul', 'busan', 'paju', 'other'];
+  const cities: City[] = ['goyang', 'seoul', 'gwanghwamun', 'busan', 'paju', 'other'];
   
   const getCityLabel = (city: City) => {
     // @ts-ignore

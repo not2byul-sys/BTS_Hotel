@@ -16,7 +16,7 @@ export const translations = {
     prefVibe: "Hipster",
     ctaFind: "Find My Perfect Stay",
     trustedBy: "Trusted by 50,000+ ARMY",
-    
+
     savingsBanner: "Smart Choice! Save average $150/night here",
     recAreas: "Recommended Areas",
     areaSeongsuTag: "The Trendy",
@@ -26,7 +26,7 @@ export const translations = {
     bestMatches: "Best Matches for You",
     night: "/ night",
     viewDetails: "View Details",
-    
+
     stayDetails: "Stay Details",
     safeReturn: "Safe Return Route",
     mapRoute: "Jamsil → Line 2 → Stay",
@@ -55,6 +55,7 @@ export const translations = {
     cityGoyang: "Goyang",
     cityPaju: "Paju",
     cityBusan: "Busan",
+    cityGwanghwamun: "Gwanghwamun",
     cityOther: "Other",
     currencySymbol: "$",
     reserveBtn: "Reserve",
@@ -96,7 +97,7 @@ export const translations = {
     prefVibe: "감성",
     ctaFind: "맞춤 숙소 찾기",
     trustedBy: "5만 명의 아미가 선택했습니다",
-    
+
     savingsBanner: "현명한 선택! 평균 1박 $150를 절약할 수 있어요.",
     recAreas: "추천 지역",
     areaSeongsuTag: "요즘 힙한 곳",
@@ -106,7 +107,7 @@ export const translations = {
     bestMatches: "나를 위한 최고의 매칭",
     night: "/ 1박",
     viewDetails: "보러가기",
-    
+
     stayDetails: "숙소 상세",
     safeReturn: "안심 귀가 루트",
     mapRoute: "잠실 → 2호선 → 숙소",
@@ -133,6 +134,7 @@ export const translations = {
     filterAvailable: "예약가능",
     citySeoul: "서울",
     cityGoyang: "고양",
+    // cityGwanghwamun: "광화문", // Removed per request
     cityPaju: "파주",
     cityBusan: "부산",
     cityOther: "그외 지역",
@@ -176,7 +178,7 @@ export const translations = {
     prefVibe: "おしゃれ",
     ctaFind: "おすすめの宿を探す",
     trustedBy: "5万人のARMYが利用",
-    
+
     savingsBanner: "賢い選択！平均で1泊$150節約できます。",
     recAreas: "おすすめエリア",
     areaSeongsuTag: "トレンド",
@@ -186,7 +188,7 @@ export const translations = {
     bestMatches: "あなたにぴったりの宿",
     night: "/ 泊",
     viewDetails: "詳細を見る",
-    
+
     stayDetails: "宿泊詳細",
     safeReturn: "安心の帰宅ルート",
     mapRoute: "蚕室 → 2号線 → 宿",
@@ -213,6 +215,7 @@ export const translations = {
     filterAvailable: "予約可能",
     citySeoul: "ソウル",
     cityGoyang: "高陽(コヤン)",
+    // cityGwanghwamun: "光化門", // Removed per request
     cityPaju: "坡州(パジュ)",
     cityBusan: "釜山(プサン)",
     cityOther: "その他",
@@ -256,7 +259,7 @@ export const translations = {
     prefVibe: "氛围感",
     ctaFind: "查找完美住宿",
     trustedBy: "超过5万名ARMY的选择",
-    
+
     savingsBanner: "明智之选！每晚平均可节省$150。",
     recAreas: "推荐区域",
     areaSeongsuTag: "潮流圣地",
@@ -266,7 +269,7 @@ export const translations = {
     bestMatches: "为您匹配的最佳结果",
     night: "/ 晚",
     viewDetails: "查看详情",
-    
+
     stayDetails: "住宿详情",
     safeReturn: "安全归家路线",
     mapRoute: "蚕室 → 2号线 → 住宿",
@@ -293,6 +296,7 @@ export const translations = {
     filterAvailable: "可预订",
     citySeoul: "首尔",
     cityGoyang: "高阳",
+    // cityGwanghwamun: "光化门", // Removed per request
     cityPaju: "坡州",
     cityBusan: "釜山",
     cityOther: "其他地区",
