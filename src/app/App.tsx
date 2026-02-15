@@ -461,6 +461,7 @@ function ArmyStayApp() {
               stats={homeStats}
               concertData={concertData}
               language={language}
+              items={hotelItems}
               onSelectHotel={handleSelectHotel}
             />
           )}
