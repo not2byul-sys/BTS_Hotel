@@ -232,7 +232,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
 
   const getCityCount = (city: City) => {
     if (!items || items.length === 0) return 0;
-    return items.filter(item => item.city?.toLowerCase() === city.toLowerCase() && item.type === 'stay' && (item.rooms_left ?? 1) > 0).length;
+    return items.filter(item => item.city?.toLowerCase() === city.toLowerCase() && (item.rooms_left ?? 1) > 0).length;
   };
 
   const displayDate = dateRange?.from
