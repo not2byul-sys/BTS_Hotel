@@ -232,6 +232,11 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
 
   const getCityCount = (city: City) => {
     if (!items || items.length === 0) return 0;
+    if (city === 'gwanghwamun') {
+      const uniqueCities = [...new Set(items.map(i => i.city))];
+      const gwMatches = items.filter(i => i.city?.toLowerCase() === 'gwanghwamun');
+      console.log('[getCityCount] items.length:', items.length, 'unique cities:', uniqueCities, 'gw matches:', gwMatches.length, 'gw sample:', gwMatches[0]?.name?.substring(0, 30));
+    }
     return items.filter(item => item.city?.toLowerCase() === city.toLowerCase() && (item.rooms_left ?? 1) > 0).length;
   };
 
