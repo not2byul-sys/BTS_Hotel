@@ -30,11 +30,10 @@ const MapClickHandler = ({ onMapClick }: { onMapClick: () => void }) => {
 // Custom Icon Creators
 const createPriceIcon = (price: string, isSelected: boolean) => L.divIcon({
   className: '',
-  html: `<div class="${
-    isSelected 
-      ? 'bg-purple-700 text-white scale-110 z-50' 
-      : 'bg-white text-gray-900 hover:scale-110 hover:z-40'
-  } transition-all duration-200 font-extrabold text-[13px] px-3 py-1.5 rounded-full shadow-md border border-gray-200 whitespace-nowrap transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer">${price}</div>`,
+  html: `<div class="${isSelected
+    ? 'bg-purple-700 text-white scale-110 z-50'
+    : 'bg-white text-gray-900 hover:scale-110 hover:z-40'
+    } transition-all duration-200 font-extrabold text-[13px] px-3 py-1.5 rounded-full shadow-md border border-gray-200 whitespace-nowrap transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer">${price}</div>`,
   iconSize: [50, 28],
   iconAnchor: [25, 14]
 });
@@ -66,12 +65,12 @@ type Category = 'all' | 'stay' | 'food' | 'spot';
 export type City = 'seoul' | 'goyang' | 'busan' | 'paju' | 'gwanghwamun' | 'other';
 
 const CITY_COORDS: Record<City, { lat: number; lng: number }> = {
-  seoul: { lat: 37.5300, lng: 127.0500 }, 
-  goyang: { lat: 37.6584, lng: 126.7640 }, 
-  paju: { lat: 37.7590, lng: 126.7750 }, 
-  busan: { lat: 35.1900, lng: 129.0700 }, 
+  seoul: { lat: 37.5300, lng: 127.0500 },
+  goyang: { lat: 37.6584, lng: 126.7640 },
+  paju: { lat: 37.7590, lng: 126.7750 },
+  busan: { lat: 35.1900, lng: 129.0700 },
   gwanghwamun: { lat: 37.5759, lng: 126.9768 },
-  other: { lat: 37.5, lng: 127.0 } 
+  other: { lat: 37.5, lng: 127.0 }
 };
 
 const JAMSIL_COORDS = { lat: 37.5148, lng: 127.0733 };
@@ -138,49 +137,49 @@ const createStationIcon = (name: string, line?: string) => {
   let detectedLine = line || '2';
   let displayName = name || '';
   const lowerName = displayName.toLowerCase();
-  
+
   // Robust detection logic
   if (line) {
-     detectedLine = line;
+    detectedLine = line;
   } else {
-     const lineMatch = displayName.match(/Line\s*(\w+)/i) || displayName.match(/(\d+)호선/);
-     if (lineMatch) {
-        detectedLine = lineMatch[1];
-        displayName = displayName.replace(/Line\s*\w+/i, '').replace(/\d+호선/, '').trim();
-     } else {
-        // Line 3 (Orange) - Goyang/Ilsan area
-        if (['daehwa', 'juyeop', 'jeongbalsan', 'madu', 'baekseok', 'daegok', 'hwajeong', 'wondang', 'samsong', 'jichuk', 'kupabal', 'yeonsinnae'].some(s => lowerName.includes(s)) ||
-            ['대화', '주엽', '정발산', '마두', '백석', '화정', '원당', '삼송', '지축', '구파발', '연신내'].some(s => displayName.includes(s))) {
-           detectedLine = '3';
-        } 
-        // Gyeongui-Jungang (Mint)
-        else if (['tanhyeon', 'ilsan', 'pungsan', 'baekma', 'goksan', 'neunggok', 'haengsin', 'dmc', 'digital media city'].some(s => lowerName.includes(s)) ||
-                 ['탄현', '일산', '풍산', '백마', '곡산', '능곡', '행신', '수색'].some(s => displayName.includes(s))) {
-           detectedLine = 'Gyeongui-Jungang';
-        }
-        // Line 2 (Green) - Seoul core
-        else if (['sports complex', 'samseong', 'gangnam', 'hongik', 'hongdae', 'sinchon', 'ewha', 'city hall', 'jamsil', 'euljiro'].some(s => lowerName.includes(s)) ||
-                 ['종합운동장', '삼성', '강남', '홍대', '신촌', '이대', '시청', '잠실', '을지로'].some(s => displayName.includes(s))) {
-           detectedLine = '2';
-        }
-        // Line 5 (Purple)
-        else if (['olympic', 'gimpo', 'yeouido', 'gwanghwamun'].some(s => lowerName.includes(s)) ||
-                 ['올림픽', '김포', '여의도', '광화문'].some(s => displayName.includes(s))) {
-           detectedLine = '5';
-        }
-        // Arex (Blue)
-        else if (['gimpo airport', 'incheon airport', 'seoul station'].some(s => lowerName.includes(s))) {
-           detectedLine = 'Arex';
-        }
-     }
+    const lineMatch = displayName.match(/Line\s*(\w+)/i) || displayName.match(/(\d+)호선/);
+    if (lineMatch) {
+      detectedLine = lineMatch[1];
+      displayName = displayName.replace(/Line\s*\w+/i, '').replace(/\d+호선/, '').trim();
+    } else {
+      // Line 3 (Orange) - Goyang/Ilsan area
+      if (['daehwa', 'juyeop', 'jeongbalsan', 'madu', 'baekseok', 'daegok', 'hwajeong', 'wondang', 'samsong', 'jichuk', 'kupabal', 'yeonsinnae'].some(s => lowerName.includes(s)) ||
+        ['대화', '주엽', '정발산', '마두', '백석', '화정', '원당', '삼송', '지축', '구파발', '연신내'].some(s => displayName.includes(s))) {
+        detectedLine = '3';
+      }
+      // Gyeongui-Jungang (Mint)
+      else if (['tanhyeon', 'ilsan', 'pungsan', 'baekma', 'goksan', 'neunggok', 'haengsin', 'dmc', 'digital media city'].some(s => lowerName.includes(s)) ||
+        ['탄현', '일산', '풍산', '백마', '곡산', '능곡', '행신', '수색'].some(s => displayName.includes(s))) {
+        detectedLine = 'Gyeongui-Jungang';
+      }
+      // Line 2 (Green) - Seoul core
+      else if (['sports complex', 'samseong', 'gangnam', 'hongik', 'hongdae', 'sinchon', 'ewha', 'city hall', 'jamsil', 'euljiro'].some(s => lowerName.includes(s)) ||
+        ['종합운동장', '삼성', '강남', '홍대', '신촌', '이대', '시청', '잠실', '을지로'].some(s => displayName.includes(s))) {
+        detectedLine = '2';
+      }
+      // Line 5 (Purple)
+      else if (['olympic', 'gimpo', 'yeouido', 'gwanghwamun'].some(s => lowerName.includes(s)) ||
+        ['올림픽', '김포', '여의도', '광화문'].some(s => displayName.includes(s))) {
+        detectedLine = '5';
+      }
+      // Arex (Blue)
+      else if (['gimpo airport', 'incheon airport', 'seoul station'].some(s => lowerName.includes(s))) {
+        detectedLine = 'Arex';
+      }
+    }
   }
 
   const color = lineColors[detectedLine] || lineColors['2'];
   const badgeContent = detectedLine === 'Gyeongui-Jungang' ? 'GJ' : (detectedLine.length > 2 ? detectedLine.charAt(0) : detectedLine);
 
   return L.divIcon({
-  className: '',
-  html: `<div class="bg-[${color}] text-white w-8 h-8 rounded-full shadow-lg border-2 border-white flex items-center justify-center z-[90]" style="background-color: ${color}">
+    className: '',
+    html: `<div class="bg-[${color}] text-white w-8 h-8 rounded-full shadow-lg border-2 border-white flex items-center justify-center z-[90]" style="background-color: ${color}">
            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
              <rect width="16" height="16" x="4" y="3" rx="2" />
              <path d="M4 11h16" />
@@ -193,9 +192,9 @@ const createStationIcon = (name: string, line?: string) => {
            <div class="w-4 h-4 rounded-full text-[8px] flex items-center justify-center text-white" style="background-color: ${color}">${badgeContent}</div>
            ${displayName}
          </div>` : ''}`,
-  iconSize: [32, 32],
-  iconAnchor: [16, 16]
-});
+    iconSize: [32, 32],
+    iconAnchor: [16, 16]
+  });
 };
 
 const MapUpdater = ({ center }: { center: { lat: number; lng: number } }) => {
@@ -219,22 +218,27 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
   }, [initialCity]);
 
   const [showAvailableOnly, setShowAvailableOnly] = useState(true);
-  
+
   const [isDateOpen, setIsDateOpen] = useState(false);
   const [tempDateRange, setTempDateRange] = useState<DateRange | undefined>(dateRange);
 
   const [isCityOpen, setIsCityOpen] = useState(false);
   const cities: City[] = ['goyang', 'seoul', 'gwanghwamun', 'busan', 'paju', 'other'];
-  
+
   const getCityLabel = (city: City) => {
     // @ts-ignore
     return t[`city${city.charAt(0).toUpperCase() + city.slice(1)}`];
   };
 
-  const displayDate = dateRange?.from 
+  const getCityCount = (city: City) => {
+    if (!items || items.length === 0) return 0;
+    return items.filter(item => item.city?.toLowerCase() === city.toLowerCase() && item.type === 'stay' && (item.rooms_left ?? 1) > 0).length;
+  };
+
+  const displayDate = dateRange?.from
     ? `${format(dateRange.from, 'MMM d')}${dateRange.to ? ` - ${format(dateRange.to, 'MMM d')}` : ''}`
     : 'Select Dates';
-  
+
   const { bookmarks, toggleBookmark } = useAuth();
 
   useEffect(() => {
@@ -248,21 +252,21 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
     const rate = t.currencyRate || 1;
     // @ts-ignore
     const symbol = t.currencySymbol || '$';
-    
+
     const converted = Math.round(usdPrice * rate);
     return `${symbol}${converted.toLocaleString()}`;
   };
 
   const calculateDistance = (lat1: number, lng1: number, lat2: number, lng2: number) => {
-    const R = 6371; 
+    const R = 6371;
     const dLat = (lat2 - lat1) * (Math.PI / 180);
     const dLng = (lng2 - lng1) * (Math.PI / 180);
-    const a = 
+    const a =
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) * 
+      Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
       Math.sin(dLng / 2) * Math.sin(dLng / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c; 
+    return R * c;
   };
 
   const filteredItems = useMemo(() => {
@@ -275,37 +279,37 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
 
     // Sort applies to all categories
     {
-       switch (activeSort) {
-         case 'lowest_price':
-           filtered.sort((a, b) => (a.price || 0) - (b.price || 0));
-           break;
-         case 'distance':
-           filtered.sort((a, b) => {
-             const venueCoords = SPECIAL_LOCATIONS[activeCity]?.venue || GOYANG_COORDS;
-             const distA = calculateDistance(a.coords.lat, a.coords.lng, venueCoords.lat, venueCoords.lng);
-             const distB = calculateDistance(b.coords.lat, b.coords.lng, venueCoords.lat, venueCoords.lng);
-             return distA - distB;
-           });
-           break;
-         case 'popular':
-           filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-           break;
-         case 'army_density':
-           filtered.sort((a, b) => (b.army_density?.value || 0) - (a.army_density?.value || 0));
-           break;
-         case 'closing_soon':
-           filtered.sort((a, b) => {
-             const aLeft = a.rooms_left === 0 ? 9999 : (a.rooms_left ?? 9999);
-             const bLeft = b.rooms_left === 0 ? 9999 : (b.rooms_left ?? 9999);
-             return aLeft - bLeft;
-           });
-           break;
-         case 'available':
-           break;
-         case 'recommended':
-         default:
-           break;
-       }
+      switch (activeSort) {
+        case 'lowest_price':
+          filtered.sort((a, b) => (a.price || 0) - (b.price || 0));
+          break;
+        case 'distance':
+          filtered.sort((a, b) => {
+            const venueCoords = SPECIAL_LOCATIONS[activeCity]?.venue || GOYANG_COORDS;
+            const distA = calculateDistance(a.coords.lat, a.coords.lng, venueCoords.lat, venueCoords.lng);
+            const distB = calculateDistance(b.coords.lat, b.coords.lng, venueCoords.lat, venueCoords.lng);
+            return distA - distB;
+          });
+          break;
+        case 'popular':
+          filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+          break;
+        case 'army_density':
+          filtered.sort((a, b) => (b.army_density?.value || 0) - (a.army_density?.value || 0));
+          break;
+        case 'closing_soon':
+          filtered.sort((a, b) => {
+            const aLeft = a.rooms_left === 0 ? 9999 : (a.rooms_left ?? 9999);
+            const bLeft = b.rooms_left === 0 ? 9999 : (b.rooms_left ?? 9999);
+            return aLeft - bLeft;
+          });
+          break;
+        case 'available':
+          break;
+        case 'recommended':
+        default:
+          break;
+      }
     }
 
     return filtered;
@@ -327,25 +331,25 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
       {viewMode === 'map' && (
         <div className="absolute top-0 left-0 right-0 z-[500] p-4 flex flex-col gap-3.5 pointer-events-none">
           <div className="flex justify-between items-center pointer-events-auto">
-             <div className="flex gap-1.5 bg-white/90 backdrop-blur-md p-1.5 rounded-full shadow-lg border border-purple-100 overflow-x-auto hide-scrollbar max-w-[calc(100vw-80px)]">
-               {cities.map((city) => (
-                 <button
-                   key={city}
-                   onClick={() => {
-                     setActiveCity(city);
-                     setSelectedMarkerId(null);
-                   }}
-                   className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 ${
-                     activeCity === city
-                       ? 'bg-purple-700 text-white shadow-md'
-                       : 'bg-transparent text-gray-600 hover:bg-gray-100'
-                   }`}
-                 >
-                   {activeCity === city && <MapPin size={12} className="text-white" />}
-                   {getCityLabel(city)}
-                 </button>
-               ))}
-             </div>
+            <div className="flex gap-1.5 bg-white/90 backdrop-blur-md p-1.5 rounded-full shadow-lg border border-purple-100 overflow-x-auto hide-scrollbar max-w-[calc(100vw-80px)]">
+              {cities.map((city) => (
+                <button
+                  key={city}
+                  onClick={() => {
+                    setActiveCity(city);
+                    setSelectedMarkerId(null);
+                  }}
+                  className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 ${activeCity === city
+                    ? 'bg-purple-700 text-white shadow-md'
+                    : 'bg-transparent text-gray-600 hover:bg-gray-100'
+                    }`}
+                >
+                  {activeCity === city && <MapPin size={12} className="text-white" />}
+                  {getCityLabel(city)}
+                  <span className={`text-[10px] ${activeCity === city ? 'text-purple-200' : 'text-gray-400'}`}>{getCityCount(city)}</span>
+                </button>
+              ))}
+            </div>
 
 
           </div>
@@ -356,113 +360,113 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
         <>
           <div className="w-full bg-gray-20 pt-[20px] pb-[2px]">
             <div className="px-5 mb-0 flex gap-2">
-               <Popover.Root 
-                  open={isDateOpen} 
-                  onOpenChange={(open) => {
-                    setIsDateOpen(open);
-                    if (open) setTempDateRange(dateRange);
-                  }}
-                >
-                  <Popover.Trigger asChild>
-                    <button className="bg-[#fff] px-4 py-2.5 rounded-xl flex items-center justify-center border border-gray-200 shadow-xs gap-2.5 flex-1 active:scale-[0.98] transition-all group hover:bg-gray-100">
-                      <Calendar size={18} className="text-gray-400 group-hover:text-purple-600 transition-colors" />
-                      <span className="text-sm font-bold text-gray-800 truncate">{displayDate}</span>
-                    </button>
-                  </Popover.Trigger>
-                  <Popover.Portal>
-                    <Popover.Content className="z-[70] bg-white p-3 rounded-xl shadow-xl border border-gray-100 animate-in fade-in zoom-in-95" sideOffset={8}>
-                      <style>{`
+              <Popover.Root
+                open={isDateOpen}
+                onOpenChange={(open) => {
+                  setIsDateOpen(open);
+                  if (open) setTempDateRange(dateRange);
+                }}
+              >
+                <Popover.Trigger asChild>
+                  <button className="bg-[#fff] px-4 py-2.5 rounded-xl flex items-center justify-center border border-gray-200 shadow-xs gap-2.5 flex-1 active:scale-[0.98] transition-all group hover:bg-gray-100">
+                    <Calendar size={18} className="text-gray-400 group-hover:text-purple-600 transition-colors" />
+                    <span className="text-sm font-bold text-gray-800 truncate">{displayDate}</span>
+                  </button>
+                </Popover.Trigger>
+                <Popover.Portal>
+                  <Popover.Content className="z-[70] bg-white p-3 rounded-xl shadow-xl border border-gray-100 animate-in fade-in zoom-in-95" sideOffset={8}>
+                    <style>{`
                         .rdp { --rdp-accent-color: #7e22ce; margin: 0; }
                         .rdp-button:hover:not([disabled]):not(.rdp-day_selected) { background-color: #f3e8ff; }
                         .rdp-day_selected { background-color: rgba(126, 34, 206, 0.1); color: #7e22ce; font-weight: bold; }
                         .rdp-day_concert:not(.rdp-day_selected) { border: 2px solid #7e22ce; color: #7e22ce; font-weight: bold; }
                       `}</style>
-                      <DayPicker 
-                        mode="range"
-                        selected={tempDateRange}
-                        onSelect={(range, selectedDay) => {
-                          if (tempDateRange?.from && tempDateRange?.to && selectedDay) {
-                            setTempDateRange({ from: selectedDay, to: undefined });
-                          } else {
-                            setTempDateRange(range);
-                          }
+                    <DayPicker
+                      mode="range"
+                      selected={tempDateRange}
+                      onSelect={(range, selectedDay) => {
+                        if (tempDateRange?.from && tempDateRange?.to && selectedDay) {
+                          setTempDateRange({ from: selectedDay, to: undefined });
+                        } else {
+                          setTempDateRange(range);
+                        }
+                      }}
+                      defaultMonth={new Date(2026, 5)}
+                      numberOfMonths={1}
+                      modifiers={{
+                        concert: [
+                          new Date(2026, 5, 10),
+                          new Date(2026, 5, 11),
+                          new Date(2026, 5, 12),
+                          new Date(2026, 5, 13),
+                          new Date(2026, 5, 14),
+                          new Date(2026, 5, 15),
+                        ]
+                      }}
+                    />
+                    <div className="flex items-center justify-end gap-2 mt-2 pt-3 border-t border-gray-50">
+                      <button
+                        onClick={() => setIsDateOpen(false)}
+                        className="px-3 py-1.5 text-xs font-medium text-gray-500 hover:bg-gray-100 rounded-lg transition-colors"
+                      >
+                        {(t as any).cancelBtn || 'Cancel'}
+                      </button>
+                      <button
+                        onClick={() => {
+                          setDateRange?.(tempDateRange);
+                          setIsDateOpen(false);
                         }}
-                        defaultMonth={new Date(2026, 5)}
-                        numberOfMonths={1}
-                        modifiers={{
-                          concert: [
-                            new Date(2026, 5, 10),
-                            new Date(2026, 5, 11),
-                            new Date(2026, 5, 12),
-                            new Date(2026, 5, 13),
-                            new Date(2026, 5, 14),
-                            new Date(2026, 5, 15),
-                          ]
-                        }}
-                      />
-                      <div className="flex items-center justify-end gap-2 mt-2 pt-3 border-t border-gray-50">
-                        <button 
-                          onClick={() => setIsDateOpen(false)}
-                          className="px-3 py-1.5 text-xs font-medium text-gray-500 hover:bg-gray-100 rounded-lg transition-colors"
-                        >
-                          {(t as any).cancelBtn || 'Cancel'}
-                        </button>
-                        <button
-                          onClick={() => {
-                            setDateRange?.(tempDateRange);
-                            setIsDateOpen(false);
-                          }}
-                          className="px-4 py-1.5 text-xs font-bold text-white bg-purple-700 hover:bg-purple-800 rounded-lg transition-colors shadow-sm"
-                        >
-                          {t.confirmDate}
+                        className="px-4 py-1.5 text-xs font-bold text-white bg-purple-700 hover:bg-purple-800 rounded-lg transition-colors shadow-sm"
+                      >
+                        {t.confirmDate}
+                      </button>
+                    </div>
+                  </Popover.Content>
+                </Popover.Portal>
+              </Popover.Root>
+
+              <Popover.Root open={isCityOpen} onOpenChange={setIsCityOpen}>
+                <Popover.Trigger asChild>
+                  <button className="bg-[#fff] px-4 py-3 rounded-xl flex items-center justify-center border border-gray-200 shadow-xs gap-2.5 flex-1 active:scale-[1] transition-all group hover:bg-gray-100">
+                    <MapPin size={18} className="text-gray-400 group-hover:text-purple-600 transition-colors" />
+                    <span className="text-sm font-bold text-gray-800 truncate">{getCityLabel(activeCity)}</span>
+                  </button>
+                </Popover.Trigger>
+                <Popover.Portal>
+                  <Popover.Content className="z-[70] bg-white p-3 rounded-xl shadow-xl border border-gray-100 animate-in fade-in zoom-in-95 w-[200px]" sideOffset={8}>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex justify-between items-center mb-1 px-1">
+                        <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2">
+                          <MapPin size={16} className="text-purple-600" />
+                          {(t as any).selectCity || 'Select City'}
+                        </h3>
+                        <button onClick={() => setIsCityOpen(false)} className="p-1 hover:bg-gray-100 rounded-full">
+                          <X size={16} className="text-gray-400" />
                         </button>
                       </div>
-                    </Popover.Content>
-                  </Popover.Portal>
-                </Popover.Root>
-
-                <Popover.Root open={isCityOpen} onOpenChange={setIsCityOpen}>
-                  <Popover.Trigger asChild>
-                    <button className="bg-[#fff] px-4 py-3 rounded-xl flex items-center justify-center border border-gray-200 shadow-xs gap-2.5 flex-1 active:scale-[1] transition-all group hover:bg-gray-100">
-                      <MapPin size={18} className="text-gray-400 group-hover:text-purple-600 transition-colors" />
-                      <span className="text-sm font-bold text-gray-800 truncate">{getCityLabel(activeCity)}</span>
-                    </button>
-                  </Popover.Trigger>
-                  <Popover.Portal>
-                    <Popover.Content className="z-[70] bg-white p-3 rounded-xl shadow-xl border border-gray-100 animate-in fade-in zoom-in-95 w-[200px]" sideOffset={8}>
-                       <div className="flex flex-col gap-2">
-                         <div className="flex justify-between items-center mb-1 px-1">
-                           <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2">
-                             <MapPin size={16} className="text-purple-600" />
-                             {(t as any).selectCity || 'Select City'}
-                           </h3>
-                           <button onClick={() => setIsCityOpen(false)} className="p-1 hover:bg-gray-100 rounded-full">
-                             <X size={16} className="text-gray-400" />
-                           </button>
-                         </div>
-                         <div className="flex flex-col gap-0">
-                           {cities.map((city) => (
-                             <button
-                               key={city}
-                               onClick={() => {
-                                 setActiveCity(city);
-                                 setIsCityOpen(false);
-                               }}
-                               className={`flex items-center gap-1 p-2 rounded-lg text-xs font-bold transition-all text-left ${
-                                 activeCity === city
-                                   ? 'bg-purple-50 text-purple-700'
-                                   : 'text-gray-700 hover:bg-gray-50'
-                               }`}
-                             >
-                               {activeCity === city && <CheckCircle size={14} className="text-purple-600" />}
-                               <span className={activeCity === city ? "font-bold" : "font-medium"}>{getCityLabel(city)}</span>
-                             </button>
-                           ))}
-                         </div>
-                       </div>
-                    </Popover.Content>
-                  </Popover.Portal>
-                </Popover.Root>
+                      <div className="flex flex-col gap-0">
+                        {cities.map((city) => (
+                          <button
+                            key={city}
+                            onClick={() => {
+                              setActiveCity(city);
+                              setIsCityOpen(false);
+                            }}
+                            className={`flex items-center gap-1 p-2 rounded-lg text-xs font-bold transition-all text-left ${activeCity === city
+                              ? 'bg-purple-50 text-purple-700'
+                              : 'text-gray-700 hover:bg-gray-50'
+                              }`}
+                          >
+                            {activeCity === city && <CheckCircle size={14} className="text-purple-600" />}
+                            <span className={activeCity === city ? "font-bold" : "font-medium"}>{getCityLabel(city)}</span>
+                            <span className="text-xs text-gray-400 ml-auto">{getCityCount(city)}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </Popover.Content>
+                </Popover.Portal>
+              </Popover.Root>
             </div>
             {/* Removed the old city chips row */}
           </div>
@@ -478,11 +482,10 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap flex items-center gap-1.5 ${
-                    activeCategory === cat.id
-                      ? 'bg-purple-700 text-white shadow-md'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
+                  className={`px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap flex items-center gap-1.5 ${activeCategory === cat.id
+                    ? 'bg-purple-700 text-white shadow-md'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
                 >
                   {cat.icon}
                   {cat.label}
@@ -497,11 +500,10 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                 <button
                   key={option.id}
                   onClick={() => setActiveSort(option.id)}
-                  className={`px-[13px] py-[7px] rounded-lg text-[13px] font-medium transition-all whitespace-nowrap border ${
-                    activeSort === option.id
-                      ? 'bg-[#333] text-[#FFF] border-0'
-                      : 'bg-gray-100 text-[#666] border-0 hover:bg-gray-200'
-                  }`}
+                  className={`px-[13px] py-[7px] rounded-lg text-[13px] font-medium transition-all whitespace-nowrap border ${activeSort === option.id
+                    ? 'bg-[#333] text-[#FFF] border-0'
+                    : 'bg-gray-100 text-[#666] border-0 hover:bg-gray-200'
+                    }`}
                 >
                   {option.label}
                 </button>
@@ -531,206 +533,202 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                   ] : (hotel.tags || []);
 
                   const tags = rawTags.filter((tag: any): tag is string => typeof tag === 'string' && tag.length > 0);
-                  
+
                   const isLiked = bookmarks.has(hotel.id);
 
                   return (
                     <div
                       key={hotel.id}
-                      className={`bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group flex flex-col transition-opacity duration-200 ${
-                        hotel.rooms_left === 0 ? 'opacity-20 pointer-events-none grayscale' : 'opacity-100'
-                      }`}
-                    >
-                    <div className="relative h-48 w-full shrink-0" data-layername="Hotel_Image">
-                      <ImageWithFallback 
-                        src={imageUrl} 
-                        alt={name} 
-                        className="w-full h-full object-cover"
-                      />
-                      
-                      {platform && (
-                        <div className="absolute top-3 left-3 z-20">
-                          <span className="text-[10px] font-bold text-white bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg uppercase tracking-wider border border-white/10">
-                            {platform}
-                          </span>
-                        </div>
-                      )}
-
-                      {!platform && hotel.rooms_left <= 3 && hotel.rooms_left > 0 && (
-                        <div className="absolute top-3 left-3 z-20">
-                          <span className="text-xs font-bold text-orange-700 bg-white/95 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
-                            Only {hotel.rooms_left} rooms left!
-                          </span>
-                        </div>
-                      )}
-
-                      <button 
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          e.preventDefault();
-                          toggleBookmark(hotel.id);
-                        }}
-                        className={`absolute top-3 right-3 p-2 backdrop-blur-sm rounded-full transition-colors z-10 group ${
-                          isLiked 
-                            ? 'bg-white text-purple-700' 
-                            : 'bg-white/90 text-gray-400 hover:text-purple-500'
+                      className={`bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group flex flex-col transition-opacity duration-200 ${hotel.rooms_left === 0 ? 'opacity-20 pointer-events-none grayscale' : 'opacity-100'
                         }`}
-                      >
-                        <div className="relative">
-                          <div>
-                            <Heart 
-                              size={20} 
-                              fill={isLiked ? "currentColor" : "none"} 
-                              className={isLiked ? "fill-purple-700" : ""}
-                            />
+                    >
+                      <div className="relative h-48 w-full shrink-0" data-layername="Hotel_Image">
+                        <ImageWithFallback
+                          src={imageUrl}
+                          alt={name}
+                          className="w-full h-full object-cover"
+                        />
+
+                        {platform && (
+                          <div className="absolute top-3 left-3 z-20">
+                            <span className="text-[10px] font-bold text-white bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg uppercase tracking-wider border border-white/10">
+                              {platform}
+                            </span>
                           </div>
-                          
+                        )}
+
+                        {!platform && hotel.rooms_left <= 3 && hotel.rooms_left > 0 && (
+                          <div className="absolute top-3 left-3 z-20">
+                            <span className="text-xs font-bold text-orange-700 bg-white/95 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+                              Only {hotel.rooms_left} rooms left!
+                            </span>
+                          </div>
+                        )}
+
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            toggleBookmark(hotel.id);
+                          }}
+                          className={`absolute top-3 right-3 p-2 backdrop-blur-sm rounded-full transition-colors z-10 group ${isLiked
+                            ? 'bg-white text-purple-700'
+                            : 'bg-white/90 text-gray-400 hover:text-purple-500'
+                            }`}
+                        >
+                          <div className="relative">
+                            <div>
+                              <Heart
+                                size={20}
+                                fill={isLiked ? "currentColor" : "none"}
+                                className={isLiked ? "fill-purple-700" : ""}
+                              />
+                            </div>
+
                             {isLiked && (
                               <div
                                 className="absolute inset-0 rounded-full border-2 border-purple-500 pointer-events-none"
                               />
                             )}
-                          
-                        </div>
-                      </button>
-                      
-                      <div 
-                        className="absolute bottom-3 left-3 bg-gray-900 text-white px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1 shadow-sm z-10"
-                        data-layername="Rating"
-                      >
-                        <Star size={12} fill="currentColor" className="text-yellow-400" />
-                        {hotel.rating}
-                      </div>
-                    </div>
-    
-                    <div className="p-4 flex flex-col gap-2 h-full">
-                      <div className="flex flex-col gap-1">
-                        <h3 
-                          className="font-bold text-lg text-gray-900 leading-tight break-words" 
-                          data-layername="Hotel_Name"
-                        >
-                          {name.replace(/\[.*?\]\s*/g, '')}
-                        </h3>
-                        
-                        <div className="flex items-center gap-3 text-xs text-gray-500 mt-0.5">
-                          <div className="flex items-center gap-1">
-                            <MapPin size={12} className="text-gray-400" />
-                            {hotel.location_desc || activeCity.charAt(0).toUpperCase() + activeCity.slice(1)}
+
                           </div>
-                          <div className="flex items-center gap-1">
-                            <MapIcon size={12} className="text-gray-400" />
-                            {calculateDistance(
-                              hotel.coords.lat, 
-                              hotel.coords.lng, 
-                              SPECIAL_LOCATIONS[activeCity]?.venue?.lat || JAMSIL_COORDS.lat, 
-                              SPECIAL_LOCATIONS[activeCity]?.venue?.lng || JAMSIL_COORDS.lng
-                            ).toFixed(1)}km {(t as any).toVenue || 'to venue'}
+                        </button>
+
+                        <div
+                          className="absolute bottom-3 left-3 bg-gray-900 text-white px-2.5 py-1 rounded-lg text-xs font-bold flex items-center gap-1 shadow-sm z-10"
+                          data-layername="Rating"
+                        >
+                          <Star size={12} fill="currentColor" className="text-yellow-400" />
+                          {hotel.rating}
+                        </div>
+                      </div>
+
+                      <div className="p-4 flex flex-col gap-2 h-full">
+                        <div className="flex flex-col gap-1">
+                          <h3
+                            className="font-bold text-lg text-gray-900 leading-tight break-words"
+                            data-layername="Hotel_Name"
+                          >
+                            {name.replace(/\[.*?\]\s*/g, '')}
+                          </h3>
+
+                          <div className="flex items-center gap-3 text-xs text-gray-500 mt-0.5">
+                            <div className="flex items-center gap-1">
+                              <MapPin size={12} className="text-gray-400" />
+                              {hotel.location_desc || activeCity.charAt(0).toUpperCase() + activeCity.slice(1)}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <MapIcon size={12} className="text-gray-400" />
+                              {calculateDistance(
+                                hotel.coords.lat,
+                                hotel.coords.lng,
+                                SPECIAL_LOCATIONS[activeCity]?.venue?.lat || JAMSIL_COORDS.lat,
+                                SPECIAL_LOCATIONS[activeCity]?.venue?.lng || JAMSIL_COORDS.lng
+                              ).toFixed(1)}km {(t as any).toVenue || 'to venue'}
+                            </div>
+                          </div>
+
+                          <div className="mt-1">
+                            {statusEn ? (
+                              <span className={`text-xs font-bold flex items-center gap-2 ${statusEn.toLowerCase().includes('sold out') ? 'text-red-500' : 'text-blue-600'}`}>
+                                {statusEn.toLowerCase().includes('sold out') ? <X size={12} /> : <CheckCircle size={12} />}
+                                {statusEn}
+                              </span>
+                            ) : hotel.rooms_left === 0 ? (
+                              <span className="text-xs font-bold text-red-500 flex items-center gap-1">
+                                <X size={12} /> {t.soldOut}
+                              </span>
+                            ) : null}
                           </div>
                         </div>
 
-                        <div className="mt-1">
-                          {statusEn ? (
-                             <span className={`text-xs font-bold flex items-center gap-2 ${statusEn.toLowerCase().includes('sold out') ? 'text-red-500' : 'text-blue-600'}`}>
-                               {statusEn.toLowerCase().includes('sold out') ? <X size={12} /> : <CheckCircle size={12} />}
-                               {statusEn}
-                             </span>
-                          ) : hotel.rooms_left === 0 ? (
-                            <span className="text-xs font-bold text-red-500 flex items-center gap-1">
-                              <X size={12} /> {t.soldOut}
-                            </span>
-                          ) : null}
-                        </div>
-                      </div>
-    
-                      <div className="flex flex-wrap gap-1">
-                        {tags?.map((tag: string, i: number) => {
-                          const isArmyTag = tag.startsWith('ARMY');
-                          return (
-                            <span 
-                              key={i} 
-                              className={`text-[10.6px] px-2 py-1 rounded-md flex items-center gap-1 ${
-                                isArmyTag 
-                                  ? 'bg-purple-100/80 text-purple-700 font-bold' 
+                        <div className="flex flex-wrap gap-1">
+                          {tags?.map((tag: string, i: number) => {
+                            const isArmyTag = tag.startsWith('ARMY');
+                            return (
+                              <span
+                                key={i}
+                                className={`text-[10.6px] px-2 py-1 rounded-md flex items-center gap-1 ${isArmyTag
+                                  ? 'bg-purple-100/80 text-purple-700 font-bold'
                                   : (hotel.display_tags?.trans?.en === tag)
                                     ? 'bg-blue-50 text-blue-700 font-medium'
                                     : 'bg-gray-100 text-gray-600 font-medium'
-                              }`}
-                            >
-                              {(hotel.display_tags?.trans?.en === tag) && <MapPin size={10} className="shrink-0" />}
-                              {tag}
-                            </span>
-                          );
-                        })}
-                      </div>
-    
-                      <div className="mt-auto flex items-end justify-between border-t border-gray-50 pt-4">
-                        {hotel.type === 'stay' ? (
-                          <>
-                            <div data-layername="Price">
-                              {hotel.cancellation?.type === 'free' && (
-                                <span className="text-[10px] font-bold text-green-600 block mb-0">
-                                  Free Cancellation
-                                </span>
-                              )}
-                              <span className="text-xs text-gray-400 line-through mr-2 block">
-                                {hotel.originalPrice && formatPrice(hotel.originalPrice)}
+                                  }`}
+                              >
+                                {(hotel.display_tags?.trans?.en === tag) && <MapPin size={10} className="shrink-0" />}
+                                {tag}
                               </span>
-                              <div className="flex items-baseline gap-1">
-                                <span className="text-[22px] font-extrabold text-gray-900">
-                                  {price}
-                                </span>
-                                {!hotel.price_usd && <span className="text-xs text-gray-500 font-medium">{t.night}</span>}
-                              </div>
-                            </div>
+                            );
+                          })}
+                        </div>
 
-                            <button
-                              onClick={() => {
-                                if (hotel.rooms_left === 0) return;
-                                onSelectHotel(hotel.id);
-                              }}
-                              disabled={hotel.rooms_left === 0}
-                              className={`px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg transition-all flex items-center gap-2 shrink-0 ${
-                                hotel.rooms_left === 0
+                        <div className="mt-auto flex items-end justify-between border-t border-gray-50 pt-4">
+                          {hotel.type === 'stay' ? (
+                            <>
+                              <div data-layername="Price">
+                                {hotel.cancellation?.type === 'free' && (
+                                  <span className="text-[10px] font-bold text-green-600 block mb-0">
+                                    Free Cancellation
+                                  </span>
+                                )}
+                                <span className="text-xs text-gray-400 line-through mr-2 block">
+                                  {hotel.originalPrice && formatPrice(hotel.originalPrice)}
+                                </span>
+                                <div className="flex items-baseline gap-1">
+                                  <span className="text-[22px] font-extrabold text-gray-900">
+                                    {price}
+                                  </span>
+                                  {!hotel.price_usd && <span className="text-xs text-gray-500 font-medium">{t.night}</span>}
+                                </div>
+                              </div>
+
+                              <button
+                                onClick={() => {
+                                  if (hotel.rooms_left === 0) return;
+                                  onSelectHotel(hotel.id);
+                                }}
+                                disabled={hotel.rooms_left === 0}
+                                className={`px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg transition-all flex items-center gap-2 shrink-0 ${hotel.rooms_left === 0
                                   ? 'bg-gray-200 text-gray-400 cursor-not-allowed shadow-none'
                                   : 'bg-purple-700 text-white hover:bg-purple-800'
-                              }`}
-                            >
-                              {hotel.rooms_left === 0 ? 'Sold Out' : t.reserveBtn}
-                              {hotel.rooms_left !== 0 && <ChevronRight size={16} />}
-                            </button>
-                          </>
-                        ) : (
-                          <>
-                            <div>
-                              <span className={`text-sm font-bold ${hotel.type === 'food' ? 'text-orange-600' : 'text-blue-600'}`}>
-                                {hotel.type === 'food' ? t.filterFood : t.filterSpot}
-                              </span>
-                              <p className="text-xs text-gray-400 mt-0.5">
-                                {calculateDistance(
-                                  hotel.coords.lat, hotel.coords.lng,
-                                  SPECIAL_LOCATIONS[activeCity]?.venue?.lat || JAMSIL_COORDS.lat,
-                                  SPECIAL_LOCATIONS[activeCity]?.venue?.lng || JAMSIL_COORDS.lng
-                                ).toFixed(1)}km {(t as any).fromVenue || 'from venue'}
-                              </p>
-                            </div>
-                            <button
-                              onClick={() => onSelectHotel(hotel.id)}
-                              className="px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg transition-all flex items-center gap-2 shrink-0 bg-purple-700 text-white hover:bg-purple-800"
-                            >
-                              {t.viewDetails}
-                              <ChevronRight size={16} />
-                            </button>
-                          </>
-                        )}
+                                  }`}
+                              >
+                                {hotel.rooms_left === 0 ? 'Sold Out' : t.reserveBtn}
+                                {hotel.rooms_left !== 0 && <ChevronRight size={16} />}
+                              </button>
+                            </>
+                          ) : (
+                            <>
+                              <div>
+                                <span className={`text-sm font-bold ${hotel.type === 'food' ? 'text-orange-600' : 'text-blue-600'}`}>
+                                  {hotel.type === 'food' ? t.filterFood : t.filterSpot}
+                                </span>
+                                <p className="text-xs text-gray-400 mt-0.5">
+                                  {calculateDistance(
+                                    hotel.coords.lat, hotel.coords.lng,
+                                    SPECIAL_LOCATIONS[activeCity]?.venue?.lat || JAMSIL_COORDS.lat,
+                                    SPECIAL_LOCATIONS[activeCity]?.venue?.lng || JAMSIL_COORDS.lng
+                                  ).toFixed(1)}km {(t as any).fromVenue || 'from venue'}
+                                </p>
+                              </div>
+                              <button
+                                onClick={() => onSelectHotel(hotel.id)}
+                                className="px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg transition-all flex items-center gap-2 shrink-0 bg-purple-700 text-white hover:bg-purple-800"
+                              >
+                                {t.viewDetails}
+                                <ChevronRight size={16} />
+                              </button>
+                            </>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
+                  );
                 })}
                 {hotels.length === 0 && (
-                   <div className="text-center py-10 text-gray-400">
-                     <p>{(t as any).noResults || 'No hotels found in this area/category.'}</p>
-                   </div>
+                  <div className="text-center py-10 text-gray-400">
+                    <p>{(t as any).noResults || 'No hotels found in this area/category.'}</p>
+                  </div>
                 )}
               </div>
             </section>
@@ -740,9 +738,9 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
 
       {viewMode === 'map' && (
         <div className="fixed inset-0 top-0 left-0 z-0 h-full w-full bg-gray-100">
-          <MapContainer 
-            center={[CITY_COORDS.seoul.lat, CITY_COORDS.seoul.lng]} 
-            zoom={13} 
+          <MapContainer
+            center={[CITY_COORDS.seoul.lat, CITY_COORDS.seoul.lng]}
+            zoom={13}
             scrollWheelZoom={true}
             zoomControl={false}
             style={{ height: '100%', width: '100%' }}
@@ -752,27 +750,27 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
               url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
             />
-            
+
             <MapUpdater center={CITY_COORDS[activeCity]} />
 
             {(mapData || SPECIAL_LOCATIONS[activeCity]) && (
               <>
                 {(mapData?.venue || SPECIAL_LOCATIONS[activeCity]?.venue) && (
-                  <Marker 
+                  <Marker
                     position={
-                      mapData?.venue 
-                        ? [mapData.venue.lat, mapData.venue.lng] 
+                      mapData?.venue
+                        ? [mapData.venue.lat, mapData.venue.lng]
                         : [SPECIAL_LOCATIONS[activeCity].venue.lat, SPECIAL_LOCATIONS[activeCity].venue.lng]
                     }
                     icon={createVenueIcon()}
                     interactive={false}
                   />
                 )}
-                
+
                 {(mapData?.local_spots || SPECIAL_LOCATIONS[activeCity]?.stations || []).map((spot: any, idx: number) => {
                   const spotName = currentLang === 'en' && spot.name_en ? spot.name_en : spot.name;
                   return (
-                    <Marker 
+                    <Marker
                       key={`spot-${idx}`}
                       position={[spot.lat, spot.lng]}
                       icon={createStationIcon(spotName, spot.line)}
@@ -786,7 +784,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
             {filteredItems.map((item) => {
               const isSelected = selectedMarkerId === item.id;
               let icon;
-              
+
               if (item.type === 'stay') {
                 icon = createPriceIcon(formatPrice(item.price), isSelected);
               } else if (item.type === 'food') {
@@ -812,51 +810,51 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
             })}
           </MapContainer>
 
-          
-            {selectedItem && (
-               <div
-                 className="absolute bottom-6 left-5 right-5 z-[1000] bg-white rounded-2xl p-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 flex gap-4 items-center cursor-pointer active:scale-[0.98] transition-transform"
-                 onClick={() => onSelectHotel(selectedItem.id)}
-               >
-                 <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-gray-100 relative">
-                   <ImageWithFallback 
-                     src={selectedItem.image_url || selectedItem.image || ''} 
-                     alt={selectedItem.name} 
-                     className="w-full h-full object-cover"
-                   />
-                 </div>
-                 <div className="flex-1 min-w-0">
-                   <div className="flex justify-between items-start">
-                     <h3 className="font-bold text-gray-900 truncate pr-2 text-[14px]">{selectedItem.name_en || selectedItem.name}</h3>
-                     <div className="flex items-center gap-1 shrink-0 bg-gray-50 px-1.5 py-0.5 rounded-md">
-                        <Star size={10} className="fill-yellow-400 text-yellow-400" />
-                        <span className="text-[10px] font-bold">{selectedItem.rating}</span>
-                     </div>
-                   </div>
-                   <p className="text-xs text-gray-500 mt-1 truncate flex items-center gap-1">
-                     <MapPin size={10} />
-                     {selectedItem.location_desc || activeCity}
-                   </p>
-                   <div className="flex items-end justify-between mt-1.5">
-                     <div className="flex flex-col leading-none">
-                        <span className="text-[10px] text-gray-400 line-through mb-0.5">
-                          {selectedItem.originalPrice && formatPrice(selectedItem.originalPrice)}
-                        </span>
-                        <div className="flex items-baseline gap-1">
-                          <span className="font-extrabold text-lg text-gray-900">
-                            {selectedItem.price_usd ? `$ ${selectedItem.price_usd}` : formatPrice(selectedItem.price)}
-                          </span>
-                          {!selectedItem.price_usd && <span className="text-[10px] text-gray-500 font-medium">/night</span>}
-                        </div>
-                     </div>
-                     <button className="bg-purple-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md">
-                       <ChevronRight size={16} />
-                     </button>
-                   </div>
-                 </div>
-               </div>
-            )}
-          
+
+          {selectedItem && (
+            <div
+              className="absolute bottom-6 left-5 right-5 z-[1000] bg-white rounded-2xl p-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 flex gap-4 items-center cursor-pointer active:scale-[0.98] transition-transform"
+              onClick={() => onSelectHotel(selectedItem.id)}
+            >
+              <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-gray-100 relative">
+                <ImageWithFallback
+                  src={selectedItem.image_url || selectedItem.image || ''}
+                  alt={selectedItem.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex justify-between items-start">
+                  <h3 className="font-bold text-gray-900 truncate pr-2 text-[14px]">{selectedItem.name_en || selectedItem.name}</h3>
+                  <div className="flex items-center gap-1 shrink-0 bg-gray-50 px-1.5 py-0.5 rounded-md">
+                    <Star size={10} className="fill-yellow-400 text-yellow-400" />
+                    <span className="text-[10px] font-bold">{selectedItem.rating}</span>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-500 mt-1 truncate flex items-center gap-1">
+                  <MapPin size={10} />
+                  {selectedItem.location_desc || activeCity}
+                </p>
+                <div className="flex items-end justify-between mt-1.5">
+                  <div className="flex flex-col leading-none">
+                    <span className="text-[10px] text-gray-400 line-through mb-0.5">
+                      {selectedItem.originalPrice && formatPrice(selectedItem.originalPrice)}
+                    </span>
+                    <div className="flex items-baseline gap-1">
+                      <span className="font-extrabold text-lg text-gray-900">
+                        {selectedItem.price_usd ? `$ ${selectedItem.price_usd}` : formatPrice(selectedItem.price)}
+                      </span>
+                      {!selectedItem.price_usd && <span className="text-[10px] text-gray-500 font-medium">/night</span>}
+                    </div>
+                  </div>
+                  <button className="bg-purple-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md">
+                    <ChevronRight size={16} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
         </div>
       )}
     </div>

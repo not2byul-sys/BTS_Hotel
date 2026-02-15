@@ -92,19 +92,11 @@ export const Landing = ({ onSearch, t, dateRange, setDateRange, stats, concertDa
   };
 
   const getCityCount = (cityKey: string) => {
-    // Determine the city filter key based on the concert id
     const city = cityKey === 'gwanghwamun' ? 'gwanghwamun' :
       cityKey === 'busan' ? 'busan' :
         cityKey === 'goyang' ? 'goyang' : 'seoul';
 
     if (!items || items.length === 0) return 0;
-
-    // Debug logging
-    if (city === 'gwanghwamun') {
-      console.log(`[Landing] Counting for ${city}. Items: ${items.length}`);
-      const sample = items.find(i => i.city?.toLowerCase() === 'gwanghwamun');
-      console.log('[Landing] Sample Gwanghwamun item:', sample);
-    }
 
     return items.filter(item => (item.city?.toLowerCase() === city.toLowerCase()) && (item.rooms_left ?? 1) > 0).length;
   };
@@ -317,7 +309,7 @@ export const Landing = ({ onSearch, t, dateRange, setDateRange, stats, concertDa
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
                   <Ticket size={20} className="text-purple-600" />
-                  Select Your Concert
+                  Select Concert
                 </h3>
                 <button
                   onClick={() => setIsConcertOpen(false)}
