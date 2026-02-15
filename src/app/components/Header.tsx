@@ -24,7 +24,6 @@ const languages: { code: Language; label: string }[] = [
 export const Header = ({ currentLang, onLanguageChange, onHome, onSearch, onBookmarks, viewMode, setViewMode }: HeaderProps) => {
   const currentLabel = languages.find(l => l.code === currentLang)?.label || 'English';
   const { isAuthenticated, user, setShowLoginModal, logout } = useAuth();
-  console.log("UI 렌더링 중 유저:", user);
   const [pendingBookmarks, setPendingBookmarks] = useState(false);
 
   useEffect(() => {

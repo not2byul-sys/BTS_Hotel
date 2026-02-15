@@ -197,7 +197,7 @@ export const Detail = ({ onBack, t, hotelId, items, onSelectHotel }: DetailProps
          {/* Section 4: Nearby Recommendations */}
          {nearby && nearby.length > 0 && (
            <div className="p-5 border-t border-gray-100">
-             <h2 className="font-bold text-lg text-gray-900 mb-4">Nearby Stays</h2>
+             <h2 className="font-bold text-lg text-gray-900 mb-4">{(t as any).nearbyStays || 'Nearby Stays'}</h2>
              <div className="relative group">
                <button 
                  onClick={() => document.getElementById('nearby-stays-scroll')?.scrollBy({ left: -200, behavior: 'smooth' })}
@@ -249,7 +249,7 @@ export const Detail = ({ onBack, t, hotelId, items, onSelectHotel }: DetailProps
                            {item.location?.area_en || "Seoul"}
                          </p>
                          <button className={`w-full py-1.5 rounded-lg text-xs font-bold text-white transition-colors ${isAvailable ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-500'}`}>
-                           {isAvailable ? 'Reserve' : 'Sold Out'}
+                           {isAvailable ? t.reserveBtn : t.soldOut}
                          </button>
                        </div>
                      </div>
@@ -265,7 +265,7 @@ export const Detail = ({ onBack, t, hotelId, items, onSelectHotel }: DetailProps
        <div className="fixed bottom-0 left-0 right-0 w-full max-w-md mx-auto bg-white border-t border-gray-100 p-4 pb-8 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 p-[16px]">
           <div className="flex items-center justify-between mb-2">
              <div className="flex flex-col">
-                <span className="text-xs text-gray-500">Total price</span>
+                <span className="text-xs text-gray-500">{t.totalPrice}</span>
                 <span className="text-xl font-bold text-gray-900">
                   {priceUsd ? `$ ${priceUsd}` : `$${hotel.price}`}
                 </span>
@@ -288,7 +288,7 @@ export const Detail = ({ onBack, t, hotelId, items, onSelectHotel }: DetailProps
                 }}
                 className="bg-gray-900 text-white font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-black active:scale-[0.98] transition-all flex items-center justify-center gap-2"
              >
-                <span>Book this room on Agoda</span>
+                <span>{t.reserveNow}{booking.platform ? ` on ${booking.platform}` : ''}</span>
                 {/* Show icon if external support is required (iframe_support is false) or defaulted to external */}
                 {(booking.iframe_support === false) && <ExternalLink size={18} />}
              </button>

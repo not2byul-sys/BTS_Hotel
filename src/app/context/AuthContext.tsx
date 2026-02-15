@@ -4,8 +4,6 @@ import { projectId } from '../../../utils/supabase/info';
 import { supabase } from '../../../utils/supabase/client';
 import { toast } from 'sonner';
 
-console.log('=== AuthContext.tsx 로드됨 ===');
-
 interface AuthContextType {
   user: User | null;
   isAuthenticated: boolean;
@@ -49,27 +47,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   // Check session on mount
   useEffect(() => {
-    console.log('=== AuthContext useEffect 시작 ===');
-    console.log('현재 URL:', window.location.href);
-
-    if (window.location.hash) {
-      console.log('URL Hash 발견:', window.location.hash);
-    }
-
-    // 세션 상태 변경 리스너 - 먼저 등록
+    // 세션 상태 변경 리스너
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        console.log('=== Auth 상태 변경 ===');
-        console.log('Event:', event);
-        console.log('Session:', session);
-
         if (session?.user) {
-          console.log('로그인 성공! User:', session.user.email);
           setUser(session.user);
           fetchBookmarks(session.access_token);
           toast.success(`Session restored for: ${session.user.email}`);
         } else {
-          console.log('로그아웃 상태');
           setUser(null);
           setBookmarks(new Set());
         }
@@ -79,17 +64,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     // 초기 세션 확인
     const checkSession = async () => {
-      console.log('=== 초기 세션 확인 시작 ===');
       try {
-        const { data: { session }, error } = await supabase.auth.getSession();
-        console.log('getSession 결과:', { session, error });
-
+        const { data: { session } } = await supabase.auth.getSession();
         if (session?.user) {
-          console.log('기존 세션 발견:', session.user.email);
           setUser(session.user);
           fetchBookmarks(session.access_token);
-        } else {
-          console.log('기존 세션 없음');
         }
       } catch (error) {
         console.error("Session check error:", error);

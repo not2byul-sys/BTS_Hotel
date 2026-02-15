@@ -272,8 +272,9 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
            break;
          case 'distance':
            filtered.sort((a, b) => {
-             const distA = calculateDistance(a.coords.lat, a.coords.lng, JAMSIL_COORDS.lat, JAMSIL_COORDS.lng);
-             const distB = calculateDistance(b.coords.lat, b.coords.lng, JAMSIL_COORDS.lat, JAMSIL_COORDS.lng);
+             const venueCoords = SPECIAL_LOCATIONS[activeCity]?.venue || GOYANG_COORDS;
+             const distA = calculateDistance(a.coords.lat, a.coords.lng, venueCoords.lat, venueCoords.lng);
+             const distB = calculateDistance(b.coords.lat, b.coords.lng, venueCoords.lat, venueCoords.lng);
              return distA - distB;
            });
            break;
@@ -395,16 +396,16 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                           onClick={() => setIsDateOpen(false)}
                           className="px-3 py-1.5 text-xs font-medium text-gray-500 hover:bg-gray-100 rounded-lg transition-colors"
                         >
-                          Cancel
+                          {(t as any).cancelBtn || 'Cancel'}
                         </button>
-                        <button 
+                        <button
                           onClick={() => {
                             setDateRange?.(tempDateRange);
                             setIsDateOpen(false);
                           }}
                           className="px-4 py-1.5 text-xs font-bold text-white bg-purple-700 hover:bg-purple-800 rounded-lg transition-colors shadow-sm"
                         >
-                          Confirm
+                          {t.confirmDate}
                         </button>
                       </div>
                     </Popover.Content>
@@ -424,7 +425,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                          <div className="flex justify-between items-center mb-1 px-1">
                            <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2">
                              <MapPin size={16} className="text-purple-600" />
-                             Select City
+                             {(t as any).selectCity || 'Select City'}
                            </h3>
                            <button onClick={() => setIsCityOpen(false)} className="p-1 hover:bg-gray-100 rounded-full">
                              <X size={16} className="text-gray-400" />
@@ -614,7 +615,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                               hotel.coords.lng, 
                               SPECIAL_LOCATIONS[activeCity]?.venue?.lat || JAMSIL_COORDS.lat, 
                               SPECIAL_LOCATIONS[activeCity]?.venue?.lng || JAMSIL_COORDS.lng
-                            ).toFixed(1)}km to venue
+                            ).toFixed(1)}km {(t as any).toVenue || 'to venue'}
                           </div>
                         </div>
 
@@ -626,7 +627,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                              </span>
                           ) : hotel.rooms_left === 0 ? (
                             <span className="text-xs font-bold text-red-500 flex items-center gap-1">
-                              <X size={12} /> Sold Out
+                              <X size={12} /> {t.soldOut}
                             </span>
                           ) : null}
                         </div>
@@ -693,21 +694,21 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                           <>
                             <div>
                               <span className={`text-sm font-bold ${hotel.type === 'food' ? 'text-orange-600' : 'text-blue-600'}`}>
-                                {hotel.type === 'food' ? (currentLang === 'ko' ? '맛집' : 'Local Eats') : (currentLang === 'ko' ? 'BTS 성지' : 'BTS Spot')}
+                                {hotel.type === 'food' ? t.filterFood : t.filterSpot}
                               </span>
                               <p className="text-xs text-gray-400 mt-0.5">
                                 {calculateDistance(
                                   hotel.coords.lat, hotel.coords.lng,
                                   SPECIAL_LOCATIONS[activeCity]?.venue?.lat || JAMSIL_COORDS.lat,
                                   SPECIAL_LOCATIONS[activeCity]?.venue?.lng || JAMSIL_COORDS.lng
-                                ).toFixed(1)}km from venue
+                                ).toFixed(1)}km {(t as any).fromVenue || 'from venue'}
                               </p>
                             </div>
                             <button
                               onClick={() => onSelectHotel(hotel.id)}
                               className="px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg transition-all flex items-center gap-2 shrink-0 bg-purple-700 text-white hover:bg-purple-800"
                             >
-                              {currentLang === 'ko' ? '자세히' : 'Details'}
+                              {t.viewDetails}
                               <ChevronRight size={16} />
                             </button>
                           </>
@@ -719,7 +720,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
                 })}
                 {hotels.length === 0 && (
                    <div className="text-center py-10 text-gray-400">
-                     <p>No hotels found in this area/category.</p>
+                     <p>{(t as any).noResults || 'No hotels found in this area/category.'}</p>
                    </div>
                 )}
               </div>

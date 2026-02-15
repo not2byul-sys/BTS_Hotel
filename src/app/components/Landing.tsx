@@ -104,9 +104,9 @@ export const Landing = ({ onSearch, t, dateRange, setDateRange, stats, concertDa
   const concerts = [
     {
       id: 'seoul',
-      title: 'seoul',
+      title: 'Seoul',
       date: 'Mar 21, 2026',
-      location: 'Gwanghwamun Square',
+      location: 'Seoul',
       city: 'seoul' as City,
       dateRange: {
         from: new Date(2026, 2, 21),
@@ -128,7 +128,7 @@ export const Landing = ({ onSearch, t, dateRange, setDateRange, stats, concertDa
       id: 'busan',
       title: 'Busan',
       date: 'Jun 12-13, 2026',
-      location: 'Stay Tune',
+      location: 'Stay Tuned',
       city: 'busan' as City,
       dateRange: {
         from: new Date(2026, 5, 12),
@@ -156,7 +156,7 @@ export const Landing = ({ onSearch, t, dateRange, setDateRange, stats, concertDa
             {t.heroTitle}
           </h1>
           <p className="text-purple-100 leading-relaxed mb-6 whitespace-pre-wrap text-[15px]">
-            We find the perfect stays for ARMY.
+            {t.heroSubtitle}
           </p>
 
           {/* Compact Live Stats Board */}
