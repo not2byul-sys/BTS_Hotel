@@ -63,14 +63,15 @@ interface ResultsProps {
 }
 
 type Category = 'all' | 'stay' | 'food' | 'spot';
-export type City = 'seoul' | 'goyang' | 'busan' | 'paju' | 'other';
+export type City = 'seoul' | 'goyang' | 'busan' | 'paju' | 'gwanghwamun' | 'other';
 
 const CITY_COORDS: Record<City, { lat: number; lng: number }> = {
-  seoul: { lat: 37.5300, lng: 127.0500 }, 
-  goyang: { lat: 37.6584, lng: 126.7640 }, 
-  paju: { lat: 37.7590, lng: 126.7750 }, 
-  busan: { lat: 35.1900, lng: 129.0700 }, 
-  other: { lat: 37.5, lng: 127.0 } 
+  seoul: { lat: 37.5300, lng: 127.0500 },
+  goyang: { lat: 37.6584, lng: 126.7640 },
+  paju: { lat: 37.7590, lng: 126.7750 },
+  busan: { lat: 35.1900, lng: 129.0700 },
+  gwanghwamun: { lat: 37.5760, lng: 126.9769 },
+  other: { lat: 37.5, lng: 127.0 }
 };
 
 const JAMSIL_COORDS = { lat: 37.5148, lng: 127.0733 };
@@ -93,6 +94,12 @@ const SPECIAL_LOCATIONS: Record<string, { venue: any, stations: any[] }> = {
   busan: {
     venue: { lat: 35.1900, lng: 129.0700, name: 'Busan Concert' },
     stations: []
+  },
+  gwanghwamun: {
+    venue: { lat: 37.5760, lng: 126.9769, name: 'Gwanghwamun Area' },
+    stations: [
+      { lat: 37.5710, lng: 126.9769, name: 'Gwanghwamun', line: '5' }
+    ]
   }
 };
 
@@ -215,7 +222,7 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
   const [tempDateRange, setTempDateRange] = useState<DateRange | undefined>(dateRange);
 
   const [isCityOpen, setIsCityOpen] = useState(false);
-  const cities: City[] = ['goyang', 'seoul', 'busan', 'paju', 'other'];
+  const cities: City[] = ['goyang', 'seoul', 'gwanghwamun', 'busan', 'paju', 'other'];
   
   const getCityLabel = (city: City) => {
     // @ts-ignore

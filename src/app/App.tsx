@@ -161,6 +161,7 @@ function ArmyStayApp() {
         seoul: { lat: 37.5148, lng: 127.0733 },
         busan: { lat: 35.1900, lng: 129.0700 },
         paju: { lat: 37.6695, lng: 126.7490 }, // closest venue is Goyang
+        gwanghwamun: { lat: 37.5760, lng: 126.9769 },
       };
       const hotelCity = item.city?.toLowerCase() || 'goyang';
       const venue = venueCoords[hotelCity] || venueCoords.goyang;
@@ -246,7 +247,8 @@ function ArmyStayApp() {
       const detectCity = () => {
         if (item.city_key) {
            const ck = item.city_key.toLowerCase();
-           if (['seongsu', 'hongdae', 'gwanghwamun', 'insadong', 'jongno', 'myeongdong', 'gangnam', 'mapo', 'yongsan'].includes(ck)) return 'seoul';
+           if (ck === 'gwanghwamun') return 'gwanghwamun';
+           if (['seongsu', 'hongdae', 'insadong', 'jongno', 'myeongdong', 'gangnam', 'mapo', 'yongsan'].includes(ck)) return 'seoul';
            if (['seoul', 'busan', 'paju', 'goyang'].includes(ck)) return ck;
         }
         if (item.city) return item.city.toLowerCase();
