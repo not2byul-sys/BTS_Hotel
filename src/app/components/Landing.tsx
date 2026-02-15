@@ -317,7 +317,7 @@ export const Landing = ({ onSearch, t, dateRange, setDateRange, stats, concertDa
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
                   <Ticket size={20} className="text-purple-600" />
-                  Select Concert
+                  Select Your Concert
                 </h3>
                 <button
                   onClick={() => setIsConcertOpen(false)}
