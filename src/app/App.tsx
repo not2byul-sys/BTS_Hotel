@@ -73,12 +73,10 @@ function ArmyStayApp() {
       try {
         let response = await fetch(DATA_URL);
         if (!response.ok) {
-          console.log("Local data not available, trying GitHub fallback...");
           response = await fetch(DATA_URL_FALLBACK);
         }
         if (!response.ok) throw new Error("Failed to fetch data from all sources");
         const json = await response.json();
-        console.log(`Loaded ${json.hotels?.length || 0} hotels`);
         setFetchedData(json);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -96,7 +94,7 @@ function ArmyStayApp() {
         const json = await response.json();
         setConcertData(json);
       } catch (error) {
-        console.log("Concert recommendations not available yet:", error);
+        // Concert recommendations not available yet
       }
     };
 
@@ -157,7 +155,16 @@ function ArmyStayApp() {
       
       let armyScore = 30;
 
-      const dist = calculateDistance(coords.lat, coords.lng, 37.6695, 126.7490);
+      // Use nearest venue coordinates based on hotel location
+      const venueCoords: Record<string, { lat: number; lng: number }> = {
+        goyang: { lat: 37.6695, lng: 126.7490 },
+        seoul: { lat: 37.5148, lng: 127.0733 },
+        busan: { lat: 35.1900, lng: 129.0700 },
+        paju: { lat: 37.6695, lng: 126.7490 }, // closest venue is Goyang
+      };
+      const hotelCity = item.city?.toLowerCase() || 'goyang';
+      const venue = venueCoords[hotelCity] || venueCoords.goyang;
+      const dist = calculateDistance(coords.lat, coords.lng, venue.lat, venue.lng);
       if (dist <= 1) armyScore += 30;
       else if (dist <= 3) armyScore += 25;
       else if (dist <= 5) armyScore += 20;
