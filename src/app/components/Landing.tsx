@@ -99,7 +99,14 @@ export const Landing = ({ onSearch, t, dateRange, setDateRange, stats, concertDa
 
     if (!items || items.length === 0) return 0;
 
-    return items.filter(item => item.city === city && (item.rooms_left ?? 1) > 0).length;
+    // Debug logging
+    if (city === 'gwanghwamun') {
+      console.log(`[Landing] Counting for ${city}. Items: ${items.length}`);
+      const sample = items.find(i => i.city?.toLowerCase() === 'gwanghwamun');
+      console.log('[Landing] Sample Gwanghwamun item:', sample);
+    }
+
+    return items.filter(item => (item.city?.toLowerCase() === city.toLowerCase()) && (item.rooms_left ?? 1) > 0).length;
   };
 
   // Custom formatting for the display date range
