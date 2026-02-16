@@ -230,15 +230,19 @@ export const Results = ({ onSelectHotel, t, currentLang = 'en', initialSort = 'r
     return t[`city${city.charAt(0).toUpperCase() + city.slice(1)}`];
   };
 
-  const getCityCount = (city: City) => {
-    if (!items || items.length === 0) return 0;
-    if (city === 'gwanghwamun') {
-      const uniqueCities = [...new Set(items.map(i => i.city))];
-      const gwMatches = items.filter(i => i.city?.toLowerCase() === 'gwanghwamun');
-      console.log('[getCityCount] items.length:', items.length, 'unique cities:', uniqueCities, 'gw matches:', gwMatches.length, 'gw sample:', gwMatches[0]?.name?.substring(0, 30));
-    }
-    return items.filter(item => item.city?.toLowerCase() === city.toLowerCase() && (item.rooms_left ?? 1) > 0).length;
-  };
+  const cityCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    if (!items || items.length === 0) return counts;
+    items.forEach(item => {
+      const city = (item.city || '').toLowerCase();
+      if ((item.rooms_left ?? 1) > 0) {
+        counts[city] = (counts[city] || 0) + 1;
+      }
+    });
+    return counts;
+  }, [items]);
+
+  const getCityCount = (city: City) => cityCounts[city.toLowerCase()] || 0;
 
   const displayDate = dateRange?.from
     ? `${format(dateRange.from, 'MMM d')}${dateRange.to ? ` - ${format(dateRange.to, 'MMM d')}` : ''}`
